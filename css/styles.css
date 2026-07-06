@@ -213,6 +213,7 @@ button{ font-family:inherit; cursor:pointer; }
   pointer-events:none;
 }
 .urgency-topbar > *{ position:relative; z-index:1; }
+.urg-mobile-text{ display:none; }
 .mobile-urgency-cta{ display:none; }
 
 /* mega menu */
@@ -398,8 +399,12 @@ select.q-input{ appearance:none; -webkit-appearance:none; cursor:pointer; }
     box-shadow:0 8px 26px rgba(0,0,0,.35);
   }
   .urgency-topbar .urg-full-text{
+    display:none !important;
+  }
+  .urgency-topbar .urg-mobile-text{
+    display:block !important;
     width:100%;
-    font-size:10px !important;
+    font-size:10.5px !important;
     letter-spacing:.12em !important;
   }
   .urgency-topbar a{
@@ -481,7 +486,7 @@ select.q-input{ appearance:none; -webkit-appearance:none; cursor:pointer; }
 }
 /* Urgency bar: keep the mobile prompt compact on very small screens */
 @media(max-width:480px){
-  .urgency-topbar .urg-full-text{ font-size:9.5px !important; }
+  .urgency-topbar .urg-mobile-text{ font-size:10px !important; }
   .hero-copy h1.display{ font-size:clamp(44px,14.5vw,64px) !important; }
   .hero-copy p{ font-size:15px !important; }
 }

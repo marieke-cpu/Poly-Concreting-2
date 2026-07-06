@@ -58,6 +58,9 @@ function Nav({ phone, onQuote }){
         <span className="mono urg-full-text" style={{fontSize:"11.5px",letterSpacing:".08em",fontWeight:600}}>
           LIMITED POUR DATES OPEN - CLAIM A PROPER QUOTE THIS WEEK
         </span>
+        <span className="mono urg-mobile-text" style={{fontSize:"11.5px",letterSpacing:".08em",fontWeight:700}}>
+          LIMITED DATES OPEN
+        </span>
         <a href="Quote.html" className="mono" style={{fontSize:"11px",letterSpacing:".1em",color:"#0a0a0b",textDecoration:"none",borderBottom:"1px solid rgba(0,0,0,.4)",whiteSpace:"nowrap",fontWeight:700}}>
           SECURE YOUR SITE VISIT →
         </a>
