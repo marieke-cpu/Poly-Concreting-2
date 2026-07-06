@@ -249,7 +249,7 @@ button{ font-family:inherit; cursor:pointer; }
 .burger--x i:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
 
 /* premium mobile menu */
-.mnav{ position:fixed; inset:0; z-index:110; background:var(--ink); display:flex; flex-direction:column; justify-content:flex-start; gap:10px;
+.mnav{ position:fixed; inset:0; z-index:150; background:var(--ink); display:flex; flex-direction:column; justify-content:flex-start; gap:10px;
   padding:108px var(--pad) calc(env(safe-area-inset-bottom,0px) + 18px); opacity:0; pointer-events:none;
   clip-path:circle(0% at calc(100% - 36px) 44px); transition:clip-path .5s var(--ease), opacity .3s; }
 .mnav--open{ opacity:1; pointer-events:auto; clip-path:circle(150% at calc(100% - 36px) 44px); }

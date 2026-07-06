@@ -119,44 +119,44 @@ function Nav({ phone, onQuote }){
         <MegaPanel/>
       </div>
 
-      {/* premium mobile menu */}
-      <div className={`mnav ${open?"mnav--open":""}`}>
-        <div className="mnav-head">
-          <a href="Poly Concreting.html" onClick={()=>setOpen(false)} className="mnav-logo-link" aria-label="Poly Concreting home">
-            <Logo h={58}/>
-          </a>
-          <span className="mono">Menu</span>
-        </div>
-        <div className="mnav-scroll">
-          {ND.nav.map(([t,h,kind],i)=>(
-            kind==="mega" ? (
-              <div key={t} ref={servicesMenuRef} className="mnav-group" style={{transitionDelay:`${0.04*i+0.05}s`}}>
-                <button className="mnav-link mnav-acc" onClick={toggleMobileServices}>
-                  <span>{t}</span>
-                  <span style={{transform:mAcc?"rotate(45deg)":"none",transition:"transform .3s",color:"var(--muted)"}}><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M8 1v14M1 8h14"/></svg></span>
-                </button>
-                <div className="mnav-sub" style={{maxHeight:mAcc?"640px":"0"}}>
-                  {Object.keys(ND.megaMenu).map(group=>(
-                    <div key={group} style={{marginTop:"6px"}}>
-                      <div className="mono" style={{fontSize:"10.5px",letterSpacing:".18em",color:"var(--faint)",padding:"10px 0 6px"}}>{group.toUpperCase()}</div>
-                      {ND.megaMenu[group].map(([st,sh])=>(
-                        <a key={st+sh} href={sh} onClick={()=>setOpen(false)} className="mnav-sublink">{st}</a>
-                      ))}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ) : (
-              <a key={t} href={h} onClick={()=>setOpen(false)} className="mnav-link mnav-stagger" style={{transitionDelay:`${0.04*i+0.05}s`}}>{t}</a>
-            )
-          ))}
-        </div>
-        <div className="mnav-foot">
-          <a href="Quote.html" className="btn btn--solid btn--lg" style={{width:"100%",justifyContent:"center"}}>Get a Quote <Arrow/></a>
-          <a href={`tel:${tel}`} className="mnav-call-cta"><Icon name="phone" s={16}/> Call {phone}</a>
-        </div>
-      </div>
     </header>
+    {/* premium mobile menu */}
+    <div className={`mnav ${open?"mnav--open":""}`}>
+      <div className="mnav-head">
+        <a href="Poly Concreting.html" onClick={()=>setOpen(false)} className="mnav-logo-link" aria-label="Poly Concreting home">
+          <Logo h={58}/>
+        </a>
+        <span className="mono">Menu</span>
+      </div>
+      <div className="mnav-scroll">
+        {ND.nav.map(([t,h,kind],i)=>(
+          kind==="mega" ? (
+            <div key={t} ref={servicesMenuRef} className="mnav-group" style={{transitionDelay:`${0.04*i+0.05}s`}}>
+              <button className="mnav-link mnav-acc" onClick={toggleMobileServices}>
+                <span>{t}</span>
+                <span style={{transform:mAcc?"rotate(45deg)":"none",transition:"transform .3s",color:"var(--muted)"}}><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M8 1v14M1 8h14"/></svg></span>
+              </button>
+              <div className="mnav-sub" style={{maxHeight:mAcc?"640px":"0"}}>
+                {Object.keys(ND.megaMenu).map(group=>(
+                  <div key={group} style={{marginTop:"6px"}}>
+                    <div className="mono" style={{fontSize:"10.5px",letterSpacing:".18em",color:"var(--faint)",padding:"10px 0 6px"}}>{group.toUpperCase()}</div>
+                    {ND.megaMenu[group].map(([st,sh])=>(
+                      <a key={st+sh} href={sh} onClick={()=>setOpen(false)} className="mnav-sublink">{st}</a>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <a key={t} href={h} onClick={()=>setOpen(false)} className="mnav-link mnav-stagger" style={{transitionDelay:`${0.04*i+0.05}s`}}>{t}</a>
+          )
+        ))}
+      </div>
+      <div className="mnav-foot">
+        <a href="Quote.html" className="btn btn--solid btn--lg" style={{width:"100%",justifyContent:"center"}}>Get a Quote <Arrow/></a>
+        <a href={`tel:${tel}`} className="mnav-call-cta"><Icon name="phone" s={16}/> Call {phone}</a>
+      </div>
+    </div>
     <div className={`mobile-urgency-cta ${solid && !open ? "mobile-urgency-cta--show" : ""}`} role="region" aria-label="Quick quote and contact actions">
       <a href="Quote.html" className="mobile-urgency-cta__quote">Get quote</a>
       <a href={`tel:${tel}`} className="mobile-urgency-cta__call"><Icon name="phone" s={15}/> Call now</a>
