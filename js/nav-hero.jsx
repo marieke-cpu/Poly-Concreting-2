@@ -62,7 +62,7 @@ function Nav({ phone, onQuote }){
           LIMITED DATES OPEN
         </span>
         <a href="Quote.html" className="mono" style={{fontSize:"11px",letterSpacing:".1em",color:"#0a0a0b",textDecoration:"none",borderBottom:"1px solid rgba(0,0,0,.4)",whiteSpace:"nowrap",fontWeight:700}}>
-          SECURE YOUR SITE VISIT →
+          <span className="urg-desktop-cta">SECURE YOUR SITE VISIT →</span><span className="urg-mobile-cta">SECURE YOUR PROJECT NOW →</span>
         </a>
       </div>
       <div className="wrap nav-inner" style={{display:"grid",gridTemplateColumns:"1fr auto 1fr",alignItems:"center",height:"100px"}}>

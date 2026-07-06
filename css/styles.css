@@ -214,6 +214,7 @@ button{ font-family:inherit; cursor:pointer; }
 }
 .urgency-topbar > *{ position:relative; z-index:1; }
 .urg-mobile-text{ display:none; }
+.urg-mobile-cta{ display:none; }
 .mobile-urgency-cta{ display:none; }
 
 /* mega menu */
@@ -394,23 +395,33 @@ select.q-input{ appearance:none; -webkit-appearance:none; cursor:pointer; }
     backdrop-filter:blur(10px) !important;
   }
   .urgency-topbar{
-    padding:10px var(--pad) !important;
-    gap:8px !important;
+    padding:7px var(--pad) !important;
+    gap:6px !important;
     box-shadow:0 8px 26px rgba(0,0,0,.35);
+    flex-wrap:nowrap !important;
   }
   .urgency-topbar .urg-full-text{
     display:none !important;
   }
   .urgency-topbar .urg-mobile-text{
-    display:block !important;
-    width:100%;
-    font-size:10.5px !important;
-    letter-spacing:.12em !important;
+    display:inline !important;
+    width:auto;
+    font-size:10px !important;
+    letter-spacing:.08em !important;
+    white-space:nowrap;
   }
   .urgency-topbar a{
     font-size:10px !important;
-    letter-spacing:.12em !important;
+    letter-spacing:.06em !important;
     border-bottom-color:rgba(0,0,0,.62) !important;
+    white-space:nowrap !important;
+  }
+  .urg-desktop-cta{ display:none !important; }
+  .urg-mobile-cta{ display:inline !important; }
+  .urgency-topbar .urg-mobile-text::after{
+    content:"·";
+    padding-left:6px;
+    font-weight:700;
   }
   .mobile-urgency-cta{
     position:fixed;
@@ -486,7 +497,9 @@ select.q-input{ appearance:none; -webkit-appearance:none; cursor:pointer; }
 }
 /* Urgency bar: keep the mobile prompt compact on very small screens */
 @media(max-width:480px){
-  .urgency-topbar .urg-mobile-text{ font-size:10px !important; }
+  .urgency-topbar{ padding-inline:12px !important; }
+  .urgency-topbar .urg-mobile-text,
+  .urgency-topbar a{ font-size:9.2px !important; }
   .hero-copy h1.display{ font-size:clamp(44px,14.5vw,64px) !important; }
   .hero-copy p{ font-size:15px !important; }
 }
