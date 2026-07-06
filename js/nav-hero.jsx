@@ -213,7 +213,7 @@ function HeroContent({ accent, onQuote, big }){
     <div className="hero-copy" style={{maxWidth: big? "min(100%,900px)":"min(100%,820px)"}}>
       
       <Reveal d="1" as="h1" className="display" style={{fontSize: big?"clamp(52px,8.2vw,138px)":"clamp(44px,6.4vw,104px)",margin:"24px 0 0",letterSpacing:".002em"}}>
-        Concrete done<br/>once.<br/><Chrome>Done properly.</Chrome>
+        The concrete<br/>beneath<br/><Chrome>South East Queensland.</Chrome>
       </Reveal>
       <Reveal d="2" as="p" style={{maxWidth:"46ch",margin:"30px 0 0",fontSize:"clamp(16px,1.3vw,19px)",color:"var(--muted)",lineHeight:1.65}}>
         Driveways, exposed aggregate, slabs and patios built by a licensed, insured crew with 10+ years on the tools. Clear quotes, locked-in dates, tidy sites and finishes made to lift the value of your home.

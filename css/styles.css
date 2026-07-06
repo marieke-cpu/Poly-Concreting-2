@@ -537,7 +537,22 @@ select.q-input{ appearance:none; -webkit-appearance:none; cursor:pointer; }
     max-width:100% !important;
     text-shadow:0 3px 22px rgba(0,0,0,.86);
   }
-  .hero-copy h1.display{ max-width:none; }
+  .hero-copy h1.display{
+    max-width:none;
+    background:var(--chrome);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent !important;
+    -webkit-text-fill-color:transparent;
+    text-shadow:none;
+  }
+  .hero-copy h1.display .chrome-text{
+    background:inherit;
+    -webkit-background-clip:inherit;
+    background-clip:inherit;
+    color:inherit;
+    -webkit-text-fill-color:inherit;
+  }
   .hero-copy p{
     max-width:46ch !important;
     margin-top:22px !important;
