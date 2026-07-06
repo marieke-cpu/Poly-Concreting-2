@@ -743,9 +743,13 @@ select.q-input{ appearance:none; -webkit-appearance:none; cursor:pointer; }
 @media(max-width:700px){
   .fv-panel{ grid-template-columns:1fr !important; height:auto !important; }
   .fv-list{
-    max-height:180px !important;
+    max-height:none !important;
+    overflow:visible !important;
     border-right:none !important;
     border-bottom:1px solid var(--line) !important;
+  }
+  .fv-list button{
+    padding:11px 16px !important;
   }
   .fv-photo{ height:clamp(240px,60vw,360px) !important; position:relative !important; }
 }
