@@ -521,6 +521,7 @@ select.q-input{ appearance:none; -webkit-appearance:none; cursor:pointer; }
     font-size:12px !important;
     letter-spacing:.1em !important;
   }
+  .hero-stats{ display:none !important; }
 }
 /* Urgency bar: keep the mobile prompt compact on very small screens */
 @media(max-width:480px){
@@ -594,11 +595,6 @@ select.q-input{ appearance:none; -webkit-appearance:none; cursor:pointer; }
     text-align:center !important;
     align-items:center !important;
   }
-}
-
-/* General: hero section stats strip — tighter on mobile */
-@media(max-width:480px){
-  .hero--cinematic .wrap > div > div:last-of-type{ gap:18px !important; }
 }
 
 /* Process: stepper circles only, no overflow issues */

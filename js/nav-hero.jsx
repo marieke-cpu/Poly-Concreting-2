@@ -56,6 +56,7 @@ function Nav({ phone, onQuote }){
   };
 
   return (
+    <>
     <header style={{
       position:"fixed",top:0,left:0,right:0,zIndex:60,
       transition:"background .4s,border-color .4s,backdrop-filter .4s",
@@ -155,11 +156,12 @@ function Nav({ phone, onQuote }){
           <a href={`tel:${tel}`} className="mnav-call-cta"><Icon name="phone" s={16}/> Call {phone}</a>
         </div>
       </div>
-      <div className={`mobile-urgency-cta ${solid ? "mobile-urgency-cta--show" : ""}`} role="region" aria-label="Quick quote and contact actions">
-        <a href="Quote.html" className="mobile-urgency-cta__quote">Get quote</a>
-        <a href={`tel:${tel}`} className="mobile-urgency-cta__call"><Icon name="phone" s={15}/> Call now</a>
-      </div>
     </header>
+    <div className={`mobile-urgency-cta ${solid && !open ? "mobile-urgency-cta--show" : ""}`} role="region" aria-label="Quick quote and contact actions">
+      <a href="Quote.html" className="mobile-urgency-cta__quote">Get quote</a>
+      <a href={`tel:${tel}`} className="mobile-urgency-cta__call"><Icon name="phone" s={15}/> Call now</a>
+    </div>
+    </>
   );
 }
 
@@ -228,7 +230,7 @@ function HeroContent({ accent, onQuote, big }){
           </div>
         ))}
       </Reveal>
-      <Reveal d="4" style={{display:"flex",gap:"30px",marginTop:"44px",flexWrap:"wrap"}}>
+      <Reveal d="4" className="hero-stats" style={{display:"flex",gap:"30px",marginTop:"44px",flexWrap:"wrap"}}>
         {[["150+","Projects placed"],["10+ yrs","Industry experience"],["9","Regions covered"]].map(([a,b])=>(
           <div key={b} style={{display:"flex",flexDirection:"column",gap:"4px"}}>
             <span className="display" style={{fontSize:"26px"}}>{a}</span>
