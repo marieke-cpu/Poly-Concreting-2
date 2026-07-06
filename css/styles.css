@@ -356,8 +356,23 @@ select.q-input{ appearance:none; -webkit-appearance:none; cursor:pointer; }
 
 /* responsive */
 @media (max-width: 1080px){
-  .hero--split{ grid-template-columns:1fr !important; }
-  .hero--split > div:last-of-type{ display:none; }
+  .hero--split{
+    grid-template-columns:1fr !important;
+    display:flex !important;
+    align-items:flex-end !important;
+    overflow:hidden;
+  }
+  .hero--split > div:first-child{
+    position:relative !important;
+    z-index:3 !important;
+    width:100%;
+  }
+  .hero--split > div:last-of-type{
+    display:block !important;
+    position:absolute !important;
+    inset:0 !important;
+    z-index:0 !important;
+  }
 }
 @media (max-width: 1000px){
   .metrics-grid{ grid-template-columns:repeat(2,1fr) !important; }
