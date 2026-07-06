@@ -110,6 +110,10 @@ function Nav({ phone, onQuote }){
 
       {/* premium mobile menu */}
       <div className={`mnav ${open?"mnav--open":""}`}>
+        <div className="mnav-head">
+          <span className="mono">Menu</span>
+          <span className="mono">Choose a page</span>
+        </div>
         <div className="mnav-scroll">
           {ND.nav.map(([t,h,kind],i)=>(
             kind==="mega" ? (
@@ -135,8 +139,7 @@ function Nav({ phone, onQuote }){
           ))}
         </div>
         <div className="mnav-foot">
-          <a href={`tel:${tel}`} className="mono" style={{display:"flex",alignItems:"center",gap:"10px",justifyContent:"center",color:"var(--muted)",padding:"6px",fontSize:"14px",letterSpacing:".06em"}}><Icon name="phone" s={16}/> {phone}</a>
-          <a href="Quote.html" className="btn btn--solid btn--lg" style={{width:"100%",justifyContent:"center",marginTop:"10px"}}>Get a Quote <Arrow/></a>
+          <a href="Quote.html" className="btn btn--solid btn--lg" style={{width:"100%",justifyContent:"center"}}>Get a Quote <Arrow/></a>
         </div>
       </div>
       <div className="mobile-urgency-cta" role="region" aria-label="Quick quote and contact actions">
