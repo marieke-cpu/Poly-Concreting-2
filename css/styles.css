@@ -433,12 +433,17 @@ button{ font-family:inherit; cursor:pointer; }
 .q-input:focus{ border-color:var(--text); }
 .q-input::placeholder{ color:var(--faint); }
 select.q-input{ appearance:none; -webkit-appearance:none; cursor:pointer; }
+.quote-modal-logo{ display:block; height:36px; width:auto; max-width:180px; object-fit:contain; flex-shrink:0; }
 .q-range{ -webkit-appearance:none; appearance:none; height:4px; border-radius:4px; background:var(--line-2); outline:none; }
 .q-range::-webkit-slider-thumb{ -webkit-appearance:none; width:22px; height:22px; border-radius:50%; background:linear-gradient(180deg,#fafafa,#c4c4c8 55%,#ededf0); cursor:pointer; box-shadow:0 2px 8px rgba(0,0,0,.5); border:1px solid #fff; }
 .q-range::-moz-range-thumb{ width:22px; height:22px; border-radius:50%; background:#dcdce0; cursor:pointer; border:1px solid #fff; }
 @media (max-width:560px){
   .q-types{ grid-template-columns:repeat(2,1fr) !important; }
   .q-fields{ grid-template-columns:1fr !important; }
+  .quote-modal-head{ padding:15px 16px !important; gap:12px; }
+  .quote-modal-brand{ min-width:0; gap:9px !important; }
+  .quote-modal-logo{ height:42px !important; max-width:150px; }
+  .quote-modal-brand .mono{ font-size:10px !important; letter-spacing:.1em !important; white-space:nowrap; }
 }
 
 /* responsive */

@@ -48,9 +48,9 @@ function QuoteModal({ open, onClose }){
       <div onMouseDown={e=>e.stopPropagation()} className="rise"
         style={{width:"min(720px,100%)",background:"linear-gradient(180deg,#161619,#101012)",border:"1px solid var(--line-2)",borderRadius:"var(--r-lg)",overflow:"hidden",boxShadow:"0 40px 120px rgba(0,0,0,.6)",margin:"auto"}}>
         {/* header */}
-        <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",padding:"20px clamp(22px,3vw,34px)",borderBottom:"1px solid var(--line)"}}>
-          <div style={{display:"flex",alignItems:"center",gap:"12px"}}>
-            <img src="Logo's/1logo.png" alt="Poly Concreting" decoding="async" width="104" height="26" style={{height:"26px"}}/>
+        <div className="quote-modal-head" style={{display:"flex",justifyContent:"space-between",alignItems:"center",padding:"20px clamp(22px,3vw,34px)",borderBottom:"1px solid var(--line)"}}>
+          <div className="quote-modal-brand" style={{display:"flex",alignItems:"center",gap:"12px"}}>
+            <img className="quote-modal-logo" src="Logo's/1logo.png" alt="Poly Concreting" decoding="async" width="180" height="45" style={{height:"36px",width:"auto"}}/>
             <span className="mono" style={{fontSize:"12px",letterSpacing:".16em",color:"var(--muted)"}}>{done?"REQUEST SENT":"GET A QUOTE"}</span>
           </div>
           <button onClick={onClose} aria-label="Close" style={{width:"36px",height:"36px",borderRadius:"50%",border:"1px solid var(--line-2)",background:"none",color:"var(--muted)",cursor:"pointer",display:"grid",placeItems:"center"}}><Iq name="x" s={16}/></button>

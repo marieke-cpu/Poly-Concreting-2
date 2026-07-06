@@ -14,6 +14,21 @@ function App(){
   const [quote, setQuote] = React.useState(false);
   const openQuote = ()=> setQuote(true);
 
+  React.useEffect(()=>{
+    const usePopup = ()=> window.matchMedia("(max-width: 760px)").matches;
+    const interceptQuotePage = e=>{
+      const link = e.target.closest?.('a[href]');
+      if(!link || !usePopup()) return;
+      const href = link.getAttribute("href") || "";
+      if(href === "Quote.html" || href.endsWith("/Quote.html")){
+        e.preventDefault();
+        setQuote(true);
+      }
+    };
+    document.addEventListener("click",interceptQuotePage);
+    return ()=>document.removeEventListener("click",interceptQuotePage);
+  },[]);
+
   return (
     <div id="top">
       <Nav phone={D.phone} onQuote={openQuote}/>
