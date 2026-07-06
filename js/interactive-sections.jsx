@@ -29,17 +29,28 @@ function JobConfigurator({ onQuote }){
           Find the right solution<br/>for your site.
         </IR>
 
-        {/* job tabs */}
-        <div style={{display:"flex",gap:"8px",marginTop:"clamp(24px,3vw,36px)",flexWrap:"wrap"}}>
+        {/* job cards */}
+        <div className="jc-card-grid">
           {JOB_TYPES.map((s,i)=>(
-            <button key={s.id} onClick={()=>setActive(i)} className="mono" style={{
-              padding:"10px 20px",borderRadius:"40px",cursor:"pointer",
-              fontSize:"11px",letterSpacing:".08em",
-              border:`1px solid ${active===i?"var(--text)":"var(--line-2)"}`,
-              background:active===i?"var(--text)":"transparent",
-              color:active===i?"#0a0a0b":"var(--muted)",
-              transition:"all .22s",whiteSpace:"nowrap",
-            }}>{s.short}</button>
+            <button
+              key={s.id}
+              type="button"
+              onClick={()=>setActive(i)}
+              className={`jc-card ${active===i ? "jc-card--active" : ""}`}
+              aria-pressed={active===i}
+              aria-label={`Show ${s.short} concrete options`}
+            >
+              <span
+                className="jc-card-photo"
+                aria-hidden="true"
+                style={{backgroundImage:`url("${s.hero}")`,backgroundPosition:s.pos||"center"}}
+              />
+              <span className="jc-card-overlay" aria-hidden="true" />
+              <span className="jc-card-content">
+                <span className="jc-card-kicker mono">{String(i+1).padStart(2,"0")}</span>
+                <span className="jc-card-title display">{s.short}</span>
+              </span>
+            </button>
           ))}
         </div>
 

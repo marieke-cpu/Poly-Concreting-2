@@ -126,7 +126,10 @@ function Nav({ phone, onQuote }){
         <a href="Poly Concreting.html" onClick={()=>setOpen(false)} className="mnav-logo-link" aria-label="Poly Concreting home">
           <Logo h={58}/>
         </a>
-        <span className="mono">Menu</span>
+        <button className="mnav-close" onClick={()=>setOpen(false)} aria-label="Close menu">
+          <span></span>
+          <span></span>
+        </button>
       </div>
       <div className="mnav-scroll">
         {ND.nav.map(([t,h,kind],i)=>(
