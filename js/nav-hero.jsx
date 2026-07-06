@@ -37,6 +37,7 @@ function Nav({ phone, onQuote }){
   const [open,setOpen]=uS(false);
   const [mega,setMega]=uS(false);
   const [mAcc,setMAcc]=uS(false);
+  const servicesMenuRef = uR(null);
   uE(()=>{
     const f=()=>setSolid(window.scrollY>40);
     f(); window.addEventListener("scroll",f,{passive:true});
@@ -44,6 +45,15 @@ function Nav({ phone, onQuote }){
   },[]);
   uE(()=>{ document.body.style.overflow = open?"hidden":""; return ()=>{document.body.style.overflow="";}; },[open]);
   const tel = phone.replace(/\s/g,"");
+  const toggleMobileServices = ()=>{
+    const next = !mAcc;
+    setMAcc(next);
+    if(next){
+      window.setTimeout(()=>{
+        servicesMenuRef.current?.scrollIntoView({behavior:"smooth",block:"start"});
+      },80);
+    }
+  };
 
   return (
     <header style={{
@@ -111,16 +121,16 @@ function Nav({ phone, onQuote }){
       {/* premium mobile menu */}
       <div className={`mnav ${open?"mnav--open":""}`}>
         <div className="mnav-head">
-          <span className="mono">Menu</span>
           <a href="Poly Concreting.html" onClick={()=>setOpen(false)} className="mnav-logo-link" aria-label="Poly Concreting home">
-            <Logo h={44}/>
+            <Logo h={58}/>
           </a>
+          <span className="mono">Menu</span>
         </div>
         <div className="mnav-scroll">
           {ND.nav.map(([t,h,kind],i)=>(
             kind==="mega" ? (
-              <div key={t} className="mnav-group" style={{transitionDelay:`${0.04*i+0.05}s`}}>
-                <button className="mnav-link mnav-acc" onClick={()=>setMAcc(a=>!a)}>
+              <div key={t} ref={servicesMenuRef} className="mnav-group" style={{transitionDelay:`${0.04*i+0.05}s`}}>
+                <button className="mnav-link mnav-acc" onClick={toggleMobileServices}>
                   <span>{t}</span>
                   <span style={{transform:mAcc?"rotate(45deg)":"none",transition:"transform .3s",color:"var(--muted)"}}><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M8 1v14M1 8h14"/></svg></span>
                 </button>

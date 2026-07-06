@@ -244,16 +244,16 @@ button{ font-family:inherit; cursor:pointer; }
 .mnav--open{ opacity:1; pointer-events:auto; clip-path:circle(150% at calc(100% - 36px) 44px); }
 .mnav-head{ display:flex; align-items:center; justify-content:space-between; gap:14px; min-height:48px; padding-bottom:8px; border-bottom:1px solid var(--line);
   color:var(--faint); font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; }
-.mnav-logo-link{ display:flex; align-items:center; justify-content:flex-end; line-height:0; }
-.mnav-logo-link .nav-logo-img{ height:46px !important; }
-.mnav-scroll{ overflow:visible; display:grid; gap:6px; padding-right:0; }
+.mnav-logo-link{ display:flex; align-items:center; justify-content:flex-start; line-height:0; }
+.mnav-logo-link .nav-logo-img{ height:62px !important; }
+.mnav-scroll{ overflow-y:auto; overscroll-behavior:contain; scroll-behavior:smooth; display:grid; gap:6px; padding-right:0; }
 .mnav-link{ display:flex; align-items:center; justify-content:space-between; width:100%; background:none; border:none; cursor:pointer;
   font-family:var(--font-display); text-transform:uppercase; font-size:clamp(22px,6vw,30px); color:var(--text); letter-spacing:.01em;
   min-height:48px; padding:8px 12px; border:1px solid var(--line); border-radius:var(--r); text-align:left; background:rgba(255,255,255,.035);
   opacity:0; transform:translateY(14px); transition:opacity .4s var(--ease-out), transform .4s var(--ease-out); }
 .mnav-link:active{ background:rgba(255,255,255,.07); }
 .mnav--open .mnav-link{ opacity:1; transform:none; }
-.mnav-sub{ overflow:hidden; max-height:0; transition:max-height .45s var(--ease); padding-inline:16px; }
+.mnav-sub{ overflow-y:auto; overscroll-behavior:contain; max-height:0; transition:max-height .45s var(--ease); padding-inline:16px; scroll-behavior:smooth; }
 .mnav-sub > div:last-child{ padding-bottom:8px; }
 .mnav-sublink{ display:block; padding:10px 0; font-size:15px; color:var(--muted); border-bottom:1px solid rgba(255,255,255,.055); }
 .mnav-sublink:active{ color:var(--text); }
@@ -480,6 +480,8 @@ select.q-input{ appearance:none; -webkit-appearance:none; cursor:pointer; }
     padding-top:112px !important;
     padding-bottom:calc(env(safe-area-inset-bottom,0px) + 14px) !important;
   }
+  .mnav-sub{ max-height:0; }
+  .mnav-sub[style*="640px"]{ max-height:34vh !important; }
   .mnav-head{ padding-bottom:8px; }
   .mnav-foot .btn{ min-height:46px; padding:13px 20px !important; }
   .mnav-call-cta{ min-height:42px; }
