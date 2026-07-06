@@ -112,7 +112,9 @@ function Nav({ phone, onQuote }){
       <div className={`mnav ${open?"mnav--open":""}`}>
         <div className="mnav-head">
           <span className="mono">Menu</span>
-          <span className="mono">Choose a page</span>
+          <a href="Poly Concreting.html" onClick={()=>setOpen(false)} className="mnav-logo-link" aria-label="Poly Concreting home">
+            <Logo h={44}/>
+          </a>
         </div>
         <div className="mnav-scroll">
           {ND.nav.map(([t,h,kind],i)=>(
@@ -143,7 +145,7 @@ function Nav({ phone, onQuote }){
           <a href={`tel:${tel}`} className="mnav-call-cta"><Icon name="phone" s={16}/> Call {phone}</a>
         </div>
       </div>
-      <div className="mobile-urgency-cta" role="region" aria-label="Quick quote and contact actions">
+      <div className={`mobile-urgency-cta ${solid ? "mobile-urgency-cta--show" : ""}`} role="region" aria-label="Quick quote and contact actions">
         <a href="Quote.html" className="mobile-urgency-cta__quote">Get quote</a>
         <a href={`tel:${tel}`} className="mobile-urgency-cta__call"><Icon name="phone" s={15}/> Call now</a>
       </div>
