@@ -140,6 +140,7 @@ function Nav({ phone, onQuote }){
         </div>
         <div className="mnav-foot">
           <a href="Quote.html" className="btn btn--solid btn--lg" style={{width:"100%",justifyContent:"center"}}>Get a Quote <Arrow/></a>
+          <a href={`tel:${tel}`} className="mnav-call-cta"><Icon name="phone" s={16}/> Call {phone}</a>
         </div>
       </div>
       <div className="mobile-urgency-cta" role="region" aria-label="Quick quote and contact actions">
