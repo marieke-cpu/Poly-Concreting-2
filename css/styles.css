@@ -655,6 +655,27 @@ select.q-input{ appearance:none; -webkit-appearance:none; cursor:pointer; }
     font-size:12px !important;
     letter-spacing:.1em !important;
   }
+  body.home-page .btn{
+    min-height:42px;
+    padding:11px 15px;
+    gap:.48em;
+    font-size:10.5px;
+    letter-spacing:.075em;
+  }
+  body.home-page .btn--lg{
+    padding:12px 16px !important;
+    font-size:10.5px !important;
+    letter-spacing:.075em !important;
+  }
+  body.home-page .hero-copy .btn{
+    min-height:44px;
+  }
+  body.home-page .mnav-foot .btn{
+    min-height:46px;
+    padding:13px 20px !important;
+    font-size:12px !important;
+    letter-spacing:.1em !important;
+  }
   .hero-stats{ display:none !important; }
 }
 /* Urgency bar: keep the mobile prompt compact on very small screens */
