@@ -187,13 +187,15 @@ function ReelModal({ onClose }){
 function HeroMedia({ motion, tall=false, label="DRONE SHOWREEL — 0:42", onReel }){
   return (
     <div className="hero-media" style={{position:"absolute",inset:0,overflow:"hidden"}}>
-      <video autoPlay muted loop playsInline preload="metadata" poster="assets/img/hero-poster.webp" onLoadedMetadata={e=>e.currentTarget.play()}
+      <video className="hero-bg-video" autoPlay muted loop playsInline preload="auto" poster="assets/img/hero-poster.webp"
+        onLoadedMetadata={e=>e.currentTarget.play()?.catch?.(()=>{})}
+        onCanPlay={e=>e.currentTarget.play()?.catch?.(()=>{})}
         style={{position:"absolute",inset:0,width:"100%",height:"100%",objectFit:"cover",objectPosition:"center"}}
         src="assets/video/hero.mp4"/>
-      <div style={{position:"absolute",inset:0}}></div>
+      <div className="hero-media__base" style={{position:"absolute",inset:0}}></div>
       {/* cinematic gradients */}
-      <div style={{position:"absolute",inset:0,background:"linear-gradient(90deg,rgba(8,8,10,.94) 0%,rgba(8,8,10,.6) 40%,rgba(8,8,10,.25) 72%,rgba(8,8,10,.6) 100%)"}}></div>
-      <div style={{position:"absolute",inset:0,background:"linear-gradient(0deg,rgba(8,8,10,.96) 2%,transparent 40%,transparent 68%,rgba(8,8,10,.72) 100%)"}}></div>
+      <div className="hero-media__shade" style={{position:"absolute",inset:0,background:"linear-gradient(90deg,rgba(8,8,10,.94) 0%,rgba(8,8,10,.6) 40%,rgba(8,8,10,.25) 72%,rgba(8,8,10,.6) 100%)"}}></div>
+      <div className="hero-media__fade" style={{position:"absolute",inset:0,background:"linear-gradient(0deg,rgba(8,8,10,.96) 2%,transparent 40%,transparent 68%,rgba(8,8,10,.72) 100%)"}}></div>
       {/* showreel chip */}
       <button onClick={onReel} className="reel-chip" style={{position:"absolute",right:"clamp(20px,4vw,54px)",top:"46%",display:"flex",alignItems:"center",gap:"12px",background:"rgba(20,20,23,.5)",border:"1px solid var(--line-2)",backdropFilter:"blur(8px)",borderRadius:"40px",padding:"9px 9px 9px 18px",color:"var(--text)",cursor:"pointer"}}>
         <span className="mono" style={{fontSize:"11px",letterSpacing:".16em"}}>{label}</span>
