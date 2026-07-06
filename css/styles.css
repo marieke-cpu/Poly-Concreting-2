@@ -382,10 +382,10 @@ select.q-input{ appearance:none; -webkit-appearance:none; cursor:pointer; }
 /* Nav: shrink height + logo on mobile */
 @media(max-width:760px){
   body{ padding-bottom:calc(76px + env(safe-area-inset-bottom,0px)); }
-  .nav-inner{ height:82px !important; grid-template-columns:auto 1fr auto !important; }
+  .nav-inner{ height:90px !important; grid-template-columns:auto 1fr auto !important; }
   .nav-inner > a{ grid-column:1 !important; justify-self:start !important; }
   .nav-inner > div:last-child{ grid-column:3 !important; justify-self:end !important; }
-  .nav-logo-img{ height:68px !important; }
+  .nav-logo-img{ height:78px !important; }
   .nav-burger{
     width:48px !important;
     height:48px !important;
@@ -463,8 +463,8 @@ select.q-input{ appearance:none; -webkit-appearance:none; cursor:pointer; }
     position:absolute;
     inset:0;
     background:
-      linear-gradient(180deg,rgba(8,8,10,.72) 0%,rgba(8,8,10,.34) 34%,rgba(8,8,10,.92) 76%,rgba(8,8,10,.98) 100%),
-      linear-gradient(90deg,rgba(8,8,10,.72),rgba(8,8,10,.14) 54%,rgba(8,8,10,.38));
+      linear-gradient(180deg,rgba(8,8,10,.44) 0%,rgba(8,8,10,.14) 34%,rgba(8,8,10,.68) 78%,rgba(8,8,10,.86) 100%),
+      linear-gradient(90deg,rgba(8,8,10,.48),rgba(8,8,10,.08) 58%,rgba(8,8,10,.24));
     pointer-events:none;
   }
   .hero--cinematic .wrap{
@@ -475,13 +475,9 @@ select.q-input{ appearance:none; -webkit-appearance:none; cursor:pointer; }
     max-width:100% !important;
     text-shadow:0 3px 22px rgba(0,0,0,.86);
   }
-  .hero-copy h1.display{
-    font-size:clamp(48px,15vw,72px) !important;
-    line-height:.9 !important;
-    max-width:8ch;
-  }
+  .hero-copy h1.display{ max-width:none; }
   .hero-copy p{
-    max-width:31ch !important;
+    max-width:46ch !important;
     margin-top:22px !important;
     font-size:16px !important;
     line-height:1.55 !important;
@@ -502,7 +498,6 @@ select.q-input{ appearance:none; -webkit-appearance:none; cursor:pointer; }
   .urgency-topbar{ padding-inline:12px !important; }
   .urgency-topbar .urg-mobile-text,
   .urgency-topbar a{ font-size:9.2px !important; }
-  .hero-copy h1.display{ font-size:clamp(44px,14.5vw,64px) !important; }
   .hero-copy p{ font-size:15px !important; }
 }
 

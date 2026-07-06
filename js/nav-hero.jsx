@@ -169,7 +169,7 @@ function ReelModal({ onClose }){
 function HeroMedia({ motion, tall=false, label="DRONE SHOWREEL — 0:42", onReel }){
   return (
     <div className="hero-media" style={{position:"absolute",inset:0,overflow:"hidden"}}>
-      <video muted loop playsInline preload="metadata" poster="assets/img/hero-poster.webp" onLoadedMetadata={e=>e.currentTarget.play()}
+      <video autoPlay muted loop playsInline preload="metadata" poster="assets/img/hero-poster.webp" onLoadedMetadata={e=>e.currentTarget.play()}
         style={{position:"absolute",inset:0,width:"100%",height:"100%",objectFit:"cover",objectPosition:"center"}}
         src="assets/video/hero.mp4"/>
       <div style={{position:"absolute",inset:0}}></div>
@@ -232,7 +232,7 @@ function SplitVideo({ motion }){
   return (
     <div style={{position:"relative"}}>
       <div style={{position:"absolute",inset:0,overflow:"hidden"}}>
-        <video key={idx} muted playsInline preload="metadata" poster="assets/img/hero-poster.webp" onLoadedMetadata={e=>e.currentTarget.play()} onEnded={next}
+        <video key={idx} autoPlay muted playsInline preload="metadata" poster="assets/img/hero-poster.webp" onLoadedMetadata={e=>e.currentTarget.play()} onEnded={next}
           style={{position:"absolute",inset:0,width:"100%",height:"100%",objectFit:"cover",objectPosition:"center"}}
           src={HERO_VIDEOS[idx]}/>
         {/* bottom fade */}
