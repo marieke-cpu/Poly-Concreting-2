@@ -50,7 +50,7 @@ function QuoteModal({ open, onClose }){
         {/* header */}
         <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",padding:"20px clamp(22px,3vw,34px)",borderBottom:"1px solid var(--line)"}}>
           <div style={{display:"flex",alignItems:"center",gap:"12px"}}>
-            <img src="Logo's/1logo.png" alt="Poly Concreting" style={{height:"26px"}}/>
+            <img src="Logo's/1logo.png" alt="Poly Concreting" decoding="async" width="104" height="26" style={{height:"26px"}}/>
             <span className="mono" style={{fontSize:"12px",letterSpacing:".16em",color:"var(--muted)"}}>{done?"REQUEST SENT":"GET A QUOTE"}</span>
           </div>
           <button onClick={onClose} aria-label="Close" style={{width:"36px",height:"36px",borderRadius:"50%",border:"1px solid var(--line-2)",background:"none",color:"var(--muted)",cursor:"pointer",display:"grid",placeItems:"center"}}><Iq name="x" s={16}/></button>

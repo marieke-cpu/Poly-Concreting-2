@@ -189,7 +189,7 @@ function ColourLightbox({ mixes, startIdx, onClose }){
         border:"1px solid var(--line-2)",background:"var(--panel)",
         boxShadow:"0 32px 80px rgba(0,0,0,.7)",
       }}>
-        <img src={mix.img} alt={mix.name} style={{
+        <img src={mix.img} alt={mix.name} loading="lazy" decoding="async" style={{
           display:"block",width:"100%",maxHeight:"72vh",objectFit:"contain",
           background:"var(--base)",
         }}/>
@@ -263,7 +263,7 @@ function AggLightbox({ mixes, startIdx, onClose }){
         border:"1px solid var(--line-2)",background:"var(--panel)",
         boxShadow:"0 32px 80px rgba(0,0,0,.7)",
       }}>
-        <img src={mix.img} alt={mix.name} style={{
+        <img src={mix.img} alt={mix.name} loading="lazy" decoding="async" style={{
           display:"block",width:"100%",maxHeight:"72vh",objectFit:"contain",
           background:"var(--base)",
         }}/>
@@ -1239,7 +1239,7 @@ function ServiceDetailApp(){
                         >
                           {m.img && (
                             <div style={{height:"160px",overflow:"hidden",flexShrink:0}}>
-                              <img src={m.img} alt={m.name} style={{
+                              <img src={m.img} alt={m.name} loading="lazy" decoding="async" style={{
                                 width:"100%",height:"100%",objectFit:"cover",
                                 objectPosition:"center top",display:"block",
                               }}/>
@@ -1341,7 +1341,7 @@ function ServiceDetailApp(){
                         >
                           {m.img
                             ? <div style={{height:"96px",flexShrink:0,overflow:"hidden",position:"relative"}}>
-                                <img src={m.img} alt={m.name} style={{width:"100%",height:"100%",objectFit:"cover",objectPosition:"center"}}/>
+                                <img src={m.img} alt={m.name} loading="lazy" decoding="async" style={{width:"100%",height:"100%",objectFit:"cover",objectPosition:"center"}}/>
                                 <div style={{position:"absolute",inset:0,display:"grid",placeItems:"center",opacity:0,transition:"opacity .2s",background:"rgba(0,0,0,.35)"}}
                                   onMouseEnter={e=>{e.currentTarget.style.opacity=1}} onMouseLeave={e=>{e.currentTarget.style.opacity=0}}>
                                   <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="white" strokeWidth="1.6"><circle cx="10" cy="10" r="7"/><path d="M15 15l4 4"/><path d="M10 7v6M7 10h6"/></svg>
@@ -1419,7 +1419,7 @@ function ServiceDetailApp(){
                       display:"flex",flexDirection:"column",height:"100%",
                     }}>
                       {p.img
-                        ? <div style={{height:"96px",flexShrink:0,overflow:"hidden"}}><img src={p.img} alt={p.name} style={{width:"100%",height:"100%",objectFit:"cover"}}/></div>
+                        ? <div style={{height:"96px",flexShrink:0,overflow:"hidden"}}><img src={p.img} alt={p.name} loading="lazy" decoding="async" style={{width:"100%",height:"100%",objectFit:"cover"}}/></div>
                         : <div style={{height:"72px",flexShrink:0,background:"linear-gradient(135deg,var(--panel-3) 25%,transparent 25%,transparent 50%,var(--panel-3) 50%,var(--panel-3) 75%,transparent 75%)",backgroundSize:"12px 12px",borderBottom:"1px solid var(--line)"}}/>
                       }
                       <div style={{padding:"clamp(14px,1.6vw,18px)",display:"flex",flexDirection:"column",gap:"6px",flex:1}}>
@@ -1450,7 +1450,7 @@ function ServiceDetailApp(){
                   <SR key={c.name} d={String(ci%4)}>
                     <div style={{background:"var(--panel)",border:"1px solid var(--line)",borderRadius:"var(--r-lg)",overflow:"hidden",display:"flex",flexDirection:"column",height:"100%"}}>
                       <div style={{height:"96px",flexShrink:0,overflow:"hidden"}}>
-                        <img src={c.img} alt={c.name} style={{width:"100%",height:"100%",objectFit:"cover"}}/>
+                        <img src={c.img} alt={c.name} loading="lazy" decoding="async" style={{width:"100%",height:"100%",objectFit:"cover"}}/>
                       </div>
                       <div style={{padding:"clamp(14px,1.6vw,18px)",display:"flex",flexDirection:"column",gap:"6px",flex:1,borderTop:"2px solid rgba(255,255,255,.06)"}}>
                         <div className="display" style={{fontSize:"clamp(14px,1.3vw,17px)",lineHeight:.95}}>{c.name}</div>
@@ -1481,7 +1481,7 @@ function ServiceDetailApp(){
                   <SR key={p.name} d={String(pi%4)}>
                     <div style={{background:"var(--panel)",border:"1px solid var(--line)",borderRadius:"var(--r-lg)",overflow:"hidden",display:"flex",flexDirection:"column",height:"100%"}}>
                       <div style={{height:"96px",flexShrink:0,overflow:"hidden"}}>
-                        <img src={p.img} alt={p.name} style={{width:"100%",height:"100%",objectFit:"cover"}}/>
+                        <img src={p.img} alt={p.name} loading="lazy" decoding="async" style={{width:"100%",height:"100%",objectFit:"cover"}}/>
                       </div>
                       <div style={{padding:"clamp(14px,1.6vw,18px)",display:"flex",flexDirection:"column",gap:"6px",flex:1,borderTop:"2px solid rgba(255,255,255,.06)"}}>
                         <div className="display" style={{fontSize:"clamp(14px,1.3vw,17px)",lineHeight:.95}}>{p.name}</div>

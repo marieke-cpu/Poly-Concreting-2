@@ -360,7 +360,7 @@ function FAQ(){
 function FinalCTA({ onQuote }){
   return (
     <section id="quote" className="section" style={{position:"relative",overflow:"hidden",textAlign:"center"}}>
-      <img src="Logo's/1logo.png" alt="" aria-hidden="true"
+      <img src="Logo's/1logo.png" alt="" aria-hidden="true" loading="lazy" decoding="async"
         style={{position:"absolute",top:"50%",left:"50%",transform:"translate(-50%,-50%)",width:"min(1100px,150%)",maxWidth:"none",opacity:.05,pointerEvents:"none"}}/>
       <div className="wrap" style={{position:"relative",zIndex:2}}>
         <Rw><div className="eyebrow" style={{justifyContent:"center"}}>Let&rsquo;s build</div></Rw>
@@ -392,7 +392,7 @@ function Footer(){
       <div className="wrap" style={{paddingBlock:"clamp(50px,6vw,84px)"}}>
         <div className="foot-grid" style={{display:"grid",gridTemplateColumns:"1.6fr 1fr 1fr 1.2fr",gap:"clamp(30px,4vw,56px)"}}>
           <div>
-            <img src="Logo's/1logo.png" alt="Poly Concreting" style={{width:"min(280px,80%)",marginBottom:"22px"}}/>
+            <img src="Logo's/1logo.png" alt="Poly Concreting" loading="lazy" decoding="async" width="280" height="70" style={{width:"min(280px,80%)",marginBottom:"22px"}}/>
             <p style={{color:"var(--muted)",maxWidth:"34ch",fontSize:"15px"}}>Quality residential and small commercial concreting. Proudly Australian Polynesian-owned, Morayfield based, serving South East Queensland.</p>
           </div>
           <div>

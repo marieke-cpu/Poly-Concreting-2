@@ -4,7 +4,7 @@ const { useState:uS, useEffect:uE, useRef:uR } = React;
 
 function Logo({ light=true, h=34 }){
   return (
-    <img src="Logo's/1logo.png" alt="Poly Concreting" className="nav-logo-img" decoding="async" style={{height:h,width:"auto",filter:"drop-shadow(0 1px 6px rgba(0,0,0,.5))"}}/>
+    <img src="Logo's/1logo.png" alt="Poly Concreting" className="nav-logo-img" width="280" height="70" decoding="async" style={{height:h,width:"auto",filter:"drop-shadow(0 1px 6px rgba(0,0,0,.5))"}}/>
   );
 }
 
