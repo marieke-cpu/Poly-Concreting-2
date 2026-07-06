@@ -10,6 +10,7 @@ function ServiceCard({ s, onQuote }){
   const [hov, setHov] = React.useState(false);
   return (
     <div
+      className="svc-card"
       onMouseEnter={()=>setHov(true)}
       onMouseLeave={()=>setHov(false)}
       style={{
@@ -122,6 +123,21 @@ function ServicesApp(){
   const [quote, setQuote] = React.useState(false);
   const openQuote = () => setQuote(true);
 
+  React.useEffect(()=>{
+    const usePopup = ()=> window.matchMedia("(max-width: 760px)").matches;
+    const interceptQuotePage = e=>{
+      const link = e.target.closest?.('a[href]');
+      if(!link || !usePopup()) return;
+      const href = link.getAttribute("href") || "";
+      if(href === "Quote.html" || href.endsWith("/Quote.html")){
+        e.preventDefault();
+        setQuote(true);
+      }
+    };
+    document.addEventListener("click",interceptQuotePage);
+    return ()=>document.removeEventListener("click",interceptQuotePage);
+  },[]);
+
   const steps = [
     { n:"01", t:"Tell us about the job",      d:"Quick message or call. Describe the site, size, finish and timing. Five minutes is enough." },
     { n:"02", t:"Fixed quote, in writing",     d:"We assess the site and send a locked price. No surprises, no variations buried in fine print." },
@@ -135,7 +151,7 @@ function ServicesApp(){
       <main>
 
         {/* ── HERO ─────────────────────────────────────── */}
-        <section style={{
+        <section className="svc-hero" style={{
           paddingTop:"clamp(180px,22vh,220px)",
           paddingBottom:"clamp(60px,8vh,96px)",
           borderBottom:"1px solid var(--line)",
@@ -168,7 +184,7 @@ function ServicesApp(){
                 }}>
                   Driveways, slabs, exposed aggregate, pool surrounds and more — one crew, one standard, fixed price. Across all of South East Queensland.
                 </p>
-                <div style={{display:"flex",gap:"12px",flexWrap:"wrap",flexShrink:0}}>
+                <div className="svc-cta-row" style={{display:"flex",gap:"12px",flexWrap:"wrap",flexShrink:0}}>
                   <button className="btn btn--solid btn--lg" onClick={openQuote}>
                     Get a free quote <SAr/>
                   </button>
@@ -181,7 +197,7 @@ function ServicesApp(){
 
             {/* trust bar */}
             <SR d="3">
-              <div style={{
+              <div className="svc-trust-strip" style={{
                 display:"flex",marginTop:"clamp(44px,5vw,64px)",
                 borderTop:"1px solid var(--line)",flexWrap:"wrap",
               }}>
@@ -223,7 +239,7 @@ function ServicesApp(){
             </SR>
 
             {/* structural services */}
-            <div style={{
+            <div className="svc-card-grid" style={{
               display:"grid",
               gridTemplateColumns:"repeat(4,1fr)",
               gap:"clamp(10px,1.2vw,14px)",
@@ -380,7 +396,7 @@ function ServicesApp(){
               }}>
                 Tell us about your site and we'll come back with a locked price, same day. No obligation. No follow-up calls unless you want them.
               </SR>
-              <SR d="3" style={{display:"flex",gap:"14px",marginTop:"36px",flexWrap:"wrap"}}>
+            <SR d="3" className="svc-cta-row" style={{display:"flex",gap:"14px",marginTop:"36px",flexWrap:"wrap"}}>
                 <button className="btn btn--solid btn--lg" onClick={openQuote}>
                   Start my quote <SAr/>
                 </button>

@@ -229,6 +229,21 @@ function DrivewayApp(){
   const [quote,setQuote]=React.useState(false);
   const open=()=>setQuote(true);
 
+  React.useEffect(()=>{
+    const usePopup = ()=> window.matchMedia("(max-width: 760px)").matches;
+    const interceptQuotePage = e=>{
+      const link = e.target.closest?.('a[href]');
+      if(!link || !usePopup()) return;
+      const href = link.getAttribute("href") || "";
+      if(href === "Quote.html" || href.endsWith("/Quote.html")){
+        e.preventDefault();
+        setQuote(true);
+      }
+    };
+    document.addEventListener("click",interceptQuotePage);
+    return ()=>document.removeEventListener("click",interceptQuotePage);
+  },[]);
+
   const testimonials = SD.testimonials;
 
   const failures=[
@@ -295,7 +310,7 @@ function DrivewayApp(){
             }}>
               Reinforced, drained and finished to spec. Fixed price, one crew, across all of South East Queensland.
             </SR>
-            <SR d="3" style={{display:"flex",gap:"12px",marginTop:"36px",flexWrap:"wrap"}}>
+            <SR d="3" className="svc-cta-row" style={{display:"flex",gap:"12px",marginTop:"36px",flexWrap:"wrap"}}>
               <button className="btn btn--solid btn--lg" onClick={open}>
                 Get a free quote <SAr/>
               </button>
@@ -412,7 +427,7 @@ function DrivewayApp(){
                 </SR>
               ))}
             </div>
-            <SR d="4" style={{marginTop:"clamp(28px,3vw,40px)",display:"flex",gap:"12px",flexWrap:"wrap"}}>
+            <SR d="4" className="svc-cta-row" style={{marginTop:"clamp(28px,3vw,40px)",display:"flex",gap:"12px",flexWrap:"wrap"}}>
               <button className="btn btn--solid btn--lg" onClick={open}>
                 Quote my driveway <SAr/>
               </button>
@@ -698,7 +713,7 @@ function DrivewayApp(){
             }}>
               Tell us the size, the finish you're after and the site details. We'll come back with a locked price — same day. No obligation to proceed.
             </SR>
-            <SR d="3" style={{
+            <SR d="3" className="svc-cta-row" style={{
               display:"flex",gap:"14px",marginTop:"40px",
               justifyContent:"center",flexWrap:"wrap",
             }}>

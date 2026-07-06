@@ -848,6 +848,21 @@ function ServiceDetailApp(){
   const openQuote = () => setQuote(true);
   const isResidential = !FINISH_IDS.has(s.id);
 
+  React.useEffect(()=>{
+    const usePopup = ()=> window.matchMedia("(max-width: 760px)").matches;
+    const interceptQuotePage = e=>{
+      const link = e.target.closest?.('a[href]');
+      if(!link || !usePopup()) return;
+      const href = link.getAttribute("href") || "";
+      if(href === "Quote.html" || href.endsWith("/Quote.html")){
+        e.preventDefault();
+        setQuote(true);
+      }
+    };
+    document.addEventListener("click",interceptQuotePage);
+    return ()=>document.removeEventListener("click",interceptQuotePage);
+  },[]);
+
   const updateMeta = (svc)=>{
     const title = `${svc.name} South East QLD | Poly Concreting`;
     const desc = svc.metaDesc || `Professional ${svc.name.toLowerCase()} across South East Queensland. Owner-operated, fixed price, same-day quotes. Based in Morayfield.`;
@@ -886,7 +901,7 @@ function ServiceDetailApp(){
       <main>
 
         {/* ── HERO ─────────────────────────────────────────── */}
-        <section style={{
+        <section className="svc-detail-hero" style={{
           position:"relative",
           minHeight: isResidential ? "100svh" : "clamp(520px,65vh,720px)",
           display:"flex",alignItems:"flex-end",overflow:"hidden",
@@ -918,7 +933,7 @@ function ServiceDetailApp(){
             }}>
               {s.tag}
             </SR>
-            <SR d="3" style={{display:"flex",gap:"clamp(18px,2.5vw,36px)",marginTop:"20px",flexWrap:"wrap"}}>
+            <SR d="3" className="svc-detail-stats" style={{display:"flex",gap:"clamp(18px,2.5vw,36px)",marginTop:"20px",flexWrap:"wrap"}}>
               {s.stat.map(x=>(
                 <span key={x} className="mono" style={{
                   fontSize:"12px",letterSpacing:".06em",color:"var(--text)",
@@ -929,7 +944,7 @@ function ServiceDetailApp(){
                 </span>
               ))}
             </SR>
-            <SR d="4" style={{display:"flex",gap:"12px",marginTop:"32px",flexWrap:"wrap"}}>
+            <SR d="4" className="svc-cta-row" style={{display:"flex",gap:"12px",marginTop:"32px",flexWrap:"wrap"}}>
               <button className="btn btn--solid btn--lg" onClick={openQuote}>
                 Quote my {s.short.toLowerCase()} <SAr/>
               </button>
@@ -965,7 +980,7 @@ function ServiceDetailApp(){
             </SR>
             {isResidential && (
               <SR d="5">
-                <div style={{
+                <div className="svc-trust-strip" style={{
                   display:"flex",flexWrap:"wrap",gap:"0",
                   marginTop:"clamp(48px,6vw,72px)",
                   borderTop:"1px solid rgba(255,255,255,.12)",
@@ -1677,7 +1692,7 @@ function ServiceDetailApp(){
               }}>
                 Tell us the size, the finish you're after and the site details. We'll come back with a locked price — same day. No obligation to proceed.
               </SR>
-              <SR d="3" style={{display:"flex",gap:"14px",marginTop:"40px",justifyContent:"center",flexWrap:"wrap"}}>
+              <SR d="3" className="svc-cta-row" style={{display:"flex",gap:"14px",marginTop:"40px",justifyContent:"center",flexWrap:"wrap"}}>
                 <button className="btn btn--solid btn--lg" onClick={openQuote}>
                   Quote my {s.short.toLowerCase()} <SAr/>
                 </button>
@@ -1716,7 +1731,7 @@ function ServiceDetailApp(){
                     Tell us about your site and we'll send a locked price, same day. No obligation to proceed.
                   </SR>
                 </div>
-                <SR d="3" style={{display:"flex",gap:"12px",flexWrap:"wrap",flexShrink:0}}>
+                <SR d="3" className="svc-cta-row" style={{display:"flex",gap:"12px",flexWrap:"wrap",flexShrink:0}}>
                   <button className="btn btn--solid btn--lg" onClick={openQuote}>
                     Quote my {s.short.toLowerCase()} <SAr/>
                   </button>
