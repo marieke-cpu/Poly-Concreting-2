@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Disallow: /images/
+
+Sitemap: https://www.polyconcreting.com.au/sitemap.xml
