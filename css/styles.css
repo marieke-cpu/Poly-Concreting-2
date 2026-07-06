@@ -190,6 +190,7 @@ button{ font-family:inherit; cursor:pointer; }
 @keyframes scrolldown{ 0%{ transform:scaleY(.3); transform-origin:top; opacity:.3 } 50%{ transform:scaleY(1); opacity:1 } 100%{ transform:scaleY(.3); transform-origin:bottom; opacity:.3 } }
 @keyframes marquee{ from{ transform:translateX(0) } to{ transform:translateX(-50%) } }
 @keyframes shimmer{ from{ background-position:-200% 0 } to{ background-position:200% 0 } }
+@keyframes urgencySweep{ 0%,45%{ transform:translateX(-120%); } 70%,100%{ transform:translateX(120%); } }
 
 /* ===== navigation ===== */
 .nav-link{ font-family:var(--font-mono); font-size:12.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); transition:color .25s; height:100%; display:flex; align-items:center; cursor:pointer; }
@@ -197,6 +198,22 @@ button{ font-family:inherit; cursor:pointer; }
 .nav-link.is-active{ position:relative; }
 .nav-link.is-active::after{ content:""; position:absolute; left:0; right:0; bottom:18px; height:1px; background:var(--chrome); }
 .nav-quote{ box-shadow:0 6px 22px rgba(0,0,0,.35); }
+.urgency-topbar{
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 10px 34px rgba(0,0,0,.32);
+}
+.urgency-topbar::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.42),transparent);
+  transform:translateX(-120%);
+  animation:urgencySweep 4.8s var(--ease) infinite;
+  pointer-events:none;
+}
+.urgency-topbar > *{ position:relative; z-index:1; }
+.mobile-urgency-cta{ display:none; }
 
 /* mega menu */
 .mega{ position:absolute; left:0; right:0; top:100%; overflow:hidden; max-height:0; opacity:0; pointer-events:none;
@@ -235,7 +252,7 @@ button{ font-family:inherit; cursor:pointer; }
 .mnav-foot{ border-top:1px solid var(--line); padding-top:18px; }
 
 @media (max-width: 980px){
-  .nav-links, .nav-phone{ display:none !important; }
+  .nav-links, .nav-cta{ display:none !important; }
   .nav-burger{ display:inline-flex !important; }
   .mega{ display:none; }
 }
@@ -362,13 +379,111 @@ select.q-input{ appearance:none; -webkit-appearance:none; cursor:pointer; }
 
 /* Nav: shrink height + logo on mobile */
 @media(max-width:760px){
-  .nav-inner{ height:68px !important; }
-  .nav-logo-img{ height:48px !important; }
+  body{ padding-bottom:calc(76px + env(safe-area-inset-bottom,0px)); }
+  .nav-inner{ height:78px !important; grid-template-columns:1fr auto 1fr !important; }
+  .nav-logo-img{ height:62px !important; }
+  .nav-burger{
+    width:48px !important;
+    height:48px !important;
+    justify-content:center !important;
+    align-items:center !important;
+    border:1px solid var(--line-2) !important;
+    border-radius:50% !important;
+    background:rgba(8,8,10,.46) !important;
+    backdrop-filter:blur(10px) !important;
+  }
+  .urgency-topbar{
+    padding:10px var(--pad) !important;
+    gap:8px !important;
+    box-shadow:0 8px 26px rgba(0,0,0,.35);
+  }
+  .urgency-topbar .urg-full-text{
+    width:100%;
+    font-size:10px !important;
+    letter-spacing:.12em !important;
+  }
+  .urgency-topbar a{
+    font-size:10px !important;
+    letter-spacing:.12em !important;
+    border-bottom-color:rgba(0,0,0,.62) !important;
+  }
+  .mobile-urgency-cta{
+    position:fixed;
+    left:12px;
+    right:12px;
+    bottom:calc(10px + env(safe-area-inset-bottom,0px));
+    z-index:130;
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:8px;
+    padding:8px;
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:14px;
+    background:rgba(8,8,10,.9);
+    backdrop-filter:blur(18px) saturate(150%);
+    box-shadow:0 20px 60px rgba(0,0,0,.55);
+  }
+  .mobile-urgency-cta a{
+    min-height:48px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    border-radius:8px;
+    font-family:var(--font-mono);
+    font-size:12px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    font-weight:700;
+  }
+  .mobile-urgency-cta__quote{ background:var(--text); color:#0a0a0b; }
+  .mobile-urgency-cta__call{ background:rgba(255,255,255,.08); color:var(--text); border:1px solid var(--line-2); }
   .reel-chip{ display:none !important; }
+  .hero--cinematic{ min-height:100svh !important; }
+  .hero--cinematic .hero-media::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+      linear-gradient(180deg,rgba(8,8,10,.72) 0%,rgba(8,8,10,.34) 34%,rgba(8,8,10,.92) 76%,rgba(8,8,10,.98) 100%),
+      linear-gradient(90deg,rgba(8,8,10,.72),rgba(8,8,10,.14) 54%,rgba(8,8,10,.38));
+    pointer-events:none;
+  }
+  .hero--cinematic .wrap{
+    padding-top:150px !important;
+    padding-bottom:118px !important;
+  }
+  .hero-copy{
+    max-width:100% !important;
+    text-shadow:0 3px 22px rgba(0,0,0,.86);
+  }
+  .hero-copy h1.display{
+    font-size:clamp(48px,15vw,72px) !important;
+    line-height:.9 !important;
+    max-width:8ch;
+  }
+  .hero-copy p{
+    max-width:31ch !important;
+    margin-top:22px !important;
+    font-size:16px !important;
+    line-height:1.55 !important;
+    color:#f0efeb !important;
+  }
+  .hero-copy .btn{
+    min-height:52px;
+    justify-content:center;
+  }
+  .hero-copy .btn--lg{
+    padding:16px 20px !important;
+    font-size:12px !important;
+    letter-spacing:.1em !important;
+  }
 }
-/* Urgency bar: collapse body text on very small screens, keep CTA */
+/* Urgency bar: keep the mobile prompt compact on very small screens */
 @media(max-width:480px){
-  .urg-full-text{ display:none !important; }
+  .urgency-topbar .urg-full-text{ font-size:9.5px !important; }
+  .hero-copy h1.display{ font-size:clamp(44px,14.5vw,64px) !important; }
+  .hero-copy p{ font-size:15px !important; }
 }
 
 /* Review progress bar animation */
@@ -393,7 +508,7 @@ select.q-input{ appearance:none; -webkit-appearance:none; cursor:pointer; }
 
 /* Hero: adjust top padding when nav is smaller */
 @media(max-width:760px){
-  .hero--cinematic .wrap{ padding-top:140px !important; }
+  .hero--cinematic .wrap{ padding-top:150px !important; }
 }
 
 /* WhyPoly: hide VS column + "them" card — show only Poly's card */

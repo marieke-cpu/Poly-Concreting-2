@@ -43,6 +43,7 @@ function Nav({ phone, onQuote }){
     return ()=>window.removeEventListener("scroll",f);
   },[]);
   uE(()=>{ document.body.style.overflow = open?"hidden":""; return ()=>{document.body.style.overflow="";}; },[open]);
+  const tel = phone.replace(/\s/g,"");
 
   return (
     <header style={{
@@ -53,12 +54,12 @@ function Nav({ phone, onQuote }){
       borderBottom:`1px solid ${(solid||mega)?"var(--line)":"transparent"}`
     }} onMouseLeave={()=>setMega(false)}>
       {/* urgency bar */}
-      <div style={{background:"var(--chrome)",color:"#0a0a0b",textAlign:"center",padding:"8px var(--pad)",display:"flex",alignItems:"center",justifyContent:"center",gap:"14px",flexWrap:"wrap"}}>
+      <div className="urgency-topbar" style={{background:"var(--chrome)",color:"#0a0a0b",textAlign:"center",padding:"8px var(--pad)",display:"flex",alignItems:"center",justifyContent:"center",gap:"14px",flexWrap:"wrap"}}>
         <span className="mono urg-full-text" style={{fontSize:"11.5px",letterSpacing:".08em",fontWeight:600}}>
-          ⚡ LIMITED BOOKINGS AVAILABLE — FILL FAST
+          LIMITED POUR DATES OPEN - CLAIM A PROPER QUOTE THIS WEEK
         </span>
         <a href="Quote.html" className="mono" style={{fontSize:"11px",letterSpacing:".1em",color:"#0a0a0b",textDecoration:"none",borderBottom:"1px solid rgba(0,0,0,.4)",whiteSpace:"nowrap",fontWeight:700}}>
-          SECURE YOUR SPOT →
+          SECURE YOUR SITE VISIT →
         </a>
       </div>
       <div className="wrap nav-inner" style={{display:"grid",gridTemplateColumns:"1fr auto 1fr",alignItems:"center",height:"100px"}}>
@@ -87,7 +88,7 @@ function Nav({ phone, onQuote }){
         {/* right — CTAs + mobile burger */}
         <div style={{display:"flex",alignItems:"center",gap:"16px",justifyContent:"flex-end"}}>
           <div className="nav-cta" style={{display:"flex",alignItems:"center",gap:"16px"}}>
-            <a href={`tel:${phone.replace(/\s/g,"")}`} className="mono nav-phone" style={{fontSize:"13px",letterSpacing:".06em",color:"var(--text)",display:"flex",alignItems:"center",gap:"8px",whiteSpace:"nowrap"}}>
+            <a href={`tel:${tel}`} className="mono nav-phone" style={{fontSize:"13px",letterSpacing:".06em",color:"var(--text)",display:"flex",alignItems:"center",gap:"8px",whiteSpace:"nowrap"}}>
               <Icon name="phone" s={15}/> {phone}
             </a>
             <a href="Quote.html" className="btn btn--solid nav-quote">Get a Quote <Arrow/></a>
@@ -131,9 +132,13 @@ function Nav({ phone, onQuote }){
           ))}
         </div>
         <div className="mnav-foot">
-          <a href={`tel:${phone.replace(/\s/g,"")}`} className="mono" style={{display:"flex",alignItems:"center",gap:"10px",justifyContent:"center",color:"var(--muted)",padding:"6px",fontSize:"14px",letterSpacing:".06em"}}><Icon name="phone" s={16}/> {phone}</a>
+          <a href={`tel:${tel}`} className="mono" style={{display:"flex",alignItems:"center",gap:"10px",justifyContent:"center",color:"var(--muted)",padding:"6px",fontSize:"14px",letterSpacing:".06em"}}><Icon name="phone" s={16}/> {phone}</a>
           <a href="Quote.html" className="btn btn--solid btn--lg" style={{width:"100%",justifyContent:"center",marginTop:"10px"}}>Get a Quote <Arrow/></a>
         </div>
+      </div>
+      <div className="mobile-urgency-cta" role="region" aria-label="Quick quote and contact actions">
+        <a href="Quote.html" className="mobile-urgency-cta__quote">Get quote</a>
+        <a href={`tel:${tel}`} className="mobile-urgency-cta__call"><Icon name="phone" s={15}/> Call now</a>
       </div>
     </header>
   );
@@ -182,17 +187,16 @@ function HeroContent({ accent, onQuote, big }){
     ? <span className="chrome-text">{children}</span>
     : <span style={{color:"#fff"}}>{children}</span>;
   return (
-    <div style={{maxWidth: big? "min(100%,900px)":"min(100%,820px)"}}>
+    <div className="hero-copy" style={{maxWidth: big? "min(100%,900px)":"min(100%,820px)"}}>
       
       <Reveal d="1" as="h1" className="display" style={{fontSize: big?"clamp(52px,8.2vw,138px)":"clamp(44px,6.4vw,104px)",margin:"24px 0 0",letterSpacing:".002em"}}>
-        The concrete<br/>beneath<br/><Chrome>South East Queensland.</Chrome>
+        Concrete done<br/>once.<br/><Chrome>Done properly.</Chrome>
       </Reveal>
       <Reveal d="2" as="p" style={{maxWidth:"46ch",margin:"30px 0 0",fontSize:"clamp(16px,1.3vw,19px)",color:"var(--muted)",lineHeight:1.65}}>
-        From driveways and exposed aggregate to house slabs and patios — 10+ years,
-        150+ pours, and one standard across the whole of SEQ: finished properly, the first time.
+        Driveways, exposed aggregate, slabs and patios built by a licensed, insured crew with 10+ years on the tools. Clear quotes, locked-in dates, tidy sites and finishes made to lift the value of your home.
       </Reveal>
       <Reveal d="3" style={{display:"flex",gap:"14px",marginTop:"38px",flexWrap:"wrap"}}>
-        <button className="btn btn--solid btn--lg" onClick={onQuote}>Get a quote <Arrow/></button>
+        <button className="btn btn--solid btn--lg" onClick={onQuote}>Get my quote <Arrow/></button>
         <a className="btn btn--ghost btn--lg" href="Projects.html">View projects <Arrow d="e"/></a>
       </Reveal>
       <Reveal d="3" style={{display:"flex",gap:"clamp(14px,2.5vw,28px)",marginTop:"20px",flexWrap:"wrap",alignItems:"center"}}>
