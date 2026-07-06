@@ -2,6 +2,30 @@
 const { Reveal, Ph, Eyebrow, Arrow, Icon } = window.PC_UI;
 const { useState:uS, useEffect:uE, useRef:uR } = React;
 
+function playHeroVideo(video){
+  if(!video) return;
+  video.muted = true;
+  video.playsInline = true;
+  const attempt = video.play();
+  attempt?.catch?.(()=>{});
+}
+
+function useAlwaysPlayingVideo(ref, deps=[]){
+  uE(()=>{
+    const resume = ()=>playHeroVideo(ref.current);
+    resume();
+    const id = window.setInterval(resume, 2200);
+    const events = ["pageshow","focus","scroll","touchend","pointerup"];
+    events.forEach(ev=>window.addEventListener(ev,resume,{passive:true}));
+    document.addEventListener("visibilitychange",resume);
+    return ()=>{
+      window.clearInterval(id);
+      events.forEach(ev=>window.removeEventListener(ev,resume));
+      document.removeEventListener("visibilitychange",resume);
+    };
+  }, deps);
+}
+
 function Logo({ light=true, h=34 }){
   return (
     <img src="Logo's/1logo.png" alt="Poly Concreting" className="nav-logo-img" width="280" height="70" decoding="async" style={{height:h,width:"auto",filter:"drop-shadow(0 1px 6px rgba(0,0,0,.5))"}}/>
@@ -188,11 +212,16 @@ function ReelModal({ onClose }){
 
 /* cinematic media block reused across variants */
 function HeroMedia({ motion, tall=false, label="DRONE SHOWREEL — 0:42", onReel }){
+  const videoRef = uR(null);
+  useAlwaysPlayingVideo(videoRef, []);
   return (
     <div className="hero-media" style={{position:"absolute",inset:0,overflow:"hidden"}}>
-      <video className="hero-bg-video" autoPlay muted loop playsInline preload="auto" poster="assets/img/hero-poster.webp"
-        onLoadedMetadata={e=>e.currentTarget.play()?.catch?.(()=>{})}
-        onCanPlay={e=>e.currentTarget.play()?.catch?.(()=>{})}
+      <video ref={videoRef} className="hero-bg-video" autoPlay muted loop playsInline preload="auto" poster="assets/img/hero-poster.webp"
+        onLoadedMetadata={e=>playHeroVideo(e.currentTarget)}
+        onCanPlay={e=>playHeroVideo(e.currentTarget)}
+        onPause={e=>window.setTimeout(()=>playHeroVideo(e.currentTarget),120)}
+        onStalled={e=>playHeroVideo(e.currentTarget)}
+        onSuspend={e=>playHeroVideo(e.currentTarget)}
         style={{position:"absolute",inset:0,width:"100%",height:"100%",objectFit:"cover",objectPosition:"center"}}
         src="assets/video/hero.mp4"/>
       <div className="hero-media__base" style={{position:"absolute",inset:0}}></div>
@@ -251,11 +280,13 @@ const HERO_VIDEOS = ["assets/video/hero.mp4","assets/video/hero3.mp4","assets/vi
 
 function SplitVideo({ motion }){
   const [idx, setIdx] = uS(0);
+  const videoRef = uR(null);
+  useAlwaysPlayingVideo(videoRef, [idx]);
   const next = ()=> setIdx(i=>(i+1)%HERO_VIDEOS.length);
   return (
     <div style={{position:"relative"}}>
       <div style={{position:"absolute",inset:0,overflow:"hidden"}}>
-        <video key={idx} autoPlay muted playsInline preload="metadata" poster="assets/img/hero-poster.webp" onLoadedMetadata={e=>e.currentTarget.play()} onEnded={next}
+        <video ref={videoRef} key={idx} autoPlay muted playsInline preload="metadata" poster="assets/img/hero-poster.webp" onLoadedMetadata={e=>playHeroVideo(e.currentTarget)} onCanPlay={e=>playHeroVideo(e.currentTarget)} onPause={e=>window.setTimeout(()=>playHeroVideo(e.currentTarget),120)} onEnded={next}
           style={{position:"absolute",inset:0,width:"100%",height:"100%",objectFit:"cover",objectPosition:"center"}}
           src={HERO_VIDEOS[idx]}/>
         {/* bottom fade */}

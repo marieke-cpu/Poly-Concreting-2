@@ -399,6 +399,7 @@ button{ font-family:inherit; cursor:pointer; }
 .foot-h{ font-size:11px; letter-spacing:.18em; color:var(--faint); }
 .foot-l{ color:var(--muted); font-size:14.5px; transition:color .2s; }
 .foot-l:hover{ color:var(--text); }
+.foot-logo{ display:block; height:auto; max-width:280px; }
 
 /* services page */
 .svc-side button:hover{ color:var(--text) !important; }
@@ -473,6 +474,9 @@ select.q-input{ appearance:none; -webkit-appearance:none; cursor:pointer; }
   .why-panel{ grid-template-columns:1fr !important; }
   .proj-card{ grid-column:auto !important; }
   .foot-grid{ grid-template-columns:1fr !important; }
+  .foot-brand{ text-align:center; }
+  .foot-logo{ width:min(240px,88vw) !important; margin:0 auto 18px !important; }
+  .foot-brand-copy{ margin-inline:auto; }
   .proc-detail{ grid-template-columns:1fr !important; }
   .test-grid{ grid-template-columns:1fr !important; }
 }
