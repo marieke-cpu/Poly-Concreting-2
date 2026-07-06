@@ -146,12 +146,12 @@ function Areas(){
 
 /* ====================== SECTION 7 — BEFORE & AFTER ====================== */
 const BA_PAIRS = [
-  { before:"assets/img/ba/ba-plain-before.jpg", after:"assets/img/ba/ba-plain-after.jpg", label:"Plain Concrete Driveway" },
-  { before:"assets/img/ba/ba03.jpg", after:"assets/img/ba/ba05.jpg", label:"Concrete Driveway" },
-  { before:"assets/img/ba/ba09.jpg", after:"assets/img/ba/ba07.jpg", label:"Acreage Slab" },
-  { before:"assets/img/ba/ba12.jpg", after:"assets/img/ba/ba13.jpg", label:"Patio Replacement" },
-  { before:"assets/img/ba/ba10.jpg", after:"assets/img/ba/ba11.jpg", label:"Concrete Crossover" },
-  { before:"Photos/Before & Afters/ex1.jpg", after:"Photos/Before & Afters/ex2.jpeg", label:"Exposed Aggregate Driveway" },
+  { before:"assets/img/ba/ba-plain-before.webp", after:"assets/img/ba/ba-plain-after.webp", label:"Plain Concrete Driveway" },
+  { before:"assets/img/ba/ba03.webp", after:"assets/img/ba/ba05.webp", label:"Concrete Driveway" },
+  { before:"assets/img/ba/ba09.webp", after:"assets/img/ba/ba07.webp", label:"Acreage Slab" },
+  { before:"assets/img/ba/ba12.webp", after:"assets/img/ba/ba13.webp", label:"Patio Replacement" },
+  { before:"assets/img/ba/ba10.webp", after:"assets/img/ba/ba11.webp", label:"Concrete Crossover" },
+  { before:"assets/img/optimized/photos-before-afters-ex1.webp", after:"assets/img/optimized/photos-before-afters-ex2.webp", label:"Exposed Aggregate Driveway" },
 ];
 
 function BASlider({ before, after }){
@@ -296,14 +296,14 @@ function Testimonials(){
 
 /* ====================== PHOTO STRIP ====================== */
 const STRIP_PHOTOS = [
-  "Photos/Driveways/Exposed1.JPG",
-  "Photos/Driveways/ex2.jpg",
-  "Photos/Driveways/Plain4.JPG",
-  "Photos/Trowel/Slab1.JPG",
-  "Photos/Rest of Photos:Vids/out1.jpg",
-  "Photos/Rest of Photos:Vids/pool1.jpg",
-  "Photos/Driveways/Plain7.jpg",
-  "Photos/Rest of Photos:Vids/outdoor10.jpg",
+  "assets/img/optimized/photos-driveways-exposed1.webp",
+  "assets/img/optimized/photos-before-afters-ex2.webp",
+  "assets/img/optimized/photos-driveways-plain4.webp",
+  "assets/img/optimized/photos-trowel-slab1.webp",
+  "assets/img/optimized/photos-rest-of-photos-vids-out1.webp",
+  "assets/img/optimized/photos-rest-of-photos-vids-pool1.webp",
+  "assets/img/optimized/photos-driveways-plain7.webp",
+  "assets/img/optimized/photos-rest-of-photos-vids-outdoor10.webp",
 ];
 
 function PhotoStrip(){

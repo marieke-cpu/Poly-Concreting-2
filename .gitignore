@@ -1,13 +1,26 @@
+.DS_Store
+
+# Raw/source media
 Photos/
+Raw/
+Originals/
+uploads/
+screenshots/
+Google Reviews/
+
+# Design source files
+*.psd
+*.ai
+*.afphoto
+
+# Raw video captures
 *.mov
 *.MOV
-*.mov
-*.mp4
-Photos/
-*.mov
-*.mp4
-Photos/
-*.mov
-*.mp4
-*.MOV
-*.MP4
+*.avi
+*.AVI
+*.m4v
+*.M4V
+
+# Keep production deployment assets tracked:
+# assets/img/
+# assets/video/

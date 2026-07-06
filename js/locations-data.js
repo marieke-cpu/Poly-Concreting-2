@@ -55,7 +55,7 @@ window.PC_LOCATIONS = [
     ],
     metaTitle: "Concreting Morayfield | Poly Concreting",
     metaDesc: "Local Morayfield concreters — driveways, shed slabs, patios & pathways. Experts in reactive clay soils. Free quotes. Call Poly Concreting today.",
-    ogImage: "assets/img/agg-driveway.jpg",
+    ogImage: "assets/img/agg-driveway.webp",
     projectIds: ["agg-drive", "acreage", "side-path"],
     schema: {
       "@context": "https://schema.org",
@@ -140,7 +140,7 @@ window.PC_LOCATIONS = [
     ],
     metaTitle: "Concreting Caboolture | Poly Concreting",
     metaDesc: "Expert concreting in Caboolture — driveways, slabs, patios & exposed aggregate. Clay soil specialists. Fast local response. Free quotes.",
-    ogImage: "assets/img/agg-driveway.jpg",
+    ogImage: "assets/img/agg-driveway.webp",
     projectIds: ["agg-drive", "acreage", "patio-agg"],
     schema: {
       "@context": "https://schema.org",
@@ -225,7 +225,7 @@ window.PC_LOCATIONS = [
     ],
     metaTitle: "Concreting North Lakes | Poly Concreting",
     metaDesc: "North Lakes concreting specialists — exposed aggregate driveways, pool surrounds & patios. Modern finishes for contemporary homes. Free quotes.",
-    ogImage: "assets/img/agg-driveway.jpg",
+    ogImage: "assets/img/agg-driveway.webp",
     projectIds: ["agg-drive", "pool-deck", "pool-coping"],
     schema: {
       "@context": "https://schema.org",
@@ -310,7 +310,7 @@ window.PC_LOCATIONS = [
     ],
     metaTitle: "Concreting Brisbane Northside | Poly Concreting",
     metaDesc: "Brisbane northside concreting — driveway replacements, patios, pool surrounds. Chermside, Aspley, Mitchelton & The Gap. Free quotes.",
-    ogImage: "assets/img/agg-driveway.jpg",
+    ogImage: "assets/img/agg-driveway.webp",
     projectIds: ["agg-drive", "pool-deck", "entry"],
     schema: {
       "@context": "https://schema.org",
@@ -396,7 +396,7 @@ window.PC_LOCATIONS = [
     ],
     metaTitle: "Concreting Sunshine Coast | Poly Concreting",
     metaDesc: "Sunshine Coast concreting — pool surrounds, driveways & alfresco slabs from Caloundra to Maroochydore. Coastal specialists. Free quotes.",
-    ogImage: "assets/img/agg-driveway.jpg",
+    ogImage: "assets/img/agg-driveway.webp",
     projectIds: ["pool-deck", "pool-coping", "patio-agg"],
     schema: {
       "@context": "https://schema.org",
@@ -481,7 +481,7 @@ window.PC_LOCATIONS = [
     ],
     metaTitle: "Concreting Ipswich | Poly Concreting",
     metaDesc: "Ipswich concreting — shed slabs, house slabs, driveways & patios. Springfield Lakes & Ripley specialists. Acreage & new builds. Free quotes.",
-    ogImage: "assets/img/agg-driveway.jpg",
+    ogImage: "assets/img/agg-driveway.webp",
     projectIds: ["acreage", "agg-drive", "commercial"],
     schema: {
       "@context": "https://schema.org",
@@ -567,7 +567,7 @@ window.PC_LOCATIONS = [
     ],
     metaTitle: "Concreting Gold Coast | Poly Concreting",
     metaDesc: "Gold Coast concreting — exposed aggregate driveways, pool surrounds & alfresco slabs. Coomera & northern Gold Coast specialists. Free quotes.",
-    ogImage: "assets/img/agg-driveway.jpg",
+    ogImage: "assets/img/agg-driveway.webp",
     projectIds: ["agg-drive", "pool-deck", "pool-coping"],
     schema: {
       "@context": "https://schema.org",
@@ -653,7 +653,7 @@ window.PC_LOCATIONS = [
     ],
     metaTitle: "Concreting Toowoomba | Poly Concreting",
     metaDesc: "Toowoomba concreting — driveways, patios, slabs & garden paths. Climate-appropriate mix design. Residential & commercial. Free quotes.",
-    ogImage: "assets/img/agg-driveway.jpg",
+    ogImage: "assets/img/agg-driveway.webp",
     projectIds: ["agg-drive", "commercial", "riverstone"],
     schema: {
       "@context": "https://schema.org",

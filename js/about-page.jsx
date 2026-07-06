@@ -82,7 +82,7 @@ function AboutPage(){
                 </div>
               </div>
               <BR d="1" style={{position:"relative",borderRadius:"var(--r-lg)",overflow:"hidden",border:"1px solid var(--line)",aspectRatio:"4/3",minHeight:"220px"}}>
-                <BPh label={null} src="assets/img/team.jpg" pos="center 38%" style={{position:"absolute",inset:0}}/>
+                <BPh label={null} src="assets/img/team.webp" pos="center 38%" style={{position:"absolute",inset:0}}/>
                 <div style={{position:"absolute",inset:0,background:"linear-gradient(0deg,rgba(8,8,10,.55),transparent 55%)"}}/>
                 <div className="ph__tag" style={{position:"absolute",left:0,bottom:0}}>THE POLY CREW · MORAYFIELD, SEQ</div>
               </BR>

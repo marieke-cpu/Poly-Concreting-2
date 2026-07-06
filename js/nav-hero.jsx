@@ -4,7 +4,7 @@ const { useState:uS, useEffect:uE, useRef:uR } = React;
 
 function Logo({ light=true, h=34 }){
   return (
-    <img src="Logo's/1logo.png" alt="Poly Concreting" className="nav-logo-img" style={{height:h,width:"auto",filter:"drop-shadow(0 1px 6px rgba(0,0,0,.5))"}}/>
+    <img src="Logo's/1logo.png" alt="Poly Concreting" className="nav-logo-img" decoding="async" style={{height:h,width:"auto",filter:"drop-shadow(0 1px 6px rgba(0,0,0,.5))"}}/>
   );
 }
 
@@ -150,9 +150,9 @@ function ReelModal({ onClose }){
   return (
     <div onClick={onClose} style={{position:"fixed",inset:0,zIndex:200,background:"rgba(8,8,10,.95)",backdropFilter:"blur(12px)",display:"flex",alignItems:"center",justifyContent:"center",padding:"clamp(16px,3vw,40px)"}}>
       <button onClick={onClose} aria-label="Close" style={{position:"fixed",top:"20px",right:"20px",width:"40px",height:"40px",borderRadius:"50%",border:"1px solid var(--line-2)",background:"rgba(8,8,10,.7)",color:"var(--text)",cursor:"pointer",display:"grid",placeItems:"center",zIndex:2,fontSize:"18px"}}>✕</button>
-      <video onClick={e=>e.stopPropagation()} autoPlay controls playsInline
+      <video onClick={e=>e.stopPropagation()} controls playsInline preload="metadata" poster="assets/img/hero-poster.webp"
         style={{maxWidth:"100%",maxHeight:"85vh",borderRadius:"var(--r-lg)",outline:"none",boxShadow:"0 24px 64px rgba(0,0,0,.7)"}}
-        src="assets/hero.mov"/>
+        src="assets/video/hero.mp4"/>
     </div>
   );
 }
@@ -161,9 +161,9 @@ function ReelModal({ onClose }){
 function HeroMedia({ motion, tall=false, label="DRONE SHOWREEL — 0:42", onReel }){
   return (
     <div className="hero-media" style={{position:"absolute",inset:0,overflow:"hidden"}}>
-      <video autoPlay muted loop playsInline
+      <video muted loop playsInline preload="metadata" poster="assets/img/hero-poster.webp" onLoadedMetadata={e=>e.currentTarget.play()}
         style={{position:"absolute",inset:0,width:"100%",height:"100%",objectFit:"cover",objectPosition:"center"}}
-        src="assets/hero.mov"/>
+        src="assets/video/hero.mp4"/>
       <div style={{position:"absolute",inset:0}}></div>
       {/* cinematic gradients */}
       <div style={{position:"absolute",inset:0,background:"linear-gradient(90deg,rgba(8,8,10,.94) 0%,rgba(8,8,10,.6) 40%,rgba(8,8,10,.25) 72%,rgba(8,8,10,.6) 100%)"}}></div>
@@ -217,7 +217,7 @@ function HeroContent({ accent, onQuote, big }){
   );
 }
 
-const HERO_VIDEOS = ["assets/hero.mov","assets/hero3.mov","assets/hero4.mov","assets/hero1.mov"];
+const HERO_VIDEOS = ["assets/video/hero.mp4","assets/video/hero3.mp4","assets/video/hero4.mp4","assets/video/hero1.mp4"];
 
 function SplitVideo({ motion }){
   const [idx, setIdx] = uS(0);
@@ -225,7 +225,7 @@ function SplitVideo({ motion }){
   return (
     <div style={{position:"relative"}}>
       <div style={{position:"absolute",inset:0,overflow:"hidden"}}>
-        <video key={idx} autoPlay muted playsInline onEnded={next}
+        <video key={idx} muted playsInline preload="metadata" poster="assets/img/hero-poster.webp" onLoadedMetadata={e=>e.currentTarget.play()} onEnded={next}
           style={{position:"absolute",inset:0,width:"100%",height:"100%",objectFit:"cover",objectPosition:"center"}}
           src={HERO_VIDEOS[idx]}/>
         {/* bottom fade */}
@@ -270,7 +270,7 @@ function Hero({ variant="cinematic", accent="chrome", motion=true, onQuote }){
             </Reveal>
           </div>
           <Reveal d="3" style={{marginTop:"40px",height:"clamp(180px,26vh,300px)",position:"relative",borderRadius:"var(--r)",overflow:"hidden",border:"1px solid var(--line)"}}>
-            <Ph label="HERO FILM — concrete pour · drone · finishing  (replace with showreel)" src="assets/img/slab-powerfloat.jpg" pos="center 58%" style={{position:"absolute",inset:0}}/>
+            <Ph label="HERO FILM — concrete pour · drone · finishing  (replace with showreel)" src="assets/img/slab-powerfloat.webp" pos="center 58%" style={{position:"absolute",inset:0}}/>
             <div style={{position:"absolute",inset:0,display:"grid",placeItems:"center"}}>
               <span style={{width:"56px",height:"56px",borderRadius:"50%",background:"var(--chrome)",color:"#0a0a0b",display:"grid",placeItems:"center"}}><Icon name="play" s={20}/></span>
             </div>

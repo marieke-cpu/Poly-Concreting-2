@@ -99,7 +99,7 @@ function QuotePage(){
 
         {/* ── HERO ─────────────────────────────────────── */}
         <section style={{paddingTop:"clamp(180px,22vh,220px)",paddingBottom:"clamp(40px,5vw,72px)",borderBottom:"1px solid var(--line)",position:"relative",overflow:"hidden"}}>
-          <img src="assets/img/agg-joint.jpg" alt="" aria-hidden="true" style={{position:"absolute",inset:0,width:"100%",height:"100%",objectFit:"cover",opacity:.12}}/>
+          <img src="assets/img/agg-joint.webp" alt="" aria-hidden="true" style={{position:"absolute",inset:0,width:"100%",height:"100%",objectFit:"cover",opacity:.12}}/>
           <div style={{position:"absolute",inset:0,background:"linear-gradient(180deg,rgba(8,8,10,.7),var(--ink))"}}/>
           <div className="wrap" style={{position:"relative"}}>
             <QR><QEb n="—">Get a Quote</QEb></QR>

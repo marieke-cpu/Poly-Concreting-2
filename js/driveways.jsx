@@ -273,7 +273,7 @@ function DrivewayApp(){
           position:"relative",minHeight:"100svh",
           display:"flex",alignItems:"flex-end",overflow:"hidden",
         }}>
-          <SPh label={null} src="assets/img/agg-driveway.jpg" pos="center 58%"
+          <SPh label={null} src="assets/img/agg-driveway.webp" pos="center 58%"
             style={{position:"absolute",inset:0}}/>
           <div style={{
             position:"absolute",inset:0,

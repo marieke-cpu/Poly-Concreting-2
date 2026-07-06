@@ -83,9 +83,11 @@ function Counter({ value, prefix="", suffix="", dur=1700 }){
 
 /* image / striped placeholder */
 function Ph({ label, className="", style, bone=false, src, alt="", pos="center", children }){
+  const fallbackAlt = src ? src.split("/").pop().replace(/\.[^.]+$/, "").replace(/[-_]+/g, " ") : "";
+  const imgAlt = alt || label || fallbackAlt;
   return (
     <div className={`ph ${bone?"ph--bone":""} ${className}`} style={style}>
-      {src && <img src={src} alt={alt} loading="lazy" style={{position:"absolute",inset:0,width:"100%",height:"100%",objectFit:"cover",objectPosition:pos}}/>}
+      {src && <img src={src} alt={imgAlt} loading="lazy" decoding="async" style={{position:"absolute",inset:0,width:"100%",height:"100%",objectFit:"cover",objectPosition:pos}}/>}
       {children}
       {label && <div className="ph__tag" style={src?{background:"rgba(8,8,10,.5)",backdropFilter:"blur(4px)",borderRadius:"3px",margin:"10px"}:undefined}>{label}</div>}
     </div>
