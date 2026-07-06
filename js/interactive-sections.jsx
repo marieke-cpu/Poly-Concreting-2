@@ -4,7 +4,9 @@ const SVC = window.PC_SERVICES;
 const SD  = window.PC_DATA;
 
 const JOB_TYPES = SVC.slice(0,6);  /* driveways → commercial */
-const FINISHES  = SVC.slice(8);     /* trowel → covercrete */
+const STANDARD_FINISHES = ["broom", "trowel", "swirl"].map(id => SVC.find(s => s.id === id)).filter(Boolean);
+const DECORATIVE_FINISHES = ["exposed", "coloured", "stamped", "covercrete"].map(id => SVC.find(s => s.id === id)).filter(Boolean);
+const FINISHES = [...STANDARD_FINISHES, ...DECORATIVE_FINISHES];
 
 /* ═══════════════════════════════════════════════════════════════
    A — WHAT ARE YOU BUILDING?  (job configurator)
@@ -171,7 +173,7 @@ function FinishVisualiser(){
             fontSize:"9.5px",letterSpacing:".18em",color:"var(--faint)",
             padding:"12px 16px 8px",borderBottom:"1px solid var(--line)",
           }}>STANDARD</div>
-          {FINISHES.slice(0,3).map((f,i)=>(
+          {STANDARD_FINISHES.map((f,i)=>(
             <FinishTab key={f.id} f={f} active={active===i} onClick={()=>setActive(i)}/>
           ))}
           {/* decorative */}
@@ -179,8 +181,8 @@ function FinishVisualiser(){
             fontSize:"9.5px",letterSpacing:".18em",color:"var(--faint)",
             padding:"12px 16px 8px",borderBottom:"1px solid var(--line)",
           }}>DECORATIVE</div>
-          {FINISHES.slice(3).map((f,i)=>(
-            <FinishTab key={f.id} f={f} active={active===i+3} onClick={()=>setActive(i+3)}/>
+          {DECORATIVE_FINISHES.map((f,i)=>(
+            <FinishTab key={f.id} f={f} active={active===i+STANDARD_FINISHES.length} onClick={()=>setActive(i+STANDARD_FINISHES.length)}/>
           ))}
         </div>
 
