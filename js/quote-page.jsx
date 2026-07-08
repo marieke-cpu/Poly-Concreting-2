@@ -49,8 +49,25 @@ function QuoteForm(){
     );
   }
 
+  const submit = async e => {
+    e.preventDefault();
+    if(!ok) return;
+    const payload = {
+      ...d,
+      name: d.name,
+      phone: d.phone,
+      type: d.service,
+      suburb: d.location,
+      message: d.details,
+      source: "Quote page",
+    };
+    if(window.PC_SUBMIT_QUOTE) await window.PC_SUBMIT_QUOTE(payload);
+    sessionStorage.setItem("pc_quote", JSON.stringify(payload));
+    setSent(true);
+  };
+
   return (
-    <form onSubmit={e=>{e.preventDefault(); if(ok) setSent(true);}}
+    <form onSubmit={submit}
       style={{background:"linear-gradient(180deg,#161619,#101012)",border:"1px solid var(--line-2)",borderRadius:"var(--r-lg)",padding:"clamp(26px,3.4vw,44px)"}}>
       <h2 className="display" style={{fontSize:"clamp(22px,2.4vw,30px)",margin:"0 0 24px"}}>Tell us about your project</h2>
       <div className="q-form-grid" style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"18px"}}>

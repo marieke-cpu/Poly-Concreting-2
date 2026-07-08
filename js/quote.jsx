@@ -30,16 +30,22 @@ function QuoteModal({ open, onClose }){
   const steps=["Service","Size & finish","Your details"];
   const canNext = step===0 ? !!type : step===1 ? area>0 : (contact.name && contact.phone);
 
-  const submit=()=>{
-    sessionStorage.setItem("pc_quote", JSON.stringify({
+  const submit=async ()=>{
+    const payload = {
       name:    contact.name,
       phone:   contact.phone,
+      email:   contact.email,
+      suburb:  region,
       type:    T ? T.label : null,
       area:    area,
       finish:  F ? F.label : null,
       estLow:  T ? estLow  : null,
       estHigh: T ? estHigh : null,
-    }));
+      message: contact.msg,
+      source: "Quote modal",
+    };
+    if(window.PC_SUBMIT_QUOTE) await window.PC_SUBMIT_QUOTE(payload);
+    sessionStorage.setItem("pc_quote", JSON.stringify(payload));
     window.location.href = "thankyou.html";
   };
 

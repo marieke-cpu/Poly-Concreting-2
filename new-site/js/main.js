@@ -66,13 +66,40 @@ if ('IntersectionObserver' in window) {
 }
 
 // ── Quote form ───────────────────────────────────────────────
+const WEB3FORMS_ACCESS_KEY = 'b2c0b7c1-c7d7-4c8d-9e45-3a8f415d2dce';
 const quoteForm = document.getElementById('quote-form');
 if (quoteForm) {
-  quoteForm.addEventListener('submit', e => {
+  quoteForm.addEventListener('submit', async e => {
     e.preventDefault();
-    const data = new FormData(quoteForm);
-    // Replace with your form handler (Netlify, Formspree, EmailJS, etc.)
-    // Example: fetch('/api/quote', { method: 'POST', body: data })
+    const submitBtn = quoteForm.querySelector('button[type="submit"]');
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+    }
+
+    const data = Object.fromEntries(new FormData(quoteForm).entries());
+    const payload = {
+      access_key: WEB3FORMS_ACCESS_KEY,
+      subject: 'New quote request - Poly Concreting new site',
+      from_name: `${data.fname || ''} ${data.lname || ''}`.trim() || 'Poly Concreting website',
+      botcheck: '',
+      ...data,
+    };
+
+    if (WEB3FORMS_ACCESS_KEY === 'YOUR_WEB3FORMS_ACCESS_KEY') {
+      console.warn('Web3Forms access key is not configured in new-site/js/main.js');
+    } else {
+      try {
+        await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify(payload),
+        });
+      } catch (error) {
+        console.error('Web3Forms submission failed', error);
+      }
+    }
+
     const successEl = document.getElementById('form-success');
     if (successEl) {
       quoteForm.style.display = 'none';

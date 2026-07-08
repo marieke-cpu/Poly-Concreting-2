@@ -3,6 +3,7 @@ window.PC_DATA = {
   phone: "0481 445 041",
   email: "contact@polyconcreting.com.au",
   base: "Morayfield, QLD",
+  web3formsAccessKey: "b2c0b7c1-c7d7-4c8d-9e45-3a8f415d2dce",
 
   nav: [
     ["Home","Poly Concreting.html"],
@@ -194,5 +195,33 @@ window.PC_DATA = {
       { id:"exposed", label:"Exposed Aggregate",  mult:1.25 },
       { id:"other",   label:"Other",              mult:1.0 },
     ]
+  }
+};
+
+window.PC_SUBMIT_QUOTE = async function submitQuoteToWeb3Forms(payload){
+  const key = window.PC_DATA && window.PC_DATA.web3formsAccessKey;
+  if(!key || key === "YOUR_WEB3FORMS_ACCESS_KEY"){
+    console.warn("Web3Forms access key is not configured in js/data.js");
+    return { success:false, missingKey:true };
+  }
+
+  const body = {
+    access_key: key,
+    subject: payload.subject || "New quote request - Poly Concreting",
+    from_name: payload.name || payload.fullName || "Poly Concreting website",
+    botcheck: "",
+    ...payload,
+  };
+
+  try {
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify(body),
+    });
+    return await res.json();
+  } catch (error) {
+    console.error("Web3Forms submission failed", error);
+    return { success:false, error:true };
   }
 };

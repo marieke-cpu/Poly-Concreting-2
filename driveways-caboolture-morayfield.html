@@ -613,17 +613,47 @@ body.ads-driveway-page{background:#08080a;color:var(--text);padding-bottom:0}
 </div>
 
 <script>
-document.getElementById("adsQuoteForm").addEventListener("submit", function(event){
+const WEB3FORMS_ACCESS_KEY = "b2c0b7c1-c7d7-4c8d-9e45-3a8f415d2dce";
+
+async function submitAdsQuoteToWeb3Forms(payload){
+  if(!WEB3FORMS_ACCESS_KEY || WEB3FORMS_ACCESS_KEY === "YOUR_WEB3FORMS_ACCESS_KEY"){
+    console.warn("Web3Forms access key is not configured on this landing page.");
+    return { success:false, missingKey:true };
+  }
+  try {
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify({
+        access_key: WEB3FORMS_ACCESS_KEY,
+        subject: "New driveway quote request - Caboolture/Morayfield",
+        from_name: payload.name || "Poly Concreting ads landing page",
+        botcheck: "",
+        ...payload,
+      }),
+    });
+    return await res.json();
+  } catch (error) {
+    console.error("Web3Forms submission failed", error);
+    return { success:false, error:true };
+  }
+}
+
+document.getElementById("adsQuoteForm").addEventListener("submit", async function(event){
   event.preventDefault();
   const data = Object.fromEntries(new FormData(event.currentTarget).entries());
-  sessionStorage.setItem("pc_quote", JSON.stringify({
+  const payload = {
     name: data.name || "",
     phone: data.phone || "",
+    email: data.email || "",
     type: "Driveway",
     suburb: data.suburb || "",
     finish: data.finish || "",
+    message: data.message || "",
     source: "Google Ads - Driveways Caboolture Morayfield"
-  }));
+  };
+  await submitAdsQuoteToWeb3Forms(payload);
+  sessionStorage.setItem("pc_quote", JSON.stringify(payload));
   window.location.href = "thankyou.html";
 });
 
