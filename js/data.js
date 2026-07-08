@@ -70,7 +70,7 @@ window.PC_DATA = {
     { id:"goodna-drive", title:"Concrete Driveway", cat:"Driveways", loc:"Goodna", scope:"Broom finish concrete driveway", year:"2026", img:"assets/img/optimized/photos-driveways-plain4.webp", pos:"center",
       blurb:"Broom finish concrete driveway in Goodna — solid prep, clean edges and a lasting result.", stat:["Broom finish"] },
     { id:"pool-deck", title:"Covercrete Pool Surround", cat:["Pool Surrounds","Resurfacing"], loc:"Birkdale", scope:"Covercrete pool surround", year:"2026", img:"assets/img/pool-deck-tile.webp", pos:"center 62%",
-      blurb:"Covercrete overlay around a pool surround — fresh decorative finish without the cost or disruption of a full rip-out.", stat:["70m²","Covercrete","Slip-rated"] },
+      blurb:"Covercrete overlay around a pool surround — fresh decorative finish without the disruption of a full rip-out.", stat:["70m²","Covercrete","Slip-rated"] },
     { id:"side-path", title:"Exposed Aggregate Side Path", cat:"Pathways", loc:"Kallangur", scope:"Exposed aggregate side access path", year:"2026", img:"assets/img/agg-path-brick.webp", pos:"center",
       blurb:"Tight side-access path in fine brown aggregate, graded to fall away from the house with a crisp brick-edge join.", stat:["40m²","Fine agg","Magnum Colour"] },
     { id:"springfield-shed", title:"Plain Concrete Shed Slab", cat:"Slabs", loc:"Springfield", scope:"Plain concrete broom finish shed slab", year:"2026", img:"assets/img/optimized/photos-rest-of-photos-vids-out1.webp", pos:"center",

@@ -41,7 +41,7 @@ window.PC_SERVICES = [
     mistakes:[
       { icon:"slab",  prob:"Steel on the ground, not in it",       probD:"Mesh flat on the ground gives almost no structural benefit. The steel needs to be at mid-height on chairs — that's what stops cracking under load for the next 30 years.",      fixD:"Mesh on chairs to the correct cover depth, every pour. We don't cut corners on the one thing that determines how the slab performs." },
       { icon:"path",  prob:"No drainage plan",                      probD:"A slab poured without positive falls drains toward your footings and under your walls. By the time you see the problem, the damage is already done.",                             fixD:"We set grades before formwork goes up — water runs the way we tell it to, away from everything it shouldn't touch." },
-      { icon:"truck", prob:"Wrong concrete spec",                   probD:"Ordering the cheapest mix to save $100 on a 200m² slab is a false economy. Under-specified concrete fails faster, loses surface strength and can't be fixed.",                  fixD:"We specify the right mix for the application — shed floor, garage or living area — and we document the slump on delivery." },
+      { icon:"truck", prob:"Wrong concrete spec",                   probD:"Ordering an under-specified mix to save a little upfront is a false economy. Weak concrete fails faster, loses surface strength and can't be fixed.",                  fixD:"We specify the right mix for the application — shed floor, garage or living area — and we document the slump on delivery." },
     ],
     benefits:[
       {icon:"clipboard", t:"To your slab design",   d:"Soil prep, footings and steel correctly placed to your slab plan."},
@@ -98,10 +98,10 @@ window.PC_SERVICES = [
       {t:"Joint & clean up",      d:"Cut joints, strip forms and leave the site tidy."},
     ],
     pricingFactors:[
-      { icon:"path",    t:"Length & width",   d:"Narrow side paths are priced per linear metre. Wide feature paths and wrap-arounds are priced per m² — we use whichever suits the job." },
+      { icon:"path",    t:"Length & width",   d:"Narrow side paths, wide feature paths and wrap-arounds are scoped differently — we use the method that suits the job." },
       { icon:"truck",   t:"Site access",      d:"Paths beside the house often need barrow or pump access. That affects labour time — we walk the site before quoting." },
-      { icon:"sparkle", t:"Drainage",         d:"Standard crossfall is included. Channel drains and pit connections are scoped and priced separately." },
-      { icon:"slab",    t:"Finish choice",    d:"Broom is the base rate. Exposed aggregate or colour adds material and labour — itemised clearly in the quote." },
+      { icon:"sparkle", t:"Drainage",         d:"Standard crossfall is part of the plan. Channel drains and pit connections are scoped clearly before work starts." },
+      { icon:"slab",    t:"Finish choice",    d:"Broom, exposed aggregate and coloured finishes all require different materials and labour. We itemise the finish clearly in the quote." },
     ],
     faqs:[
       {q:"Can you fit down a narrow side access?",  a:"Yes — tight side runs with drainage are one of our most common jobs. We barrow or pump where machines won't fit."},
@@ -320,7 +320,7 @@ window.PC_SERVICES = [
     faqs:[
       {q:"Which direction does the broom run?",    a:"Typically perpendicular to traffic flow so the lines give the most grip underfoot and to tyres."},
       {q:"How coarse is the texture?",             a:"We match the broom coarseness to the application — finer for paths and patios, coarser for driveways."},
-      {q:"Can it be combined with coloured concrete?", a:"Yes — broom over oxide-coloured concrete is one of the most popular and cost-effective finish combinations we do."},
+      {q:"Can it be combined with coloured concrete?", a:"Yes — broom over oxide-coloured concrete is one of the most popular finish combinations we do."},
     ],
     stat:["Slip-resistant","Any outdoor area","Pairs with colour"],
     testimonial:{ q:"Just a straightforward backyard slab — but they did it exactly right. Level, no cracks, tidy edges. Exactly what we needed.", n:"Tony B.", r:"Morayfield" },
@@ -348,7 +348,7 @@ window.PC_SERVICES = [
     ],
     faqs:[
       {q:"Is the pattern consistent across the whole slab?",  a:"Yes — a good swirl finish is uniform in size and depth across the full area. Patchy swirls are a sign of a rushed or late finish."},
-      {q:"Can you do it on large areas?",                     a:"Yes, though it takes more time per square metre than a broom finish. We factor that into the quote."},
+      {q:"Can you do it on large areas?",                     a:"Yes, though it takes more time than a broom finish. We'll advise where it suits best before locking in the scope."},
       {q:"Does it suit driveways?",                          a:"It can, though broom finish is more common on driveways. Swirl is popular on patios, pool surrounds and under-cover entertaining areas."},
     ],
     stat:["Hand-applied","Slip-resistant","Outdoor & entertaining"],
@@ -461,7 +461,7 @@ window.PC_SERVICES = [
     faqs:[
       {q:"Will the colour fade?",               a:"Not significantly. Oxide pigments are UV-stable. A reseal every few years keeps the colour rich and protected."},
       {q:"Can you match my existing concrete?", a:"We can get close but not exact — concrete colour varies with batch, age and weathering. We'll be upfront about that."},
-      {q:"Is it more expensive than plain?",    a:"Slightly — oxide pigment adds cost, but it's a fraction of the price difference between concrete and pavers."},
+      {q:"How does coloured concrete compare with plain concrete?", a:"Coloured concrete uses oxide pigment to create a richer finish than plain grey concrete. We'll talk through the look, maintenance and best use cases during the site visit."},
     ],
     stat:["Full-depth colour","UV stable","Wide palette"],
     testimonial:{ q:"The charcoal coloured driveway lifted the whole streetscape. Looks exactly like the sample — really happy.", n:"Lisa & David W.", r:"Redcliffe" },
@@ -609,7 +609,7 @@ window.PC_SERVICES = [
     metaDesc:"Covercrete spray overlays across South East QLD. Decorative resurfacing over existing slabs — no demolition. Dulux Avista colours & patterns. Fixed price. Based in Morayfield.",
     tag:"Transform tired concrete with a sprayed decorative overlay — no demolition required.",
     hero:"assets/img/covercrete-hero.webp", pos:"center",
-    intro:"Covercrete is a spray-applied polymer-modified overlay that bonds directly to existing sound concrete. You get a fresh, decorative surface without the cost or disruption of a full rip-out — and with a far wider range of finishes than plain resurfacing.",
+    intro:"Covercrete is a spray-applied polymer-modified overlay that bonds directly to existing sound concrete. You get a fresh, decorative surface without the disruption of a full rip-out — and with a far wider range of finishes than plain resurfacing.",
     benefits:[
       {icon:"sparkle",   t:"No demolition",               d:"Goes over your existing slab if it's structurally sound — no skip bin, no excavation, no mess."},
       {icon:"trowel",    t:"Wide pattern & colour range",  d:"Aggregate, slate, stone and custom textured finishes in dozens of colour options."},
