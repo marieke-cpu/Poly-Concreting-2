@@ -120,6 +120,128 @@ function TCard({ q, n, r }){
   );
 }
 
+function GoogleMark(){
+  return (
+    <svg width="34" height="34" viewBox="0 0 48 48" aria-hidden="true" style={{flexShrink:0}}>
+      <path fill="#4285F4" d="M44.5 20H24v8h11.7C34 33.5 29.5 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6-6C34.6 5.1 29.6 3 24 3 12.4 3 3 12.4 3 24s9.4 21 21 21c10.9 0 20-7.9 20-21 0-1.3-.1-2.7-.5-4z"/>
+      <path fill="#34A853" d="M6.3 14.7l6.6 4.8C14.6 15.4 19 12 24 12c3.1 0 5.9 1.1 8.1 2.9l6-6C34.6 5.1 29.6 3 24 3c-7.7 0-14.4 4.5-17.7 11.7z"/>
+      <path fill="#FBBC05" d="M24 45c5.4 0 10.3-1.9 14.1-5l-6.5-5.3C29.5 36.2 26.9 37 24 37c-5.5 0-10.1-3.5-11.7-8.3l-6.6 5C9.4 40.5 16.2 45 24 45z"/>
+      <path fill="#EA4335" d="M44.5 20H24v8h11.7c-.8 2.4-2.4 4.4-4.5 5.8l6.5 5.3C41.8 35.7 45 30.3 45 24c0-1.3-.1-2.7-.5-4z"/>
+    </svg>
+  );
+}
+
+function Stars({ size=17 }){
+  const star = "M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z";
+  return (
+    <span aria-label="5 star review" style={{display:"inline-flex",gap:"3px",color:"#FBBC04"}}>
+      {[0,1,2,3,4].map(i=>(
+        <svg key={i} width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d={star}/>
+        </svg>
+      ))}
+    </span>
+  );
+}
+
+function ReviewCarousel({ reviews }){
+  const [idx, setIdx] = React.useState(0);
+  const total = reviews.length;
+  const go = step => setIdx(i => (i + step + total) % total);
+
+  React.useEffect(()=>{
+    if(total < 2) return;
+    const timer = setInterval(()=>go(1), 5200);
+    return ()=>clearInterval(timer);
+  }, [total]);
+
+  const featured = reviews[idx] || reviews[0];
+
+  return (
+    <div className="services-review-carousel" style={{
+      display:"flex",
+      alignItems:"stretch",
+      gap:"0",
+      marginTop:"clamp(28px,3.5vw,44px)",
+      background:"var(--base)",
+      border:"1px solid var(--line)",
+      borderRadius:"var(--r)",
+      overflow:"hidden",
+    }}>
+      <SR d="2">
+        <div style={{
+          height:"100%",
+          background:"var(--panel)",
+          borderRight:"1px solid var(--line)",
+          padding:"clamp(18px,2vw,24px)",
+          width:"clamp(250px,24vw,330px)",
+          display:"flex",
+          flexDirection:"column",
+          justifyContent:"space-between",
+          gap:"18px",
+        }}>
+          <div>
+            <div style={{display:"flex",alignItems:"center",gap:"14px"}}>
+              <GoogleMark/>
+              <div>
+                <div className="mono" style={{fontSize:"11px",letterSpacing:".14em",color:"var(--muted)"}}>GOOGLE REVIEWS</div>
+                <div style={{display:"flex",alignItems:"center",gap:"10px",marginTop:"5px"}}>
+                  <strong style={{fontSize:"32px",lineHeight:1}}>4.8</strong>
+                  <Stars/>
+                </div>
+              </div>
+            </div>
+            <p style={{margin:"22px 0 0",color:"var(--muted)",fontSize:"15px",lineHeight:1.65,maxWidth:"34ch"}}>
+              Public client feedback from homeowners and builders across South East Queensland.
+            </p>
+          </div>
+          <div className="mono" style={{fontSize:"10.5px",letterSpacing:".09em",color:"var(--faint)",borderTop:"1px solid var(--line)",paddingTop:"14px"}}>
+            {SD.googleReviewCount}+ REVIEWS · MORAYFIELD BASED
+          </div>
+        </div>
+      </SR>
+
+      <SR d="3" style={{flex:1,minWidth:0}}>
+        <div style={{
+          height:"100%",
+          display:"flex",
+          alignItems:"stretch",
+          minWidth:0,
+        }}>
+          <div key={idx} className="rise" style={{padding:"clamp(20px,2.4vw,30px)",flex:1,minWidth:0}}>
+            <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",gap:"16px",flexWrap:"wrap"}}>
+              <Stars size={18}/>
+              <span className="mono" style={{fontSize:"10.5px",letterSpacing:".12em",color:"var(--muted)"}}>GOOGLE REVIEW</span>
+            </div>
+            <p style={{margin:"clamp(16px,1.8vw,22px) 0 0",fontSize:"clamp(16px,1.35vw,21px)",lineHeight:1.5,maxWidth:"72ch",color:"var(--text)"}}>
+              "{featured.q}"
+            </p>
+            <div style={{display:"flex",alignItems:"center",gap:"12px",marginTop:"clamp(16px,1.8vw,22px)"}}>
+              <div style={{width:"44px",height:"44px",borderRadius:"50%",background:"var(--panel-3)",border:"1px solid var(--line-2)",display:"grid",placeItems:"center",fontWeight:800}}>
+                {featured.n[0]}
+              </div>
+              <div>
+                <div style={{fontWeight:700}}>{featured.n}</div>
+                <div className="mono" style={{fontSize:"11px",color:"var(--muted)",letterSpacing:".05em"}}>{featured.r} · Google</div>
+              </div>
+            </div>
+          </div>
+
+          <div style={{borderLeft:"1px solid var(--line)",padding:"clamp(18px,2vw,24px)",display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",gap:"14px",background:"var(--panel)",width:"clamp(118px,10vw,150px)",flexShrink:0}}>
+            <div className="mono" style={{fontSize:"11px",letterSpacing:".1em",color:"var(--muted)",whiteSpace:"nowrap"}}>
+              {idx + 1} / {total}
+            </div>
+            <div style={{display:"flex",gap:"8px"}}>
+              <button type="button" aria-label="Previous review" onClick={()=>go(-1)} style={{width:"38px",height:"38px",borderRadius:"50%",border:"1px solid var(--line-2)",background:"transparent",color:"var(--text)"}}>‹</button>
+              <button type="button" aria-label="Next review" onClick={()=>go(1)} style={{width:"38px",height:"38px",borderRadius:"50%",border:"1px solid var(--line-2)",background:"transparent",color:"var(--text)"}}>›</button>
+            </div>
+          </div>
+        </div>
+      </SR>
+    </div>
+  );
+}
+
 /* ── app ── */
 function ServicesApp(){
   const [quote, setQuote] = React.useState(false);
@@ -354,33 +476,7 @@ function ServicesApp(){
           </div>
         </section>
 
-        {/* ── TESTIMONIALS ──────────────────────────────── */}
-        <section className="section">
-          <div className="wrap">
-
-            <SR><SEb n="03">What clients say</SEb></SR>
-            <SR d="1" as="h2" className="display" style={{
-              fontSize:"clamp(32px,4.2vw,62px)",margin:"20px 0 0",lineHeight:.95,
-            }}>
-              The results speak.
-            </SR>
-
-            <div style={{
-              display:"grid",
-              gridTemplateColumns:"repeat(auto-fit,minmax(280px,1fr))",
-              gap:"clamp(12px,1.4vw,18px)",
-              marginTop:"clamp(36px,4vw,54px)",
-            }}>
-              {SD.testimonials.slice(0,3).map((t,i)=>(
-                <SR key={i} d={String(i)}>
-                  <TCard {...t}/>
-                </SR>
-              ))}
-            </div>
-
-
-          </div>
-        </section>
+        {window.PC_REVIEWS && <window.PC_REVIEWS/>}
 
         {/* ── FINAL CTA ─────────────────────────────────── */}
         <section style={{

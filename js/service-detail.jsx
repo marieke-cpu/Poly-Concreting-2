@@ -829,12 +829,7 @@ function TestimonialsCommercial(){
 
 /* ── dispatcher ── */
 function ServiceTestimonials({ serviceId }){
-  if(serviceId==="pathways")    return <TestimonialsPathways/>;
-  if(serviceId==="patios")      return <TestimonialsOutdoor/>;
-  if(serviceId==="pools")       return <TestimonialsPools/>;
-  if(serviceId==="resurfacing") return <TestimonialsResurfacing/>;
-  if(serviceId==="commercial")  return <TestimonialsCommercial/>;
-  return <TestimonialsSlabs/>;
+  return window.PC_REVIEWS ? <window.PC_REVIEWS/> : null;
 }
 
 /* ── main app ── */

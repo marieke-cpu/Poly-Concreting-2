@@ -218,40 +218,7 @@ function AboutPage(){
           </div>
         </section>
 
-        {/* ── TESTIMONIALS ──────────────────────────────── */}
-        <section style={{background:"linear-gradient(180deg,#0c0c10,#0e0e14)",borderBottom:"1px solid rgba(255,255,255,.06)",padding:"clamp(70px,8vw,100px) 0",overflow:"hidden"}}>
-          <div className="wrap">
-            <div style={{display:"flex",gap:"16px",marginBottom:"clamp(32px,4vw,48px)",alignItems:"center",justifyContent:"space-between",flexWrap:"wrap"}}>
-              <BR style={{display:"flex",gap:"3px"}}>
-                {Array(5).fill(0).map((_,k)=>(
-                  <svg key={k} width="16" height="16" viewBox="0 0 14 14" fill="#f5c542"><path d="M7 1l1.8 3.6L13 5.2l-3 2.9.7 4.1L7 10.1l-3.7 2 .7-4.1-3-2.9 4.2-.6z"/></svg>
-                ))}
-              </BR>
-              <BR d="1"><span className="mono" style={{fontSize:"11px",letterSpacing:".08em",color:"rgba(232,232,239,.3)"}}>{BD.googleReviewCount}+ GOOGLE, FACEBOOK &amp; INSTAGRAM REVIEWS</span></BR>
-            </div>
-            <BR d="2">
-              <blockquote key={featIdx} className="rise" style={{margin:0,border:0,padding:0}}>
-                <p className="display" style={{fontSize:"clamp(22px,3.5vw,52px)",lineHeight:1.08,margin:0,color:"rgba(232,232,239,.95)",maxWidth:"26ch"}}>
-                  "{feat.q}"
-                </p>
-                <footer style={{marginTop:"clamp(24px,3vw,40px)",display:"flex",alignItems:"center",gap:"14px"}}>
-                  <div style={{width:"44px",height:"44px",borderRadius:"50%",background:"rgba(255,255,255,.06)",border:"1px solid rgba(255,255,255,.1)",display:"grid",placeItems:"center",flexShrink:0}}>
-                    <span style={{fontSize:"16px",fontWeight:700,color:"rgba(232,232,239,.9)"}}>{feat.n[0]}</span>
-                  </div>
-                  <div>
-                    <div style={{fontSize:"14px",fontWeight:600,color:"rgba(232,232,239,.9)"}}>{feat.n}</div>
-                    <div className="mono" style={{fontSize:"10px",letterSpacing:".06em",color:"rgba(232,232,239,.3)",marginTop:"3px"}}>{feat.r}</div>
-                  </div>
-                </footer>
-              </blockquote>
-            </BR>
-            <div style={{display:"flex",gap:"6px",marginTop:"clamp(36px,4vw,52px)"}}>
-              {BD.testimonials.map((_,i)=>(
-                <button key={i} onClick={()=>setFeatIdx(i)} style={{width:i===featIdx?24:6,height:6,borderRadius:3,background:i===featIdx?"rgba(232,232,239,.8)":"rgba(255,255,255,.12)",border:0,padding:0,cursor:"pointer",transition:"width .3s ease"}}/>
-              ))}
-            </div>
-          </div>
-        </section>
+        {window.PC_REVIEWS && <window.PC_REVIEWS/>}
 
         {/* ── FINAL CTA ─────────────────────────────────── */}
         <section style={{borderTop:"1px solid var(--line)",background:"var(--panel-2)",padding:"clamp(70px,9vw,110px) 0"}}>

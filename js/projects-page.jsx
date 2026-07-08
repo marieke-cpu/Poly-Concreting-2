@@ -212,38 +212,7 @@ function ProjectsApp(){
           </div>
         </section>
 
-        {/* ── TESTIMONIALS ──────────────────────────────── */}
-        <section className="section" style={{background:"var(--panel)",borderTop:"1px solid var(--line)",borderBottom:"1px solid var(--line)"}}>
-          <div className="wrap">
-            <PR><PEb n="02">What clients say</PEb></PR>
-            <PR d="1" as="h2" className="display" style={{fontSize:"clamp(32px,4.2vw,62px)",margin:"20px 0 0",lineHeight:.95}}>
-              The results speak.
-            </PR>
-            <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(280px,1fr))",gap:"clamp(12px,1.4vw,18px)",marginTop:"clamp(36px,4vw,54px)"}}>
-              {PJ.testimonials.slice(0,3).map((t,i)=>(
-                <PR key={i} d={String(i)}>
-                  <div style={{background:"var(--base)",border:"1px solid var(--line)",borderRadius:"var(--r-lg)",padding:"clamp(20px,2.2vw,26px)",display:"flex",flexDirection:"column",gap:"12px"}}>
-                    <div style={{display:"flex",gap:"2px"}}>
-                      {Array(5).fill(0).map((_,k)=>(
-                        <svg key={k} width="13" height="13" viewBox="0 0 14 14" fill="#f5c542"><path d="M7 1l1.8 3.6L13 5.2l-3 2.9.7 4.1L7 10.1l-3.7 2 .7-4.1-3-2.9 4.2-.6z"/></svg>
-                      ))}
-                    </div>
-                    <p style={{margin:0,fontSize:"clamp(13px,1.1vw,15px)",lineHeight:1.65,color:"var(--text)",flex:1}}>"{t.q}"</p>
-                    <div style={{display:"flex",alignItems:"center",gap:"10px",paddingTop:"4px"}}>
-                      <div style={{width:"32px",height:"32px",borderRadius:"50%",background:"var(--panel-2)",border:"1px solid var(--line-2)",display:"grid",placeItems:"center",flexShrink:0}}>
-                        <span style={{fontSize:"12px",fontWeight:700}}>{t.n[0]}</span>
-                      </div>
-                      <div>
-                        <div style={{fontSize:"13px",fontWeight:600}}>{t.n}</div>
-                        <div className="mono" style={{fontSize:"10px",color:"var(--muted)"}}>{t.r}</div>
-                      </div>
-                    </div>
-                  </div>
-                </PR>
-              ))}
-            </div>
-          </div>
-        </section>
+        {window.PC_REVIEWS && <window.PC_REVIEWS/>}
 
         {/* ── FINAL CTA ─────────────────────────────────── */}
         <section style={{borderTop:"1px solid var(--line)",background:"var(--panel-2)",padding:"clamp(70px,9vw,110px) 0"}}>

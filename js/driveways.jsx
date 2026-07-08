@@ -640,31 +640,7 @@ function DrivewayApp(){
           </div>
         </section>
 
-        {/* ─── TESTIMONIALS (carousel) ─────────────────────── */}
-        <section className="section--tight" style={{
-          background:"var(--panel)",
-          borderTop:"1px solid var(--line)",
-          borderBottom:"1px solid var(--line)",
-          overflow:"hidden",
-        }}>
-          <div className="wrap">
-            <SR>
-              <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",flexWrap:"wrap",gap:"16px"}}>
-                <div>
-                  <SEb n="07">What clients say</SEb>
-                  <h2 className="display" style={{fontSize:"clamp(28px,4vw,58px)",margin:"14px 0 0",lineHeight:.93}}>
-                    Don't take our word for it.
-                  </h2>
-                  <span className="mono" style={{fontSize:"12px",color:"var(--muted)",letterSpacing:".07em",display:"block",marginTop:"8px"}}>
-                    4.8★ · {SD.googleReviewCount}+ Google, Facebook &amp; Instagram Reviews
-                  </span>
-                </div>
-                <ReviewCarouselControls testimonials={testimonials}/>
-              </div>
-            </SR>
-          </div>
-          <ReviewCarousel testimonials={testimonials}/>
-        </section>
+        {window.PC_REVIEWS && <window.PC_REVIEWS/>}
 
         {/* ─── FAQ ─────────────────────────────────────────── */}
         <section className="section--tight">

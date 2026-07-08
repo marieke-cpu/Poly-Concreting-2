@@ -230,3 +230,89 @@ window.PC_SUBMIT_QUOTE = async function submitQuoteToWeb3Forms(payload){
     return { success:false, error:true };
   }
 };
+
+window.PC_REVIEWS = function PolyGoogleReviews(){
+  const data = window.PC_DATA || {};
+  const reviews = data.testimonials || [];
+  const total = reviews.length || 1;
+  const [idx, setIdx] = React.useState(0);
+
+  React.useEffect(()=>{
+    const timer = setInterval(()=>setIdx(i=>(i+1)%total), 5200);
+    return ()=>clearInterval(timer);
+  },[total]);
+
+  const featured = reviews[idx] || reviews[0] || { q:"Great service, clear communication and a professional finish.", n:"Google reviewer", r:"Google review" };
+  const go = (dir)=>setIdx(i=>(i+dir+total)%total);
+  const GoogleMark = React.createElement("svg", { width:24, height:24, viewBox:"0 0 48 48", "aria-hidden":"true" },
+    React.createElement("path", { fill:"#4285F4", d:"M44.5 20H24v8h11.7C34 33.5 29.5 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6-6C34.6 5.1 29.6 3 24 3 12.4 3 3 12.4 3 24s9.4 21 21 21c10.9 0 20-7.9 20-21 0-1.3-.1-2.7-.5-4z" }),
+    React.createElement("path", { fill:"#34A853", d:"M6.3 14.7l6.6 4.8C14.6 15.4 19 12 24 12c3.1 0 5.9 1.1 8.1 2.9l6-6C34.6 5.1 29.6 3 24 3c-7.7 0-14.4 4.5-17.7 11.7z" }),
+    React.createElement("path", { fill:"#FBBC05", d:"M24 45c5.4 0 10.3-1.9 14.1-5l-6.5-5.3C29.5 36.2 26.9 37 24 37c-5.5 0-10.1-3.5-11.7-8.3l-6.6 5C9.4 40.5 16.2 45 24 45z" }),
+    React.createElement("path", { fill:"#EA4335", d:"M44.5 20H24v8h11.7c-.8 2.4-2.4 4.4-4.5 5.8l6.5 5.3C41.8 35.7 45 30.3 45 24c0-1.3-.1-2.7-.5-4z" })
+  );
+  const stars = React.createElement("span", { "aria-label":"5 star Google review", style:{display:"inline-flex",gap:"3px",color:"#FBBC04"} },
+    [0,1,2,3,4].map(i=>React.createElement("span", { key:i, style:{fontSize:"15px",lineHeight:1} }, "★"))
+  );
+
+  return React.createElement("section", { className:"section pc-review-section", style:{background:"var(--panel-2)",borderTop:"1px solid var(--line)",borderBottom:"1px solid var(--line)"} },
+    React.createElement("div", { className:"wrap" },
+      React.createElement("div", { style:{display:"flex",alignItems:"flex-end",justifyContent:"space-between",gap:"18px",flexWrap:"wrap"} },
+        React.createElement("div", null,
+          React.createElement("div", { className:"eyebrow" }, "Google reviews"),
+          React.createElement("h2", { className:"display", style:{fontSize:"clamp(32px,4.2vw,62px)",margin:"20px 0 0",lineHeight:.95} },
+            "Proof from people", React.createElement("br"), "who hired us."
+          )
+        ),
+        React.createElement("p", { style:{margin:"0 0 4px",color:"var(--muted)",fontSize:"clamp(14px,1.1vw,17px)",lineHeight:1.65,maxWidth:"38ch"} },
+          "Real Google feedback from local clients across driveways, slabs, paths and decorative concrete."
+        )
+      ),
+      React.createElement("div", { className:"services-review-carousel", style:{display:"flex",alignItems:"stretch",marginTop:"clamp(28px,3.5vw,48px)",border:"1px solid var(--line-2)",borderRadius:"8px",overflow:"hidden",background:"var(--base)"} },
+        React.createElement("div", { className:"pc-review-rating", style:{width:"clamp(210px,24vw,300px)",padding:"clamp(20px,2.4vw,30px)",borderRight:"1px solid var(--line)",display:"flex",flexDirection:"column",justifyContent:"space-between",gap:"24px"} },
+          React.createElement("div", null,
+            React.createElement("div", { style:{display:"flex",alignItems:"center",gap:"11px"} },
+              GoogleMark,
+              React.createElement("div", null,
+                React.createElement("div", { style:{fontWeight:800,fontSize:"18px",lineHeight:1} }, "Google"),
+                React.createElement("div", { className:"mono", style:{fontSize:"10px",color:"var(--muted)",letterSpacing:".08em",marginTop:"4px"} }, "PUBLIC FEEDBACK")
+              )
+            ),
+            React.createElement("div", { style:{marginTop:"22px",display:"flex",alignItems:"center",gap:"10px",flexWrap:"wrap"} },
+              React.createElement("span", { className:"display", style:{fontSize:"clamp(34px,4vw,48px)",lineHeight:1} }, "4.8"),
+              React.createElement("div", null, stars,
+                React.createElement("div", { className:"mono", style:{fontSize:"10px",color:"var(--muted)",letterSpacing:".06em",marginTop:"5px"} }, (data.googleReviewCount || 50) + "+ REVIEWS")
+              )
+            )
+          ),
+          React.createElement("div", { className:"mono", style:{fontSize:"11px",color:"var(--faint)",letterSpacing:".06em"} }, "MORAYFIELD BASED · SEQ WIDE")
+        ),
+        React.createElement("div", { className:"pc-review-body", style:{flex:1,display:"flex",minWidth:0} },
+          React.createElement("div", { style:{flex:1,padding:"clamp(24px,3vw,42px)",minWidth:0,display:"flex",flexDirection:"column",justifyContent:"center"} },
+            React.createElement("div", { style:{display:"flex",alignItems:"center",gap:"8px",marginBottom:"16px"} }, stars,
+              React.createElement("span", { className:"mono", style:{fontSize:"11px",color:"var(--muted)",letterSpacing:".06em"} }, featured.r + " · Google")
+            ),
+            React.createElement("p", { key:idx, style:{margin:0,fontSize:"clamp(18px,2vw,29px)",lineHeight:1.34,fontWeight:800,color:"var(--text)",animation:"fadeUp .35s ease both"} },
+              "\"" + featured.q + "\""
+            ),
+            React.createElement("div", { style:{display:"flex",alignItems:"center",gap:"11px",marginTop:"24px"} },
+              React.createElement("div", { style:{width:"38px",height:"38px",borderRadius:"50%",background:"var(--panel-2)",border:"1px solid var(--line-2)",display:"grid",placeItems:"center",flexShrink:0} },
+                React.createElement("span", { style:{fontSize:"14px",fontWeight:800} }, (featured.n || "G")[0])
+              ),
+              React.createElement("div", null,
+                React.createElement("div", { style:{fontSize:"14px",fontWeight:800} }, featured.n),
+                React.createElement("div", { className:"mono", style:{fontSize:"10px",color:"var(--muted)",letterSpacing:".06em",marginTop:"3px"} }, "VERIFIED GOOGLE REVIEW")
+              )
+            )
+          ),
+          React.createElement("div", { className:"pc-review-controls", style:{width:"112px",borderLeft:"1px solid var(--line)",display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",gap:"12px",padding:"18px"} },
+            React.createElement("div", { className:"mono", style:{fontSize:"11px",color:"var(--muted)",letterSpacing:".08em"} }, String(idx+1).padStart(2,"0") + " / " + String(total).padStart(2,"0")),
+            React.createElement("div", { style:{display:"flex",gap:"8px"} },
+              React.createElement("button", { type:"button", "aria-label":"Previous review", onClick:()=>go(-1), style:{width:"38px",height:"38px",borderRadius:"50%",border:"1px solid var(--line-2)",background:"transparent",color:"var(--text)",cursor:"pointer"} }, "‹"),
+              React.createElement("button", { type:"button", "aria-label":"Next review", onClick:()=>go(1), style:{width:"38px",height:"38px",borderRadius:"50%",border:"1px solid var(--line-2)",background:"transparent",color:"var(--text)",cursor:"pointer"} }, "›")
+            )
+          )
+        )
+      )
+    )
+  );
+};
