@@ -72,6 +72,10 @@ const quoteForm = document.getElementById('quote-form');
 if (quoteForm) {
   quoteForm.addEventListener('submit', async e => {
     e.preventDefault();
+    if (!quoteForm.checkValidity()) {
+      quoteForm.reportValidity();
+      return;
+    }
     const submitBtn = quoteForm.querySelector('button[type="submit"]');
     const originalText = submitBtn ? submitBtn.textContent : '';
     if (submitBtn) {
@@ -81,13 +85,12 @@ if (quoteForm) {
 
     const formData = new FormData(quoteForm);
     const data = Object.fromEntries(formData.entries());
-    formData.append('access_key', WEB3FORMS_ACCESS_KEY);
-    formData.append('subject', 'New quote request - Poly Concreting new site');
-    formData.append('from_name', `${data.fname || ''} ${data.lname || ''}`.trim() || 'Poly Concreting website');
-    formData.append('to', QUOTE_EMAIL);
-    formData.append('recipient', QUOTE_EMAIL);
-    formData.append('inbox', 'Quotes');
-    formData.append('botcheck', '');
+    formData.set('access_key', WEB3FORMS_ACCESS_KEY);
+    formData.set('subject', 'New quote request - Poly Concreting new site');
+    formData.set('from_name', `${data.fname || ''} ${data.lname || ''}`.trim() || 'Poly Concreting website');
+    formData.set('inbox', 'Quotes');
+    formData.set('quote_email', QUOTE_EMAIL);
+    formData.set('botcheck', '');
 
     try {
       if (WEB3FORMS_ACCESS_KEY === 'YOUR_WEB3FORMS_ACCESS_KEY') {
@@ -107,7 +110,7 @@ if (quoteForm) {
       }
     } catch (error) {
       console.error('Web3Forms submission failed', error);
-      alert('Something went wrong. Please try again or call 0481 445 041.');
+      quoteForm.submit();
       return;
     } finally {
       if (submitBtn) {

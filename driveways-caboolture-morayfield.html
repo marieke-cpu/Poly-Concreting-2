@@ -284,7 +284,14 @@ body.ads-driveway-page{background:#08080a;color:var(--text);padding-bottom:0}
           <h2 class="display">Tell us where to quote.</h2>
           <p>Send the basics now. Angelo will confirm access, finish options and the next available site visit.</p>
         </div>
-        <form class="ads-form" id="adsQuoteForm">
+        <form class="ads-form" id="adsQuoteForm" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="b2c0b7c1-c7d7-4c8d-9e45-3a8f415d2dce"/>
+          <input type="hidden" name="subject" value="New driveway quote request - Caboolture/Morayfield"/>
+          <input type="hidden" name="from_name" value="Poly Concreting ads landing page"/>
+          <input type="hidden" name="inbox" value="Quotes"/>
+          <input type="hidden" name="quote_email" value="quotes@polyconcretingqld.com.au"/>
+          <input type="hidden" name="redirect" value="https://polyconcretingqld.com.au/thankyou"/>
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off"/>
           <div class="ads-form__grid">
             <div class="ads-field">
               <label for="name">Name *</label>
@@ -626,9 +633,8 @@ async function submitAdsQuoteToWeb3Forms(payload){
     access_key: WEB3FORMS_ACCESS_KEY,
     subject: "New driveway quote request - Caboolture/Morayfield",
     from_name: payload.name || "Poly Concreting ads landing page",
-    to: QUOTE_EMAIL,
-    recipient: QUOTE_EMAIL,
     inbox: "Quotes",
+    quote_email: QUOTE_EMAIL,
     botcheck: "",
     ...payload,
   }).forEach(([field, value]) => formData.append(field, value == null ? "" : value));
@@ -677,7 +683,7 @@ document.getElementById("adsQuoteForm").addEventListener("submit", async functio
     }
     alert("Error: " + ((result && result.message) || "Your quote could not be sent. Please call 0481 445 041."));
   } catch (error) {
-    alert("Something went wrong. Please try again or call 0481 445 041.");
+    form.submit();
   } finally {
     if(submitBtn){
       submitBtn.textContent = originalText;

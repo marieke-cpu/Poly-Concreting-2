@@ -71,7 +71,14 @@
 
       <!-- Form -->
       <div>
-        <form id="quote-form" class="highlight-box" style="border-color:var(--line-2);" novalidate>
+        <form id="quote-form" class="highlight-box" style="border-color:var(--line-2);" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="b2c0b7c1-c7d7-4c8d-9e45-3a8f415d2dce">
+          <input type="hidden" name="subject" value="New quote request - Poly Concreting new site">
+          <input type="hidden" name="from_name" value="Poly Concreting website">
+          <input type="hidden" name="inbox" value="Quotes">
+          <input type="hidden" name="quote_email" value="quotes@polyconcretingqld.com.au">
+          <input type="hidden" name="redirect" value="https://polyconcretingqld.com.au/thankyou">
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
           <h2 style="font-size:22px;margin-bottom:24px;">Project Details</h2>
           <div class="form-grid">
             <div class="form-group">

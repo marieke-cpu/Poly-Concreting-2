@@ -212,9 +212,8 @@ window.PC_SUBMIT_QUOTE = async function submitQuoteToWeb3Forms(payload){
     access_key: key,
     subject: payload.subject || "New quote request - Poly Concreting",
     from_name: payload.name || payload.fullName || "Poly Concreting website",
-    to: window.PC_DATA.quoteEmail,
-    recipient: window.PC_DATA.quoteEmail,
     inbox: "Quotes",
+    quote_email: window.PC_DATA.quoteEmail,
     botcheck: "",
     ...payload,
   }).forEach(([field, value]) => formData.append(field, value == null ? "" : value));
