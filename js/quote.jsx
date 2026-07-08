@@ -170,3 +170,58 @@ function Field({ label, v, on, ph }){
 }
 
 window.PC_QUOTE = QuoteModal;
+
+function mountGlobalQuoteLauncher(){
+  if(window.PC_GLOBAL_QUOTE_MOUNTED || !window.PC_QUOTE || !window.ReactDOM) return;
+  window.PC_GLOBAL_QUOTE_MOUNTED = true;
+
+  window.PC_OPEN_QUOTE = ()=>{
+    window.dispatchEvent(new CustomEvent("pc:openQuote"));
+  };
+
+  const host = document.createElement("div");
+  host.id = "pc-global-quote-root";
+  document.body.appendChild(host);
+
+  function GlobalQuoteHost(){
+    const [open,setOpen] = React.useState(false);
+    React.useEffect(()=>{
+      const openQuote = ()=>setOpen(true);
+      window.addEventListener("pc:openQuote", openQuote);
+      return ()=>window.removeEventListener("pc:openQuote", openQuote);
+    },[]);
+    return <window.PC_QUOTE open={open} onClose={()=>setOpen(false)}/>;
+  }
+
+  ReactDOM.createRoot(host).render(<GlobalQuoteHost/>);
+
+  document.addEventListener("click", e=>{
+    const link = e.target.closest && e.target.closest("a[href]");
+    if(!link) return;
+    const href = link.getAttribute("href") || "";
+    const url = new URL(href, window.location.href);
+    const isQuoteLink =
+      href === "Quote" ||
+      href === "/Quote" ||
+      href === "#quote" ||
+      href === "/?quote=open" ||
+      url.pathname.endsWith("/Quote") ||
+      url.searchParams.get("quote") === "open";
+    if(!isQuoteLink) return;
+    e.preventDefault();
+    window.PC_OPEN_QUOTE();
+  });
+
+  const shouldOpen =
+    new URLSearchParams(window.location.search).get("quote") === "open" ||
+    window.location.hash === "#quote";
+  if(shouldOpen){
+    window.setTimeout(()=>window.PC_OPEN_QUOTE(), 80);
+  }
+}
+
+if(document.readyState === "loading"){
+  document.addEventListener("DOMContentLoaded", mountGlobalQuoteLauncher);
+}else{
+  mountGlobalQuoteLauncher();
+}

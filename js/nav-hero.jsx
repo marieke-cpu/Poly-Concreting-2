@@ -96,7 +96,7 @@ function Nav({ phone, onQuote }){
         <span className="mono urg-mobile-text" style={{fontSize:"11.5px",letterSpacing:".08em",fontWeight:700}}>
           LIMITED DATES OPEN
         </span>
-        <a href="Quote" className="mono" style={{fontSize:"11px",letterSpacing:".1em",color:"#0a0a0b",textDecoration:"none",borderBottom:"1px solid rgba(0,0,0,.4)",whiteSpace:"nowrap",fontWeight:700}}>
+        <a href="#quote" className="mono" style={{fontSize:"11px",letterSpacing:".1em",color:"#0a0a0b",textDecoration:"none",borderBottom:"1px solid rgba(0,0,0,.4)",whiteSpace:"nowrap",fontWeight:700}}>
           <span className="urg-desktop-cta">SECURE YOUR SITE VISIT →</span><span className="urg-mobile-cta">SECURE YOUR PROJECT NOW →</span>
         </a>
       </div>
@@ -129,7 +129,7 @@ function Nav({ phone, onQuote }){
             <a href={`tel:${tel}`} className="mono nav-phone" style={{fontSize:"13px",letterSpacing:".06em",color:"var(--text)",display:"flex",alignItems:"center",gap:"8px",whiteSpace:"nowrap"}}>
               <Icon name="phone" s={15}/> {phone}
             </a>
-            <a href="Quote" className="btn btn--solid nav-quote">Get a Quote <Arrow/></a>
+            <a href="#quote" className="btn btn--solid nav-quote">Get a Quote <Arrow/></a>
           </div>
           <button className="nav-burger" onClick={()=>setOpen(o=>!o)} aria-label="Menu" aria-expanded={open}
             style={{display:"none",background:"none",border:"none",padding:"8px",color:"var(--text)",position:"relative",zIndex:120}}>
@@ -180,12 +180,12 @@ function Nav({ phone, onQuote }){
         ))}
       </div>
       <div className="mnav-foot">
-        <a href="Quote" className="btn btn--solid btn--lg" style={{width:"100%",justifyContent:"center"}}>Get a Quote <Arrow/></a>
+        <a href="#quote" className="btn btn--solid btn--lg" style={{width:"100%",justifyContent:"center"}}>Get a Quote <Arrow/></a>
         <a href={`tel:${tel}`} className="mnav-call-cta"><Icon name="phone" s={16}/> Call {phone}</a>
       </div>
     </div>
     <div className={`mobile-urgency-cta ${solid && !open ? "mobile-urgency-cta--show" : ""}`} role="region" aria-label="Quick quote and contact actions">
-      <a href="Quote" className="mobile-urgency-cta__quote">Get quote</a>
+      <a href="#quote" className="mobile-urgency-cta__quote">Get quote</a>
       <a href={`tel:${tel}`} className="mobile-urgency-cta__call"><Icon name="phone" s={15}/> Call now</a>
     </div>
     </>

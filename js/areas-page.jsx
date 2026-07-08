@@ -72,7 +72,7 @@ function AreasPage(){
                   </div>
                   <div style={{display:"flex",flexWrap:"wrap",gap:"8px",marginTop:"18px"}}>
                     {(AP.areaSuburbs[r.id]||[]).map(s=>(
-                      <a key={s} href="Quote" className="mono"
+                      <a key={s} href="#quote" className="mono"
                         style={{fontSize:"12px",letterSpacing:".04em",color:"var(--muted)",border:"1px solid var(--line-2)",borderRadius:"40px",padding:"7px 13px",transition:"all .2s"}}
                         onMouseEnter={e=>{e.currentTarget.style.color="var(--text)";e.currentTarget.style.borderColor="var(--line-3)";}}
                         onMouseLeave={e=>{e.currentTarget.style.color="var(--muted)";e.currentTarget.style.borderColor="var(--line-2)";}}>
@@ -96,7 +96,7 @@ function AreasPage(){
               ))}
             </div>
             <AR d="2" as="p" className="mono" style={{marginTop:"22px",fontSize:"12.5px",color:"var(--faint)",letterSpacing:".03em"}}>
-              Don't see your suburb? We cover the whole of SEQ — <a href="Quote" className="link-sweep" style={{display:"inline-flex"}}>ask us about your area <AArr d="e"/></a>
+              Don't see your suburb? We cover the whole of SEQ — <a href="#quote" className="link-sweep" style={{display:"inline-flex"}}>ask us about your area <AArr d="e"/></a>
             </AR>
           </div>
         </section>

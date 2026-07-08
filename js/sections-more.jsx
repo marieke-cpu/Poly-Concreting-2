@@ -216,7 +216,7 @@ function BeforeAfter(){
         </Rw>
 
         <Rw d="2" style={{marginTop:"clamp(28px,3vw,40px)",display:"flex",alignItems:"center",gap:"16px",flexWrap:"wrap"}}>
-          <a href="Quote" className="btn btn--solid btn--lg">Get a free quote <Aw d="e"/></a>
+          <a href="#quote" className="btn btn--solid btn--lg">Get a free quote <Aw d="e"/></a>
           <a href="Projects" className="btn btn--ghost">See all projects <Aw d="e"/></a>
         </Rw>
       </div>
@@ -348,7 +348,7 @@ function FAQ(){
           ))}
         </div>
         <Rw d="2" style={{marginTop:"clamp(28px,3vw,40px)",display:"flex",gap:"14px",flexWrap:"wrap"}}>
-          <a href="Quote" className="btn btn--solid btn--lg">Get a free quote <Aw d="e"/></a>
+          <a href="#quote" className="btn btn--solid btn--lg">Get a free quote <Aw d="e"/></a>
           <a href={`tel:${PDm.phone.replace(/\s/g,"")}`} className="btn btn--ghost"><Iw name="phone" s={15}/> {PDm.phone}</a>
         </Rw>
       </div>

@@ -95,7 +95,7 @@ function WhyPoly(){
           </div>
         </div>
         <Rv d="2" style={{marginTop:"clamp(36px,4vw,56px)",display:"flex",alignItems:"center",gap:"20px",flexWrap:"wrap"}}>
-          <a href="Quote" className="btn btn--solid btn--lg">Get a free quote <Ar d="e"/></a>
+          <a href="#quote" className="btn btn--solid btn--lg">Get a free quote <Ar d="e"/></a>
           <a href={`tel:${PD.phone.replace(/\s/g,"")}`} className="btn btn--ghost">Call Angelo — {PD.phone}</a>
         </Rv>
       </div>
