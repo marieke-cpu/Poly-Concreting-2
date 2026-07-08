@@ -908,6 +908,9 @@ select.q-input{ appearance:none; -webkit-appearance:none; cursor:pointer; }
   }
 }
 @media(max-width:760px){
+  .svc-sticky-quote{
+    display:none !important;
+  }
   .loc-hero .wrap{
     padding-bottom:104px !important;
   }
@@ -1005,5 +1008,164 @@ select.q-input{ appearance:none; -webkit-appearance:none; cursor:pointer; }
   }
   .pc-review-section .pc-review-rating{
     width:auto !important;
+  }
+}
+
+/* Mobile polish for Projects, Service Areas and About */
+@media(max-width:760px){
+  .mobile-polish-page .subpage-hero{
+    padding-top:132px !important;
+    padding-bottom:42px !important;
+  }
+  .mobile-polish-page .subpage-hero h1.display{
+    font-size:clamp(38px,13.5vw,62px) !important;
+    line-height:.94 !important;
+    max-width:11.5ch;
+  }
+  .mobile-polish-page .subpage-hero-copy{
+    flex-direction:column !important;
+    align-items:stretch !important;
+    gap:18px !important;
+    margin-top:24px !important;
+  }
+  .mobile-polish-page .subpage-hero-copy p{
+    font-size:15.5px !important;
+    line-height:1.58 !important;
+    max-width:100% !important;
+  }
+  .mobile-polish-page .subpage-actions{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    width:100% !important;
+    gap:9px !important;
+  }
+  .mobile-polish-page .subpage-actions .btn,
+  .mobile-polish-page .subpage-actions button,
+  .mobile-polish-page .subpage-actions a{
+    width:100% !important;
+    min-height:46px !important;
+    justify-content:center !important;
+    padding:12px 14px !important;
+    font-size:10.5px !important;
+    letter-spacing:.075em !important;
+  }
+  .mobile-polish-page .subpage-stats{
+    display:grid !important;
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    border:1px solid var(--line) !important;
+    border-radius:var(--r) !important;
+    overflow:hidden !important;
+    margin-top:28px !important;
+  }
+  .mobile-polish-page .subpage-stats > div{
+    border-right:none !important;
+    border-bottom:1px solid var(--line) !important;
+    padding:15px 14px !important;
+    min-width:0 !important;
+  }
+  .mobile-polish-page .subpage-stats > div:nth-last-child(-n+2){
+    border-bottom:none !important;
+  }
+  .mobile-polish-page .subpage-stats > div:nth-child(odd){
+    border-right:1px solid var(--line) !important;
+  }
+  .mobile-polish-page .section,
+  .mobile-polish-page .section--tight{
+    padding-block:56px !important;
+  }
+  .projects-filter-row{
+    align-items:flex-start !important;
+    gap:12px !important;
+  }
+  .projects-filter-chips{
+    flex-wrap:nowrap !important;
+    overflow-x:auto !important;
+    width:100% !important;
+    padding-bottom:6px !important;
+    scroll-snap-type:x proximity;
+    -webkit-overflow-scrolling:touch;
+  }
+  .projects-filter-chips button{
+    flex:0 0 auto;
+    scroll-snap-align:start;
+    padding:9px 13px !important;
+    font-size:10.5px !important;
+  }
+  .projects-grid{
+    grid-template-columns:1fr !important;
+    gap:12px !important;
+  }
+  .project-card{
+    min-height:330px !important;
+    border-radius:var(--r) !important;
+  }
+  .project-card .btn{
+    min-height:42px !important;
+    padding:11px 14px !important;
+    font-size:10.5px !important;
+  }
+  .areas-grid{
+    grid-template-columns:1fr !important;
+    gap:18px !important;
+    margin-top:28px !important;
+  }
+  .areas-map{
+    min-height:280px !important;
+    border-radius:var(--r) !important;
+  }
+  .areas-page .areas-dir{
+    grid-template-columns:1fr !important;
+    margin-top:28px !important;
+  }
+  .areas-page .areas-dir > .reveal{
+    padding:20px !important;
+  }
+  .areas-page .areas-dir h3{
+    font-size:24px !important;
+    line-height:1 !important;
+  }
+  .areas-page .areas-dir a{
+    font-size:10.5px !important;
+    padding:7px 10px !important;
+  }
+  .about-page .about-grid{
+    grid-template-columns:1fr !important;
+    gap:26px !important;
+  }
+  .about-page .about-grid > .reveal[style*="sticky"]{
+    position:static !important;
+  }
+  .about-page .about-creds{
+    display:grid !important;
+    grid-template-columns:1fr 1fr !important;
+    gap:10px !important;
+    justify-content:stretch !important;
+  }
+  .about-page .about-creds > span{
+    display:none !important;
+  }
+  .about-page .about-creds > div{
+    min-height:42px;
+    justify-content:center;
+    padding:9px 10px;
+    border:1px solid var(--line);
+    border-radius:var(--r);
+    background:rgba(255,255,255,.03);
+  }
+  .about-page .about-values,
+  .about-page .about-safety{
+    grid-template-columns:1fr !important;
+    gap:10px !important;
+  }
+  .about-page .about-values > .reveal,
+  .about-page .about-safety > .reveal{
+    padding:22px !important;
+    border-radius:var(--r) !important;
+  }
+  .about-page .about-heritage-card{
+    padding:16px !important;
+  }
+  .about-page .about-mission-list{
+    margin-top:6px !important;
   }
 }

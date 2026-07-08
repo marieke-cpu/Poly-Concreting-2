@@ -9,12 +9,12 @@ const AAreas  = window.PC_S2.Areas;
 function AreasPage(){
   const [quote,setQuote]=React.useState(false);
   return (
-    <div id="top">
+    <div id="top" className="areas-page mobile-polish-page">
       <ANav phone={AD.phone} onQuote={()=>setQuote(true)}/>
       <main>
 
         {/* ── HERO ─────────────────────────────────────── */}
-        <section style={{
+        <section className="subpage-hero" style={{
           paddingTop:"clamp(180px,22vh,220px)",
           paddingBottom:"clamp(60px,8vh,96px)",
           borderBottom:"1px solid var(--line)",
@@ -27,18 +27,18 @@ function AreasPage(){
               We pour right across<br/>South East QLD.
             </AR>
             <AR d="2">
-              <div style={{display:"flex",gap:"clamp(28px,5vw,72px)",marginTop:"32px",alignItems:"flex-end",flexWrap:"wrap"}}>
+              <div className="subpage-hero-copy" style={{display:"flex",gap:"clamp(28px,5vw,72px)",marginTop:"32px",alignItems:"flex-end",flexWrap:"wrap"}}>
                 <p style={{margin:0,color:"var(--muted)",fontSize:"clamp(16px,1.35vw,20px)",maxWidth:"46ch",lineHeight:1.65}}>
                   Based in Morayfield and working from the Sunshine Coast through Brisbane, Ipswich and west to Toowoomba. If you're in SEQ, chances are we're already pouring near you.
                 </p>
-                <div style={{display:"flex",gap:"12px",flexWrap:"wrap",flexShrink:0}}>
+                <div className="subpage-actions" style={{display:"flex",gap:"12px",flexWrap:"wrap",flexShrink:0}}>
                   <button className="btn btn--solid btn--lg" onClick={()=>setQuote(true)}>Get a free quote <AArr/></button>
                   <a className="btn btn--ghost btn--lg" href={`tel:${AD.phone.replace(/\s/g,"")}`}><AIc name="phone" s={16}/> {AD.phone}</a>
                 </div>
               </div>
             </AR>
             <AR d="3">
-              <div style={{display:"flex",marginTop:"clamp(44px,5vw,64px)",borderTop:"1px solid var(--line)",flexWrap:"wrap"}}>
+              <div className="subpage-stats" style={{display:"flex",marginTop:"clamp(44px,5vw,64px)",borderTop:"1px solid var(--line)",flexWrap:"wrap"}}>
                 {AD.metrics.map((m,i)=>(
                   <div key={i} style={{flex:"1 1 120px",borderRight:i<AD.metrics.length-1?"1px solid var(--line)":"none",padding:"clamp(18px,2vw,26px) clamp(16px,2vw,28px)"}}>
                     <div className="display chrome-text" style={{fontSize:"clamp(24px,3vw,42px)",lineHeight:.95}}>{m.prefix||""}{m.value}{m.suffix}</div>
@@ -114,7 +114,7 @@ function AreasPage(){
               <AR d="2" as="p" style={{margin:"22px 0 0",color:"var(--muted)",fontSize:"clamp(16px,1.3vw,19px)",maxWidth:"44ch",lineHeight:1.65}}>
                 Tell us about your site and we'll come back with a locked price, same day. No obligation. No follow-up calls unless you want them.
               </AR>
-              <AR d="3" style={{display:"flex",gap:"14px",marginTop:"36px",flexWrap:"wrap"}}>
+              <AR d="3" className="subpage-actions" style={{display:"flex",gap:"14px",marginTop:"36px",flexWrap:"wrap"}}>
                 <button className="btn btn--solid btn--lg" onClick={()=>setQuote(true)}>Start my quote <AArr/></button>
                 <a className="btn btn--ghost btn--lg" href={`tel:${AD.phone.replace(/\s/g,"")}`}><AIc name="phone" s={16}/> {AD.phone}</a>
               </AR>

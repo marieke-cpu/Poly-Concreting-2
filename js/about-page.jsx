@@ -25,12 +25,12 @@ function AboutPage(){
   const feat = BD.testimonials[featIdx];
 
   return (
-    <div id="top">
+    <div id="top" className="about-page mobile-polish-page">
       <BNav phone={BD.phone} onQuote={()=>setQuote(true)}/>
       <main>
 
         {/* ── HERO ─────────────────────────────────────── */}
-        <section style={{
+        <section className="subpage-hero" style={{
           paddingTop:"clamp(180px,22vh,220px)",
           paddingBottom:"clamp(60px,8vh,96px)",
           borderBottom:"1px solid var(--line)",
@@ -43,18 +43,18 @@ function AboutPage(){
               A local crew that<br/>takes it <span className="chrome-text">personally.</span>
             </BR>
             <BR d="2">
-              <div style={{display:"flex",gap:"clamp(28px,5vw,72px)",marginTop:"32px",alignItems:"flex-end",flexWrap:"wrap"}}>
+              <div className="subpage-hero-copy" style={{display:"flex",gap:"clamp(28px,5vw,72px)",marginTop:"32px",alignItems:"flex-end",flexWrap:"wrap"}}>
                 <p style={{margin:0,color:"var(--muted)",fontSize:"clamp(16px,1.35vw,20px)",maxWidth:"46ch",lineHeight:1.65}}>
                   {BA.lede}
                 </p>
-                <div style={{display:"flex",gap:"12px",flexWrap:"wrap",flexShrink:0}}>
+                <div className="subpage-actions" style={{display:"flex",gap:"12px",flexWrap:"wrap",flexShrink:0}}>
                   <button className="btn btn--solid btn--lg" onClick={()=>setQuote(true)}>Get a free quote <BArr/></button>
                   <a className="btn btn--ghost btn--lg" href={`tel:${BD.phone.replace(/\s/g,"")}`}><BIc name="phone" s={16}/> {BD.phone}</a>
                 </div>
               </div>
             </BR>
             <BR d="3">
-              <div style={{display:"flex",marginTop:"clamp(44px,5vw,64px)",borderTop:"1px solid var(--line)",flexWrap:"wrap"}}>
+              <div className="subpage-stats" style={{display:"flex",marginTop:"clamp(44px,5vw,64px)",borderTop:"1px solid var(--line)",flexWrap:"wrap"}}>
                 {BA.stats.map(([v,l],i)=>(
                   <div key={l} style={{flex:"1 1 120px",borderRight:i<BA.stats.length-1?"1px solid var(--line)":"none",padding:"clamp(18px,2vw,26px) clamp(16px,2vw,28px)"}}>
                     <div className="display chrome-text" style={{fontSize:"clamp(24px,3vw,42px)",lineHeight:.95}}>{v}</div>
@@ -93,7 +93,7 @@ function AboutPage(){
         {/* ── CREDENTIALS BAR ──────────────────────────── */}
         <section style={{borderBottom:"1px solid var(--line)",background:"var(--panel)",padding:"clamp(16px,2vw,22px) 0"}}>
           <div className="wrap">
-            <div style={{display:"flex",gap:"clamp(12px,2.5vw,36px)",flexWrap:"wrap",alignItems:"center",justifyContent:"center"}}>
+            <div className="about-creds" style={{display:"flex",gap:"clamp(12px,2.5vw,36px)",flexWrap:"wrap",alignItems:"center",justifyContent:"center"}}>
               {CREDS.map(({icon,label},i)=>(
                 <React.Fragment key={label}>
                   {i>0 && <span style={{width:"1px",height:"13px",background:"var(--line)",flexShrink:0}}/>}
@@ -134,7 +134,7 @@ function AboutPage(){
                   </div>
                 </div>
                 {/* Polynesian heritage badge */}
-                <div style={{marginTop:"12px",border:"1px solid var(--line)",borderRadius:"var(--r-lg)",padding:"clamp(18px,2vw,24px)",display:"flex",gap:"14px",alignItems:"flex-start"}}>
+                <div className="about-heritage-card" style={{marginTop:"12px",border:"1px solid var(--line)",borderRadius:"var(--r-lg)",padding:"clamp(18px,2vw,24px)",display:"flex",gap:"14px",alignItems:"flex-start"}}>
                   <span style={{fontSize:"24px",lineHeight:1,flexShrink:0}}>🌊</span>
                   <div>
                     <div style={{fontSize:"12px",fontWeight:700,letterSpacing:".05em",color:"var(--text)",marginBottom:"6px"}}>POLYNESIAN HERITAGE</div>
@@ -159,7 +159,7 @@ function AboutPage(){
                   {BA.mission}
                 </BR>
               </div>
-              <BR d="1" style={{display:"flex",flexDirection:"column",gap:"1px",background:"rgba(255,255,255,.06)",border:"1px solid rgba(255,255,255,.06)",borderRadius:"var(--r-lg)",overflow:"hidden",marginTop:"clamp(0px,2vw,8px)"}}>
+              <BR d="1" className="about-mission-list" style={{display:"flex",flexDirection:"column",gap:"1px",background:"rgba(255,255,255,.06)",border:"1px solid rgba(255,255,255,.06)",borderRadius:"var(--r-lg)",overflow:"hidden",marginTop:"clamp(0px,2vw,8px)"}}>
                 {[
                   ["Residential","Driveways, slabs, paths, patios & pool surrounds"],
                   ["Commercial","Hardstands, warehouse floors & shopfront slabs"],
@@ -231,7 +231,7 @@ function AboutPage(){
               <BR d="2" as="p" style={{margin:"22px 0 0",color:"var(--muted)",fontSize:"clamp(16px,1.3vw,19px)",maxWidth:"44ch",lineHeight:1.65}}>
                 Tell us about your site and we'll come back with a locked price, same day. No obligation. No follow-up calls unless you want them.
               </BR>
-              <BR d="3" style={{display:"flex",gap:"14px",marginTop:"36px",flexWrap:"wrap"}}>
+              <BR d="3" className="subpage-actions" style={{display:"flex",gap:"14px",marginTop:"36px",flexWrap:"wrap"}}>
                 <button className="btn btn--solid btn--lg" onClick={()=>setQuote(true)}>Start my quote <BArr/></button>
                 <a className="btn btn--ghost btn--lg" href={`tel:${BD.phone.replace(/\s/g,"")}`}><BIc name="phone" s={16}/> {BD.phone}</a>
               </BR>

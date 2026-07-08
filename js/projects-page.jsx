@@ -17,6 +17,7 @@ function PCard({ p, d, onOpen }){
   return (
     <PR d={d}>
       <div
+        className="project-card"
         onMouseEnter={()=>setHov(true)}
         onMouseLeave={()=>setHov(false)}
         style={{
@@ -147,12 +148,12 @@ function ProjectsApp(){
   },[]);
 
   return (
-    <div id="top">
+    <div id="top" className="projects-page mobile-polish-page">
       <PNav phone={PJ.phone} onQuote={()=>setQuote(true)}/>
       <main>
 
         {/* ── HERO ─────────────────────────────────────── */}
-        <section style={{
+        <section className="subpage-hero" style={{
           paddingTop:"clamp(180px,22vh,220px)",
           paddingBottom:"clamp(60px,8vh,96px)",
           borderBottom:"1px solid var(--line)",
@@ -165,18 +166,18 @@ function ProjectsApp(){
               Work that speaks<br/>for itself.
             </PR>
             <PR d="2">
-              <div style={{display:"flex",gap:"clamp(28px,5vw,72px)",marginTop:"32px",alignItems:"flex-end",flexWrap:"wrap"}}>
+              <div className="subpage-hero-copy" style={{display:"flex",gap:"clamp(28px,5vw,72px)",marginTop:"32px",alignItems:"flex-end",flexWrap:"wrap"}}>
                 <p style={{margin:0,color:"var(--muted)",fontSize:"clamp(16px,1.35vw,20px)",maxWidth:"46ch",lineHeight:1.65}}>
                   {PROJ.length} recent jobs across South East Queensland — driveways, slabs, pathways and decorative finishes. Tap any project to see it up close.
                 </p>
-                <div style={{display:"flex",gap:"12px",flexWrap:"wrap",flexShrink:0}}>
+                <div className="subpage-actions" style={{display:"flex",gap:"12px",flexWrap:"wrap",flexShrink:0}}>
                   <button className="btn btn--solid btn--lg" onClick={()=>setQuote(true)}>Get a free quote <PAr/></button>
                   <a className="btn btn--ghost btn--lg" href={`tel:${PJ.phone.replace(/\s/g,"")}`}><PIc name="phone" s={16}/> {PJ.phone}</a>
                 </div>
               </div>
             </PR>
             <PR d="3">
-              <div style={{display:"flex",marginTop:"clamp(44px,5vw,64px)",borderTop:"1px solid var(--line)",flexWrap:"wrap"}}>
+              <div className="subpage-stats" style={{display:"flex",marginTop:"clamp(44px,5vw,64px)",borderTop:"1px solid var(--line)",flexWrap:"wrap"}}>
                 {PJ.metrics.map((m,i)=>(
                   <div key={i} style={{flex:"1 1 120px",borderRight:i<PJ.metrics.length-1?"1px solid var(--line)":"none",padding:"clamp(18px,2vw,26px) clamp(16px,2vw,28px)"}}>
                     <div className="display chrome-text" style={{fontSize:"clamp(24px,3vw,42px)",lineHeight:.95}}>{m.prefix||""}{m.value}{m.suffix}</div>
@@ -195,8 +196,8 @@ function ProjectsApp(){
             <PR d="1" as="h2" className="display" style={{fontSize:"clamp(32px,4.2vw,62px)",margin:"20px 0 0",lineHeight:.95}}>
               Real jobs. Real results.
             </PR>
-            <PR d="2" style={{display:"flex",justifyContent:"space-between",alignItems:"center",gap:"20px",flexWrap:"wrap",marginTop:"clamp(28px,3.5vw,40px)"}}>
-              <div style={{display:"flex",gap:"10px",flexWrap:"wrap"}}>
+            <PR d="2" className="projects-filter-row" style={{display:"flex",justifyContent:"space-between",alignItems:"center",gap:"20px",flexWrap:"wrap",marginTop:"clamp(28px,3.5vw,40px)"}}>
+              <div className="projects-filter-chips" style={{display:"flex",gap:"10px",flexWrap:"wrap"}}>
                 {PJ.projectFilters.map(ff=>(
                   <button key={ff} onClick={()=>setF(ff)} className="mono"
                     style={{fontSize:"12px",letterSpacing:".1em",textTransform:"uppercase",padding:"10px 16px",borderRadius:"40px",cursor:"pointer",
@@ -206,7 +207,7 @@ function ProjectsApp(){
               </div>
               <span className="mono" style={{fontSize:"12px",color:"var(--faint)",letterSpacing:".08em"}}>{list.length} {list.length===1?"project":"projects"}</span>
             </PR>
-            <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:"clamp(10px,1.2vw,14px)",marginTop:"clamp(20px,2.5vw,28px)"}}>
+            <div className="projects-grid" style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:"clamp(10px,1.2vw,14px)",marginTop:"clamp(20px,2.5vw,28px)"}}>
               {list.map((p,i)=><PCard key={p.id} p={p} d={String(i%4)} onOpen={select}/>)}
             </div>
           </div>
@@ -225,7 +226,7 @@ function ProjectsApp(){
               <PR d="2" as="p" style={{margin:"22px 0 0",color:"var(--muted)",fontSize:"clamp(16px,1.3vw,19px)",maxWidth:"44ch",lineHeight:1.65}}>
                 Tell us about your site and we'll come back with a locked price, same day. No obligation. No follow-up calls unless you want them.
               </PR>
-              <PR d="3" style={{display:"flex",gap:"14px",marginTop:"36px",flexWrap:"wrap"}}>
+              <PR d="3" className="subpage-actions" style={{display:"flex",gap:"14px",marginTop:"36px",flexWrap:"wrap"}}>
                 <button className="btn btn--solid btn--lg" onClick={()=>setQuote(true)}>Start my quote <PAr/></button>
                 <a className="btn btn--ghost btn--lg" href={`tel:${PJ.phone.replace(/\s/g,"")}`}><PIc name="phone" s={16}/> {PJ.phone}</a>
               </PR>

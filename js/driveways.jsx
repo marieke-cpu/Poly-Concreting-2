@@ -93,7 +93,7 @@ function StickyBar({ onQuote }){
     return ()=>window.removeEventListener("scroll",f);
   },[]);
   return (
-    <div style={{
+    <div className="svc-sticky-quote" style={{
       position:"fixed",bottom:0,left:0,right:0,zIndex:50,
       background:"rgba(8,8,10,.94)",backdropFilter:"blur(14px) saturate(140%)",
       borderTop:"1px solid var(--line-2)",
