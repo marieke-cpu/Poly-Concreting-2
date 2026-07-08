@@ -119,6 +119,111 @@ function StickyBar({ onQuote }){
   );
 }
 
+function DrivewaySalesHero({ open }){
+  const proof = [
+    "Excavation depth, sub-base and mesh checked before the pour",
+    "Drainage and crossover details planned before formwork",
+    "Plain, broom, coloured and exposed aggregate finishes available",
+  ];
+  return (
+    <section className="svc-sales-hero driveway-sales-hero" style={{
+      position:"relative",minHeight:"100svh",
+      display:"flex",alignItems:"flex-end",overflow:"hidden",
+    }}>
+      <SPh label={null} src="assets/img/agg-driveway.webp" pos="center 58%"
+        style={{position:"absolute",inset:0}}/>
+      <div style={{
+        position:"absolute",inset:0,
+        background:"linear-gradient(100deg,rgba(8,8,10,.94) 0%,rgba(8,8,10,.72) 44%,rgba(8,8,10,.32) 74%,rgba(8,8,10,.62) 100%)",
+      }}/>
+      <div style={{position:"absolute",inset:0,background:"linear-gradient(0deg,rgba(8,8,10,.94) 0%,rgba(8,8,10,.18) 46%,rgba(8,8,10,.62) 100%)"}}/>
+      <div className="wrap" style={{
+        position:"relative",width:"100%",
+        paddingTop:"clamp(170px,21vh,220px)",paddingBottom:"clamp(46px,8vh,92px)",
+      }}>
+        <div className="svc-sales-hero__grid">
+          <div className="hero-copy">
+            <SR><SEb n="—">Concrete Driveways · South East QLD</SEb></SR>
+            <SR d="1" as="h1" className="display" style={{
+              fontSize:"clamp(46px,7.8vw,118px)",lineHeight:.9,
+              margin:"20px 0 0",maxWidth:"12ch",
+            }}>
+              The last driveway you'll ever <span className="chrome-text">pour.</span>
+            </SR>
+            <SR d="2" as="p" style={{
+              margin:"24px 0 0",fontSize:"clamp(17px,1.35vw,21px)",
+              color:"#f4f3ef",maxWidth:"52ch",lineHeight:1.58,textShadow:"0 2px 18px rgba(0,0,0,.72)",
+            }}>
+              Reinforced, drained and finished to spec. We plan the base, falls, crossover and finish before concrete arrives, so the driveway looks sharp and performs properly.
+            </SR>
+            <SR d="3">
+              <div className="svc-sales-hero__chips" style={{display:"flex",flexWrap:"wrap",gap:"8px",marginTop:"24px"}}>
+                {["Fixed written quotes","Google reviewed","Proper prep","Clean handover"].map(label=>(
+                  <span key={label} className="mono" style={{fontSize:"11px",letterSpacing:".08em",textTransform:"uppercase",color:"var(--text)",border:"1px solid rgba(255,255,255,.22)",background:"rgba(8,8,10,.34)",backdropFilter:"blur(10px)",padding:"7px 10px",borderRadius:"4px"}}>
+                    {label}
+                  </span>
+                ))}
+              </div>
+            </SR>
+            <SR d="4" className="svc-cta-row" style={{display:"flex",gap:"12px",marginTop:"32px",flexWrap:"wrap"}}>
+              <button className="btn btn--solid btn--lg" onClick={open}>
+                Get a free quote <SAr/>
+              </button>
+              <a className="btn btn--ghost btn--lg" href={`tel:${SD.phone.replace(/\s/g,"")}`}>
+                <SIc name="phone" s={16}/> {SD.phone}
+              </a>
+            </SR>
+          </div>
+          <SR d="2" className="svc-sales-hero__panel-wrap">
+            <aside className="svc-sales-hero__panel">
+              <div className="mono" style={{fontSize:"10px",letterSpacing:".18em",textTransform:"uppercase",color:"var(--faint)"}}>Driveway quote-ready</div>
+              <h2 className="display" style={{fontSize:"clamp(24px,2.2vw,34px)",lineHeight:.96,margin:"14px 0 0"}}>
+                Built for daily use.<br/>Finished for street appeal.
+              </h2>
+              <div style={{display:"grid",gap:"10px",marginTop:"20px"}}>
+                {proof.map((point,i)=>(
+                  <div key={point} style={{display:"grid",gridTemplateColumns:"28px 1fr",gap:"10px",alignItems:"start"}}>
+                    <span className="mono" style={{width:"28px",height:"28px",display:"grid",placeItems:"center",border:"1px solid var(--line-2)",borderRadius:"50%",fontSize:"10px",color:"var(--text)"}}>{String(i+1).padStart(2,"0")}</span>
+                    <p style={{margin:"2px 0 0",fontSize:"13.5px",lineHeight:1.5,color:"var(--muted)"}}>{point}</p>
+                  </div>
+                ))}
+              </div>
+              <div style={{borderTop:"1px solid var(--line)",marginTop:"20px",paddingTop:"18px"}}>
+                <div className="mono" style={{fontSize:"10px",letterSpacing:".15em",textTransform:"uppercase",color:"var(--faint)",marginBottom:"10px"}}>Popular driveway finishes</div>
+                <div style={{display:"grid",gridTemplateColumns:"repeat(2,minmax(0,1fr))",gap:"8px"}}>
+                  {["Broom finish","Exposed aggregate","Coloured concrete","Plain concrete"].map(item=>(
+                    <span key={item} style={{border:"1px solid var(--line)",background:"rgba(255,255,255,.04)",borderRadius:"var(--r)",padding:"10px 11px",fontSize:"13px",fontWeight:700,lineHeight:1.2}}>
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <button className="btn btn--solid" onClick={open} style={{width:"100%",justifyContent:"center",marginTop:"20px"}}>
+                Check availability <SAr/>
+              </button>
+            </aside>
+          </SR>
+        </div>
+        <SR d="5">
+          <div className="svc-trust-strip svc-sales-hero__stats" style={{display:"grid",gridTemplateColumns:"repeat(4,minmax(0,1fr))",marginTop:"clamp(30px,4vw,48px)",border:"1px solid rgba(255,255,255,.16)",background:"rgba(8,8,10,.32)",backdropFilter:"blur(12px)",borderRadius:"var(--r)",overflow:"hidden"}}>
+            {[
+              {v:"150+",  l:"Jobs completed"},
+              {v:"10+",   l:"Years in SEQ"},
+              {v:"4.8★",  l:"Google rating"},
+              {v:"Fixed", l:"Written quotes"},
+            ].map((t,i,arr)=>(
+              <div key={t.v} style={{padding:"clamp(15px,1.7vw,22px)",borderRight:i<arr.length-1?"1px solid rgba(255,255,255,.12)":"none"}}>
+                <div className="display chrome-text" style={{fontSize:"clamp(22px,2.5vw,36px)",lineHeight:.95}}>{t.v}</div>
+                <div className="mono" style={{fontSize:"10.5px",letterSpacing:".06em",color:"var(--muted)",marginTop:"6px"}}>{t.l}</div>
+              </div>
+            ))}
+          </div>
+        </SR>
+      </div>
+    </section>
+  );
+}
+
 /* ── review card ── */
 function ReviewCard({ t }){
   return (
@@ -285,64 +390,7 @@ function DrivewayApp(){
       <main>
 
         {/* ─── HERO ─────────────────────────────────────────── */}
-        <section style={{
-          position:"relative",minHeight:"100svh",
-          display:"flex",alignItems:"flex-end",overflow:"hidden",
-        }}>
-          <SPh label={null} src="assets/img/agg-driveway.webp" pos="center 58%"
-            style={{position:"absolute",inset:0}}/>
-          <div style={{
-            position:"absolute",inset:0,
-            background:"linear-gradient(105deg,rgba(8,8,10,.97) 0%,rgba(8,8,10,.75) 42%,rgba(8,8,10,.3) 100%)",
-          }}/>
-          <div className="wrap" style={{
-            position:"relative",width:"100%",
-            paddingTop:"clamp(180px,22vh,220px)",paddingBottom:"clamp(70px,10vw,120px)",
-          }}>
-            <SR d="1" as="h1" className="display" style={{
-              fontSize:"clamp(48px,8.5vw,128px)",lineHeight:.9,
-              margin:0,maxWidth:"14ch",
-            }}>
-              The last driveway you'll ever <span className="chrome-text">pour.</span>
-            </SR>
-            <SR d="2" as="p" style={{
-              margin:"28px 0 0",fontSize:"clamp(16px,1.4vw,21px)",
-              color:"var(--text)",maxWidth:"44ch",lineHeight:1.6,
-            }}>
-              Reinforced, drained and finished to spec. Fixed price, one crew, across all of South East Queensland.
-            </SR>
-            <SR d="3" className="svc-cta-row" style={{display:"flex",gap:"12px",marginTop:"36px",flexWrap:"wrap"}}>
-              <button className="btn btn--solid btn--lg" onClick={open}>
-                Get a free quote <SAr/>
-              </button>
-              <a className="btn btn--ghost btn--lg" href={`tel:${SD.phone.replace(/\s/g,"")}`}>
-                <SIc name="phone" s={16}/> {SD.phone}
-              </a>
-            </SR>
-            <SR d="4">
-              <div style={{
-                display:"flex",flexWrap:"wrap",gap:"0",
-                marginTop:"clamp(48px,6vw,72px)",
-                borderTop:"1px solid rgba(255,255,255,.12)",
-              }}>
-                {[
-                  {v:"150+",  l:"Jobs completed"},
-                  {v:"10+",   l:"Years in SEQ"},
-                  {v:"4.8★",  l:"Google rating"},
-                  {v:"Fixed", l:"No-surprise quotes"},
-                ].map((t,i,arr)=>(
-                  <div key={t.v} style={{
-                    padding:"clamp(16px,2vw,24px) clamp(18px,2.4vw,32px)",
-                    borderRight:i<arr.length-1?"1px solid rgba(255,255,255,.12)":"none",
-                  }}>
-                    <div style={{fontSize:"clamp(20px,2.2vw,30px)",fontWeight:800,letterSpacing:"-.01em"}}>{t.v}</div>
-                    <div className="mono" style={{fontSize:"11px",letterSpacing:".07em",color:"var(--muted)",marginTop:"4px"}}>{t.l}</div>
-                  </div>
-                ))}
-              </div>
-            </SR>
-          </div>
-        </section>
+        <DrivewaySalesHero open={open}/>
 
         {/* ─── WHY DRIVEWAYS FAIL ───────────────────────────── */}
         <section className="section" style={{

@@ -865,6 +865,20 @@ select.q-input{ appearance:none; -webkit-appearance:none; cursor:pointer; }
   background:rgba(255,255,255,.08) !important;
   color:var(--text);
 }
+.svc-sales-hero__grid{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(340px,430px);
+  gap:clamp(28px,5vw,78px);
+  align-items:end;
+}
+.svc-sales-hero__panel{
+  background:rgba(12,12,14,.78);
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:var(--r);
+  padding:clamp(20px,2.2vw,28px);
+  box-shadow:0 24px 80px rgba(0,0,0,.38);
+  backdrop-filter:blur(18px) saturate(140%);
+}
 @media(max-width:1040px){
   .loc-hero__content{
     grid-template-columns:1fr;
@@ -873,10 +887,23 @@ select.q-input{ appearance:none; -webkit-appearance:none; cursor:pointer; }
   .loc-hero__panel-wrap{
     max-width:680px;
   }
+  .svc-sales-hero__grid{
+    grid-template-columns:1fr;
+    align-items:start;
+  }
+  .svc-sales-hero__panel-wrap{
+    max-width:680px;
+  }
   .loc-hero__stats{
     grid-template-columns:repeat(2,minmax(0,1fr)) !important;
   }
+  .svc-sales-hero__stats{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  }
   .loc-hero__stats > div:nth-child(2){
+    border-right:none !important;
+  }
+  .svc-sales-hero__stats > div:nth-child(2){
     border-right:none !important;
   }
 }
@@ -884,14 +911,30 @@ select.q-input{ appearance:none; -webkit-appearance:none; cursor:pointer; }
   .loc-hero .wrap{
     padding-bottom:104px !important;
   }
+  .svc-sales-hero .wrap{
+    padding-top:150px !important;
+    padding-bottom:104px !important;
+  }
   .loc-hero__panel{
+    padding:18px;
+  }
+  .svc-sales-hero__panel{
     padding:18px;
   }
   .loc-hero__panel .btn{
     width:100%;
     justify-content:center;
   }
+  .svc-sales-hero__panel .btn{
+    width:100%;
+    justify-content:center;
+  }
   .loc-hero__chips span{
+    font-size:9.5px !important;
+    letter-spacing:.055em !important;
+    padding:6px 8px !important;
+  }
+  .svc-sales-hero__chips span{
     font-size:9.5px !important;
     letter-spacing:.055em !important;
     padding:6px 8px !important;

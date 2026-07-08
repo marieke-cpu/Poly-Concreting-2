@@ -833,6 +833,136 @@ function ServiceTestimonials({ serviceId }){
   return window.PC_REVIEWS ? <window.PC_REVIEWS/> : null;
 }
 
+function ServiceSalesHero({ s, isResidential, openQuote }){
+  const hasDeepOptions = s.aggRanges || s.colourRanges || s.stampPatterns || s.coverColours;
+  const proof = [
+    "Base prep, drainage and set-out checked before the pour",
+    "Owner-operated crew with clean formwork and tidy handover",
+    "Finish, access and site details confirmed before we lock it in",
+  ];
+  const services = isResidential
+    ? ["Driveways","Slabs","Pathways","Patios","Pool surrounds","Resurfacing"]
+    : ["Boral & Nielsens ranges","Samples at site visit","Wet-look seal options","Finish guidance"];
+
+  const scrollLink = ()=>{
+    if(s.aggRanges) return {href:"#stone-ranges", label:"View stone ranges"};
+    if(s.colourRanges) return {href:"#colour-ranges", label:"View colour ranges"};
+    if(s.stampPatterns) return {href:"#stamp-patterns", label:"View stamp patterns"};
+    if(s.coverColours) return {href:"#cover-colours", label:"View colours & patterns"};
+    return null;
+  };
+  const secondary = scrollLink();
+
+  return (
+    <section className="svc-detail-hero svc-sales-hero" style={{
+      position:"relative",
+      minHeight: isResidential ? "100svh" : "clamp(620px,78vh,820px)",
+      display:"flex",alignItems:"flex-end",overflow:"hidden",
+    }}>
+      <SPh label={null} src={s.hero} pos={s.pos} style={{position:"absolute",inset:0}}/>
+      <div style={{
+        position:"absolute",inset:0,
+        background:"linear-gradient(100deg,rgba(8,8,10,.94) 0%,rgba(8,8,10,.72) 44%,rgba(8,8,10,.32) 74%,rgba(8,8,10,.62) 100%)",
+      }}/>
+      <div style={{position:"absolute",inset:0,background:"linear-gradient(0deg,rgba(8,8,10,.94) 0%,rgba(8,8,10,.18) 46%,rgba(8,8,10,.62) 100%)"}}/>
+
+      <div className="wrap" style={{position:"relative",width:"100%",paddingTop:"clamp(170px,21vh,220px)",paddingBottom:"clamp(46px,8vh,92px)"}}>
+        <div className="svc-sales-hero__grid">
+          <div className="hero-copy">
+            <SR><SEb n="—">Poly Concreting · South East QLD</SEb></SR>
+            <SR d="1" as="h1" className="display" style={{
+              fontSize:"clamp(46px,7.8vw,118px)",lineHeight:.9,margin:"20px 0 0",maxWidth:"12ch",
+            }}>
+              {s.headline
+                ? <>{s.headline[0]} <span className="chrome-text">{s.headline[1]}</span></>
+                : <span className="chrome-text">{s.name}</span>
+              }
+            </SR>
+            <SR d="2" as="p" style={{
+              margin:"24px 0 0",fontSize:"clamp(17px,1.35vw,21px)",
+              color:"#f4f3ef",maxWidth:"52ch",lineHeight:1.58,textShadow:"0 2px 18px rgba(0,0,0,.72)",
+            }}>
+              {s.tag} We plan the base, drainage, reinforcement and finish before concrete arrives, so the result looks sharp and performs properly.
+            </SR>
+            <SR d="3">
+              <div className="svc-sales-hero__chips" style={{display:"flex",flexWrap:"wrap",gap:"8px",marginTop:"24px"}}>
+                {["Fixed written quotes","Google reviewed","Proper prep","Clean handover"].map(label=>(
+                  <span key={label} className="mono" style={{fontSize:"11px",letterSpacing:".08em",textTransform:"uppercase",color:"var(--text)",border:"1px solid rgba(255,255,255,.22)",background:"rgba(8,8,10,.34)",backdropFilter:"blur(10px)",padding:"7px 10px",borderRadius:"4px"}}>
+                    {label}
+                  </span>
+                ))}
+              </div>
+            </SR>
+            <SR d="4" className="svc-cta-row" style={{display:"flex",gap:"12px",marginTop:"32px",flexWrap:"wrap"}}>
+              <button className="btn btn--solid btn--lg" onClick={openQuote}>
+                Quote my {s.short.toLowerCase()} <SAr/>
+              </button>
+              {secondary ? (
+                <a className="btn btn--ghost btn--lg" href={secondary.href}
+                  onClick={e=>{e.preventDefault();document.querySelector(secondary.href)?.scrollIntoView({behavior:"smooth"});}}>
+                  {secondary.label} <SAr/>
+                </a>
+              ) : (
+                <a className="btn btn--ghost btn--lg" href={`tel:${SD.phone.replace(/\s/g,"")}`}>
+                  <SIc name="phone" s={16}/> {SD.phone}
+                </a>
+              )}
+            </SR>
+          </div>
+
+          <SR d="2" className="svc-sales-hero__panel-wrap">
+            <aside className="svc-sales-hero__panel">
+              <div className="mono" style={{fontSize:"10px",letterSpacing:".18em",textTransform:"uppercase",color:"var(--faint)"}}>Quote-ready {s.name.toLowerCase()}</div>
+              <h2 className="display" style={{fontSize:"clamp(24px,2.2vw,34px)",lineHeight:.96,margin:"14px 0 0"}}>
+                Built to look good.<br/>Set up to last.
+              </h2>
+              <div style={{display:"grid",gap:"10px",marginTop:"20px"}}>
+                {proof.map((point,i)=>(
+                  <div key={point} style={{display:"grid",gridTemplateColumns:"28px 1fr",gap:"10px",alignItems:"start"}}>
+                    <span className="mono" style={{width:"28px",height:"28px",display:"grid",placeItems:"center",border:"1px solid var(--line-2)",borderRadius:"50%",fontSize:"10px",color:"var(--text)"}}>{String(i+1).padStart(2,"0")}</span>
+                    <p style={{margin:"2px 0 0",fontSize:"13.5px",lineHeight:1.5,color:"var(--muted)"}}>{point}</p>
+                  </div>
+                ))}
+              </div>
+              <div style={{borderTop:"1px solid var(--line)",marginTop:"20px",paddingTop:"18px"}}>
+                <div className="mono" style={{fontSize:"10px",letterSpacing:".15em",textTransform:"uppercase",color:"var(--faint)",marginBottom:"10px"}}>{hasDeepOptions ? "Options included" : "Common jobs"}</div>
+                <div style={{display:"grid",gridTemplateColumns:"repeat(2,minmax(0,1fr))",gap:"8px"}}>
+                  {services.map(item=>(
+                    <span key={item} style={{border:"1px solid var(--line)",background:"rgba(255,255,255,.04)",borderRadius:"var(--r)",padding:"10px 11px",fontSize:"13px",fontWeight:700,lineHeight:1.2}}>
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <button className="btn btn--solid" onClick={openQuote} style={{width:"100%",justifyContent:"center",marginTop:"20px"}}>
+                Check availability <SAr/>
+              </button>
+            </aside>
+          </SR>
+        </div>
+
+        {isResidential && (
+          <SR d="5">
+            <div className="svc-trust-strip svc-sales-hero__stats" style={{display:"grid",gridTemplateColumns:"repeat(4,minmax(0,1fr))",marginTop:"clamp(30px,4vw,48px)",border:"1px solid rgba(255,255,255,.16)",background:"rgba(8,8,10,.32)",backdropFilter:"blur(12px)",borderRadius:"var(--r)",overflow:"hidden"}}>
+              {[
+                {v:"150+",  l:"Jobs completed"},
+                {v:"10+",   l:"Years in SEQ"},
+                {v:"4.8★",  l:"Google rating"},
+                {v:"Fixed", l:"Written quotes"},
+              ].map((t,i,arr)=>(
+                <div key={t.v} style={{padding:"clamp(15px,1.7vw,22px)",borderRight:i<arr.length-1?"1px solid rgba(255,255,255,.12)":"none"}}>
+                  <div className="display chrome-text" style={{fontSize:"clamp(22px,2.5vw,36px)",lineHeight:.95}}>{t.v}</div>
+                  <div className="mono" style={{fontSize:"10.5px",letterSpacing:".06em",color:"var(--muted)",marginTop:"6px"}}>{t.l}</div>
+                </div>
+              ))}
+            </div>
+          </SR>
+        )}
+      </div>
+    </section>
+  );
+}
+
 /* ── main app ── */
 function ServiceDetailApp(){
   const [s,   setS]   = React.useState(svcFromHash);
@@ -897,109 +1027,7 @@ function ServiceDetailApp(){
       <main>
 
         {/* ── HERO ─────────────────────────────────────────── */}
-        <section className="svc-detail-hero" style={{
-          position:"relative",
-          minHeight: isResidential ? "100svh" : "clamp(520px,65vh,720px)",
-          display:"flex",alignItems:"flex-end",overflow:"hidden",
-        }}>
-          <SPh label={null} src={s.hero} pos={s.pos} style={{position:"absolute",inset:0}}/>
-          <div style={{
-            position:"absolute",inset:0,
-            background: isResidential
-              ? "linear-gradient(105deg,rgba(8,8,10,.97) 0%,rgba(8,8,10,.75) 42%,rgba(8,8,10,.3) 100%)"
-              : "linear-gradient(0deg,rgba(8,8,10,.97) 0%,rgba(8,8,10,.55) 45%,rgba(8,8,10,.22) 100%)",
-          }}/>
-
-          <div className="wrap" style={{
-            position:"relative",width:"100%",
-            paddingTop:"clamp(180px,22vh,220px)",
-            paddingBottom:"clamp(52px,7vw,90px)",
-          }}>
-            <SR d="1" as="h1" className="display" style={{
-              fontSize:"clamp(46px,8vw,118px)",lineHeight:.92,margin:0,maxWidth:"14ch",
-            }}>
-              {s.headline
-                ? <>{s.headline[0]} <span className="chrome-text">{s.headline[1]}</span></>
-                : <span className="chrome-text">{s.name}</span>
-              }
-            </SR>
-            <SR d="2" as="p" style={{
-              margin:"18px 0 0",fontSize:"clamp(16px,1.45vw,22px)",
-              color:"var(--text)",maxWidth:"46ch",lineHeight:1.5,
-            }}>
-              {s.tag}
-            </SR>
-            <SR d="3" className="svc-detail-stats" style={{display:"flex",gap:"clamp(18px,2.5vw,36px)",marginTop:"20px",flexWrap:"wrap"}}>
-              {s.stat.map(x=>(
-                <span key={x} className="mono" style={{
-                  fontSize:"12px",letterSpacing:".06em",color:"var(--text)",
-                  display:"flex",alignItems:"center",gap:"8px",
-                }}>
-                  <span style={{width:"5px",height:"5px",background:"#9a9aa0"}}/>
-                  {x}
-                </span>
-              ))}
-            </SR>
-            <SR d="4" className="svc-cta-row" style={{display:"flex",gap:"12px",marginTop:"32px",flexWrap:"wrap"}}>
-              <button className="btn btn--solid btn--lg" onClick={openQuote}>
-                Quote my {s.short.toLowerCase()} <SAr/>
-              </button>
-              {!s.aggRanges && !s.colourRanges && !s.stampPatterns && !s.coverColours && (
-                <a className="btn btn--ghost btn--lg" href={`tel:${SD.phone.replace(/\s/g,"")}`}>
-                  <SIc name="phone" s={16}/> {SD.phone}
-                </a>
-              )}
-              {s.aggRanges && (
-                <a className="btn btn--ghost btn--lg" href="#stone-ranges"
-                  onClick={e=>{e.preventDefault();document.getElementById("stone-ranges").scrollIntoView({behavior:"smooth"});}}>
-                  View stone ranges <SAr/>
-                </a>
-              )}
-              {s.colourRanges && (
-                <a className="btn btn--ghost btn--lg" href="#colour-ranges"
-                  onClick={e=>{e.preventDefault();document.getElementById("colour-ranges").scrollIntoView({behavior:"smooth"});}}>
-                  View colour ranges <SAr/>
-                </a>
-              )}
-              {s.stampPatterns && (
-                <a className="btn btn--ghost btn--lg" href="#stamp-patterns"
-                  onClick={e=>{e.preventDefault();document.getElementById("stamp-patterns").scrollIntoView({behavior:"smooth"});}}>
-                  View stamp patterns <SAr/>
-                </a>
-              )}
-              {s.coverColours && (
-                <a className="btn btn--ghost btn--lg" href="#cover-colours"
-                  onClick={e=>{e.preventDefault();document.getElementById("cover-colours").scrollIntoView({behavior:"smooth"});}}>
-                  View colours &amp; patterns <SAr/>
-                </a>
-              )}
-            </SR>
-            {isResidential && (
-              <SR d="5">
-                <div className="svc-trust-strip" style={{
-                  display:"flex",flexWrap:"wrap",gap:"0",
-                  marginTop:"clamp(48px,6vw,72px)",
-                  borderTop:"1px solid rgba(255,255,255,.12)",
-                }}>
-                  {[
-                    {v:"150+",  l:"Jobs completed"},
-                    {v:"10+",   l:"Years in SEQ"},
-                    {v:"4.8★",  l:"Google rating"},
-                    {v:"Fixed", l:"No-surprise quotes"},
-                  ].map((t,i,arr)=>(
-                    <div key={t.v} style={{
-                      padding:"clamp(16px,2vw,24px) clamp(18px,2.4vw,32px)",
-                      borderRight:i<arr.length-1?"1px solid rgba(255,255,255,.12)":"none",
-                    }}>
-                      <div style={{fontSize:"clamp(20px,2.2vw,30px)",fontWeight:800,letterSpacing:"-.01em"}}>{t.v}</div>
-                      <div className="mono" style={{fontSize:"11px",letterSpacing:".07em",color:"var(--muted)",marginTop:"4px"}}>{t.l}</div>
-                    </div>
-                  ))}
-                </div>
-              </SR>
-            )}
-          </div>
-        </section>
+        <ServiceSalesHero s={s} isResidential={isResidential} openQuote={openQuote}/>
 
         {/* ── DESCRIPTION ──────────────────────────────────── */}
         {["trowel","broom","swirl","exposed","coloured","stamped","covercrete","resurfacing"].includes(s.id) && (
