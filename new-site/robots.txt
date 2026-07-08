@@ -3,4 +3,4 @@ Allow: /
 
 Disallow: /images/
 
-Sitemap: https://www.polyconcreting.com.au/sitemap.xml
+Sitemap: https://polyconcretingqld.com.au/sitemap.xml

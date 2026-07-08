@@ -866,7 +866,7 @@ function ServiceDetailApp(){
   const updateMeta = (svc)=>{
     const title = `${svc.name} South East QLD | Poly Concreting`;
     const desc = svc.metaDesc || `Professional ${svc.name.toLowerCase()} across South East Queensland. Owner-operated, fixed price, same-day quotes. Based in Morayfield.`;
-    const url = `https://www.polyconcreting.com.au/service-detail.html#${svc.id}`;
+    const url = `https://polyconcretingqld.com.au/service-detail.html#${svc.id}`;
     document.title = title;
     const setMeta = (sel,attr,val)=>{ const el=document.querySelector(sel); if(el) el.setAttribute(attr,val); };
     setMeta('meta[name="description"]','content',desc);

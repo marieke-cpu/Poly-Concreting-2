@@ -5,18 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Concrete Driveways Caboolture &amp; Morayfield QLD | Free Fixed Quote</title>
 <meta name="description" content="Get a fixed quote for a concrete driveway in Caboolture or Morayfield. Plain, broom, coloured and exposed aggregate driveways by local Morayfield concreters."/>
-<link rel="canonical" href="https://www.polyconcreting.com.au/driveways-caboolture-morayfield.html"/>
+<link rel="canonical" href="https://polyconcretingqld.com.au/driveways-caboolture-morayfield.html"/>
 <meta property="og:type" content="website"/>
-<meta property="og:url" content="https://www.polyconcreting.com.au/driveways-caboolture-morayfield.html"/>
+<meta property="og:url" content="https://polyconcretingqld.com.au/driveways-caboolture-morayfield.html"/>
 <meta property="og:title" content="Concrete Driveways Caboolture &amp; Morayfield | Poly Concreting"/>
 <meta property="og:description" content="Local concrete driveway quotes for Caboolture and Morayfield. Reinforced, drained and finished properly. Same-day response."/>
-<meta property="og:image" content="https://www.polyconcreting.com.au/assets/img/agg-driveway.webp"/>
+<meta property="og:image" content="https://polyconcretingqld.com.au/assets/img/agg-driveway.webp"/>
 <meta property="og:site_name" content="Poly Concreting"/>
 <meta property="og:locale" content="en_AU"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="Concrete Driveways Caboolture &amp; Morayfield | Poly Concreting"/>
 <meta name="twitter:description" content="Fixed quotes for concrete driveways in Caboolture and Morayfield. Same-day response."/>
-<meta name="twitter:image" content="https://www.polyconcreting.com.au/assets/img/agg-driveway.webp"/>
+<meta name="twitter:image" content="https://polyconcretingqld.com.au/assets/img/agg-driveway.webp"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -24,15 +24,15 @@
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.polyconcreting.com.au/"},
-        {"@type": "ListItem", "position": 2, "name": "Driveways Caboolture & Morayfield", "item": "https://www.polyconcreting.com.au/driveways-caboolture-morayfield.html"}
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://polyconcretingqld.com.au/"},
+        {"@type": "ListItem", "position": 2, "name": "Driveways Caboolture & Morayfield", "item": "https://polyconcretingqld.com.au/driveways-caboolture-morayfield.html"}
       ]
     },
     {
       "@type": "Service",
-      "@id": "https://www.polyconcreting.com.au/driveways-caboolture-morayfield.html#service",
+      "@id": "https://polyconcretingqld.com.au/driveways-caboolture-morayfield.html#service",
       "name": "Concrete Driveways Caboolture and Morayfield",
-      "provider": {"@id": "https://www.polyconcreting.com.au/#business"},
+      "provider": {"@id": "https://polyconcretingqld.com.au/#business"},
       "areaServed": [
         {"@type": "Place", "name": "Caboolture QLD 4510"},
         {"@type": "Place", "name": "Morayfield QLD 4506"}
@@ -614,6 +614,7 @@ body.ads-driveway-page{background:#08080a;color:var(--text);padding-bottom:0}
 
 <script>
 const WEB3FORMS_ACCESS_KEY = "b2c0b7c1-c7d7-4c8d-9e45-3a8f415d2dce";
+const QUOTE_EMAIL = "quotes@polyconcretingqld.com.au";
 
 async function submitAdsQuoteToWeb3Forms(payload){
   if(!WEB3FORMS_ACCESS_KEY || WEB3FORMS_ACCESS_KEY === "YOUR_WEB3FORMS_ACCESS_KEY"){
@@ -628,6 +629,9 @@ async function submitAdsQuoteToWeb3Forms(payload){
         access_key: WEB3FORMS_ACCESS_KEY,
         subject: "New driveway quote request - Caboolture/Morayfield",
         from_name: payload.name || "Poly Concreting ads landing page",
+        to: QUOTE_EMAIL,
+        recipient: QUOTE_EMAIL,
+        inbox: "Quotes",
         botcheck: "",
         ...payload,
       }),

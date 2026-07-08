@@ -67,6 +67,7 @@ if ('IntersectionObserver' in window) {
 
 // ── Quote form ───────────────────────────────────────────────
 const WEB3FORMS_ACCESS_KEY = 'b2c0b7c1-c7d7-4c8d-9e45-3a8f415d2dce';
+const QUOTE_EMAIL = 'quotes@polyconcretingqld.com.au';
 const quoteForm = document.getElementById('quote-form');
 if (quoteForm) {
   quoteForm.addEventListener('submit', async e => {
@@ -82,6 +83,9 @@ if (quoteForm) {
       access_key: WEB3FORMS_ACCESS_KEY,
       subject: 'New quote request - Poly Concreting new site',
       from_name: `${data.fname || ''} ${data.lname || ''}`.trim() || 'Poly Concreting website',
+      to: QUOTE_EMAIL,
+      recipient: QUOTE_EMAIL,
+      inbox: 'Quotes',
       botcheck: '',
       ...data,
     };

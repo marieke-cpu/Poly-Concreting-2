@@ -1,7 +1,9 @@
 /* Poly Concreting — content data (window globals) */
 window.PC_DATA = {
   phone: "0481 445 041",
-  email: "contact@polyconcreting.com.au",
+  email: "info@polyconcretingqld.com.au",
+  quoteEmail: "quotes@polyconcretingqld.com.au",
+  accountsEmail: "accounts@polyconcretingqld.com.au",
   base: "Morayfield, QLD",
   web3formsAccessKey: "b2c0b7c1-c7d7-4c8d-9e45-3a8f415d2dce",
 
@@ -209,6 +211,9 @@ window.PC_SUBMIT_QUOTE = async function submitQuoteToWeb3Forms(payload){
     access_key: key,
     subject: payload.subject || "New quote request - Poly Concreting",
     from_name: payload.name || payload.fullName || "Poly Concreting website",
+    to: window.PC_DATA.quoteEmail,
+    recipient: window.PC_DATA.quoteEmail,
+    inbox: "Quotes",
     botcheck: "",
     ...payload,
   };

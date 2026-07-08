@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /thankyou.html
 
-Sitemap: https://www.polyconcreting.com.au/sitemap.xml
+Sitemap: https://polyconcretingqld.com.au/sitemap.xml
