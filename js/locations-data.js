@@ -20,12 +20,12 @@ window.PC_LOCATIONS = [
       "Being local means we can respond quickly, avoid long travel fees, and take real pride in work that our neighbours will see every day. Whether you need a simple broom-finished pathway or a full decorative driveway with feature borders, Poly Concreting is your Morayfield concreter."
     ],
     services: [
-      { name: "Driveways", href: "driveways.html", desc: "Exposed aggregate, coloured, and broom-finish driveways built for Morayfield's clay soils." },
-      { name: "Shed & House Slabs", href: "service-detail.html#slabs", desc: "Reinforced concrete slabs for acreage sheds, granny flats, and new home builds." },
-      { name: "Pathways", href: "service-detail.html#pathways", desc: "Practical connecting pathways across large blocks and between structures." },
-      { name: "Patios & Entertaining Areas", href: "service-detail.html#patios", desc: "Outdoor entertaining slabs finished to match your home's style." },
-      { name: "Pool Surrounds", href: "service-detail.html#pools", desc: "Slip-resistant pool coping and surrounds for residential pools." },
-      { name: "Concrete Resurfacing", href: "service-detail.html#resurfacing", desc: "Restore tired or cracked concrete without the full replacement cost." }
+      { name: "Driveways", href: "driveways", desc: "Exposed aggregate, coloured, and broom-finish driveways built for Morayfield's clay soils." },
+      { name: "Shed & House Slabs", href: "service-detail#slabs", desc: "Reinforced concrete slabs for acreage sheds, granny flats, and new home builds." },
+      { name: "Pathways", href: "service-detail#pathways", desc: "Practical connecting pathways across large blocks and between structures." },
+      { name: "Patios & Entertaining Areas", href: "service-detail#patios", desc: "Outdoor entertaining slabs finished to match your home's style." },
+      { name: "Pool Surrounds", href: "service-detail#pools", desc: "Slip-resistant pool coping and surrounds for residential pools." },
+      { name: "Concrete Resurfacing", href: "service-detail#resurfacing", desc: "Restore tired or cracked concrete without the full replacement cost." }
     ],
     nearbySuburbs: [
       "Caboolture", "Burpengary", "Narangba", "Dakabin", "Kallangur",
@@ -62,7 +62,7 @@ window.PC_LOCATIONS = [
       "@type": "LocalBusiness",
       "name": "Poly Concreting — Morayfield",
       "description": "Professional concreting services in Morayfield QLD including driveways, shed slabs, patios, pathways and pool surrounds.",
-      "url": "https://polyconcretingqld.com.au/morayfield-concreting.html",
+      "url": "https://polyconcretingqld.com.au/morayfield-concreting",
       "telephone": "+61481445041",
       "email": "info@polyconcretingqld.com.au",
       "address": {
@@ -105,12 +105,12 @@ window.PC_LOCATIONS = [
       "Poly Concreting is based just down the road in Morayfield, meaning fast response times, no excess travel costs, and a genuine commitment to the Caboolture community. We've built a strong reputation here through consistent, honest work — and we intend to keep it that way."
     ],
     services: [
-      { name: "Driveways", href: "driveways.html", desc: "New driveways and driveway replacements for Caboolture's mix of old and new properties." },
-      { name: "Shed & House Slabs", href: "service-detail.html#slabs", desc: "Reinforced slabs for new builds, granny flats, and large acreage sheds." },
-      { name: "Patios & Outdoor Areas", href: "service-detail.html#patios", desc: "Concrete alfresco and entertaining areas for family living." },
-      { name: "Pathways", href: "service-detail.html#pathways", desc: "Connecting paths, side access, and practical concrete walkways." },
-      { name: "Exposed Aggregate", href: "service-detail.html#exposed", desc: "Premium exposed aggregate finish — popular in Caboolture South estates." },
-      { name: "Concrete Resurfacing", href: "service-detail.html#resurfacing", desc: "Revive and protect ageing concrete without a full demolition." }
+      { name: "Driveways", href: "driveways", desc: "New driveways and driveway replacements for Caboolture's mix of old and new properties." },
+      { name: "Shed & House Slabs", href: "service-detail#slabs", desc: "Reinforced slabs for new builds, granny flats, and large acreage sheds." },
+      { name: "Patios & Outdoor Areas", href: "service-detail#patios", desc: "Concrete alfresco and entertaining areas for family living." },
+      { name: "Pathways", href: "service-detail#pathways", desc: "Connecting paths, side access, and practical concrete walkways." },
+      { name: "Exposed Aggregate", href: "service-detail#exposed", desc: "Premium exposed aggregate finish — popular in Caboolture South estates." },
+      { name: "Concrete Resurfacing", href: "service-detail#resurfacing", desc: "Revive and protect ageing concrete without a full demolition." }
     ],
     nearbySuburbs: [
       "Morayfield", "Upper Caboolture", "Caboolture South", "Wamuran",
@@ -147,7 +147,7 @@ window.PC_LOCATIONS = [
       "@type": "LocalBusiness",
       "name": "Poly Concreting — Caboolture",
       "description": "Professional concreting in Caboolture QLD — driveways, shed slabs, patios, exposed aggregate and resurfacing.",
-      "url": "https://polyconcretingqld.com.au/caboolture-concreting.html",
+      "url": "https://polyconcretingqld.com.au/caboolture-concreting",
       "telephone": "+61481445041",
       "email": "info@polyconcretingqld.com.au",
       "address": {
@@ -190,12 +190,12 @@ window.PC_LOCATIONS = [
       "The sandy loam soils around North Lakes are more workable than the heavy clays further north, but they still need proper compaction to avoid subsidence under slabs. Our sub-base preparation is thorough regardless of soil type, and we use steel mesh reinforcement as standard across all residential slabs and driveways in the area."
     ],
     services: [
-      { name: "Driveways", href: "driveways.html", desc: "Driveway upgrades from builder-grade to premium exposed aggregate or coloured concrete." },
-      { name: "Pool Surrounds & Coping", href: "service-detail.html#pools", desc: "Slip-resistant pool surrounds and coping to match modern North Lakes homes." },
-      { name: "Patios & Alfresco", href: "service-detail.html#patios", desc: "Outdoor entertaining areas that connect seamlessly with your pool or home." },
-      { name: "Exposed Aggregate", href: "service-detail.html#exposed", desc: "The premium finish of choice for North Lakes' contemporary streetscapes." },
-      { name: "Coloured Concrete", href: "service-detail.html#coloured", desc: "Integral and surface-applied colour to match any facade or landscape scheme." },
-      { name: "Pathways", href: "service-detail.html#pathways", desc: "Side paths, entry paths, and connecting walkways for residential blocks." }
+      { name: "Driveways", href: "driveways", desc: "Driveway upgrades from builder-grade to premium exposed aggregate or coloured concrete." },
+      { name: "Pool Surrounds & Coping", href: "service-detail#pools", desc: "Slip-resistant pool surrounds and coping to match modern North Lakes homes." },
+      { name: "Patios & Alfresco", href: "service-detail#patios", desc: "Outdoor entertaining areas that connect seamlessly with your pool or home." },
+      { name: "Exposed Aggregate", href: "service-detail#exposed", desc: "The premium finish of choice for North Lakes' contemporary streetscapes." },
+      { name: "Coloured Concrete", href: "service-detail#coloured", desc: "Integral and surface-applied colour to match any facade or landscape scheme." },
+      { name: "Pathways", href: "service-detail#pathways", desc: "Side paths, entry paths, and connecting walkways for residential blocks." }
     ],
     nearbySuburbs: [
       "Mango Hill", "Mango Hill East", "Kallangur", "Narangba", "Dakabin",
@@ -232,7 +232,7 @@ window.PC_LOCATIONS = [
       "@type": "LocalBusiness",
       "name": "Poly Concreting — North Lakes",
       "description": "Concreting services in North Lakes QLD — driveway upgrades, pool surrounds, alfresco areas and decorative concrete finishes.",
-      "url": "https://polyconcretingqld.com.au/north-lakes-concreting.html",
+      "url": "https://polyconcretingqld.com.au/north-lakes-concreting",
       "telephone": "+61481445041",
       "email": "info@polyconcretingqld.com.au",
       "address": {
@@ -275,12 +275,12 @@ window.PC_LOCATIONS = [
       "Pool surrounds and backyard entertaining slabs are also popular in northside Brisbane as homeowners maximise their smaller blocks. A well-finished concrete entertaining area or pool surround can dramatically expand your usable outdoor space. We offer coloured and exposed aggregate finishes that sit beautifully next to the established gardens and timber houses typical of these Brisbane suburbs."
     ],
     services: [
-      { name: "Driveways", href: "driveways.html", desc: "Old driveway removal and replacement for northside Brisbane's established homes." },
-      { name: "Patios & Entertaining Areas", href: "service-detail.html#patios", desc: "Maximise your outdoor space with a new entertaining or alfresco slab." },
-      { name: "Pool Surrounds", href: "service-detail.html#pools", desc: "Slip-resistant pool surrounds and coping for residential pools." },
-      { name: "Pathways", href: "service-detail.html#pathways", desc: "Entry paths, side access, and garden pathways on tight residential blocks." },
-      { name: "Coloured Concrete", href: "service-detail.html#coloured", desc: "Subtle colour to complement heritage-style homes and established gardens." },
-      { name: "Concrete Resurfacing", href: "service-detail.html#resurfacing", desc: "Refresh tired concrete without full replacement — ideal for patios and pathways." }
+      { name: "Driveways", href: "driveways", desc: "Old driveway removal and replacement for northside Brisbane's established homes." },
+      { name: "Patios & Entertaining Areas", href: "service-detail#patios", desc: "Maximise your outdoor space with a new entertaining or alfresco slab." },
+      { name: "Pool Surrounds", href: "service-detail#pools", desc: "Slip-resistant pool surrounds and coping for residential pools." },
+      { name: "Pathways", href: "service-detail#pathways", desc: "Entry paths, side access, and garden pathways on tight residential blocks." },
+      { name: "Coloured Concrete", href: "service-detail#coloured", desc: "Subtle colour to complement heritage-style homes and established gardens." },
+      { name: "Concrete Resurfacing", href: "service-detail#resurfacing", desc: "Refresh tired concrete without full replacement — ideal for patios and pathways." }
     ],
     nearbySuburbs: [
       "Chermside", "Aspley", "Mitchelton", "The Gap", "Everton Park",
@@ -317,7 +317,7 @@ window.PC_LOCATIONS = [
       "@type": "LocalBusiness",
       "name": "Poly Concreting — Brisbane",
       "description": "Concreting services across Brisbane's northside — driveway replacements, pool surrounds, patios and pathways in Chermside, Aspley, Mitchelton and surrounds.",
-      "url": "https://polyconcretingqld.com.au/brisbane-concreting.html",
+      "url": "https://polyconcretingqld.com.au/brisbane-concreting",
       "telephone": "+61481445041",
       "email": "info@polyconcretingqld.com.au",
       "address": {
@@ -361,12 +361,12 @@ window.PC_LOCATIONS = [
       "We also do solid foundational work in the Sunshine Coast's newer residential estates around Birtinya, Bokarina, and Mountain Creek — driveways, paths, and patio slabs for homes in the 5–10 year range that are now at the stage of completing their outdoor areas properly. If you're on the Sunshine Coast and want concrete work done properly and on time, Poly Concreting makes the trip regularly."
     ],
     services: [
-      { name: "Pool Surrounds & Coping", href: "service-detail.html#pools", desc: "Slip-resistant pool surrounds and coping for Sunshine Coast's year-round outdoor living." },
-      { name: "Driveways", href: "driveways.html", desc: "Driveways from Caloundra to Maroochydore — coloured, exposed aggregate, and broom finish." },
-      { name: "Patios & Alfresco", href: "service-detail.html#patios", desc: "Outdoor entertaining slabs that connect indoor and outdoor living spaces." },
-      { name: "Exposed Aggregate", href: "service-detail.html#exposed", desc: "Natural stone aggregate finishes for pool surrounds, driveways and entertaining areas." },
-      { name: "Pathways", href: "service-detail.html#pathways", desc: "Garden paths and connecting walkways for residential coastal properties." },
-      { name: "Coloured Concrete", href: "service-detail.html#coloured", desc: "Earthy and coastal tones to complement Sunshine Coast landscaping and architecture." }
+      { name: "Pool Surrounds & Coping", href: "service-detail#pools", desc: "Slip-resistant pool surrounds and coping for Sunshine Coast's year-round outdoor living." },
+      { name: "Driveways", href: "driveways", desc: "Driveways from Caloundra to Maroochydore — coloured, exposed aggregate, and broom finish." },
+      { name: "Patios & Alfresco", href: "service-detail#patios", desc: "Outdoor entertaining slabs that connect indoor and outdoor living spaces." },
+      { name: "Exposed Aggregate", href: "service-detail#exposed", desc: "Natural stone aggregate finishes for pool surrounds, driveways and entertaining areas." },
+      { name: "Pathways", href: "service-detail#pathways", desc: "Garden paths and connecting walkways for residential coastal properties." },
+      { name: "Coloured Concrete", href: "service-detail#coloured", desc: "Earthy and coastal tones to complement Sunshine Coast landscaping and architecture." }
     ],
     nearbySuburbs: [
       "Caloundra", "Maroochydore", "Mooloolaba", "Buddina", "Bokarina",
@@ -403,7 +403,7 @@ window.PC_LOCATIONS = [
       "@type": "LocalBusiness",
       "name": "Poly Concreting — Sunshine Coast",
       "description": "Concreting services on the Sunshine Coast QLD — pool surrounds, driveways, alfresco slabs from Caloundra to Maroochydore.",
-      "url": "https://polyconcretingqld.com.au/sunshine-coast-concreting.html",
+      "url": "https://polyconcretingqld.com.au/sunshine-coast-concreting",
       "telephone": "+61481445041",
       "email": "info@polyconcretingqld.com.au",
       "address": {
@@ -447,11 +447,11 @@ window.PC_LOCATIONS = [
       "In Springfield Lakes itself, the newer residential streets show a preference for neat, clean concrete — broom finish or honed driveways that match the contemporary townhouse and family home streetscape. We see a lot of new builds coming to us for their first driveway pour, and we take care to get the finish exactly right the first time."
     ],
     services: [
-      { name: "Shed & House Slabs", href: "service-detail.html#slabs", desc: "Reinforced slabs for new home builds, sheds, and outbuildings in Ipswich and surrounds." },
-      { name: "Driveways", href: "driveways.html", desc: "First-time pours and replacements for Springfield Lakes, Ripley and inner Ipswich." },
-      { name: "Patios & Outdoor Areas", href: "service-detail.html#patios", desc: "Alfresco and entertaining slabs for new builds and established homes." },
-      { name: "Pathways", href: "service-detail.html#pathways", desc: "Practical concrete paths and side access for residential and acreage blocks." },
-      { name: "Commercial Concrete", href: "service-detail.html#commercial", desc: "Hardstand areas, access roads, and commercial slabs for small businesses." }
+      { name: "Shed & House Slabs", href: "service-detail#slabs", desc: "Reinforced slabs for new home builds, sheds, and outbuildings in Ipswich and surrounds." },
+      { name: "Driveways", href: "driveways", desc: "First-time pours and replacements for Springfield Lakes, Ripley and inner Ipswich." },
+      { name: "Patios & Outdoor Areas", href: "service-detail#patios", desc: "Alfresco and entertaining slabs for new builds and established homes." },
+      { name: "Pathways", href: "service-detail#pathways", desc: "Practical concrete paths and side access for residential and acreage blocks." },
+      { name: "Commercial Concrete", href: "service-detail#commercial", desc: "Hardstand areas, access roads, and commercial slabs for small businesses." }
     ],
     nearbySuburbs: [
       "Springfield Lakes", "Springfield", "Ripley", "Deebing Heights",
@@ -488,7 +488,7 @@ window.PC_LOCATIONS = [
       "@type": "LocalBusiness",
       "name": "Poly Concreting — Ipswich",
       "description": "Concreting services in Ipswich QLD — shed slabs, house slabs, driveways and patios in Springfield Lakes, Ripley and across the Ipswich region.",
-      "url": "https://polyconcretingqld.com.au/ipswich-concreting.html",
+      "url": "https://polyconcretingqld.com.au/ipswich-concreting",
       "telephone": "+61481445041",
       "email": "info@polyconcretingqld.com.au",
       "address": {
@@ -532,12 +532,12 @@ window.PC_LOCATIONS = [
       "The soils in the Coomera and Upper Coomera area are typically compacted fill over clay, which requires careful sub-base preparation to prevent differential settlement. We always assess conditions on site and prepare the formation to the appropriate standard before any concrete is placed. Getting the base right is the difference between a driveway that lasts 30 years and one that's lifting and cracking in five."
     ],
     services: [
-      { name: "Driveways", href: "driveways.html", desc: "New driveway pours and replacements across Coomera, Upper Coomera and surrounds." },
-      { name: "Pool Surrounds & Coping", href: "service-detail.html#pools", desc: "Outdoor entertaining and pool surrounds for Gold Coast's year-round lifestyle." },
-      { name: "Patios & Alfresco", href: "service-detail.html#patios", desc: "Alfresco and entertaining slabs to extend Gold Coast outdoor living." },
-      { name: "Exposed Aggregate", href: "service-detail.html#exposed", desc: "The premium Gold Coast driveway finish — natural, durable, UV-stable." },
-      { name: "Coloured Concrete", href: "service-detail.html#coloured", desc: "Bold and subtle colour options to match contemporary Gold Coast home facades." },
-      { name: "Stamped Concrete", href: "service-detail.html#stamped", desc: "Patterned concrete for decorative driveways and pool surrounds." }
+      { name: "Driveways", href: "driveways", desc: "New driveway pours and replacements across Coomera, Upper Coomera and surrounds." },
+      { name: "Pool Surrounds & Coping", href: "service-detail#pools", desc: "Outdoor entertaining and pool surrounds for Gold Coast's year-round lifestyle." },
+      { name: "Patios & Alfresco", href: "service-detail#patios", desc: "Alfresco and entertaining slabs to extend Gold Coast outdoor living." },
+      { name: "Exposed Aggregate", href: "service-detail#exposed", desc: "The premium Gold Coast driveway finish — natural, durable, UV-stable." },
+      { name: "Coloured Concrete", href: "service-detail#coloured", desc: "Bold and subtle colour options to match contemporary Gold Coast home facades." },
+      { name: "Stamped Concrete", href: "service-detail#stamped", desc: "Patterned concrete for decorative driveways and pool surrounds." }
     ],
     nearbySuburbs: [
       "Coomera", "Upper Coomera", "Ormeau", "Pimpama", "Oxenford",
@@ -574,7 +574,7 @@ window.PC_LOCATIONS = [
       "@type": "LocalBusiness",
       "name": "Poly Concreting — Gold Coast",
       "description": "Concreting services on the Gold Coast QLD — driveways, pool surrounds, alfresco slabs in Coomera, Upper Coomera, Ormeau and surrounds.",
-      "url": "https://polyconcretingqld.com.au/gold-coast-concreting.html",
+      "url": "https://polyconcretingqld.com.au/gold-coast-concreting",
       "telephone": "+61481445041",
       "email": "info@polyconcretingqld.com.au",
       "address": {
@@ -618,12 +618,12 @@ window.PC_LOCATIONS = [
       "We also do commercial and industrial slabs for Toowoomba's significant industrial and logistics sector around the Charlton Wellcamp precinct. If you need a hardstand, workshop floor, or commercial driveway in the Toowoomba area, Poly Concreting can deliver. Distance means scheduling is planned ahead — we block out Toowoomba work in focused runs to make the trip worthwhile for everyone."
     ],
     services: [
-      { name: "Driveways", href: "driveways.html", desc: "Driveway replacements and new pours built for Toowoomba's climate demands." },
-      { name: "Patios & Outdoor Areas", href: "service-detail.html#patios", desc: "Garden city entertaining slabs and outdoor living areas for Toowoomba homes." },
-      { name: "Shed & House Slabs", href: "service-detail.html#slabs", desc: "Residential and rural slabs built to spec for Toowoomba's conditions." },
-      { name: "Pathways", href: "service-detail.html#pathways", desc: "Garden paths and connecting walkways for Toowoomba's established properties." },
-      { name: "Coloured Concrete", href: "service-detail.html#coloured", desc: "Warm tones that complement Toowoomba's gardens and heritage streetscapes." },
-      { name: "Commercial Concrete", href: "service-detail.html#commercial", desc: "Hardstand areas and commercial slabs for Toowoomba's industrial and rural sectors." }
+      { name: "Driveways", href: "driveways", desc: "Driveway replacements and new pours built for Toowoomba's climate demands." },
+      { name: "Patios & Outdoor Areas", href: "service-detail#patios", desc: "Garden city entertaining slabs and outdoor living areas for Toowoomba homes." },
+      { name: "Shed & House Slabs", href: "service-detail#slabs", desc: "Residential and rural slabs built to spec for Toowoomba's conditions." },
+      { name: "Pathways", href: "service-detail#pathways", desc: "Garden paths and connecting walkways for Toowoomba's established properties." },
+      { name: "Coloured Concrete", href: "service-detail#coloured", desc: "Warm tones that complement Toowoomba's gardens and heritage streetscapes." },
+      { name: "Commercial Concrete", href: "service-detail#commercial", desc: "Hardstand areas and commercial slabs for Toowoomba's industrial and rural sectors." }
     ],
     nearbySuburbs: [
       "Harristown", "Newtown", "Rangeville", "Highfields", "Kearneys Spring",
@@ -660,7 +660,7 @@ window.PC_LOCATIONS = [
       "@type": "LocalBusiness",
       "name": "Poly Concreting — Toowoomba",
       "description": "Concreting services in Toowoomba QLD — driveways, patios, slabs and commercial concrete built for Toowoomba's climate.",
-      "url": "https://polyconcretingqld.com.au/toowoomba-concreting.html",
+      "url": "https://polyconcretingqld.com.au/toowoomba-concreting",
       "telephone": "+61481445041",
       "email": "info@polyconcretingqld.com.au",
       "address": {

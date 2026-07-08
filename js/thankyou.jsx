@@ -76,10 +76,10 @@ function ThankYouApp(){
               display:"flex",gap:"12px",marginTop:"36px",
               justifyContent:"center",flexWrap:"wrap",
             }}>
-              <a href="Poly Concreting.html" className="btn btn--solid btn--lg">
+              <a href="/" className="btn btn--solid btn--lg">
                 Back to home <SAr/>
               </a>
-              <a href="Services.html" className="btn btn--ghost btn--lg">
+              <a href="Services" className="btn btn--ghost btn--lg">
                 View all services
               </a>
             </SR>

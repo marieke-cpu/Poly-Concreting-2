@@ -52,7 +52,7 @@ function FinishCard({ s }){
   const [hov,setHov]=React.useState(false);
   return (
     <a
-      href={`service-detail.html#${s.id}`}
+      href={`service-detail#${s.id}`}
       onMouseEnter={()=>setHov(true)}
       onMouseLeave={()=>setHov(false)}
       style={{
@@ -92,7 +92,7 @@ function RelatedCard({ s }){
   const [hov,setHov]=React.useState(false);
   return (
     <a
-      href={`service-detail.html#${s.id}`}
+      href={`service-detail#${s.id}`}
       onMouseEnter={()=>setHov(true)}
       onMouseLeave={()=>setHov(false)}
       style={{
@@ -854,7 +854,7 @@ function ServiceDetailApp(){
       const link = e.target.closest?.('a[href]');
       if(!link || !usePopup()) return;
       const href = link.getAttribute("href") || "";
-      if(href === "Quote.html" || href.endsWith("/Quote.html")){
+      if(href === "Quote" || href.endsWith("/Quote")){
         e.preventDefault();
         setQuote(true);
       }
@@ -866,7 +866,7 @@ function ServiceDetailApp(){
   const updateMeta = (svc)=>{
     const title = `${svc.name} South East QLD | Poly Concreting`;
     const desc = svc.metaDesc || `Professional ${svc.name.toLowerCase()} across South East Queensland. Owner-operated, fixed price, same-day quotes. Based in Morayfield.`;
-    const url = `https://polyconcretingqld.com.au/service-detail.html#${svc.id}`;
+    const url = `https://polyconcretingqld.com.au/service-detail#${svc.id}`;
     document.title = title;
     const setMeta = (sel,attr,val)=>{ const el=document.querySelector(sel); if(el) el.setAttribute(attr,val); };
     setMeta('meta[name="description"]','content',desc);
@@ -1761,7 +1761,7 @@ function ServiceDetailApp(){
               ))}
             </div>
             <SR d="3" style={{marginTop:"28px",textAlign:"center"}}>
-              <a href="Services.html" className="btn btn--ghost" style={{fontSize:"12px"}}>
+              <a href="Services" className="btn btn--ghost" style={{fontSize:"12px"}}>
                 View all services <SAr/>
               </a>
             </SR>

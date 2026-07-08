@@ -73,39 +73,52 @@ if (quoteForm) {
   quoteForm.addEventListener('submit', async e => {
     e.preventDefault();
     const submitBtn = quoteForm.querySelector('button[type="submit"]');
+    const originalText = submitBtn ? submitBtn.textContent : '';
     if (submitBtn) {
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending...';
     }
 
-    const data = Object.fromEntries(new FormData(quoteForm).entries());
-    const payload = {
-      access_key: WEB3FORMS_ACCESS_KEY,
-      subject: 'New quote request - Poly Concreting new site',
-      from_name: `${data.fname || ''} ${data.lname || ''}`.trim() || 'Poly Concreting website',
-      to: QUOTE_EMAIL,
-      recipient: QUOTE_EMAIL,
-      inbox: 'Quotes',
-      botcheck: '',
-      ...data,
-    };
+    const formData = new FormData(quoteForm);
+    const data = Object.fromEntries(formData.entries());
+    formData.append('access_key', WEB3FORMS_ACCESS_KEY);
+    formData.append('subject', 'New quote request - Poly Concreting new site');
+    formData.append('from_name', `${data.fname || ''} ${data.lname || ''}`.trim() || 'Poly Concreting website');
+    formData.append('to', QUOTE_EMAIL);
+    formData.append('recipient', QUOTE_EMAIL);
+    formData.append('inbox', 'Quotes');
+    formData.append('botcheck', '');
 
-    if (WEB3FORMS_ACCESS_KEY === 'YOUR_WEB3FORMS_ACCESS_KEY') {
-      console.warn('Web3Forms access key is not configured in new-site/js/main.js');
-    } else {
-      try {
-        await fetch('https://api.web3forms.com/submit', {
+    try {
+      if (WEB3FORMS_ACCESS_KEY === 'YOUR_WEB3FORMS_ACCESS_KEY') {
+        console.warn('Web3Forms access key is not configured in new-site/js/main.js');
+        alert('Something went wrong. Please call 0481 445 041.');
+        return;
+      } else {
+        const response = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-          body: JSON.stringify(payload),
+          body: formData,
         });
-      } catch (error) {
-        console.error('Web3Forms submission failed', error);
+        const result = await response.json();
+        if (!response.ok) {
+          alert('Error: ' + (result.message || 'Your quote could not be sent. Please call 0481 445 041.'));
+          return;
+        }
+      }
+    } catch (error) {
+      console.error('Web3Forms submission failed', error);
+      alert('Something went wrong. Please try again or call 0481 445 041.');
+      return;
+    } finally {
+      if (submitBtn) {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
       }
     }
 
     const successEl = document.getElementById('form-success');
     if (successEl) {
+      quoteForm.reset();
       quoteForm.style.display = 'none';
       successEl.style.display = 'block';
     }

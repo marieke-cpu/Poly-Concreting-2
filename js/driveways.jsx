@@ -14,7 +14,7 @@ function FinishCard({ s }){
   const [hov,setHov]=React.useState(false);
   return (
     <a
-      href={`service-detail.html#${s.id}`}
+      href={`service-detail#${s.id}`}
       onMouseEnter={()=>setHov(true)}
       onMouseLeave={()=>setHov(false)}
       style={{
@@ -235,7 +235,7 @@ function DrivewayApp(){
       const link = e.target.closest?.('a[href]');
       if(!link || !usePopup()) return;
       const href = link.getAttribute("href") || "";
-      if(href === "Quote.html" || href.endsWith("/Quote.html")){
+      if(href === "Quote" || href.endsWith("/Quote")){
         e.preventDefault();
         setQuote(true);
       }
@@ -431,7 +431,7 @@ function DrivewayApp(){
               <button className="btn btn--solid btn--lg" onClick={open}>
                 Quote my driveway <SAr/>
               </button>
-              <a href="Projects.html" className="btn btn--ghost btn--lg">
+              <a href="Projects" className="btn btn--ghost btn--lg">
                 See our work <SAr/>
               </a>
             </SR>
@@ -471,7 +471,7 @@ function DrivewayApp(){
               ))}
             </div>
             <SR d="3" style={{marginTop:"clamp(20px,2.5vw,32px)",textAlign:"center"}}>
-              <a href="Projects.html" className="btn btn--ghost">View all projects <SAr/></a>
+              <a href="Projects" className="btn btn--ghost">View all projects <SAr/></a>
             </SR>
           </div>
         </section>

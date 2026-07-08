@@ -131,7 +131,7 @@ function LocationPage(){
               <div style={{display:"grid",gridTemplateColumns:`repeat(${nearby.length},1fr)`,gap:"clamp(10px,1.2vw,14px)",marginTop:"clamp(28px,3.5vw,44px)"}}>
                 {nearby.map((p,i)=>(
                   <LR key={p.id} d={String(i)}>
-                    <a href={`Projects.html#${p.id}`} style={{display:"block",position:"relative",aspectRatio:"4/3",borderRadius:"var(--r-lg)",overflow:"hidden",border:"1px solid var(--line)",textDecoration:"none"}}>
+                    <a href={`Projects#${p.id}`} style={{display:"block",position:"relative",aspectRatio:"4/3",borderRadius:"var(--r-lg)",overflow:"hidden",border:"1px solid var(--line)",textDecoration:"none"}}>
                       <LPh label={null} src={p.img} pos={p.pos||"center"} style={{position:"absolute",inset:0}}/>
                       <div style={{position:"absolute",inset:0,background:"linear-gradient(0deg,rgba(8,8,10,.9) 20%,rgba(8,8,10,.2) 65%,transparent)"}}/>
                       <div style={{position:"absolute",bottom:0,left:0,right:0,padding:"clamp(14px,1.8vw,20px)"}}>
@@ -143,7 +143,7 @@ function LocationPage(){
                 ))}
               </div>
               <LR d="2" style={{marginTop:"22px",textAlign:"center"}}>
-                <a href="Projects.html" className="btn btn--ghost">View all projects <LAr/></a>
+                <a href="Projects" className="btn btn--ghost">View all projects <LAr/></a>
               </LR>
             </div>
           </section>

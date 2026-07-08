@@ -35,7 +35,7 @@ function ServiceCard({ s, onQuote }){
 
       {/* full-card link — sits behind content, makes whole card clickable */}
       <a
-        href={s.id==="driveways" ? "driveways.html" : `service-detail.html#${s.id}`}
+        href={s.id==="driveways" ? "driveways" : `service-detail#${s.id}`}
         aria-label={`View ${s.name} service details`}
         style={{position:"absolute",inset:0,zIndex:1}}
       />
@@ -129,7 +129,7 @@ function ServicesApp(){
       const link = e.target.closest?.('a[href]');
       if(!link || !usePopup()) return;
       const href = link.getAttribute("href") || "";
-      if(href === "Quote.html" || href.endsWith("/Quote.html")){
+      if(href === "Quote" || href.endsWith("/Quote")){
         e.preventDefault();
         setQuote(true);
       }

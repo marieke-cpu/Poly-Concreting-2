@@ -95,7 +95,7 @@ function WhyPoly(){
           </div>
         </div>
         <Rv d="2" style={{marginTop:"clamp(36px,4vw,56px)",display:"flex",alignItems:"center",gap:"20px",flexWrap:"wrap"}}>
-          <a href="Quote.html" className="btn btn--solid btn--lg">Get a free quote <Ar d="e"/></a>
+          <a href="Quote" className="btn btn--solid btn--lg">Get a free quote <Ar d="e"/></a>
           <a href={`tel:${PD.phone.replace(/\s/g,"")}`} className="btn btn--ghost">Call Angelo — {PD.phone}</a>
         </Rv>
       </div>
@@ -120,7 +120,7 @@ function Projects({ onQuote }){
                   background: f===ff?"var(--text)":"transparent", color: f===ff?"#0a0a0b":"var(--muted)",transition:"all .25s"}}>{ff}</button>
             ))}
           </div>
-          <a className="link-sweep" href="Projects.html" style={{flexShrink:0,fontSize:"14px"}}>View all projects <Ar d="e"/></a>
+          <a className="link-sweep" href="Projects" style={{flexShrink:0,fontSize:"14px"}}>View all projects <Ar d="e"/></a>
         </Rv>
         <div className="proj-grid" style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:"clamp(12px,1.2vw,18px)",marginTop:"20px"}}>
           {list.map((p,idx)=> <ProjectCard key={p.id} p={p} d={String(idx%3)} feature={false}/> )}
@@ -134,7 +134,7 @@ function ProjectCard({ p, d, feature }){
   const [h,setH]=React.useState(false);
   return (
     <Rv d={d} className="proj-card" style={{gridColumn: feature?"1 / -1":"auto"}}>
-      <a href={`Projects.html#${p.id}`} onMouseEnter={()=>setH(true)} onMouseLeave={()=>setH(false)}
+      <a href={`Projects#${p.id}`} onMouseEnter={()=>setH(true)} onMouseLeave={()=>setH(false)}
         style={{display:"block",position:"relative",borderRadius:"var(--r-lg)",overflow:"hidden",border:"1px solid var(--line)",background:"var(--panel)"}}>
         <div style={{position:"relative",aspectRatio:"16/9",overflow:"hidden"}}>
           <Im label={`${p.cat.toUpperCase()} — ${p.loc.toUpperCase()}`} src={p.img} pos={p.pos||"center"} style={{position:"absolute",inset:0,transform:h?"scale(1.05)":"scale(1)",transition:"transform .8s var(--ease-out)"}}/>

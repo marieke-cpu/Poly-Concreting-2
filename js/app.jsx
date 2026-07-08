@@ -20,7 +20,7 @@ function App(){
       const link = e.target.closest?.('a[href]');
       if(!link || !usePopup()) return;
       const href = link.getAttribute("href") || "";
-      if(href === "Quote.html" || href.endsWith("/Quote.html")){
+      if(href === "Quote" || href.endsWith("/Quote")){
         e.preventDefault();
         setQuote(true);
       }

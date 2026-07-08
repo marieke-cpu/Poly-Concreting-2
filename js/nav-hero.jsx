@@ -33,7 +33,7 @@ function Logo({ light=true, h=34 }){
 }
 
 const ND = window.PC_DATA;
-const HERE = (typeof location!=="undefined" ? (location.pathname.split("/").pop()||"Poly Concreting.html") : "");
+const HERE = (typeof location!=="undefined" ? (location.pathname.split("/").pop()||"") : "");
 const fileOf = (h)=> (h||"").split("#")[0];
 
 function MegaPanel(){
@@ -96,7 +96,7 @@ function Nav({ phone, onQuote }){
         <span className="mono urg-mobile-text" style={{fontSize:"11.5px",letterSpacing:".08em",fontWeight:700}}>
           LIMITED DATES OPEN
         </span>
-        <a href="Quote.html" className="mono" style={{fontSize:"11px",letterSpacing:".1em",color:"#0a0a0b",textDecoration:"none",borderBottom:"1px solid rgba(0,0,0,.4)",whiteSpace:"nowrap",fontWeight:700}}>
+        <a href="Quote" className="mono" style={{fontSize:"11px",letterSpacing:".1em",color:"#0a0a0b",textDecoration:"none",borderBottom:"1px solid rgba(0,0,0,.4)",whiteSpace:"nowrap",fontWeight:700}}>
           <span className="urg-desktop-cta">SECURE YOUR SITE VISIT →</span><span className="urg-mobile-cta">SECURE YOUR PROJECT NOW →</span>
         </a>
       </div>
@@ -119,7 +119,7 @@ function Nav({ phone, onQuote }){
         </nav>
 
         {/* centre — logo */}
-        <a href="Poly Concreting.html" style={{position:"relative",zIndex:2,justifySelf:"center"}}>
+        <a href="/" style={{position:"relative",zIndex:2,justifySelf:"center"}}>
           <Logo h={80}/>
         </a>
 
@@ -129,7 +129,7 @@ function Nav({ phone, onQuote }){
             <a href={`tel:${tel}`} className="mono nav-phone" style={{fontSize:"13px",letterSpacing:".06em",color:"var(--text)",display:"flex",alignItems:"center",gap:"8px",whiteSpace:"nowrap"}}>
               <Icon name="phone" s={15}/> {phone}
             </a>
-            <a href="Quote.html" className="btn btn--solid nav-quote">Get a Quote <Arrow/></a>
+            <a href="Quote" className="btn btn--solid nav-quote">Get a Quote <Arrow/></a>
           </div>
           <button className="nav-burger" onClick={()=>setOpen(o=>!o)} aria-label="Menu" aria-expanded={open}
             style={{display:"none",background:"none",border:"none",padding:"8px",color:"var(--text)",position:"relative",zIndex:120}}>
@@ -147,7 +147,7 @@ function Nav({ phone, onQuote }){
     {/* premium mobile menu */}
     <div className={`mnav ${open?"mnav--open":""}`}>
       <div className="mnav-head">
-        <a href="Poly Concreting.html" onClick={()=>setOpen(false)} className="mnav-logo-link" aria-label="Poly Concreting home">
+        <a href="/" onClick={()=>setOpen(false)} className="mnav-logo-link" aria-label="Poly Concreting home">
           <Logo h={58}/>
         </a>
         <button className="mnav-close" onClick={()=>setOpen(false)} aria-label="Close menu">
@@ -180,12 +180,12 @@ function Nav({ phone, onQuote }){
         ))}
       </div>
       <div className="mnav-foot">
-        <a href="Quote.html" className="btn btn--solid btn--lg" style={{width:"100%",justifyContent:"center"}}>Get a Quote <Arrow/></a>
+        <a href="Quote" className="btn btn--solid btn--lg" style={{width:"100%",justifyContent:"center"}}>Get a Quote <Arrow/></a>
         <a href={`tel:${tel}`} className="mnav-call-cta"><Icon name="phone" s={16}/> Call {phone}</a>
       </div>
     </div>
     <div className={`mobile-urgency-cta ${solid && !open ? "mobile-urgency-cta--show" : ""}`} role="region" aria-label="Quick quote and contact actions">
-      <a href="Quote.html" className="mobile-urgency-cta__quote">Get quote</a>
+      <a href="Quote" className="mobile-urgency-cta__quote">Get quote</a>
       <a href={`tel:${tel}`} className="mobile-urgency-cta__call"><Icon name="phone" s={15}/> Call now</a>
     </div>
     </>
@@ -252,7 +252,7 @@ function HeroContent({ accent, onQuote, big }){
       </Reveal>
       <Reveal d="3" style={{display:"flex",gap:"14px",marginTop:"38px",flexWrap:"wrap"}}>
         <button className="btn btn--solid btn--lg" onClick={onQuote}>Get my quote <Arrow/></button>
-        <a className="btn btn--ghost btn--lg" href="Projects.html">View projects <Arrow d="e"/></a>
+        <a className="btn btn--ghost btn--lg" href="Projects">View projects <Arrow d="e"/></a>
       </Reveal>
       <Reveal d="3" style={{display:"flex",gap:"clamp(14px,2.5vw,28px)",marginTop:"20px",flexWrap:"wrap",alignItems:"center"}}>
         {[["shield","QBCC Licensed"],["check","Fully Insured"],["doc","Fixed Quotes"],["star","Written Warranty"]].map(([ico,txt])=>(
@@ -327,7 +327,7 @@ function Hero({ variant="cinematic", accent="chrome", motion=true, onQuote }){
             </Reveal>
             <Reveal d="3" style={{display:"flex",gap:"14px",flexWrap:"wrap"}}>
               <button className="btn btn--solid btn--lg" onClick={onQuote}>Get a quote <Arrow/></button>
-              <a className="btn btn--ghost btn--lg" href="Projects.html">View projects <Arrow d="e"/></a>
+              <a className="btn btn--ghost btn--lg" href="Projects">View projects <Arrow d="e"/></a>
             </Reveal>
           </div>
           <Reveal d="3" style={{marginTop:"40px",height:"clamp(180px,26vh,300px)",position:"relative",borderRadius:"var(--r)",overflow:"hidden",border:"1px solid var(--line)"}}>

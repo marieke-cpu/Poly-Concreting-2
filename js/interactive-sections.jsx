@@ -115,7 +115,7 @@ function JobConfigurator({ onQuote }){
               <button className="btn btn--solid" onClick={onQuote}>
                 Quote my {cur.short.toLowerCase()} <IAr/>
               </button>
-              <a href={cur.id==="driveways"?"driveways.html":`service-detail.html#${cur.id}`}
+              <a href={cur.id==="driveways"?"driveways":`service-detail#${cur.id}`}
                 className="btn btn--ghost">
                 Learn more <IAr/>
               </a>
@@ -219,7 +219,7 @@ function FinishVisualiser(){
               margin:"12px 0 0",color:"var(--muted)",
               fontSize:"clamp(13px,1.1vw,15px)",maxWidth:"52ch",lineHeight:1.6,
             }}>{cur.intro}</p>
-            <a href={`service-detail.html#${cur.id}`}
+            <a href={`service-detail#${cur.id}`}
               className="btn btn--ghost"
               style={{marginTop:"18px",display:"inline-flex"}}>
               View full details <IAr/>
@@ -307,7 +307,7 @@ function ProjectReel({ onQuote }){
             </svg>
             DRAG TO EXPLORE
           </span>
-          <a href="Projects.html" className="btn btn--ghost" style={{fontSize:"12px"}}>
+          <a href="Projects" className="btn btn--ghost" style={{fontSize:"12px"}}>
             All projects <IAr/>
           </a>
         </IR>
@@ -351,7 +351,7 @@ function ProjectReel({ onQuote }){
           <button className="btn btn--solid" onClick={onQuote} style={{width:"100%",justifyContent:"center"}}>
             Get a quote <IAr/>
           </button>
-          <a href="Projects.html" className="btn btn--ghost" style={{width:"100%",justifyContent:"center",fontSize:"12px"}}>
+          <a href="Projects" className="btn btn--ghost" style={{width:"100%",justifyContent:"center",fontSize:"12px"}}>
             All projects <IAr/>
           </a>
         </div>

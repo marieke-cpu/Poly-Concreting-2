@@ -128,7 +128,7 @@ function Areas(){
               <div className="mono" style={{fontSize:"11px",letterSpacing:".14em",color:"var(--faint)",marginBottom:"12px"}}>SUBURBS SERVICED</div>
               <p style={{color:"var(--text)",fontSize:"clamp(16px,1.4vw,19px)",lineHeight:1.7,margin:0}}>{cur.towns}</p>
               <div style={{flex:1}}></div>
-              <a className="link-sweep" href={cur.locationPages ? cur.locationPages[0][1] : "ServiceAreas.html"} style={{marginTop:"28px"}}>{cur.name} concreting <Aw d="e"/></a>
+              <a className="link-sweep" href={cur.locationPages ? cur.locationPages[0][1] : "ServiceAreas"} style={{marginTop:"28px"}}>{cur.name} concreting <Aw d="e"/></a>
             </div>
             <div style={{display:"flex",gap:"10px",flexWrap:"wrap",marginTop:"14px"}}>
               {regions.map(r=>(
@@ -216,8 +216,8 @@ function BeforeAfter(){
         </Rw>
 
         <Rw d="2" style={{marginTop:"clamp(28px,3vw,40px)",display:"flex",alignItems:"center",gap:"16px",flexWrap:"wrap"}}>
-          <a href="Quote.html" className="btn btn--solid btn--lg">Get a free quote <Aw d="e"/></a>
-          <a href="Projects.html" className="btn btn--ghost">See all projects <Aw d="e"/></a>
+          <a href="Quote" className="btn btn--solid btn--lg">Get a free quote <Aw d="e"/></a>
+          <a href="Projects" className="btn btn--ghost">See all projects <Aw d="e"/></a>
         </Rw>
       </div>
     </section>
@@ -348,7 +348,7 @@ function FAQ(){
           ))}
         </div>
         <Rw d="2" style={{marginTop:"clamp(28px,3vw,40px)",display:"flex",gap:"14px",flexWrap:"wrap"}}>
-          <a href="Quote.html" className="btn btn--solid btn--lg">Get a free quote <Aw d="e"/></a>
+          <a href="Quote" className="btn btn--solid btn--lg">Get a free quote <Aw d="e"/></a>
           <a href={`tel:${PDm.phone.replace(/\s/g,"")}`} className="btn btn--ghost"><Iw name="phone" s={15}/> {PDm.phone}</a>
         </Rw>
       </div>
@@ -398,13 +398,13 @@ function Footer(){
           <div>
             <div className="mono foot-h">SERVICES</div>
             <div style={{display:"flex",flexDirection:"column",gap:"11px",marginTop:"18px"}}>
-              {PDm.services.map(([name,id])=> <a key={id} href={`Services.html#${id}`} className="foot-l">{name}</a>)}
+              {PDm.services.map(([name,id])=> <a key={id} href={`Services#${id}`} className="foot-l">{name}</a>)}
             </div>
           </div>
           <div>
             <div className="mono foot-h">SERVICE AREAS</div>
             <div style={{display:"flex",flexDirection:"column",gap:"11px",marginTop:"18px"}}>
-              {PDm.regions.map(r=> <a key={r.id} href="ServiceAreas.html" className="foot-l">{r.name}</a>)}
+              {PDm.regions.map(r=> <a key={r.id} href="ServiceAreas" className="foot-l">{r.name}</a>)}
             </div>
           </div>
           <div>

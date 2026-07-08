@@ -44,7 +44,7 @@ function QuoteForm(){
         <p style={{color:"var(--muted)",margin:"14px auto 0",maxWidth:"40ch",lineHeight:1.65}}>
           Your request is in. A Poly owner will call you on <span style={{color:"var(--text)"}}>{d.phone}</span> the same day to book your free site visit.
         </p>
-        <a href="Poly Concreting.html" className="btn btn--ghost" style={{marginTop:"28px"}}>Back to home</a>
+        <a href="/" className="btn btn--ghost" style={{marginTop:"28px"}}>Back to home</a>
       </div>
     );
   }
@@ -61,7 +61,15 @@ function QuoteForm(){
       message: d.details,
       source: "Quote page",
     };
-    if(window.PC_SUBMIT_QUOTE) await window.PC_SUBMIT_QUOTE(payload);
+    if(!window.PC_SUBMIT_QUOTE){
+      alert("Something went wrong. Please call 0481 445 041.");
+      return;
+    }
+    const result = await window.PC_SUBMIT_QUOTE(payload);
+    if(!(result && (result.success || result.ok))){
+      alert("Error: " + ((result && result.message) || "Your quote could not be sent. Please call 0481 445 041."));
+      return;
+    }
     sessionStorage.setItem("pc_quote", JSON.stringify(payload));
     setSent(true);
   };

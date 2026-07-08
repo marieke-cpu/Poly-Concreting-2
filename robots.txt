@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /thankyou.html
+Disallow: /thankyou
 
 Sitemap: https://polyconcretingqld.com.au/sitemap.xml

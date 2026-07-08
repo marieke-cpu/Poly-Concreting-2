@@ -44,9 +44,17 @@ function QuoteModal({ open, onClose }){
       message: contact.msg,
       source: "Quote modal",
     };
-    if(window.PC_SUBMIT_QUOTE) await window.PC_SUBMIT_QUOTE(payload);
+    if(!window.PC_SUBMIT_QUOTE){
+      alert("Something went wrong. Please call 0481 445 041.");
+      return;
+    }
+    const result = await window.PC_SUBMIT_QUOTE(payload);
+    if(!(result && (result.success || result.ok))){
+      alert("Error: " + ((result && result.message) || "Your quote could not be sent. Please call 0481 445 041."));
+      return;
+    }
     sessionStorage.setItem("pc_quote", JSON.stringify(payload));
-    window.location.href = "thankyou.html";
+    window.location.href = "thankyou";
   };
 
   return (

@@ -8,43 +8,43 @@ window.PC_DATA = {
   web3formsAccessKey: "b2c0b7c1-c7d7-4c8d-9e45-3a8f415d2dce",
 
   nav: [
-    ["Home","Poly Concreting.html"],
-    ["Services","Services.html","mega"],
-    ["Projects","Projects.html"],
-    ["Service Areas","ServiceAreas.html"],
-    ["About","About.html"],
+    ["Home","/"],
+    ["Services","Services","mega"],
+    ["Projects","Projects"],
+    ["Service Areas","ServiceAreas"],
+    ["About","About"],
   ],
   megaMenu: {
     Residential: [
-      ["Driveways","driveways.html"],
-      ["House & Shed Slabs","service-detail.html#slabs"],
-      ["Pathways","service-detail.html#pathways"],
-      ["Outdoor Entertaining","service-detail.html#patios"],
-      ["Pool Surrounds","service-detail.html#pools"],
-      ["Resurfacing","service-detail.html#resurfacing"],
+      ["Driveways","driveways"],
+      ["House & Shed Slabs","service-detail#slabs"],
+      ["Pathways","service-detail#pathways"],
+      ["Outdoor Entertaining","service-detail#patios"],
+      ["Pool Surrounds","service-detail#pools"],
+      ["Resurfacing","service-detail#resurfacing"],
     ],
     "Standard Finishes": [
-      ["Trowel Finish","service-detail.html#trowel"],
-      ["Broom Finish","service-detail.html#broom"],
-      ["Swirl Finish","service-detail.html#swirl"],
+      ["Trowel Finish","service-detail#trowel"],
+      ["Broom Finish","service-detail#broom"],
+      ["Swirl Finish","service-detail#swirl"],
     ],
     "Decorative Finishes": [
-      ["Exposed Aggregate","service-detail.html#exposed"],
-      ["Coloured","service-detail.html#coloured"],
-      ["Stamped","service-detail.html#stamped"],
-      ["Covercrete","service-detail.html#covercrete"],
+      ["Exposed Aggregate","service-detail#exposed"],
+      ["Coloured","service-detail#coloured"],
+      ["Stamped","service-detail#stamped"],
+      ["Covercrete","service-detail#covercrete"],
     ],
     Commercial: [
-      ["Small Commercial","service-detail.html#commercial"],
+      ["Small Commercial","service-detail#commercial"],
     ],
     Locations: [
-      ["Morayfield","morayfield-concreting.html"],
-      ["Caboolture","caboolture-concreting.html"],
-      ["North Lakes","north-lakes-concreting.html"],
-      ["Brisbane","brisbane-concreting.html"],
-      ["Sunshine Coast","sunshine-coast-concreting.html"],
-      ["Ipswich","ipswich-concreting.html"],
-      ["Toowoomba","toowoomba-concreting.html"],
+      ["Morayfield","morayfield-concreting"],
+      ["Caboolture","caboolture-concreting"],
+      ["North Lakes","north-lakes-concreting"],
+      ["Brisbane","brisbane-concreting"],
+      ["Sunshine Coast","sunshine-coast-concreting"],
+      ["Ipswich","ipswich-concreting"],
+      ["Toowoomba","toowoomba-concreting"],
     ],
   },
 
@@ -137,12 +137,12 @@ window.PC_DATA = {
   ],
 
   regions: [
-    { id:"moretonbay", name:"Moreton Bay", towns:"Morayfield · Caboolture · Redcliffe · North Lakes", count:"60+", home:true, locationPages:[["Morayfield","morayfield-concreting.html"],["Caboolture","caboolture-concreting.html"],["North Lakes","north-lakes-concreting.html"]] },
-    { id:"brisbane",   name:"Brisbane", towns:"CBD · Northside · Southside · Western suburbs", count:"35+", locationPages:[["Brisbane","brisbane-concreting.html"]] },
-    { id:"sunshine",   name:"Sunshine Coast", towns:"Caloundra · Maroochydore · Noosa", count:"18+", locationPages:[["Sunshine Coast","sunshine-coast-concreting.html"]] },
-    { id:"ipswich",    name:"Ipswich", towns:"Ipswich · Springfield · Ripley", count:"35+", locationPages:[["Ipswich","ipswich-concreting.html"]] },
+    { id:"moretonbay", name:"Moreton Bay", towns:"Morayfield · Caboolture · Redcliffe · North Lakes", count:"60+", home:true, locationPages:[["Morayfield","morayfield-concreting"],["Caboolture","caboolture-concreting"],["North Lakes","north-lakes-concreting"]] },
+    { id:"brisbane",   name:"Brisbane", towns:"CBD · Northside · Southside · Western suburbs", count:"35+", locationPages:[["Brisbane","brisbane-concreting"]] },
+    { id:"sunshine",   name:"Sunshine Coast", towns:"Caloundra · Maroochydore · Noosa", count:"18+", locationPages:[["Sunshine Coast","sunshine-coast-concreting"]] },
+    { id:"ipswich",    name:"Ipswich", towns:"Ipswich · Springfield · Ripley", count:"35+", locationPages:[["Ipswich","ipswich-concreting"]] },
     { id:"logan",      name:"Logan", towns:"Logan · Beenleigh · Springwood", count:"12+" },
-    { id:"toowoomba",  name:"Toowoomba", towns:"Toowoomba · Highfields · Range", count:"6+", locationPages:[["Toowoomba","toowoomba-concreting.html"]] },
+    { id:"toowoomba",  name:"Toowoomba", towns:"Toowoomba · Highfields · Range", count:"6+", locationPages:[["Toowoomba","toowoomba-concreting"]] },
     { id:"lockyer",    name:"Lockyer Valley", towns:"Gatton · Laidley · Plainland · Forest Hill", count:"4+" },
     { id:"somerset",   name:"Somerset Region", towns:"Esk · Kilcoy · Toogoolawah · Lowood", count:"3+" },
   ],
@@ -207,7 +207,8 @@ window.PC_SUBMIT_QUOTE = async function submitQuoteToWeb3Forms(payload){
     return { success:false, missingKey:true };
   }
 
-  const body = {
+  const formData = new FormData();
+  Object.entries({
     access_key: key,
     subject: payload.subject || "New quote request - Poly Concreting",
     from_name: payload.name || payload.fullName || "Poly Concreting website",
@@ -216,15 +217,15 @@ window.PC_SUBMIT_QUOTE = async function submitQuoteToWeb3Forms(payload){
     inbox: "Quotes",
     botcheck: "",
     ...payload,
-  };
+  }).forEach(([field, value]) => formData.append(field, value == null ? "" : value));
 
   try {
     const res = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
-      headers: { "Content-Type": "application/json", Accept: "application/json" },
-      body: JSON.stringify(body),
+      body: formData,
     });
-    return await res.json();
+    const data = await res.json();
+    return { ...data, ok: res.ok };
   } catch (error) {
     console.error("Web3Forms submission failed", error);
     return { success:false, error:true };
