@@ -4,10 +4,12 @@ const SVC = window.PC_SERVICES;
 const SD  = window.PC_DATA;
 const SNav    = window.PC_HERO.Nav;
 const SFooter = window.PC_S2.Footer;
+const serviceHref = s => s.id === "driveways" ? "driveways" : `service-detail#${s.id}`;
 
 /* ── service card ── */
-function ServiceCard({ s, onQuote }){
+function ServiceCard({ s }){
   const [hov, setHov] = React.useState(false);
+  const href = serviceHref(s);
   return (
     <div
       className="svc-card"
@@ -35,7 +37,7 @@ function ServiceCard({ s, onQuote }){
 
       {/* full-card link — sits behind content, makes whole card clickable */}
       <a
-        href={s.id==="driveways" ? "driveways" : `service-detail#${s.id}`}
+        href={href}
         aria-label={`View ${s.name} service details`}
         style={{position:"absolute",inset:0,zIndex:1}}
       />
@@ -67,14 +69,14 @@ function ServiceCard({ s, onQuote }){
             </div>
           ))}
         </div>
-        {/* quote button — z-index keeps it above the card link */}
-        <button
+        {/* Visible service link — z-index keeps it above the full-card link */}
+        <a
+          href={href}
           className="btn btn--solid"
-          onClick={e=>{ e.preventDefault(); onQuote(); }}
           style={{width:"100%",justifyContent:"center",fontSize:"12px",padding:"13px 20px",position:"relative",zIndex:3}}
         >
-          Quote {s.short.toLowerCase()} <SAr/>
-        </button>
+          View {s.short.toLowerCase()} <SAr/>
+        </a>
       </div>
     </div>
   );
@@ -144,6 +146,10 @@ function ServicesApp(){
     { n:"03", t:"We show up and do it right",  d:"Prep, reinforce, pour and finish to the standard you hired us for — on the date we committed to." },
     { n:"04", t:"Cured, sealed, handed over",  d:"Proper curing, sealed where needed. Site left clean. Written workmanship warranty on every job." },
   ];
+  const byId = id => SVC.find(s => s.id === id);
+  const coreServices = ["driveways","slabs","pathways","patios","pools","commercial","resurfacing"].map(byId).filter(Boolean);
+  const standardFinishes = ["broom","trowel","swirl"].map(byId).filter(Boolean);
+  const decorativeFinishes = ["exposed","coloured","stamped","covercrete"].map(byId).filter(Boolean);
 
   return (
     <div id="top">
@@ -235,7 +241,7 @@ function ServicesApp(){
               margin:"18px 0 0",color:"var(--muted)",
               fontSize:"clamp(15px,1.2vw,18px)",maxWidth:"48ch",
             }}>
-              Residential, commercial and decorative — one crew, one standard, fixed price. Tap your project type to get a quote.
+              Residential, commercial and decorative — one crew, one standard, fixed price. Click any service to see more details.
             </SR>
 
             {/* structural services */}
@@ -245,9 +251,9 @@ function ServicesApp(){
               gap:"clamp(10px,1.2vw,14px)",
               marginTop:"clamp(36px,4vw,54px)",
             }}>
-              {SVC.slice(0,8).map((s,i)=>(
+              {coreServices.map((s,i)=>(
                 <SR key={s.id} d={String(i%4)}>
-                  <ServiceCard s={s} onQuote={openQuote}/>
+                  <ServiceCard s={s}/>
                 </SR>
               ))}
             </div>
@@ -276,9 +282,9 @@ function ServicesApp(){
               gap:"clamp(10px,1.2vw,14px)",
               marginTop:"clamp(20px,2.5vw,28px)",
             }}>
-              {SVC.slice(8,11).map((s,i)=>(
+              {standardFinishes.map((s,i)=>(
                 <SR key={s.id} d={String(i%4)}>
-                  <ServiceCard s={s} onQuote={openQuote}/>
+                  <ServiceCard s={s}/>
                 </SR>
               ))}
             </div>
@@ -307,9 +313,9 @@ function ServicesApp(){
               gap:"clamp(10px,1.2vw,14px)",
               marginTop:"clamp(20px,2.5vw,28px)",
             }}>
-              {SVC.slice(11).map((s,i)=>(
+              {decorativeFinishes.map((s,i)=>(
                 <SR key={s.id} d={String(i%4)}>
-                  <ServiceCard s={s} onQuote={openQuote}/>
+                  <ServiceCard s={s}/>
                 </SR>
               ))}
             </div>

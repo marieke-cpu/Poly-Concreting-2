@@ -415,7 +415,8 @@ function Footer(){
               <div style={{color:"var(--muted)",fontSize:"15px",display:"flex",gap:"9px",alignItems:"flex-start"}}><Iw name="pin" s={16}/> Morayfield QLD 4506<br/>Servicing all of SEQ</div>
               <div style={{display:"flex",gap:"10px",marginTop:"4px"}}>
                 <a href="https://www.instagram.com/poly_concreting/" target="_blank" rel="noopener noreferrer" className="mono" style={{width:"38px",height:"38px",borderRadius:"50%",border:"1px solid var(--line-2)",display:"grid",placeItems:"center",fontSize:"11px",color:"var(--muted)",textDecoration:"none"}}>IG</a>
-              <a href="https://www.facebook.com/people/Poly-concreting/100091605109959/" target="_blank" rel="noopener noreferrer" className="mono" style={{width:"38px",height:"38px",borderRadius:"50%",border:"1px solid var(--line-2)",display:"grid",placeItems:"center",fontSize:"11px",color:"var(--muted)",textDecoration:"none"}}>FB</a>
+                <a href="https://www.facebook.com/people/Poly-concreting/100091605109959/" target="_blank" rel="noopener noreferrer" className="mono" style={{width:"38px",height:"38px",borderRadius:"50%",border:"1px solid var(--line-2)",display:"grid",placeItems:"center",fontSize:"11px",color:"var(--muted)",textDecoration:"none"}}>FB</a>
+                <a href="https://www.youtube.com/@polyconcreting/videos" target="_blank" rel="noopener noreferrer" className="mono" style={{width:"38px",height:"38px",borderRadius:"50%",border:"1px solid var(--line-2)",display:"grid",placeItems:"center",fontSize:"11px",color:"var(--muted)",textDecoration:"none"}}>YT</a>
               </div>
             </div>
           </div>
