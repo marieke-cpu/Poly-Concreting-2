@@ -221,6 +221,11 @@ window.PC_SERVICES = [
       {t:"Pour, float & document",   d:"Power-float to tolerance. Slump tests taken, batch tickets kept, pour time recorded."},
       {t:"Cut, cure & hand over",    d:"Saw joints placed, curing compound applied, site cleaned. Ready for the next trade."},
     ],
+    pricingFactors:[
+      {icon:"clipboard", t:"Scope and documentation", d:"Certifier requirements, batch tickets, slump testing and handover records are included in the quote so the paperwork is clear upfront."},
+      {icon:"slab",      t:"Finish and tolerance",    d:"Power-floated floors, broomed hardstand, coloured concrete and exposed aggregate each affect labour, timing and finishing requirements."},
+      {icon:"truck",     t:"Access and staging",      d:"After-hours pours, tight access, pump setup, traffic control and staged handovers are allowed for before the job starts."},
+    ],
     faqs:[
       {q:"Can you commit to a specific pour date?",     a:"Yes — we give you a pour date in writing and we hold it. If site conditions force a change, you hear from us immediately so you can adjust your program."},
       {q:"What documentation do you supply?",           a:"Slump test records, batch delivery tickets and pour time logs at handover. If your certifier or body corporate has specific requirements, let us know upfront and we'll format accordingly."},

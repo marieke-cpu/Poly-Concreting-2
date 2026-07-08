@@ -42,9 +42,10 @@ function FAQList({ faqs }){
 }
 
 /* ── services that show a finishes section ── */
-const SHOWS_FINISHES = new Set(["driveways","slabs","patios","pools","pathways"]);
-const STANDARD_FINISHES    = window.PC_SERVICES.slice(8,11);  /* trowel, broom, swirl */
-const DECORATIVE_FINISHES  = window.PC_SERVICES.slice(11);    /* exposed, coloured, stamped, covercrete */
+const SHOWS_FINISHES = new Set(["driveways","slabs","patios","pools","pathways","commercial"]);
+const serviceById = id => window.PC_SERVICES.find(s=>s.id===id);
+const STANDARD_FINISHES    = ["broom","trowel","swirl"].map(serviceById).filter(Boolean);
+const DECORATIVE_FINISHES  = ["exposed","coloured","stamped","covercrete"].map(serviceById).filter(Boolean);
 const FINISH_IDS = new Set(["trowel","broom","swirl","exposed","coloured","stamped","covercrete"]);
 
 /* ── compact finish card ── */
@@ -1023,7 +1024,7 @@ function ServiceDetailApp(){
         )}
 
         {/* ── INTRO + CTA CARD ─────────────────────────────── */}
-        {s.id !== "exposed" && s.id !== "coloured" && s.id !== "stamped" && s.id !== "covercrete" && s.id !== "swirl" && s.id !== "broom" && s.id !== "trowel" && s.id !== "resurfacing" && s.id !== "slabs" && s.id !== "pathways" && s.id !== "patios" && s.id !== "pools" && <section className="section--tight" style={{borderBottom:"1px solid var(--line)"}}>
+        {s.id !== "exposed" && s.id !== "coloured" && s.id !== "stamped" && s.id !== "covercrete" && s.id !== "swirl" && s.id !== "broom" && s.id !== "trowel" && s.id !== "resurfacing" && s.id !== "slabs" && s.id !== "pathways" && s.id !== "patios" && s.id !== "pools" && s.id !== "commercial" && <section className="section--tight" style={{borderBottom:"1px solid var(--line)"}}>
           <div className="wrap">
             <div style={{
               display:"grid",
@@ -1537,13 +1538,8 @@ function ServiceDetailApp(){
 
         {/* ── FINISHES (conditional) ───────────────────────── */}
         {SHOWS_FINISHES.has(s.id) && (()=>{
-          const isComm = s.id==="commercial";
-          const stdFinishes  = isComm
-            ? STANDARD_FINISHES.filter(f=>f.id==="trowel"||f.id==="broom")
-            : STANDARD_FINISHES;
-          const decFinishes  = isComm
-            ? DECORATIVE_FINISHES.filter(f=>f.id==="coloured"||f.id==="exposed")
-            : DECORATIVE_FINISHES;
+          const stdFinishes = STANDARD_FINISHES;
+          const decFinishes = DECORATIVE_FINISHES;
           return (
             <section className="section--tight" style={{
               background:"var(--panel-2)",
@@ -1555,22 +1551,19 @@ function ServiceDetailApp(){
                 <SR d="1" as="h2" className="display" style={{
                   fontSize:"clamp(28px,3.6vw,52px)",margin:"20px 0 0",lineHeight:.95,
                 }}>
-                  {isComm ? <>Spec the right<br/>surface.</> : <>Choose your surface.</>}
+                  Choose your surface.
                 </SR>
                 <SR d="2" as="p" style={{
                   margin:"14px 0 0",color:"var(--muted)",
                   fontSize:"clamp(14px,1.1vw,17px)",maxWidth:"50ch",lineHeight:1.6,
                 }}>
-                  {isComm
-                    ? "We advise on the right finish for your use — foot traffic, machinery loads and aesthetic requirements all factor in. Power float is the base for most commercial floors; broom for external areas."
-                    : `Every finish below can be applied to your ${s.short.toLowerCase()}. Click any to see the full detail, or ask us what suits your site best.`
-                  }
+                  Every finish below can be applied to your {s.short.toLowerCase()}. Click any to see the full detail, or ask us what suits your site best.
                 </SR>
 
                 {/* standard finishes */}
                 <SR d="3">
                   <div style={{display:"flex",alignItems:"center",gap:"20px",marginTop:"clamp(36px,4vw,52px)"}}>
-                    <div className="eyebrow">{isComm ? "Primary Finishes" : "Standard Finishes"}</div>
+                    <div className="eyebrow">Standard Finishes</div>
                     <div style={{flex:1,height:"1px",background:"var(--line)"}}/>
                   </div>
                 </SR>
@@ -1588,7 +1581,7 @@ function ServiceDetailApp(){
                 {/* decorative finishes */}
                 <SR d="3">
                   <div style={{display:"flex",alignItems:"center",gap:"20px",marginTop:"clamp(28px,3.5vw,44px)"}}>
-                    <div className="eyebrow">{isComm ? "Premium Finishes" : "Decorative Finishes"}</div>
+                    <div className="eyebrow">Decorative Finishes</div>
                     <div style={{flex:1,height:"1px",background:"var(--line)"}}/>
                   </div>
                 </SR>

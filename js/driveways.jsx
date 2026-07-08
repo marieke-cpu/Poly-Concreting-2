@@ -6,8 +6,9 @@ const SNav    = window.PC_HERO.Nav;
 const SFooter = window.PC_S2.Footer;
 
 const DRV = SVC.find(s=>s.id==="driveways");
-const STD_FINISHES = SVC.slice(8,11);
-const DEC_FINISHES = SVC.slice(11);
+const byServiceId = id => SVC.find(s=>s.id===id);
+const STD_FINISHES = ["broom","trowel","swirl"].map(byServiceId).filter(Boolean);
+const DEC_FINISHES = ["exposed","coloured","stamped","covercrete"].map(byServiceId).filter(Boolean);
 
 /* ── small finish card ── */
 function FinishCard({ s }){
