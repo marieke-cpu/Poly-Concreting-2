@@ -102,12 +102,13 @@ body.ads-exposed-page{background:#08080a;color:var(--text);padding-bottom:0}
 .ads-top__actions .btn{padding:11px 16px;font-size:10.5px;letter-spacing:.08em}
 
 /* ── hero ── */
-.ads-hero{position:relative;min-height:100svh;display:grid;align-items:end;overflow:hidden;background:#0b0b0d}
-.ads-hero__media{position:absolute;inset:0}
-.ads-hero__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%;opacity:0;transform:scale(1.018);transition:opacity 1.3s ease,transform 7s linear}
-.ads-hero__media img.is-active{opacity:1;transform:scale(1.068)}
-.ads-hero__shade{position:absolute;inset:0;background:linear-gradient(108deg,rgba(8,8,10,.94) 0%,rgba(8,8,10,.74) 42%,rgba(8,8,10,.22) 100%),linear-gradient(0deg,rgba(8,8,10,.52) 0%,rgba(8,8,10,0) 38%)}
-.ads-hero__inner{position:relative;z-index:2;width:100%;max-width:var(--maxw);margin:0 auto;padding:150px var(--pad) clamp(34px,5vw,64px);display:grid;grid-template-columns:minmax(0,1fr) minmax(380px,440px);gap:clamp(24px,4vw,56px);align-items:center}
+.ads-hero{min-height:100svh;display:grid;grid-template-columns:1.05fr .95fr;position:relative;background:#0b0b0d}
+.ads-hero__media{position:relative;overflow:hidden}
+.ads-hero__media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.ads-hero__shade{display:none}
+.ads-hero__media-fade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,10,1) 0%,rgba(8,8,10,.35) 22%,transparent 50%),linear-gradient(0deg,rgba(8,8,10,.6) 0%,transparent 35%)}
+.ads-hero__inner{position:relative;z-index:2;padding:clamp(120px,15vh,160px) clamp(28px,4vw,56px) 80px var(--pad);display:flex;flex-direction:column;justify-content:center;background:#0b0b0d}
+.ads-quote-wrap{max-width:var(--maxw);margin:0 auto;padding:clamp(56px,7vw,100px) var(--pad);display:grid;grid-template-columns:1fr minmax(380px,460px);gap:clamp(40px,6vw,90px);align-items:start}
 
 /* ── hero badge ── */
 .ads-badge{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(196,153,74,.4);background:rgba(196,153,74,.1);border-radius:999px;padding:8px 14px;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#c4994a}
@@ -234,7 +235,10 @@ body.ads-exposed-page{background:#08080a;color:var(--text);padding-bottom:0}
 /* ── responsive ── */
 @media(max-width:1100px){.ads-stone-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media(max-width:980px){
-  .ads-hero__inner{grid-template-columns:1fr;padding-top:142px}
+  .ads-hero{grid-template-columns:1fr}
+  .ads-hero__inner{padding:130px var(--pad) 52px}
+  .ads-hero__media{min-height:60vw}
+  .ads-quote-wrap{grid-template-columns:1fr}
   .ads-card{max-width:680px}
   .ads-range-head{grid-template-columns:1fr}
   .ads-stone-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
@@ -249,8 +253,9 @@ body.ads-exposed-page{background:#08080a;color:var(--text);padding-bottom:0}
   .ads-logo{height:62px}
   .ads-top__actions .btn--ghost{display:none}
   .ads-top__actions .btn{padding:9px 12px;font-size:9.5px;letter-spacing:.06em}
-  .ads-hero{min-height:auto}
-  .ads-hero__inner{padding:132px 14px 32px;gap:22px}
+  .ads-hero{grid-template-columns:1fr;min-height:auto}
+  .ads-hero__media{display:none}
+  .ads-hero__inner{padding:120px 14px 52px}
   .ads-urgency__inner{padding:6px 14px;font-size:9.5px;letter-spacing:.06em;gap:7px}
   .ads-hero h1{font-size:clamp(40px,14vw,62px);max-width:11ch}
   .ads-hero-cta .btn{width:100%;justify-content:center}
@@ -280,8 +285,8 @@ body.ads-exposed-page{background:#08080a;color:var(--text);padding-bottom:0}
   <div class="ads-urgency">
     <div class="ads-urgency__inner">
       <span class="ads-urgency__dot" aria-hidden="true"></span>
-      <span>Caboolture &amp; Morayfield exposed aggregate quotes — same-day response available</span>
-      <a href="#quote">Get yours</a>
+      <span>⚡ Limited pour dates left this month — Caboolture &amp; Morayfield bookings filling fast</span>
+      <a href="#quote">Lock in your date</a>
     </div>
   </div>
   <div class="ads-top__inner">
@@ -299,40 +304,45 @@ body.ads-exposed-page{background:#08080a;color:var(--text);padding-bottom:0}
 
   <!-- ── HERO ── -->
   <section class="ads-hero">
-    <div class="ads-hero__media" aria-hidden="true">
-      <img class="is-active" src="assets/img/agg-river-stone.webp" alt="" fetchpriority="high"/>
-      <img src="assets/img/agg-driveway.webp" alt="" loading="eager"/>
-      <img src="assets/img/optimized/photos-before-afters-ex2.webp" alt="" loading="lazy"/>
-      <img src="assets/img/exposed1.webp" alt="" loading="lazy"/>
-      <img src="assets/img/exposed2.webp" alt="" loading="lazy"/>
-      <img src="assets/img/exposed3.webp" alt="" loading="lazy"/>
-      <img src="assets/img/exposed4.webp" alt="" loading="lazy"/>
-      <img src="assets/img/agg-patio-curve.webp" alt="" loading="lazy"/>
-      <img src="assets/img/optimized/photos-driveways-exposed1.webp" alt="" loading="lazy"/>
-    </div>
-    <div class="ads-hero__shade" aria-hidden="true"></div>
     <div class="ads-hero__inner">
+      <div class="ads-badge">Boral &amp; Nielsens specialist · Caboolture &amp; Morayfield</div>
+      <h1 class="display">Exposed aggregate concrete Caboolture.</h1>
+      <p class="ads-hero__lead">Stone finish, wet-look seal, natural grip underfoot. Driveways, paths and pool surrounds poured and washed by a local Morayfield crew that knows exactly when to hit the reveal — and services Caboolture and surrounding suburbs every week.</p>
+      <div class="ads-offer-list">
+        <div><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Over 30 stone colours across the Boral Exposé and Nielsens ranges — choose your colour before we pour.</span></div>
+        <div><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Fixed written quote on every job — no loose estimates, no surprises at handover.</span></div>
+        <div><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Morayfield-based, 50+ Google reviews, owner on every Caboolture and Morayfield job from quote to seal.</span></div>
+      </div>
+      <div class="ads-hero-cta">
+        <a class="btn btn--solid btn--lg" href="#quote">Get my fixed quote <span class="ar" aria-hidden="true">&#8599;</span></a>
+        <a class="btn btn--ghost btn--lg" href="tel:0481445041">Call Angelo</a>
+      </div>
+      <div class="ads-proof" aria-label="Trust indicators">
+        <div><strong>Same day</strong><span>quote response</span></div>
+        <div><strong>Fixed</strong><span>written price</span></div>
+        <div><strong>50+</strong><span>Google reviews</span></div>
+        <div><strong>10+</strong><span>years pouring</span></div>
+      </div>
+    </div>
+    <div class="ads-hero__media" aria-hidden="true">
+      <video id="heroVid" autoplay muted playsinline preload="auto" src="poly/PJ1.mov"></video>
+      <div class="ads-hero__media-fade"></div>
+    </div>
+  </section>
+
+  <!-- ── QUOTE FORM ── -->
+  <section style="background:#0b0b0d;border-bottom:1px solid var(--line)">
+    <div class="ads-quote-wrap">
       <div>
-        <div class="ads-badge">Boral &amp; Nielsens specialist · Caboolture &amp; Morayfield</div>
-        <h1 class="display">Exposed aggregate concrete Caboolture and Morayfield.</h1>
-        <p class="ads-hero__lead">Stone finish, wet-look seal, natural grip underfoot. Driveways, paths and pool surrounds poured and washed by a local Morayfield crew that knows exactly when to hit the reveal — and services Caboolture and surrounding suburbs every week.</p>
-        <div class="ads-offer-list">
-          <div><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Over 30 stone colours across the Boral Exposé and Nielsens ranges — choose your colour before we pour.</span></div>
-          <div><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Fixed written quote on every job — no loose estimates, no surprises at handover.</span></div>
-          <div><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Morayfield-based, 50+ Google reviews, owner on every Caboolture and Morayfield job from quote to seal.</span></div>
-        </div>
-        <div class="ads-hero-cta">
-          <a class="btn btn--solid btn--lg" href="#quote">Get my fixed quote <span class="ar" aria-hidden="true">&#8599;</span></a>
-          <a class="btn btn--ghost btn--lg" href="tel:0481445041">Call Angelo</a>
-        </div>
-        <div class="ads-proof" aria-label="Trust indicators">
-          <div><strong>Same day</strong><span>quote response</span></div>
-          <div><strong>Fixed</strong><span>written price</span></div>
-          <div><strong>50+</strong><span>Google reviews</span></div>
-          <div><strong>10+</strong><span>years pouring</span></div>
+        <div class="eyebrow" style="color:#c4994a">Free quote</div>
+        <h2 class="display" style="font-size:clamp(30px,4.2vw,60px);margin:18px 0 0;line-height:.93">Get a fixed price.<br/>No surprises.</h2>
+        <p style="margin:18px 0 0;color:var(--muted);font-size:clamp(15px,1.2vw,18px);line-height:1.65;max-width:42ch">Angelo will come out to Caboolture or Morayfield, bring stone samples and give you a fixed written price on the spot. Same-day response for local jobs.</p>
+        <div style="margin-top:28px;display:grid;gap:14px">
+          <div style="display:flex;gap:10px;align-items:flex-start;color:var(--muted);font-size:15px;line-height:1.5"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#c4994a" stroke-width="1.8" style="flex:0 0 auto;margin-top:2px" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Fixed written quote — no per-metre rates that blow out at handover</span></div>
+          <div style="display:flex;gap:10px;align-items:flex-start;color:var(--muted);font-size:15px;line-height:1.5"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#c4994a" stroke-width="1.8" style="flex:0 0 auto;margin-top:2px" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>50+ Google reviews from real Caboolture and Morayfield clients</span></div>
+          <div style="display:flex;gap:10px;align-items:flex-start;color:var(--muted);font-size:15px;line-height:1.5"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#c4994a" stroke-width="1.8" style="flex:0 0 auto;margin-top:2px" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Angelo brings stone samples to you — choose your colour before anything is poured</span></div>
         </div>
       </div>
-
       <aside class="ads-card" id="quote" aria-label="Request an exposed aggregate quote">
         <div class="ads-card__flag"><span>Free exposed aggregate quote</span><span>No obligation</span></div>
         <div class="ads-card__head">
@@ -396,6 +406,78 @@ body.ads-exposed-page{background:#08080a;color:var(--text);padding-bottom:0}
           </div>
         </form>
       </aside>
+    </div>
+  </section>
+
+  <!-- ── REVIEWS ── -->
+  <section class="section ads-review-section">
+    <div class="wrap">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:18px;flex-wrap:wrap">
+        <div>
+          <div class="eyebrow" style="color:#c4994a">Google reviews</div>
+          <h2 class="display" style="font-size:clamp(32px,4.2vw,62px);margin:18px 0 0;line-height:.95">50+ five-star reviews<br/>on Google.</h2>
+        </div>
+        <p style="margin:0 0 4px;color:var(--muted);font-size:clamp(14px,1.1vw,17px);line-height:1.65;max-width:38ch">Real Google feedback from clients across Caboolture, Morayfield and nearby Moreton Bay suburbs.</p>
+      </div>
+
+      <div data-review-strip style="display:flex;align-items:stretch;margin-top:clamp(28px,3.5vw,48px);border:1px solid var(--line-2);border-radius:8px;overflow:hidden;background:var(--base)">
+        <div style="width:clamp(200px,24vw,290px);padding:clamp(20px,2.4vw,30px);border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;gap:24px;flex-shrink:0">
+          <div>
+            <div style="display:flex;align-items:center;gap:11px">
+              <span class="ads-google-g">G</span>
+              <div>
+                <div style="font-weight:800;font-size:18px;line-height:1">Google</div>
+                <div class="mono" style="font-size:10px;color:var(--muted);letter-spacing:.08em;margin-top:4px">PUBLIC FEEDBACK</div>
+              </div>
+            </div>
+            <div style="margin-top:22px;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+              <span class="display" style="font-size:clamp(34px,4vw,48px);line-height:1">4.8</span>
+              <div>
+                <span class="ads-stars" aria-label="4.8 star Google rating">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <div class="mono" style="font-size:10px;color:var(--muted);letter-spacing:.06em;margin-top:5px">50+ REVIEWS</div>
+              </div>
+            </div>
+          </div>
+          <div class="mono" style="font-size:11px;color:var(--faint);letter-spacing:.06em">MORAYFIELD BASED · CABOOLTURE AREA</div>
+        </div>
+        <div style="flex:1;display:flex;min-width:0">
+          <div style="flex:1;padding:clamp(22px,3vw,40px);min-width:0;display:flex;flex-direction:column;justify-content:center">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px">
+              <span class="ads-stars" aria-label="Five star review">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <span class="mono" data-review-date style="font-size:11px;color:var(--muted);letter-spacing:.06em">3 months ago · Google</span>
+            </div>
+            <p data-review-quote style="margin:0;font-size:clamp(14px,1.3vw,19px);line-height:1.5;font-weight:500;color:var(--text)">&ldquo;The exposed aggregate driveway is flawless two winters on. They sent a photo update every single day.&rdquo;</p>
+            <div style="display:flex;align-items:center;gap:11px;margin-top:22px">
+              <div style="width:38px;height:38px;border-radius:50%;background:var(--panel-2);border:1px solid var(--line-2);display:grid;place-items:center;flex-shrink:0"><span data-review-initial style="font-size:14px;font-weight:800">S</span></div>
+              <div>
+                <div data-review-name style="font-size:14px;font-weight:800">Sarah &amp; Tom H.</div>
+                <div class="mono" style="font-size:10px;color:var(--muted);letter-spacing:.06em;margin-top:3px">VERIFIED GOOGLE REVIEW</div>
+              </div>
+            </div>
+          </div>
+          <div style="width:108px;border-left:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:18px;flex-shrink:0">
+            <div class="mono" data-review-count style="font-size:11px;color:var(--muted);letter-spacing:.08em">01 / 13</div>
+            <div style="display:flex;gap:8px">
+              <button class="ads-review-btn" type="button" data-review-prev aria-label="Previous review">&#8249;</button>
+              <button class="ads-review-btn" type="button" data-review-next aria-label="Next review">&#8250;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── GALLERY ── -->
+  <section class="section--tight" style="background:var(--panel);border-bottom:1px solid var(--line)">
+    <div class="wrap">
+      <div class="eyebrow" style="color:#c4994a">Recent work — Caboolture &amp; Morayfield</div>
+      <h2 class="display" style="font-size:clamp(32px,4.5vw,66px);margin:18px 0 0;line-height:.93">Jobs we've poured and sealed nearby.</h2>
+      <div class="ads-gallery">
+        <div class="ads-shot"><img src="assets/img/exposed1.webp" alt="Salt and Pepper exposed aggregate driveway" loading="lazy"/><span>Salt &amp; Pepper — Boral</span></div>
+        <div class="ads-shot"><img src="assets/img/exposed2.webp" alt="Night Sky exposed aggregate driveway" loading="lazy"/><span>Night Sky — Boral</span></div>
+        <div class="ads-shot"><img src="assets/img/agg-path-brick.webp" alt="Exposed aggregate path beside brickwork" loading="lazy"/><span>Path — Nielsens</span></div>
+        <div class="ads-shot"><img src="assets/img/agg-patio-curve.webp" alt="Exposed aggregate curved patio" loading="lazy"/><span>Curved patio</span></div>
+      </div>
     </div>
   </section>
 
@@ -614,78 +696,6 @@ body.ads-exposed-page{background:#08080a;color:var(--text);padding-bottom:0}
     </div>
   </section>
 
-  <!-- ── GALLERY ── -->
-  <section class="section--tight" style="background:var(--panel);border-bottom:1px solid var(--line)">
-    <div class="wrap">
-      <div class="eyebrow" style="color:#c4994a">Recent work — Caboolture &amp; Morayfield</div>
-      <h2 class="display" style="font-size:clamp(32px,4.5vw,66px);margin:18px 0 0;line-height:.93">Jobs we've poured and sealed nearby.</h2>
-      <div class="ads-gallery">
-        <div class="ads-shot"><img src="assets/img/exposed1.webp" alt="Salt and Pepper exposed aggregate driveway" loading="lazy"/><span>Salt &amp; Pepper — Boral</span></div>
-        <div class="ads-shot"><img src="assets/img/exposed2.webp" alt="Night Sky exposed aggregate driveway" loading="lazy"/><span>Night Sky — Boral</span></div>
-        <div class="ads-shot"><img src="assets/img/agg-path-brick.webp" alt="Exposed aggregate path beside brickwork" loading="lazy"/><span>Path — Nielsens</span></div>
-        <div class="ads-shot"><img src="assets/img/agg-patio-curve.webp" alt="Exposed aggregate curved patio" loading="lazy"/><span>Curved patio</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── REVIEWS ── -->
-  <section class="section ads-review-section">
-    <div class="wrap">
-      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:18px;flex-wrap:wrap">
-        <div>
-          <div class="eyebrow" style="color:#c4994a">Google reviews</div>
-          <h2 class="display" style="font-size:clamp(32px,4.2vw,62px);margin:18px 0 0;line-height:.95">50+ five-star reviews<br/>on Google.</h2>
-        </div>
-        <p style="margin:0 0 4px;color:var(--muted);font-size:clamp(14px,1.1vw,17px);line-height:1.65;max-width:38ch">Real Google feedback from clients across Caboolture, Morayfield and nearby Moreton Bay suburbs.</p>
-      </div>
-
-      <div data-review-strip style="display:flex;align-items:stretch;margin-top:clamp(28px,3.5vw,48px);border:1px solid var(--line-2);border-radius:8px;overflow:hidden;background:var(--base)">
-        <div style="width:clamp(200px,24vw,290px);padding:clamp(20px,2.4vw,30px);border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;gap:24px;flex-shrink:0">
-          <div>
-            <div style="display:flex;align-items:center;gap:11px">
-              <span class="ads-google-g">G</span>
-              <div>
-                <div style="font-weight:800;font-size:18px;line-height:1">Google</div>
-                <div class="mono" style="font-size:10px;color:var(--muted);letter-spacing:.08em;margin-top:4px">PUBLIC FEEDBACK</div>
-              </div>
-            </div>
-            <div style="margin-top:22px;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
-              <span class="display" style="font-size:clamp(34px,4vw,48px);line-height:1">4.8</span>
-              <div>
-                <span class="ads-stars" aria-label="4.8 star Google rating">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                <div class="mono" style="font-size:10px;color:var(--muted);letter-spacing:.06em;margin-top:5px">50+ REVIEWS</div>
-              </div>
-            </div>
-          </div>
-          <div class="mono" style="font-size:11px;color:var(--faint);letter-spacing:.06em">MORAYFIELD BASED · CABOOLTURE AREA</div>
-        </div>
-        <div style="flex:1;display:flex;min-width:0">
-          <div style="flex:1;padding:clamp(22px,3vw,40px);min-width:0;display:flex;flex-direction:column;justify-content:center">
-            <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px">
-              <span class="ads-stars" aria-label="Five star review">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-              <span class="mono" data-review-date style="font-size:11px;color:var(--muted);letter-spacing:.06em">3 months ago · Google</span>
-            </div>
-            <p data-review-quote style="margin:0;font-size:clamp(14px,1.3vw,19px);line-height:1.5;font-weight:500;color:var(--text)">&ldquo;The exposed aggregate driveway is flawless two winters on. They sent a photo update every single day.&rdquo;</p>
-            <div style="display:flex;align-items:center;gap:11px;margin-top:22px">
-              <div style="width:38px;height:38px;border-radius:50%;background:var(--panel-2);border:1px solid var(--line-2);display:grid;place-items:center;flex-shrink:0"><span data-review-initial style="font-size:14px;font-weight:800">S</span></div>
-              <div>
-                <div data-review-name style="font-size:14px;font-weight:800">Sarah &amp; Tom H.</div>
-                <div class="mono" style="font-size:10px;color:var(--muted);letter-spacing:.06em;margin-top:3px">VERIFIED GOOGLE REVIEW</div>
-              </div>
-            </div>
-          </div>
-          <div style="width:108px;border-left:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:18px;flex-shrink:0">
-            <div class="mono" data-review-count style="font-size:11px;color:var(--muted);letter-spacing:.08em">01 / 13</div>
-            <div style="display:flex;gap:8px">
-              <button class="ads-review-btn" type="button" data-review-prev aria-label="Previous review">&#8249;</button>
-              <button class="ads-review-btn" type="button" data-review-next aria-label="Next review">&#8250;</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ── FAQ ── -->
   <section class="section--tight" style="background:var(--base);border-bottom:1px solid var(--line)">
     <div class="wrap">
@@ -791,18 +801,6 @@ document.getElementById("adsQuoteForm").addEventListener("submit", async functio
     if(submitBtn){ submitBtn.textContent = originalText; submitBtn.disabled = false; }
   }
 });
-
-/* hero image slideshow */
-(function(){
-  const slides = Array.from(document.querySelectorAll(".ads-hero__media img"));
-  if(slides.length < 2 || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  let index = 0;
-  setInterval(function(){
-    slides[index].classList.remove("is-active");
-    index = (index + 1) % slides.length;
-    slides[index].classList.add("is-active");
-  }, 5400);
-})();
 
 /* review carousel */
 (function(){

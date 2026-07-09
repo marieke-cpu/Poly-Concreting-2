@@ -76,8 +76,8 @@
 <style>
 body.ads-driveway-page{background:#08080a;color:var(--text);padding-bottom:0}
 .ads-top{position:fixed;top:0;left:0;right:0;z-index:60;background:rgba(8,8,10,.86);border-bottom:1px solid var(--line);backdrop-filter:blur(16px)}
-.ads-urgency{position:relative;overflow:hidden;background:var(--text);color:#08080a;border-bottom:1px solid rgba(0,0,0,.16)}
-.ads-urgency:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.65),transparent);transform:translateX(-120%);animation:urgencySweep 4.8s var(--ease) infinite;pointer-events:none}
+.ads-urgency{position:relative;overflow:hidden;background:#b8bec8;color:#08080a;border-bottom:1px solid rgba(0,0,0,.16)}
+.ads-urgency:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);transform:translateX(-120%);animation:urgencySweep 4.8s var(--ease) infinite;pointer-events:none}
 .ads-urgency__inner{position:relative;z-index:1;max-width:var(--maxw);margin:0 auto;padding:7px var(--pad);display:flex;align-items:center;justify-content:center;gap:10px;font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:800;text-align:center}
 .ads-urgency__dot{width:7px;height:7px;border-radius:50%;background:#1f8f3a;box-shadow:0 0 0 4px rgba(31,143,58,.16);flex:0 0 auto}
 .ads-urgency a{border-bottom:1px solid currentColor}
@@ -85,13 +85,13 @@ body.ads-driveway-page{background:#08080a;color:var(--text);padding-bottom:0}
 .ads-logo{height:76px;width:auto;object-fit:contain}
 .ads-top__actions{display:flex;align-items:center;gap:10px}
 .ads-top__actions .btn{padding:11px 16px;font-size:10.5px;letter-spacing:.08em}
-.ads-hero{position:relative;min-height:100svh;display:grid;align-items:end;overflow:hidden;background:#0b0b0d}
-.ads-hero__media{position:absolute;inset:0}
-.ads-hero__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 58%;filter:saturate(1.02) brightness(1.06);opacity:0;transform:scale(1.018);transition:opacity 1.2s var(--ease),transform 6.5s linear}
-.ads-hero__media img.is-active{opacity:1;transform:scale(1.065)}
-.ads-hero__shade{position:absolute;inset:0;background:linear-gradient(100deg,rgba(8,8,10,.9) 0%,rgba(8,8,10,.7) 44%,rgba(8,8,10,.18) 100%),linear-gradient(0deg,rgba(8,8,10,.5) 0%,rgba(8,8,10,0) 40%)}
-.ads-hero__inner{position:relative;z-index:2;width:100%;max-width:var(--maxw);margin:0 auto;padding:150px var(--pad) clamp(34px,5vw,64px);display:grid;grid-template-columns:minmax(0,1fr) minmax(380px,440px);gap:clamp(24px,4vw,56px);align-items:center}
-.ads-badge{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);border-radius:999px;padding:8px 12px;font-family:var(--font-mono);font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--bone)}
+.ads-hero{min-height:100svh;display:grid;grid-template-columns:1.05fr .95fr;position:relative;background:#0b0b0d}
+.ads-hero__inner{position:relative;z-index:2;padding:clamp(120px,15vh,160px) clamp(28px,4vw,56px) 80px var(--pad);display:flex;flex-direction:column;justify-content:center;background:#0b0b0d}
+.ads-hero__media{position:relative;overflow:hidden}
+.ads-hero__media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.ads-hero__media-fade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,11,13,1) 0%,rgba(11,11,13,.35) 22%,transparent 50%),linear-gradient(0deg,rgba(11,11,13,.6) 0%,transparent 35%)}
+.ads-quote-wrap{max-width:var(--maxw);margin:0 auto;padding:clamp(56px,7vw,100px) var(--pad);display:grid;grid-template-columns:1fr minmax(380px,460px);gap:clamp(40px,6vw,90px);align-items:start}
+.ads-badge{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(184,190,200,.35);background:rgba(184,190,200,.1);border-radius:999px;padding:8px 12px;font-family:var(--font-mono);font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--bone)}
 .ads-badge:before{content:"";width:8px;height:8px;border-radius:50%;background:#76d28d;box-shadow:0 0 0 5px rgba(118,210,141,.13)}
 .ads-hero h1{font-size:clamp(46px,7.4vw,104px);max-width:12.6ch;margin:18px 0 0;line-height:.9}
 .ads-hero__lead{margin:22px 0 0;max-width:48ch;color:#f3f2ee;font-size:clamp(16px,1.3vw,20px);line-height:1.55}
@@ -99,12 +99,12 @@ body.ads-driveway-page{background:#08080a;color:var(--text);padding-bottom:0}
 .ads-offer-list div{display:flex;gap:10px;align-items:flex-start;color:#f4f3ee;font-size:15.5px;line-height:1.45}
 .ads-offer-list svg{flex:0 0 auto;margin-top:2px;color:#76d28d}
 .ads-hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.ads-proof{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:clamp(24px,3vw,38px);border-top:1px solid rgba(255,255,255,.14);border-left:1px solid rgba(255,255,255,.14)}
-.ads-proof div{padding:16px 18px;border-right:1px solid rgba(255,255,255,.14);border-bottom:1px solid rgba(255,255,255,.14);background:rgba(8,8,10,.42)}
+.ads-proof{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:clamp(24px,3vw,38px);border-top:1px solid rgba(184,190,200,.2);border-left:1px solid rgba(184,190,200,.2)}
+.ads-proof div{padding:16px 18px;border-right:1px solid rgba(184,190,200,.2);border-bottom:1px solid rgba(184,190,200,.2);background:rgba(8,8,10,.42)}
 .ads-proof strong{display:block;font-size:clamp(18px,2vw,28px);line-height:1.1}
 .ads-proof span{display:block;margin-top:4px;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.08em;color:var(--muted);text-transform:uppercase;line-height:1.35}
-.ads-card{background:linear-gradient(180deg,rgba(27,27,31,.98),rgba(10,10,12,.99));border:1px solid rgba(255,255,255,.24);border-radius:8px;box-shadow:0 30px 90px rgba(0,0,0,.66);overflow:hidden}
-.ads-card__flag{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 22px;background:var(--text);color:#08080a;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:800}
+.ads-card{background:linear-gradient(180deg,rgba(27,27,31,.98),rgba(10,10,12,.99));border:1px solid rgba(184,190,200,.3);border-radius:8px;box-shadow:0 30px 90px rgba(0,0,0,.66);overflow:hidden}
+.ads-card__flag{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 22px;background:#b8bec8;color:#08080a;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:800}
 .ads-card__flag span:last-child{opacity:.75}
 .ads-card__head{padding:22px 22px 18px;border-bottom:1px solid var(--line)}
 .ads-card__head h2{font-size:clamp(24px,2.2vw,34px);margin:0}
@@ -161,7 +161,7 @@ body.ads-driveway-page{background:#08080a;color:var(--text);padding-bottom:0}
 .ads-review blockquote{margin:18px 0 0;font-size:clamp(20px,2.5vw,34px);line-height:1.22;font-weight:800}
 .ads-review cite{display:block;margin-top:16px;color:var(--muted);font-style:normal}
 .ads-reviews-head{display:flex;align-items:end;justify-content:space-between;gap:24px;flex-wrap:wrap}
-.ads-google-pill{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line-2);border-radius:999px;padding:9px 12px;background:rgba(255,255,255,.05);font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--bone)}
+.ads-google-pill{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line-2);border-radius:999px;padding:9px 12px;background:rgba(184,190,200,.07);font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--bone)}
 .ads-google-g{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:#fff;color:#4285f4;font-family:Arial,sans-serif;font-size:15px;font-weight:800;letter-spacing:0;text-transform:none}
 .ads-review-carousel{margin-top:clamp(26px,3vw,42px)}
 .ads-review-window{overflow:hidden}
@@ -175,10 +175,10 @@ body.ads-driveway-page{background:#08080a;color:var(--text);padding-bottom:0}
 .ads-review-controls{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:18px}
 .ads-review-arrows{display:flex;gap:8px}
 .ads-review-btn{width:42px;height:42px;border-radius:50%;border:1px solid var(--line-2);background:transparent;color:var(--text);display:grid;place-items:center;font-size:20px;line-height:1;transition:border-color .2s,background .2s}
-.ads-review-btn:hover{border-color:var(--text);background:rgba(255,255,255,.06)}
+.ads-review-btn:hover{border-color:#b8bec8;background:rgba(184,190,200,.08)}
 .ads-review-dots{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}
 .ads-review-dot{width:8px;height:8px;border:0;border-radius:999px;background:var(--line-3);padding:0;transition:width .25s,background .25s}
-.ads-review-dot.is-active{width:24px;background:var(--text)}
+.ads-review-dot.is-active{width:24px;background:#b8bec8}
 .ads-faq{max-width:900px;margin-top:clamp(26px,3vw,42px);border-top:1px solid var(--line)}
 .ads-faq details{border-bottom:1px solid var(--line);padding:18px 0}
 .ads-faq summary{cursor:pointer;font-weight:700;list-style:none}
@@ -190,8 +190,10 @@ body.ads-driveway-page{background:#08080a;color:var(--text);padding-bottom:0}
 .ads-final .wrap{position:relative;z-index:2}
 .ads-sticky{display:none}
 @media(max-width:980px){
-  .ads-hero__inner{grid-template-columns:1fr;padding-top:142px}
-  .ads-card{max-width:720px}
+  .ads-hero{grid-template-columns:1fr}
+  .ads-hero__inner{padding:130px var(--pad) 52px}
+  .ads-hero__media{min-height:60vw}
+  .ads-quote-wrap{grid-template-columns:1fr}
   .ads-grid{grid-template-columns:1fr 1fr}
   .ads-split{grid-template-columns:1fr}
   .ads-quote-band .wrap,.ads-problem{grid-template-columns:1fr}
@@ -206,23 +208,25 @@ body.ads-driveway-page{background:#08080a;color:var(--text);padding-bottom:0}
   .ads-logo{height:62px}
   .ads-top__actions .btn--ghost{display:none}
   .ads-top__actions .btn{padding:9px 12px;font-size:9.5px;letter-spacing:.06em}
-  .ads-hero{min-height:auto}
-  .ads-hero__inner{padding:132px 14px 34px;gap:22px}
+  .ads-hero{min-height:auto;grid-template-columns:1fr}
+  .ads-hero__media{display:none}
+  .ads-hero__inner{padding:120px 14px 52px}
   .ads-urgency__inner{padding:6px 14px;font-size:9.5px;letter-spacing:.06em;gap:7px}
   .ads-hero h1{font-size:clamp(42px,15vw,64px);max-width:10.8ch}
   .ads-hero-cta .btn{width:100%;justify-content:center}
   .ads-proof{grid-template-columns:1fr 1fr;margin-top:24px}
   .ads-card__head,.ads-form{padding-left:16px;padding-right:16px}
   .ads-form__grid{grid-template-columns:1fr}
+  .ads-quote-wrap{padding-left:14px;padding-right:14px}
   .ads-grid{grid-template-columns:1fr}
   .ads-finish-list{grid-template-columns:1fr}
   .ads-finish img{height:150px}
   .ads-strip__inner{padding:18px 14px}
   .ads-gallery{gap:8px}
-  .ads-sticky{position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:80;display:grid;grid-template-columns:1.15fr .85fr;gap:8px;padding:8px;border:1px solid rgba(255,255,255,.18);border-radius:12px;background:rgba(8,8,10,.92);backdrop-filter:blur(16px);box-shadow:0 16px 50px rgba(0,0,0,.58)}
+  .ads-sticky{position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:80;display:grid;grid-template-columns:1.15fr .85fr;gap:8px;padding:8px;border:1px solid rgba(184,190,200,.22);border-radius:12px;background:rgba(8,8,10,.92);backdrop-filter:blur(16px);box-shadow:0 16px 50px rgba(0,0,0,.58)}
   .ads-sticky a{min-height:48px;display:flex;align-items:center;justify-content:center;border-radius:8px;font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:800}
-  .ads-sticky__quote{background:var(--text);color:#08080a}
-  .ads-sticky__call{background:rgba(255,255,255,.08);border:1px solid var(--line-2)}
+  .ads-sticky__quote{background:#b8bec8;color:#08080a}
+  .ads-sticky__call{background:rgba(184,190,200,.08);border:1px solid var(--line-2)}
 }
 </style>
 </head>
@@ -235,8 +239,8 @@ body.ads-driveway-page{background:#08080a;color:var(--text);padding-bottom:0}
   <div class="ads-urgency">
     <div class="ads-urgency__inner">
       <span class="ads-urgency__dot" aria-hidden="true"></span>
-      <span>Caboolture &amp; Morayfield driveway quotes: same-day replies available</span>
-      <a href="#quote">Request yours</a>
+      <span>⚡ Limited pour dates left this month — Caboolture &amp; Morayfield bookings filling fast</span>
+      <a href="#quote">Lock in your date</a>
     </div>
   </div>
   <div class="ads-top__inner">
@@ -252,46 +256,60 @@ body.ads-driveway-page{background:#08080a;color:var(--text);padding-bottom:0}
 
 <main>
   <section class="ads-hero">
-    <div class="ads-hero__media" aria-hidden="true">
-      <img class="is-active" src="assets/img/agg-driveway.webp" alt="" fetchpriority="high"/>
-      <img src="assets/img/optimized/photos-before-afters-ex2.webp" alt="" loading="eager"/>
-      <img src="assets/img/optimized/photos-driveways-exposed1.webp" alt="" loading="lazy"/>
-      <img src="assets/img/optimized/photos-driveways-plain1.webp" alt="" loading="lazy"/>
-      <img src="assets/img/optimized/photos-driveways-plain2.webp" alt="" loading="lazy"/>
-      <img src="assets/img/optimized/photos-driveways-plain3.webp" alt="" loading="lazy"/>
-      <img src="assets/img/optimized/photos-driveways-plain4.webp" alt="" loading="lazy"/>
-      <img src="assets/img/optimized/photos-driveways-plain6.webp" alt="" loading="lazy"/>
-      <img src="assets/img/optimized/photos-driveways-plain7.webp" alt="" loading="lazy"/>
-      <img src="assets/img/optimized/photos-driveways-plain8.webp" alt="" loading="lazy"/>
-      <img src="assets/img/optimized/photos-trowel-trowel1.webp" alt="" loading="lazy"/>
-    </div>
-    <div class="ads-hero__shade" aria-hidden="true"></div>
     <div class="ads-hero__inner">
+      <h1 class="display">Concrete Driveways Caboolture.</h1>
+      <p class="ads-hero__lead">Get a fixed written quote for a reinforced concrete driveway in Caboolture or Morayfield. We handle the base, drainage, finish and crossover details properly from day one.</p>
+      <div class="ads-offer-list">
+        <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Same-day reply with clear next steps, not a vague square-metre guess.</span></div>
+        <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Plain, broom, coloured and exposed aggregate finishes for any budget.</span></div>
+        <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Morayfield-based crew with 50+ Google reviews and local driveway work.</span></div>
+      </div>
+      <div class="ads-hero-cta">
+        <a class="btn btn--solid btn--lg" href="#quote">Get my fixed quote <span class="ar" aria-hidden="true">&#8599;</span></a>
+        <a class="btn btn--ghost btn--lg" href="tel:0481445041">Call Angelo now</a>
+      </div>
+      <div class="ads-proof" aria-label="Trust points">
+        <div><strong>Same day</strong><span>quote response</span></div>
+        <div><strong>Fixed</strong><span>written pricing</span></div>
+        <div><strong>50+</strong><span>Google reviews</span></div>
+        <div><strong>10+</strong><span>years experience</span></div>
+      </div>
+    </div>
+    <div class="ads-hero__media" aria-hidden="true">
+      <video id="heroVid" autoplay muted playsinline preload="auto" src="poly/PT1.mov"></video>
+      <div class="ads-hero__media-fade"></div>
+    </div>
+  </section>
+
+  <!-- ── QUOTE FORM (below hero) ── -->
+  <section style="background:var(--base);border-bottom:1px solid var(--line)">
+    <div class="ads-quote-wrap">
       <div>
-        <div class="ads-badge">Local driveway quotes for 4506 &amp; 4510</div>
-        <h1 class="display">Concrete driveways Caboolture and Morayfield.</h1>
-        <p class="ads-hero__lead">Get a fixed written quote for a reinforced concrete driveway in Caboolture or Morayfield. We handle the base, drainage, finish and crossover details properly from day one.</p>
-        <div class="ads-offer-list">
-          <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Same-day reply with clear next steps, not a vague square-metre guess.</span></div>
-          <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Plain, broom, coloured and exposed aggregate finishes for any budget.</span></div>
-          <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Morayfield-based crew with 50+ Google reviews and local driveway work.</span></div>
+        <div class="eyebrow">Free fixed quote</div>
+        <h2 class="display" style="font-size:clamp(32px,4.5vw,66px);margin:20px 0 0;line-height:.93">Tell us where to quote.</h2>
+        <p style="margin:18px 0 0;color:var(--muted);font-size:clamp(15px,1.2vw,18px);line-height:1.62;max-width:44ch">Send the basics now. Angelo will confirm access, finish options and the next available site visit — same-day response for Caboolture and Morayfield.</p>
+        <div style="display:grid;gap:12px;margin-top:30px">
+          <div style="display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.45;color:var(--text)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#76d28d" stroke-width="1.8" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Fixed written price — no loose estimates that change at handover.</span></div>
+          <div style="display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.45;color:var(--text)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#76d28d" stroke-width="1.8" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Same-day response for Caboolture and Morayfield jobs.</span></div>
+          <div style="display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.45;color:var(--text)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#76d28d" stroke-width="1.8" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Angelo quotes, forms, pours and finishes — one contact from start to seal.</span></div>
+          <div style="display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.45;color:var(--text)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#76d28d" stroke-width="1.8" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>No obligation. No spam. Just a local quote and a clear next step.</span></div>
         </div>
-        <div class="ads-hero-cta">
-          <a class="btn btn--solid btn--lg" href="#quote">Get my fixed quote <span class="ar" aria-hidden="true">&#8599;</span></a>
-          <a class="btn btn--ghost btn--lg" href="tel:0481445041">Call Angelo now</a>
-        </div>
-        <div class="ads-proof" aria-label="Trust points">
-          <div><strong>Same day</strong><span>quote response</span></div>
-          <div><strong>Fixed</strong><span>written pricing</span></div>
-          <div><strong>50+</strong><span>Google reviews</span></div>
-          <div><strong>10+</strong><span>years experience</span></div>
+        <div style="margin-top:36px;padding:20px;border:1px solid var(--line);border-radius:8px;background:var(--panel)">
+          <div class="mono" style="font-size:10px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;margin-bottom:10px">Google Rating</div>
+          <div style="display:flex;align-items:center;gap:10px">
+            <span style="font-size:28px;font-weight:800;line-height:1">4.8</span>
+            <div>
+              <span style="color:#f5c542;letter-spacing:2px;font-size:17px" aria-label="4.8 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <div class="mono" style="font-size:10px;color:var(--muted);letter-spacing:.06em;margin-top:3px">50+ VERIFIED REVIEWS</div>
+            </div>
+          </div>
         </div>
       </div>
 
       <aside class="ads-card" id="quote" aria-label="Request a driveway quote">
         <div class="ads-card__flag"><span>Free driveway quote</span><span>No obligation</span></div>
         <div class="ads-card__head">
-          <h2 class="display">Tell us where to quote.</h2>
+          <h2 class="display">Get a fixed written price.</h2>
           <p>Send the basics now. Angelo will confirm access, finish options and the next available site visit.</p>
         </div>
         <form class="ads-form" id="adsQuoteForm" action="https://api.web3forms.com/submit" method="POST">
@@ -348,6 +366,84 @@ body.ads-driveway-page{background:#08080a;color:var(--text);padding-bottom:0}
           </div>
         </form>
       </aside>
+    </div>
+  </section>
+
+  <section class="section pc-review-section ads-review">
+    <div class="wrap">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:18px;flex-wrap:wrap">
+        <div>
+          <div class="eyebrow">Google reviews</div>
+          <h2 class="display" style="font-size:clamp(32px,4.2vw,62px);margin:20px 0 0;line-height:.95">50+ five-star reviews<br/>on Google.</h2>
+        </div>
+        <p style="margin:0 0 4px;color:var(--muted);font-size:clamp(14px,1.1vw,17px);line-height:1.65;max-width:38ch">Real Google feedback from Caboolture, Morayfield and nearby Moreton Bay clients.</p>
+      </div>
+
+      <div class="services-review-carousel" data-review-strip style="display:flex;align-items:stretch;margin-top:clamp(28px,3.5vw,48px);border:1px solid var(--line-2);border-radius:8px;overflow:hidden;background:var(--base)">
+        <div class="pc-review-rating" style="width:clamp(210px,24vw,300px);padding:clamp(20px,2.4vw,30px);border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;gap:24px">
+          <div>
+            <div style="display:flex;align-items:center;gap:11px">
+              <span class="ads-google-g">G</span>
+              <div>
+                <div style="font-weight:800;font-size:18px;line-height:1">Google</div>
+                <div class="mono" style="font-size:10px;color:var(--muted);letter-spacing:.08em;margin-top:4px">PUBLIC FEEDBACK</div>
+              </div>
+            </div>
+            <div style="margin-top:22px;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+              <span class="display" style="font-size:clamp(34px,4vw,48px);line-height:1">4.8</span>
+              <div>
+                <span class="ads-stars" aria-label="Five star Google review">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <div class="mono" style="font-size:10px;color:var(--muted);letter-spacing:.06em;margin-top:5px">50+ REVIEWS</div>
+              </div>
+            </div>
+          </div>
+          <div class="mono" style="font-size:11px;color:var(--faint);letter-spacing:.06em">MORAYFIELD BASED · CABOOLTURE AREA</div>
+        </div>
+        <div class="pc-review-body" style="flex:1;display:flex;min-width:0">
+          <div style="flex:1;padding:clamp(24px,3vw,42px);min-width:0;display:flex;flex-direction:column;justify-content:center">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px">
+              <span class="ads-stars" aria-label="Five star Google review">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <span class="mono" data-review-date style="font-size:11px;color:var(--muted);letter-spacing:.06em">3 months ago · Google</span>
+            </div>
+            <p data-review-quote style="margin:0;font-size:clamp(14px,1.3vw,19px);line-height:1.5;font-weight:500;color:var(--text)">&ldquo;Angelo and his team replaced our old driveway and were great from start to finish. Very efficient, easy to deal with and kept everything running smoothly. The finished job looks excellent and has completely transformed the front of our home. Highly recommend.&rdquo;</p>
+            <div style="display:flex;align-items:center;gap:11px;margin-top:24px">
+              <div style="width:38px;height:38px;border-radius:50%;background:var(--panel-2);border:1px solid var(--line-2);display:grid;place-items:center;flex-shrink:0"><span data-review-initial style="font-size:14px;font-weight:800">C</span></div>
+              <div>
+                <div data-review-name style="font-size:14px;font-weight:800">Clyde Woodward</div>
+                <div class="mono" style="font-size:10px;color:var(--muted);letter-spacing:.06em;margin-top:3px">VERIFIED GOOGLE REVIEW</div>
+              </div>
+            </div>
+          </div>
+          <div class="pc-review-controls" style="width:112px;border-left:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:18px">
+            <div class="mono" data-review-count style="font-size:11px;color:var(--muted);letter-spacing:.08em">01 / 13</div>
+            <div style="display:flex;gap:8px">
+              <button class="ads-review-btn" type="button" data-review-prev aria-label="Previous review">&#8249;</button>
+              <button class="ads-review-btn" type="button" data-review-next aria-label="Next review">&#8250;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section--tight">
+    <div class="wrap">
+      <div class="eyebrow">Recent work — Caboolture &amp; Morayfield</div>
+      <h2 class="display" style="font-size:clamp(32px,4.5vw,66px);margin:20px 0 0;line-height:.93">Driveways we've poured nearby.</h2>
+      <div class="ads-gallery">
+        <div class="ads-shot"><img src="poly/D1.JPG" alt="Concrete driveway Caboolture" loading="lazy"/><span>Caboolture</span></div>
+        <div class="ads-shot"><img src="poly/D2.JPG" alt="Concrete driveway Morayfield" loading="lazy"/><span>Morayfield</span></div>
+        <div class="ads-shot"><img src="poly/D3.JPG" alt="Concrete driveway local area" loading="lazy"/><span>Local job</span></div>
+        <div class="ads-shot"><img src="assets/img/optimized/photos-driveways-plain2.webp" alt="Concrete driveway in Caboolture" loading="lazy"/><span>Caboolture</span></div>
+        <div class="ads-shot"><img src="assets/img/optimized/photos-driveways-plain3.webp" alt="Plain concrete driveway" loading="lazy"/><span>Plain concrete</span></div>
+        <div class="ads-shot"><img src="assets/img/optimized/photos-driveways-plain6.webp" alt="Broom finish driveway" loading="lazy"/><span>Broom finish</span></div>
+        <div class="ads-shot"><img src="assets/img/optimized/photos-driveways-plain7.webp" alt="Concrete driveway Moreton Bay" loading="lazy"/><span>Moreton Bay</span></div>
+        <div class="ads-shot"><img src="assets/img/optimized/photos-driveways-plain8.webp" alt="Residential concrete driveway" loading="lazy"/><span>Residential</span></div>
+        <div class="ads-shot"><img src="assets/img/optimized/photos-plain10.webp" alt="Concrete driveway local" loading="lazy"/><span>Local job</span></div>
+        <div class="ads-shot"><img src="assets/img/optimized/photos-driveways-exposed1.webp" alt="Exposed aggregate driveway" loading="lazy"/><span>Exposed agg</span></div>
+        <div class="ads-shot"><img src="assets/img/agg-driveway.webp" alt="Exposed aggregate driveway" loading="lazy"/><span>Exposed agg</span></div>
+        <div class="ads-shot"><img src="assets/img/optimized/photos-driveways-plain1.webp" alt="Acreage concrete driveway" loading="lazy"/><span>Moreton Bay</span></div>
+      </div>
     </div>
   </section>
 
@@ -466,76 +562,6 @@ body.ads-driveway-page{background:#08080a;color:var(--text);padding-bottom:0}
           <img src="assets/img/covercrete-hero.webp" alt="Covercrete resurfacing finish"/>
           <div><span class="ads-finish-tag">Resurface option</span><h3>Covercrete</h3><p>For suitable existing concrete, resurfacing can refresh the look with colour and stencil options without a full rip-out.</p></div>
         </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section--tight">
-    <div class="wrap">
-      <div class="eyebrow">Recent work — Caboolture &amp; Morayfield</div>
-      <h2 class="display" style="font-size:clamp(32px,4.5vw,66px);margin:20px 0 0;line-height:.93">Driveways we've poured nearby.</h2>
-      <div class="ads-gallery">
-        <div class="ads-shot"><img src="assets/img/optimized/photos-driveways-plain2.webp" alt="Concrete driveway in Caboolture"/><span>Caboolture</span></div>
-        <div class="ads-shot"><img src="assets/img/optimized/photos-driveways-plain6.webp" alt="Plain concrete driveway with broom finish"/><span>Broom finish</span></div>
-        <div class="ads-shot"><img src="assets/img/optimized/photos-driveways-exposed1.webp" alt="Exposed aggregate driveway"/><span>Exposed agg</span></div>
-        <div class="ads-shot"><img src="assets/img/optimized/photos-driveways-plain1.webp" alt="Acreage concrete driveway"/><span>Moreton Bay</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section pc-review-section ads-review">
-    <div class="wrap">
-      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:18px;flex-wrap:wrap">
-        <div>
-          <div class="eyebrow">Google reviews</div>
-          <h2 class="display" style="font-size:clamp(32px,4.2vw,62px);margin:20px 0 0;line-height:.95">50+ five-star reviews<br/>on Google.</h2>
-        </div>
-        <p style="margin:0 0 4px;color:var(--muted);font-size:clamp(14px,1.1vw,17px);line-height:1.65;max-width:38ch">Real Google feedback from Caboolture, Morayfield and nearby Moreton Bay clients.</p>
-      </div>
-
-      <div class="services-review-carousel" data-review-strip style="display:flex;align-items:stretch;margin-top:clamp(28px,3.5vw,48px);border:1px solid var(--line-2);border-radius:8px;overflow:hidden;background:var(--base)">
-        <div class="pc-review-rating" style="width:clamp(210px,24vw,300px);padding:clamp(20px,2.4vw,30px);border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;gap:24px">
-          <div>
-            <div style="display:flex;align-items:center;gap:11px">
-              <span class="ads-google-g">G</span>
-              <div>
-                <div style="font-weight:800;font-size:18px;line-height:1">Google</div>
-                <div class="mono" style="font-size:10px;color:var(--muted);letter-spacing:.08em;margin-top:4px">PUBLIC FEEDBACK</div>
-              </div>
-            </div>
-            <div style="margin-top:22px;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
-              <span class="display" style="font-size:clamp(34px,4vw,48px);line-height:1">4.8</span>
-              <div>
-                <span class="ads-stars" aria-label="Five star Google review">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                <div class="mono" style="font-size:10px;color:var(--muted);letter-spacing:.06em;margin-top:5px">50+ REVIEWS</div>
-              </div>
-            </div>
-          </div>
-          <div class="mono" style="font-size:11px;color:var(--faint);letter-spacing:.06em">MORAYFIELD BASED · CABOOLTURE AREA</div>
-        </div>
-        <div class="pc-review-body" style="flex:1;display:flex;min-width:0">
-          <div style="flex:1;padding:clamp(24px,3vw,42px);min-width:0;display:flex;flex-direction:column;justify-content:center">
-            <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px">
-              <span class="ads-stars" aria-label="Five star Google review">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-              <span class="mono" data-review-date style="font-size:11px;color:var(--muted);letter-spacing:.06em">3 months ago · Google</span>
-            </div>
-            <p data-review-quote style="margin:0;font-size:clamp(14px,1.3vw,19px);line-height:1.5;font-weight:500;color:var(--text)">&ldquo;Angelo and his team replaced our old driveway and were great from start to finish. Very efficient, easy to deal with and kept everything running smoothly. The finished job looks excellent and has completely transformed the front of our home. Highly recommend.&rdquo;</p>
-            <div style="display:flex;align-items:center;gap:11px;margin-top:24px">
-              <div style="width:38px;height:38px;border-radius:50%;background:var(--panel-2);border:1px solid var(--line-2);display:grid;place-items:center;flex-shrink:0"><span data-review-initial style="font-size:14px;font-weight:800">C</span></div>
-              <div>
-                <div data-review-name style="font-size:14px;font-weight:800">Clyde Woodward</div>
-                <div class="mono" style="font-size:10px;color:var(--muted);letter-spacing:.06em;margin-top:3px">VERIFIED GOOGLE REVIEW</div>
-              </div>
-            </div>
-          </div>
-          <div class="pc-review-controls" style="width:112px;border-left:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:18px">
-            <div class="mono" data-review-count style="font-size:11px;color:var(--muted);letter-spacing:.08em">01 / 13</div>
-            <div style="display:flex;gap:8px">
-              <button class="ads-review-btn" type="button" data-review-prev aria-label="Previous review">&#8249;</button>
-              <button class="ads-review-btn" type="button" data-review-next aria-label="Next review">&#8250;</button>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -674,14 +700,43 @@ document.getElementById("adsQuoteForm").addEventListener("submit", async functio
 });
 
 (function(){
-  const slides = Array.from(document.querySelectorAll(".ads-hero__media img"));
-  if(slides.length < 2 || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  let index = 0;
-  window.setInterval(function(){
-    slides[index].classList.remove("is-active");
-    index = (index + 1) % slides.length;
-    slides[index].classList.add("is-active");
-  }, 5200);
+  const playlist = [
+    "poly/PT1.mov",
+    "poly/PT2-1.MP4",
+    "poly/PT2-2.MP4",
+    "poly/PT2-3.MP4",
+    "poly/PT2-4.MP4",
+    "poly/PT2-5.MP4",
+    "poly/PT2-6.MOV"
+  ];
+  const vid = document.getElementById("heroVid");
+  if(!vid) return;
+  let idx = 0;
+
+  function tryPlay(){
+    var p = vid.play();
+    if(p && p.catch) p.catch(function(){});
+  }
+
+  function advance(){
+    idx = (idx + 1) % playlist.length;
+    vid.src = playlist[idx];
+    vid.load();
+    tryPlay();
+  }
+
+  vid.addEventListener("ended", advance);
+  vid.addEventListener("error", advance);
+
+  /* retry on visibility/focus restore (mobile tab-switching) */
+  document.addEventListener("visibilitychange", function(){
+    if(!document.hidden) tryPlay();
+  });
+  ["focus","pageshow"].forEach(function(ev){
+    window.addEventListener(ev, tryPlay, {passive:true});
+  });
+
+  tryPlay();
 })();
 
 (function(){
