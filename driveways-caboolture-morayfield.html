@@ -648,13 +648,30 @@ document.getElementById("adsQuoteForm").addEventListener("submit", async functio
   try {
     const result = await submitAdsQuoteToWeb3Forms(payload);
     if(result && (result.success || result.ok)){
+      window.PCAnalytics?.trackQuoteFormSubmit?.({
+        ...payload,
+        form_name: "Google Ads driveway quote form",
+        service_selected: payload.type
+      });
       sessionStorage.setItem("pc_quote", JSON.stringify(payload));
       form.reset();
       window.location.href = "thankyou";
       return;
     }
+    window.PCAnalytics?.trackQuoteFormError?.({
+      ...payload,
+      form_name: "Google Ads driveway quote form",
+      service_selected: payload.type,
+      error_message: (result && result.message) || "Driveway quote submission failed"
+    });
     alert("Error: " + ((result && result.message) || "Your quote could not be sent. Please call 0481 445 041."));
   } catch (error) {
+    window.PCAnalytics?.trackQuoteFormError?.({
+      ...payload,
+      form_name: "Google Ads driveway quote form",
+      service_selected: payload.type,
+      error_message: "Driveway quote submission exception"
+    });
     form.submit();
   } finally {
     if(submitBtn){
@@ -726,5 +743,6 @@ document.getElementById("adsQuoteForm").addEventListener("submit", async functio
   restart();
 })();
 </script>
+<script type="module" src="assets/js/analytics.js?v=20260708-data-layer-v1"></script>
 </body>
 </html>
