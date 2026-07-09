@@ -17,25 +17,25 @@ window.PC_DATA = {
   megaMenu: {
     Residential: [
       ["Driveways","driveways"],
-      ["House & Shed Slabs","service-detail#slabs"],
-      ["Pathways","service-detail#pathways"],
-      ["Outdoor Entertaining","service-detail#patios"],
-      ["Pool Surrounds","service-detail#pools"],
-      ["Resurfacing","service-detail#resurfacing"],
+      ["House & Shed Slabs","slabs"],
+      ["Pathways","pathways"],
+      ["Outdoor Entertaining","outdoor"],
+      ["Pool Surrounds","pools"],
+      ["Resurfacing","resurfacing"],
     ],
     "Standard Finishes": [
-      ["Trowel Finish","service-detail#trowel"],
-      ["Broom Finish","service-detail#broom"],
-      ["Swirl Finish","service-detail#swirl"],
+      ["Trowel Finish","trowel"],
+      ["Broom Finish","broom"],
+      ["Swirl Finish","swirl"],
     ],
     "Decorative Finishes": [
-      ["Exposed Aggregate","service-detail#exposed"],
-      ["Coloured","service-detail#coloured"],
-      ["Stamped","service-detail#stamped"],
-      ["Covercrete","service-detail#covercrete"],
+      ["Exposed Aggregate","exposedaggregate"],
+      ["Coloured","coloured"],
+      ["Stamped","stamped"],
+      ["Covercrete","covercrete"],
     ],
     Commercial: [
-      ["Small Commercial","service-detail#commercial"],
+      ["Small Commercial","commercial"],
     ],
     Locations: [
       ["Morayfield","morayfield-concreting"],
@@ -164,10 +164,10 @@ window.PC_DATA = {
   ],
 
   services: [
-    ["Driveways","driveways"],["House & Shed Slabs","slabs"],["Pathways","pathways"],["Outdoor Entertaining","patios"],
+    ["Driveways","driveways"],["House & Shed Slabs","slabs"],["Pathways","pathways"],["Outdoor Entertaining","outdoor"],
     ["Pool Surrounds","pools"],["Small Commercial","commercial"],["Resurfacing","resurfacing"],
     ["Trowel Finish","trowel"],["Swirl Finish","swirl"],["Broom Finish","broom"],
-    ["Exposed Aggregate","exposed"],["Coloured","coloured"],["Stamped","stamped"],["Covercrete","covercrete"],
+    ["Exposed Aggregate","exposedaggregate"],["Coloured","coloured"],["Stamped","stamped"],["Covercrete","covercrete"],
   ],
 
   googleReviewCount: 50,

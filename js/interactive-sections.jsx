@@ -3,6 +3,8 @@ const { Reveal:IR, Ph:IPh, Eyebrow:IEb, Arrow:IAr, Icon:IIc } = window.PC_UI;
 const SVC = window.PC_SERVICES;
 const SD  = window.PC_DATA;
 
+const SVC_SLUGS = {driveways:"driveways",slabs:"slabs",pathways:"pathways",patios:"outdoor",pools:"pools",commercial:"commercial",resurfacing:"resurfacing",trowel:"trowel",broom:"broom",swirl:"swirl",exposed:"exposedaggregate",coloured:"coloured",stamped:"stamped",covercrete:"covercrete"};
+const svcHref = id => SVC_SLUGS[id] || id;
 const JOB_TYPES = SVC.slice(0,6);  /* driveways → commercial */
 const STANDARD_FINISHES = ["broom", "trowel", "swirl"].map(id => SVC.find(s => s.id === id)).filter(Boolean);
 const DECORATIVE_FINISHES = ["exposed", "coloured", "stamped", "covercrete"].map(id => SVC.find(s => s.id === id)).filter(Boolean);
@@ -115,7 +117,7 @@ function JobConfigurator({ onQuote }){
               <button className="btn btn--solid" onClick={onQuote}>
                 Quote my {cur.short.toLowerCase()} <IAr/>
               </button>
-              <a href={cur.id==="driveways"?"driveways":`service-detail#${cur.id}`}
+              <a href={svcHref(cur.id)}
                 className="btn btn--ghost">
                 Learn more <IAr/>
               </a>
@@ -219,7 +221,7 @@ function FinishVisualiser(){
               margin:"12px 0 0",color:"var(--muted)",
               fontSize:"clamp(13px,1.1vw,15px)",maxWidth:"52ch",lineHeight:1.6,
             }}>{cur.intro}</p>
-            <a href={`service-detail#${cur.id}`}
+            <a href={svcHref(cur.id)}
               className="btn btn--ghost"
               style={{marginTop:"18px",display:"inline-flex"}}>
               View full details <IAr/>

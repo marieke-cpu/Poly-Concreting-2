@@ -5,6 +5,8 @@ const SD  = window.PC_DATA;
 const SNav    = window.PC_HERO.Nav;
 const SFooter = window.PC_S2.Footer;
 
+const SVC_SLUGS = {driveways:"driveways",slabs:"slabs",pathways:"pathways",patios:"outdoor",pools:"pools",commercial:"commercial",resurfacing:"resurfacing",trowel:"trowel",broom:"broom",swirl:"swirl",exposed:"exposedaggregate",coloured:"coloured",stamped:"stamped",covercrete:"covercrete"};
+const svcHref = id => SVC_SLUGS[id] || id;
 const DRV = SVC.find(s=>s.id==="driveways");
 const byServiceId = id => SVC.find(s=>s.id===id);
 const STD_FINISHES = ["broom","trowel","swirl"].map(byServiceId).filter(Boolean);
@@ -15,7 +17,7 @@ function FinishCard({ s }){
   const [hov,setHov]=React.useState(false);
   return (
     <a
-      href={`service-detail#${s.id}`}
+      href={svcHref(s.id)}
       onMouseEnter={()=>setHov(true)}
       onMouseLeave={()=>setHov(false)}
       style={{

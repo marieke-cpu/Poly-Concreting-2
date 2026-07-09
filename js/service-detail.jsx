@@ -5,7 +5,20 @@ const SD      = window.PC_DATA;
 const SNav    = window.PC_HERO.Nav;
 const SFooter = window.PC_S2.Footer;
 
-function svcFromHash(){
+const SVC_SLUGS = {
+  driveways:"driveways", slabs:"slabs", pathways:"pathways", patios:"outdoor",
+  pools:"pools", commercial:"commercial", resurfacing:"resurfacing",
+  trowel:"trowel", broom:"broom", swirl:"swirl",
+  exposed:"exposedaggregate", coloured:"coloured", stamped:"stamped", covercrete:"covercrete",
+};
+const SLUG_TO_ID = Object.fromEntries(Object.entries(SVC_SLUGS).map(([id,slug])=>[slug,id]));
+const svcHref = id => SVC_SLUGS[id] || id;
+
+function svcFromUrl(){
+  const pathSlug = location.pathname.split("/").pop().replace(/\.html$/,"");
+  const idFromPath = SLUG_TO_ID[pathSlug] || pathSlug;
+  const fromPath = SVC.find(s=>s.id===idFromPath);
+  if(fromPath) return fromPath;
   const h = (location.hash||"").replace("#","");
   return SVC.find(s=>s.id===h) || SVC[0];
 }
@@ -53,7 +66,7 @@ function FinishCard({ s }){
   const [hov,setHov]=React.useState(false);
   return (
     <a
-      href={`service-detail#${s.id}`}
+      href={svcHref(s.id)}
       onMouseEnter={()=>setHov(true)}
       onMouseLeave={()=>setHov(false)}
       style={{
@@ -93,7 +106,7 @@ function RelatedCard({ s }){
   const [hov,setHov]=React.useState(false);
   return (
     <a
-      href={`service-detail#${s.id}`}
+      href={svcHref(s.id)}
       onMouseEnter={()=>setHov(true)}
       onMouseLeave={()=>setHov(false)}
       style={{
@@ -965,7 +978,7 @@ function ServiceSalesHero({ s, isResidential, openQuote }){
 
 /* ── main app ── */
 function ServiceDetailApp(){
-  const [s,   setS]   = React.useState(svcFromHash);
+  const [s,   setS]   = React.useState(svcFromUrl);
   const [quote,setQuote] = React.useState(false);
   const [lightbox, setLightbox] = React.useState(null);
   const [colourLightbox, setColourLightbox] = React.useState(null);
@@ -992,7 +1005,7 @@ function ServiceDetailApp(){
   const updateMeta = (svc)=>{
     const title = `${svc.name} South East QLD | Poly Concreting`;
     const desc = svc.metaDesc || `Professional ${svc.name.toLowerCase()} across South East Queensland. Owner-operated, fixed price, same-day quotes. Based in Morayfield.`;
-    const url = `https://polyconcretingqld.com.au/service-detail#${svc.id}`;
+    const url = `https://polyconcretingqld.com.au/${svcHref(svc.id)}`;
     document.title = title;
     const setMeta = (sel,attr,val)=>{ const el=document.querySelector(sel); if(el) el.setAttribute(attr,val); };
     setMeta('meta[name="description"]','content',desc);
@@ -1007,7 +1020,7 @@ function ServiceDetailApp(){
   React.useEffect(()=>{
     updateMeta(s);
     const onHash = ()=>{
-      const svc = svcFromHash();
+      const svc = svcFromUrl();
       setS(svc);
       updateMeta(svc);
       window.scrollTo({top:0,behavior:"smooth"});

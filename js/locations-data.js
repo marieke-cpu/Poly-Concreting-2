@@ -5,19 +5,19 @@
 
 const LOCATION_SERVICES = [
   { name: "Driveways", href: "driveways", img: "assets/img/optimized/photos-driveways-plain4.webp", pos: "center 58%", desc: "Plain, broom, coloured and exposed aggregate driveways built with proper base prep and drainage." },
-  { name: "House & Shed Slabs", href: "service-detail#slabs", img: "assets/img/optimized/photos-trowel-slab1.webp", pos: "center", desc: "Reinforced house, garage, shed and workshop slabs prepared to the right specification." },
-  { name: "Pathways", href: "service-detail#pathways", img: "assets/img/path-side-drain.webp", pos: "center 55%", desc: "Side access, garden paths and connecting walkways with clean falls and tidy edges." },
-  { name: "Outdoor Entertaining", href: "service-detail#patios", img: "assets/img/patio-broom.webp", pos: "center 55%", desc: "Patio and alfresco concrete shaped, drained and finished for Queensland outdoor living." },
-  { name: "Pool Surrounds", href: "service-detail#pools", img: "assets/img/pool-coping.webp", pos: "center", desc: "Slip-resistant pool surrounds, coping tie-ins and wet-zone drainage details." },
-  { name: "Small Commercial", href: "service-detail#commercial", img: "assets/img/optimized/photos-trowel-slab2.webp", pos: "center 55%", desc: "Shopfront slabs, hardstand, small commercial floors and documented pours." },
-  { name: "Concrete Resurfacing", href: "service-detail#resurfacing", img: "assets/img/slab-float-bush.webp", pos: "center", desc: "Refresh tired existing concrete with a new decorative surface where the slab is sound." },
-  { name: "Trowel Finish", href: "service-detail#trowel", img: "assets/img/trowel-IMG_0262.webp", pos: "center", desc: "Smooth, dense concrete finish for slabs, garages and covered spaces." },
-  { name: "Broom Finish", href: "service-detail#broom", img: "assets/img/broom1.webp", pos: "center", desc: "Practical textured finish for driveways, paths and outdoor concrete that needs grip." },
-  { name: "Swirl Finish", href: "service-detail#swirl", img: "assets/img/place-broom.webp", pos: "center", desc: "Decorative hand-finished texture that adds movement and grip to plain concrete." },
-  { name: "Exposed Aggregate", href: "service-detail#exposed", img: "assets/img/exposed1.webp", pos: "center 60%", desc: "Decorative stone finish for premium driveways, paths, patios and pool surrounds." },
-  { name: "Coloured Concrete", href: "service-detail#coloured", img: "assets/img/coloured3.webp", pos: "center", desc: "Integral colour options to match your home, landscape and street appeal." },
-  { name: "Stamped Concrete", href: "service-detail#stamped", img: "assets/img/stamped-hero.webp", pos: "center", desc: "Patterned concrete with stone, slate, cobble and tile-style surface impressions." },
-  { name: "Covercrete", href: "service-detail#covercrete", img: "assets/img/covercrete-hero.webp", pos: "center", desc: "Spray-on decorative overlay for resurfacing existing concrete with colour and stencil options." },
+  { name: "House & Shed Slabs", href: "slabs", img: "assets/img/optimized/photos-trowel-slab1.webp", pos: "center", desc: "Reinforced house, garage, shed and workshop slabs prepared to the right specification." },
+  { name: "Pathways", href: "pathways", img: "assets/img/path-side-drain.webp", pos: "center 55%", desc: "Side access, garden paths and connecting walkways with clean falls and tidy edges." },
+  { name: "Outdoor Entertaining", href: "outdoor", img: "assets/img/patio-broom.webp", pos: "center 55%", desc: "Patio and alfresco concrete shaped, drained and finished for Queensland outdoor living." },
+  { name: "Pool Surrounds", href: "pools", img: "assets/img/pool-coping.webp", pos: "center", desc: "Slip-resistant pool surrounds, coping tie-ins and wet-zone drainage details." },
+  { name: "Small Commercial", href: "commercial", img: "assets/img/optimized/photos-trowel-slab2.webp", pos: "center 55%", desc: "Shopfront slabs, hardstand, small commercial floors and documented pours." },
+  { name: "Concrete Resurfacing", href: "resurfacing", img: "assets/img/slab-float-bush.webp", pos: "center", desc: "Refresh tired existing concrete with a new decorative surface where the slab is sound." },
+  { name: "Trowel Finish", href: "trowel", img: "assets/img/trowel-IMG_0262.webp", pos: "center", desc: "Smooth, dense concrete finish for slabs, garages and covered spaces." },
+  { name: "Broom Finish", href: "broom", img: "assets/img/broom1.webp", pos: "center", desc: "Practical textured finish for driveways, paths and outdoor concrete that needs grip." },
+  { name: "Swirl Finish", href: "swirl", img: "assets/img/place-broom.webp", pos: "center", desc: "Decorative hand-finished texture that adds movement and grip to plain concrete." },
+  { name: "Exposed Aggregate", href: "exposedaggregate", img: "assets/img/exposed1.webp", pos: "center 60%", desc: "Decorative stone finish for premium driveways, paths, patios and pool surrounds." },
+  { name: "Coloured Concrete", href: "coloured", img: "assets/img/coloured3.webp", pos: "center", desc: "Integral colour options to match your home, landscape and street appeal." },
+  { name: "Stamped Concrete", href: "stamped", img: "assets/img/stamped-hero.webp", pos: "center", desc: "Patterned concrete with stone, slate, cobble and tile-style surface impressions." },
+  { name: "Covercrete", href: "covercrete", img: "assets/img/covercrete-hero.webp", pos: "center", desc: "Spray-on decorative overlay for resurfacing existing concrete with colour and stencil options." },
 ];
 
 window.PC_LOCATIONS = [

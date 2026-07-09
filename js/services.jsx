@@ -4,7 +4,8 @@ const SVC = window.PC_SERVICES;
 const SD  = window.PC_DATA;
 const SNav    = window.PC_HERO.Nav;
 const SFooter = window.PC_S2.Footer;
-const serviceHref = s => s.id === "driveways" ? "driveways" : `service-detail#${s.id}`;
+const SVC_SLUGS = {driveways:"driveways",slabs:"slabs",pathways:"pathways",patios:"outdoor",pools:"pools",commercial:"commercial",resurfacing:"resurfacing",trowel:"trowel",broom:"broom",swirl:"swirl",exposed:"exposedaggregate",coloured:"coloured",stamped:"stamped",covercrete:"covercrete"};
+const serviceHref = s => SVC_SLUGS[s.id] || s.id;
 
 /* ── service card ── */
 function ServiceCard({ s }){
