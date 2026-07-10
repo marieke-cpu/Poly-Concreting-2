@@ -91,6 +91,7 @@ body.ads-slabs-page{background:#08080a;color:var(--text);padding-bottom:0}
 .ads-hero__media{position:relative;overflow:hidden}
 .ads-hero__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;opacity:0;transform:scale(1.018);transition:opacity 1.3s ease,transform 7s linear}
 .ads-hero__media img.is-active{opacity:1;transform:scale(1.068)}
+.ads-hero__media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
 .ads-hero__media-fade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,11,13,1) 0%,rgba(11,11,13,.35) 22%,transparent 50%),linear-gradient(0deg,rgba(11,11,13,.6) 0%,transparent 35%)}
 .ads-quote-wrap{max-width:var(--maxw);margin:0 auto;padding:clamp(56px,7vw,100px) var(--pad);display:grid;grid-template-columns:1fr minmax(380px,460px);gap:clamp(40px,6vw,90px);align-items:start}
 .ads-hero h1{font-size:clamp(46px,7.4vw,104px);max-width:12.6ch;margin:18px 0 0;line-height:.9}
@@ -275,7 +276,26 @@ body[class^="ads-"],body[class*=" ads-"]{overflow-x:hidden}
   .ads-stone-grid,.ads-finishes,.ads-gallery{grid-template-columns:1fr}
   .ads-sticky{grid-template-columns:1fr}
 }
-</style>
+/* Mobile conversion layout: concise copy, compact actions, no sticky bar. */
+@media(max-width:760px){
+  body[class^="ads-"],body[class*=" ads-"]{padding-bottom:0!important}
+  .ads-sticky{display:none!important}
+  .ads-hero__lead{font-size:14.5px!important;line-height:1.5!important;margin-top:14px!important}
+  .ads-offer-list{margin-top:15px!important;gap:0!important}
+  .ads-offer-list>div{font-size:13.5px!important;line-height:1.42!important}
+  .ads-offer-list>div:nth-child(n+2){display:none!important}
+  .ads-hero-cta{display:grid!important;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr)!important;gap:7px!important;margin-top:18px!important}
+  .ads-hero-cta .btn{width:100%!important;min-height:40px!important;padding:9px 10px!important;font-size:9.5px!important;letter-spacing:.045em!important;gap:.4em!important;white-space:normal!important;text-align:center!important;line-height:1.25!important}
+  .ads-proof{margin-top:17px!important}
+  .ads-proof div{padding:10px 7px!important}
+  .ads-proof strong{font-size:17px!important}
+  .ads-proof span{font-size:8.5px!important;line-height:1.25!important}
+  .ads-submit,.ads-card .btn,.ads-quote-band .btn,.ads-final .btn{min-height:42px!important;padding:10px 14px!important;font-size:10px!important;letter-spacing:.06em!important}
+}
+@media(max-width:380px){
+  .ads-hero-cta{grid-template-columns:1fr!important}
+}
++</style>
 </head>
 <body class="ads-slabs-page">
 <!-- Google Tag Manager (noscript) -->
@@ -324,12 +344,9 @@ body[class^="ads-"],body[class*=" ads-"]{overflow-x:hidden}
       </div>
     </div>
     <div class="ads-hero__media" aria-hidden="true">
-      <img class="is-active" src="assets/img/trowel-hero.webp" alt="" fetchpriority="high"/>
-      <img src="assets/img/slab-powerfloat.webp" alt="" loading="eager"/>
-      <img src="assets/img/slab-reo-bush.webp" alt="" loading="lazy"/>
-      <img src="assets/img/slab-float-bush.webp" alt="" loading="lazy"/>
-      <img src="assets/img/slab-bush-finished.webp" alt="" loading="lazy"/>
-      <img src="assets/img/slab-yellowhouse.webp" alt="" loading="lazy"/>
+      <video autoplay muted loop playsinline preload="auto" poster="assets/img/hero-poster.webp">
+        <source src="assets/video/hero.mp4" type="video/mp4"/>
+      </video>
       <div class="ads-hero__media-fade"></div>
     </div>
   </section>

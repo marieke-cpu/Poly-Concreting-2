@@ -336,7 +336,26 @@ body[class^="ads-"],body[class*=" ads-"]{overflow-x:hidden}
   .ads-stone-grid,.ads-finishes,.ads-gallery{grid-template-columns:1fr}
   .ads-sticky{grid-template-columns:1fr}
 }
-</style>
+/* Mobile conversion layout: concise copy, compact actions, no sticky bar. */
+@media(max-width:760px){
+  body[class^="ads-"],body[class*=" ads-"]{padding-bottom:0!important}
+  .ads-sticky{display:none!important}
+  .ads-hero__lead{font-size:14.5px!important;line-height:1.5!important;margin-top:14px!important}
+  .ads-offer-list{margin-top:15px!important;gap:0!important}
+  .ads-offer-list>div{font-size:13.5px!important;line-height:1.42!important}
+  .ads-offer-list>div:nth-child(n+2){display:none!important}
+  .ads-hero-cta{display:grid!important;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr)!important;gap:7px!important;margin-top:18px!important}
+  .ads-hero-cta .btn{width:100%!important;min-height:40px!important;padding:9px 10px!important;font-size:9.5px!important;letter-spacing:.045em!important;gap:.4em!important;white-space:normal!important;text-align:center!important;line-height:1.25!important}
+  .ads-proof{margin-top:17px!important}
+  .ads-proof div{padding:10px 7px!important}
+  .ads-proof strong{font-size:17px!important}
+  .ads-proof span{font-size:8.5px!important;line-height:1.25!important}
+  .ads-submit,.ads-card .btn,.ads-quote-band .btn,.ads-final .btn{min-height:42px!important;padding:10px 14px!important;font-size:10px!important;letter-spacing:.06em!important}
+}
+@media(max-width:380px){
+  .ads-hero-cta{grid-template-columns:1fr!important}
+}
++</style>
 </head>
 <body class="ads-exposed-page">
 <!-- Google Tag Manager (noscript) -->
@@ -387,7 +406,9 @@ body[class^="ads-"],body[class*=" ads-"]{overflow-x:hidden}
       </div>
     </div>
     <div class="ads-hero__media" aria-hidden="true">
-      <video id="heroVid" autoplay muted playsinline preload="auto" src="poly/PJ1.mov"></video>
+      <video autoplay muted loop playsinline preload="auto" poster="assets/img/hero-poster.webp">
+        <source src="assets/video/hero.mp4" type="video/mp4"/>
+      </video>
       <div class="ads-hero__media-fade"></div>
     </div>
   </section>
