@@ -282,7 +282,25 @@ body[class^="ads-"],body[class*=" ads-"]{overflow-x:hidden}
   .ads-urgency__inner{min-height:0!important;padding:3px 10px!important;gap:5px!important;font-size:8px!important;line-height:1.15!important;letter-spacing:.025em!important}
   .ads-urgency__inner a{font-size:8px!important;line-height:1.15!important;white-space:nowrap!important}
   .ads-urgency__dot{width:5px!important;height:5px!important}
+  .ads-top__actions .btn--ghost{display:inline-flex!important}
+  .ads-top__actions .ads-call-desktop{display:none!important}
+  .ads-top__actions .ads-call-mobile{display:inline!important}
   .ads-sticky{display:none!important}
+  .ads-why-section{padding-block:48px!important}
+  .ads-why-section .wrap,.ads-why-section .ads-split{min-width:0!important}
+  .ads-why-section .ads-split{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:24px!important}
+  .ads-why-section h2{font-size:clamp(31px,10vw,42px)!important;line-height:.96!important;margin-top:12px!important;max-width:14ch}
+  .ads-why-section .eyebrow{font-size:10px!important;letter-spacing:.18em!important}
+  .ads-why-section .ads-split>div:first-child>p{font-size:14px!important;line-height:1.55!important;margin-top:12px!important;max-width:none!important}
+  .ads-why-section .ads-split>div:first-child>.btn{width:100%!important;min-height:42px!important;margin-top:20px!important;padding:10px 14px!important;font-size:10px!important;justify-content:center!important}
+  .ads-why-section .ads-why-grid,.ads-why-section .ads-grid{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:8px!important;margin-top:22px!important;background:transparent!important;border:0!important;overflow:visible!important}
+  .ads-why-section .ads-split .ads-why-grid{margin-top:0!important}
+  .ads-why-section .ads-why-tile,.ads-why-section .ads-tile{display:grid!important;grid-template-columns:30px minmax(0,1fr)!important;column-gap:12px!important;align-items:start!important;padding:16px!important;border:1px solid var(--line)!important;border-radius:8px!important;background:var(--base)!important;min-width:0!important}
+  .ads-why-section .ads-why-tile svg,.ads-why-section .ads-tile svg{grid-column:1!important;grid-row:1 / span 2!important;width:23px!important;height:23px!important;margin-top:1px}
+  .ads-why-section .ads-why-tile h3,.ads-why-section .ads-tile h3{grid-column:2!important;margin:0!important;font-size:15px!important;line-height:1.25!important}
+  .ads-why-section .ads-why-tile p,.ads-why-section .ads-tile p{grid-column:2!important;margin:5px 0 0!important;font-size:12.5px!important;line-height:1.48!important}
+  .ads-why-section>.wrap>div:last-child[style*="display:flex"]{display:grid!important;grid-template-columns:1fr!important;gap:8px!important;margin-top:20px!important}
+  .ads-why-section>.wrap>div:last-child[style*="display:flex"] .btn{width:100%!important;min-height:42px!important;padding:10px 14px!important;font-size:10px!important;justify-content:center!important}
   .ads-hero{position:relative!important;isolation:isolate}
   .ads-hero__media{display:block!important;position:absolute!important;inset:0!important;min-height:0!important;z-index:0}
   .ads-hero__media video{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important}
@@ -299,6 +317,8 @@ body[class^="ads-"],body[class*=" ads-"]{overflow-x:hidden}
   .ads-proof strong{font-size:17px!important}
   .ads-proof span{font-size:8.5px!important;line-height:1.25!important}
   .ads-submit,.ads-card .btn,.ads-quote-band .btn,.ads-final .btn{min-height:42px!important;padding:10px 14px!important;font-size:10px!important;letter-spacing:.06em!important}
+  main .btn,main button.btn,main a.btn{width:100%!important;min-height:44px!important;padding:11px 14px!important;font-size:10px!important;line-height:1.2!important;letter-spacing:.06em!important;justify-content:center!important;text-align:center!important;white-space:normal!important}
+  main [style*="display:flex"]:has(>.btn){display:grid!important;grid-template-columns:1fr!important;gap:8px!important}
 }
 @media(max-width:380px){
   .ads-hero-cta{grid-template-columns:1fr!important}
@@ -323,7 +343,7 @@ body[class^="ads-"],body[class*=" ads-"]{overflow-x:hidden}
       <img class="ads-logo" src="Logo's/1logo.png" alt="Poly Concreting" width="180" height="45"/>
     </a>
     <div class="ads-top__actions">
-      <a class="btn btn--ghost" href="tel:0481445041">Call 0481 445 041</a>
+      <a class="btn btn--ghost" href="tel:0481445041" aria-label="Call Poly Concreting on 0481 445 041"><span class="ads-call-desktop">Call 0481 445 041</span><span class="ads-call-mobile" style="display:none">Call</span></a>
       <a class="btn btn--solid" href="#quote">Free quote <span class="ar" aria-hidden="true">&#8599;</span></a>
     </div>
   </div>
@@ -513,18 +533,12 @@ body[class^="ads-"],body[class*=" ads-"]{overflow-x:hidden}
       <div class="eyebrow">Recent work — Caboolture &amp; Morayfield</div>
       <h2 class="display" style="font-size:clamp(32px,4.5vw,66px);margin:20px 0 0;line-height:.93">Slabs we've formed and poured nearby.</h2>
       <div class="ads-gallery">
-        <div class="ads-shot"><img src="assets/img/slab-bush-finished.webp" alt="Finished shed slab Caboolture" loading="lazy"/><span>Shed slab</span></div>
-        <div class="ads-shot"><img src="assets/img/optimized/photos-trowel-slab2.webp" alt="Trowel finish slab" loading="lazy"/><span>Trowel finish</span></div>
-        <div class="ads-shot"><img src="assets/img/slab-powerfloat.webp" alt="Power float finish concrete slab" loading="lazy"/><span>Power float</span></div>
-        <div class="ads-shot"><img src="assets/img/slab-reo-bush.webp" alt="Reinforced concrete slab Caboolture" loading="lazy"/><span>Reo placement</span></div>
-        <div class="ads-shot"><img src="assets/img/optimized/photos-trowel-slab1.webp" alt="Trowel finish concrete floor" loading="lazy"/><span>Trowel finish floor</span></div>
-        <div class="ads-shot"><img src="assets/img/slab-yellowhouse.webp" alt="House pad pour Caboolture" loading="lazy"/><span>House pad pour</span></div>
-        <div class="ads-shot"><img src="assets/img/pour-reo.webp" alt="Concrete pour with reinforcement" loading="lazy"/><span>Reinforced pour</span></div>
-        <div class="ads-shot"><img src="assets/img/slab-float-bush.webp" alt="Float finish concrete slab" loading="lazy"/><span>Float finish slab</span></div>
-        <div class="ads-shot"><img src="assets/img/trowel-IMG_9277.webp" alt="Trowel finish concrete" loading="lazy"/><span>Trowel finish</span></div>
-        <div class="ads-shot"><img src="assets/img/trowel-IMG_9284.webp" alt="Dense trowel floor finish" loading="lazy"/><span>Dense floor finish</span></div>
-        <div class="ads-shot"><img src="assets/img/trowel-IMG_9374.webp" alt="Workshop floor concrete" loading="lazy"/><span>Workshop floor</span></div>
-        <div class="ads-shot"><img src="assets/img/trowel-IMG_9513.webp" alt="Shed floor concrete slab" loading="lazy"/><span>Shed floor</span></div>
+        <div class="ads-shot"><img src="assets/img/broom5.webp" alt="Concrete basketball court slab" loading="lazy"/><span>Basketball Court Slab</span></div>
+        <div class="ads-shot"><img src="assets/img/broom3.webp" alt="Plain concrete carport slab" loading="lazy"/><span>Carport Slab</span></div>
+        <div class="ads-shot"><img src="assets/img/slab-float-bush.webp" alt="500 square metre workshop slab" loading="lazy"/><span>500sqm Workshop Slab</span></div>
+        <div class="ads-shot"><img src="assets/img/slab-powerfloat.webp" alt="Concrete granny flat slab" loading="lazy"/><span>Granny Flat Slab</span></div>
+        <div class="ads-shot"><img src="assets/img/trowel-IMG_0262.webp" alt="Trowel-finished concrete carport slab" loading="lazy"/><span>Carport Slab</span></div>
+        <div class="ads-shot"><img src="poly/D1.JPG" alt="Plain concrete driveway slab" loading="lazy"/><span>Driveway Slab</span></div>
       </div>
     </div>
   </section>
@@ -563,7 +577,7 @@ body[class^="ads-"],body[class*=" ads-"]{overflow-x:hidden}
   </section>
 
   <!-- ── DONE PROPERLY TILES ── -->
-  <section class="section--tight" style="background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <section class="section--tight ads-why-section" style="background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
     <div class="wrap">
       <div class="eyebrow">What you get</div>
       <h2 class="display" style="font-size:clamp(32px,4.8vw,72px);margin:20px 0 0;line-height:.92">Built to the load from the base up.</h2>
