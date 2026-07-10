@@ -297,6 +297,11 @@ body[class^="ads-"],body[class*=" ads-"]{overflow-x:hidden}
 @media(max-width:760px){
   body[class^="ads-"],body[class*=" ads-"]{padding-bottom:0!important}
   .ads-sticky{display:none!important}
+  .ads-hero{position:relative!important;isolation:isolate}
+  .ads-hero__media{display:block!important;position:absolute!important;inset:0!important;min-height:0!important;z-index:0}
+  .ads-hero__media video{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important}
+  .ads-hero__media-fade{z-index:1;background:linear-gradient(90deg,rgba(8,8,10,.88),rgba(8,8,10,.58)),linear-gradient(0deg,rgba(8,8,10,.88),rgba(8,8,10,.22) 55%,rgba(8,8,10,.72))!important}
+  .ads-hero__inner{position:relative!important;z-index:2!important;background:transparent!important}
   .ads-hero__lead{font-size:14.5px!important;line-height:1.5!important;margin-top:14px!important}
   .ads-offer-list{margin-top:15px!important;gap:0!important}
   .ads-offer-list>div{font-size:13.5px!important;line-height:1.42!important}
