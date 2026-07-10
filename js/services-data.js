@@ -378,7 +378,6 @@ window.PC_SERVICES = [
         intro:"Boral's Exposé range is the Moreton Bay, North Brisbane & Sunshine Coast exposed aggregate standard — consistent sizing, reliable colour batching and wide availability. We pour Boral mixes regularly and know exactly how each colour washes back and seals up.",
         mixes:[
           { name:"Salt and Pepper", img:"assets/img/agg-boral/salt-and-pepper.webp", tone:"Black · White",         desc:"The classic. Fine black and white aggregate — clean, contemporary and the most popular choice for modern Moreton Bay, North Brisbane & Sunshine Coast homes." },
-          { name:"Pearl",           img:"assets/img/agg-boral/pearl.webp",           tone:"Cream · White",         desc:"Soft cream and off-white tones that keep the surface light and bright. A favourite for pool surrounds and alfresco areas." },
           { name:"Silver Frost",    img:"assets/img/agg-boral/silver-frost.webp",    tone:"Cool Silver · Grey",    desc:"Cool silver-grey aggregate with a frosted, clean finish. Works beautifully with rendered homes and Hamptons-style builds." },
           { name:"Arctic Sun",      img:"assets/img/agg-boral/arctic-sun.webp",      tone:"Warm White · Gold",     desc:"Light warm-white tones with subtle golden flecks — an elegant finish that catches the Queensland light." },
           { name:"River Red",       img:"assets/img/agg-boral/river-red.webp",       tone:"Warm Red · Terracotta", desc:"Earthy red and terracotta tones that complement brick, sandstone and traditional Queenslander homes." },

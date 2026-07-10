@@ -81,7 +81,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
 <link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Archivo:wght@400;500;600;700;800;900&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="css/styles.min.css?v=20260708-compact-reviews"/>
+<link rel="stylesheet" href="css/styles.min.css?v=20260711-mobile-compat"/>
 <style>
 /* ── page reset ── */
 body.ads-exposed-page{background:#08080a;color:var(--text);padding-bottom:0}
@@ -109,10 +109,6 @@ body.ads-exposed-page{background:#08080a;color:var(--text);padding-bottom:0}
 .ads-hero__media-fade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,10,1) 0%,rgba(8,8,10,.35) 22%,transparent 50%),linear-gradient(0deg,rgba(8,8,10,.6) 0%,transparent 35%)}
 .ads-hero__inner{position:relative;z-index:2;padding:clamp(120px,15vh,160px) clamp(28px,4vw,56px) 80px var(--pad);display:flex;flex-direction:column;justify-content:center;background:#0b0b0d}
 .ads-quote-wrap{max-width:var(--maxw);margin:0 auto;padding:clamp(56px,7vw,100px) var(--pad);display:grid;grid-template-columns:1fr minmax(380px,460px);gap:clamp(40px,6vw,90px);align-items:start}
-
-/* ── hero badge ── */
-.ads-badge{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(196,153,74,.4);background:rgba(196,153,74,.1);border-radius:999px;padding:8px 14px;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#c4994a}
-.ads-badge:before{content:"";width:7px;height:7px;border-radius:50%;background:#c4994a;box-shadow:0 0 0 4px rgba(196,153,74,.2)}
 
 /* ── hero text ── */
 .ads-hero h1{font-size:clamp(44px,7.2vw,100px);max-width:13ch;margin:18px 0 0;line-height:.9}
@@ -230,6 +226,9 @@ body.ads-exposed-page{background:#08080a;color:var(--text);padding-bottom:0}
 .ads-final .wrap{position:relative;z-index:2}
 
 /* ── mobile sticky bar ── */
+.ads-footer{border-top:1px solid var(--line);background:#08080a;padding:22px var(--pad);text-align:center}
+.ads-footer a{display:inline-flex;align-items:center;justify-content:center;color:var(--text);font-family:var(--font-mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:800}
+.ads-footer a:hover{color:#c4994a}
 .ads-sticky{display:none}
 
 /* ── responsive ── */
@@ -305,7 +304,6 @@ body[class^="ads-"],body[class*=" ads-"]{overflow-x:hidden}
   .ads-urgency__inner{padding:6px 10px;font-size:9px;line-height:1.35;letter-spacing:.04em;gap:6px}
   .ads-urgency__dot{width:6px;height:6px}
   .ads-hero__inner{padding:108px 14px 42px}
-  .ads-badge{max-width:100%;white-space:normal;border-radius:6px;font-size:9px;line-height:1.3}
   .ads-hero h1{max-width:100%;font-size:clamp(38px,13vw,58px);line-height:.96;letter-spacing:0}
   .ads-hero__lead{font-size:15px;line-height:1.55}
   .ads-offer-list div{font-size:14px}
@@ -370,7 +368,6 @@ body[class^="ads-"],body[class*=" ads-"]{overflow-x:hidden}
   <!-- ── HERO ── -->
   <section class="ads-hero">
     <div class="ads-hero__inner">
-      <div class="ads-badge">Boral &amp; Nielsens specialist · Caboolture &amp; Morayfield</div>
       <h1 class="display">Exposed aggregate concrete Caboolture.</h1>
       <p class="ads-hero__lead">Stone finish, wet-look seal, natural grip underfoot. Driveways, paths and pool surrounds poured and washed by a local Morayfield crew that knows exactly when to hit the reveal — and services Caboolture and surrounding suburbs every week.</p>
       <div class="ads-offer-list">
@@ -542,6 +539,14 @@ body[class^="ads-"],body[class*=" ads-"]{overflow-x:hidden}
         <div class="ads-shot"><img src="assets/img/exposed2.webp" alt="Night Sky exposed aggregate driveway" loading="lazy"/><span>Night Sky — Boral</span></div>
         <div class="ads-shot"><img src="assets/img/agg-path-brick.webp" alt="Exposed aggregate path beside brickwork" loading="lazy"/><span>Path — Nielsens</span></div>
         <div class="ads-shot"><img src="assets/img/agg-patio-curve.webp" alt="Exposed aggregate curved patio" loading="lazy"/><span>Curved patio</span></div>
+        <div class="ads-shot"><img src="assets/img/agg-driveway.webp" alt="Exposed aggregate concrete driveway" loading="lazy"/><span>Exposed driveway</span></div>
+        <div class="ads-shot"><img src="assets/img/optimized/photos-driveways-exposed1.webp" alt="Exposed aggregate driveway Moreton Bay" loading="lazy"/><span>Moreton Bay driveway</span></div>
+        <div class="ads-shot"><img src="assets/img/agg-entry-1.webp" alt="Exposed aggregate entry path" loading="lazy"/><span>Entry path</span></div>
+        <div class="ads-shot"><img src="assets/img/agg-entry-2.webp" alt="Decorative exposed aggregate entry" loading="lazy"/><span>Feature entry</span></div>
+        <div class="ads-shot"><img src="assets/img/agg-joint.webp" alt="Exposed aggregate control joint detail" loading="lazy"/><span>Joint detail</span></div>
+        <div class="ads-shot"><img src="assets/img/agg-river-stone.webp" alt="River stone exposed aggregate finish" loading="lazy"/><span>River stone finish</span></div>
+        <div class="ads-shot"><img src="assets/img/exposed3.webp" alt="Exposed aggregate concrete project" loading="lazy"/><span>Stone finish</span></div>
+        <div class="ads-shot"><img src="assets/img/exposed4.webp" alt="Sealed exposed aggregate concrete" loading="lazy"/><span>Sealed aggregate</span></div>
       </div>
     </div>
   </section>
@@ -681,7 +686,7 @@ body[class^="ads-"],body[class*=" ads-"]{overflow-x:hidden}
   <!-- ── WHY US ── -->
   <section class="section--tight" style="background:var(--panel);border-bottom:1px solid var(--line)">
     <div class="wrap">
-      <div style="display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(24px,4vw,60px);align-items:start">
+      <div class="ads-split" style="display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(24px,4vw,60px);align-items:start">
         <div>
           <div class="eyebrow" style="color:#c4994a">Why it matters</div>
           <h2 class="display" style="font-size:clamp(30px,4.5vw,64px);margin:18px 0 0;line-height:.93">The reveal only happens once.</h2>
@@ -805,6 +810,10 @@ body[class^="ads-"],body[class*=" ads-"]{overflow-x:hidden}
   </section>
 
 </main>
+
+<footer class="ads-footer">
+  <a href="https://www.rastrick.com.au" target="_blank" rel="noopener">Website Built by RASTRICK. MADE</a>
+</footer>
 
 <div class="ads-sticky" aria-label="Quick contact">
   <a class="ads-sticky__quote" href="#quote">Free quote</a>

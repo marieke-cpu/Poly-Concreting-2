@@ -72,7 +72,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
 <link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Archivo:wght@400;500;600;700;800;900&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="css/styles.min.css?v=20260708-compact-reviews"/>
+<link rel="stylesheet" href="css/styles.min.css?v=20260711-mobile-compat"/>
 <style>
 body.ads-slabs-page{background:#08080a;color:var(--text);padding-bottom:0}
 .ads-top{position:fixed;top:0;left:0;right:0;z-index:60;background:rgba(8,8,10,.86);border-bottom:1px solid var(--line);backdrop-filter:blur(16px)}
@@ -170,6 +170,9 @@ body.ads-slabs-page{background:#08080a;color:var(--text);padding-bottom:0}
 .ads-final:before{content:"";position:absolute;inset:0;background:url("assets/img/trowel-hero.webp") center/cover no-repeat;opacity:.18;filter:saturate(.7)}
 .ads-final:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,10,.96),rgba(8,8,10,.76))}
 .ads-final .wrap{position:relative;z-index:2}
+.ads-footer{border-top:1px solid var(--line);background:#08080a;padding:22px var(--pad);text-align:center}
+.ads-footer a{display:inline-flex;align-items:center;justify-content:center;color:var(--text);font-family:var(--font-mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:800}
+.ads-footer a:hover{color:#b8bec8}
 .ads-sticky{display:none}
 @media(max-width:980px){
   .ads-hero{grid-template-columns:1fr}
@@ -240,7 +243,6 @@ body[class^="ads-"],body[class*=" ads-"]{overflow-x:hidden}
   .ads-urgency__inner{padding:6px 10px;font-size:9px;line-height:1.35;letter-spacing:.04em;gap:6px}
   .ads-urgency__dot{width:6px;height:6px}
   .ads-hero__inner{padding:108px 14px 42px}
-  .ads-badge{max-width:100%;white-space:normal;border-radius:6px;font-size:9px;line-height:1.3}
   .ads-hero h1{max-width:100%;font-size:clamp(38px,13vw,58px);line-height:.96;letter-spacing:0}
   .ads-hero__lead{font-size:15px;line-height:1.55}
   .ads-offer-list div{font-size:14px}
@@ -660,6 +662,10 @@ body[class^="ads-"],body[class*=" ads-"]{overflow-x:hidden}
     </div>
   </section>
 </main>
+
+<footer class="ads-footer">
+  <a href="https://www.rastrick.com.au" target="_blank" rel="noopener">Website Built by RASTRICK. MADE</a>
+</footer>
 
 <div class="ads-sticky" aria-label="Quick contact">
   <a class="ads-sticky__quote" href="#quote">Free quote</a>

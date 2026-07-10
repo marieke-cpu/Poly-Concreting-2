@@ -944,6 +944,32 @@ select.q-input{ appearance:none; -webkit-appearance:none; cursor:pointer; }
   }
 }
 
+/* Site-wide narrow-screen containment and location-page stacking. */
+@media(max-width:760px){
+  html, body, #root{ max-width:100%; overflow-x:clip; }
+  .wrap{ width:100%; min-width:0; }
+  main, section, header, footer, nav, .reveal{ min-width:0; }
+  h1, h2, h3, h4, p, a, span{ overflow-wrap:anywhere; }
+  input, select, textarea{ max-width:100%; min-width:0; }
+  .loc-intro-grid{ grid-template-columns:minmax(0,1fr) !important; gap:28px !important; }
+  .loc-nearby-card{ position:static !important; top:auto !important; width:100%; }
+  .loc-final-actions{ display:grid !important; grid-template-columns:1fr !important; width:100%; gap:10px !important; }
+  .loc-final-actions .btn{ width:100%; min-width:0; justify-content:center; white-space:normal; text-align:center; }
+  .loc-hero__content, .loc-hero__copy, .loc-hero__panel-wrap, .loc-hero__panel{ min-width:0; width:100%; }
+  .loc-hero__copy h1{ font-size:clamp(40px,13vw,64px) !important; overflow-wrap:normal; word-break:normal; }
+  .loc-hero__copy .svc-cta-row{ display:grid !important; grid-template-columns:1fr !important; width:100%; gap:10px !important; }
+  .loc-hero__copy .svc-cta-row .btn{ width:100%; min-width:0; justify-content:center; white-space:normal; text-align:center; }
+}
+
+@media(max-width:420px){
+  :root{ --pad:16px; }
+  .btn, .btn--lg{ max-width:100%; white-space:normal; text-align:center; justify-content:center; padding-inline:16px; }
+  .loc-hero__panel{ padding:16px; }
+  .loc-hero__panel [style*="grid-template-columns: repeat(2"]{ grid-template-columns:1fr !important; }
+  .mobile-urgency-cta{ left:8px; right:8px; grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr); }
+  .mobile-urgency-cta a{ min-width:0; padding-inline:8px; font-size:10px; letter-spacing:.07em; }
+}
+
 /* Reviews: make quote text feel professional instead of oversized and boxy */
 .pc-review-section .services-review-carousel{
   border-color:rgba(255,255,255,.11) !important;

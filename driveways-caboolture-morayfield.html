@@ -72,7 +72,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
 <link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Archivo:wght@400;500;600;700;800;900&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="css/styles.min.css?v=20260708-compact-reviews"/>
+<link rel="stylesheet" href="css/styles.min.css?v=20260711-mobile-compat"/>
 <style>
 body.ads-driveway-page{background:#08080a;color:var(--text);padding-bottom:0}
 .ads-top{position:fixed;top:0;left:0;right:0;z-index:60;background:rgba(8,8,10,.86);border-bottom:1px solid var(--line);backdrop-filter:blur(16px)}
@@ -91,8 +91,6 @@ body.ads-driveway-page{background:#08080a;color:var(--text);padding-bottom:0}
 .ads-hero__media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
 .ads-hero__media-fade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,11,13,1) 0%,rgba(11,11,13,.35) 22%,transparent 50%),linear-gradient(0deg,rgba(11,11,13,.6) 0%,transparent 35%)}
 .ads-quote-wrap{max-width:var(--maxw);margin:0 auto;padding:clamp(56px,7vw,100px) var(--pad);display:grid;grid-template-columns:1fr minmax(380px,460px);gap:clamp(40px,6vw,90px);align-items:start}
-.ads-badge{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(184,190,200,.35);background:rgba(184,190,200,.1);border-radius:999px;padding:8px 12px;font-family:var(--font-mono);font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--bone)}
-.ads-badge:before{content:"";width:8px;height:8px;border-radius:50%;background:#76d28d;box-shadow:0 0 0 5px rgba(118,210,141,.13)}
 .ads-hero h1{font-size:clamp(46px,7.4vw,104px);max-width:12.6ch;margin:18px 0 0;line-height:.9}
 .ads-hero__lead{margin:22px 0 0;max-width:48ch;color:#f3f2ee;font-size:clamp(16px,1.3vw,20px);line-height:1.55}
 .ads-offer-list{display:grid;gap:10px;margin:24px 0 0;max-width:560px}
@@ -188,6 +186,9 @@ body.ads-driveway-page{background:#08080a;color:var(--text);padding-bottom:0}
 .ads-final:before{content:"";position:absolute;inset:0;background:url("assets/img/optimized/photos-before-afters-ex2.webp") center/cover no-repeat;opacity:.22;filter:saturate(.9)}
 .ads-final:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,10,.96),rgba(8,8,10,.76))}
 .ads-final .wrap{position:relative;z-index:2}
+.ads-footer{border-top:1px solid var(--line);background:#08080a;padding:22px var(--pad);text-align:center}
+.ads-footer a{display:inline-flex;align-items:center;justify-content:center;color:var(--text);font-family:var(--font-mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:800}
+.ads-footer a:hover{color:#b8bec8}
 .ads-sticky{display:none}
 @media(max-width:980px){
   .ads-hero{grid-template-columns:1fr}
@@ -260,7 +261,6 @@ body[class^="ads-"],body[class*=" ads-"]{overflow-x:hidden}
   .ads-urgency__inner{padding:6px 10px;font-size:9px;line-height:1.35;letter-spacing:.04em;gap:6px}
   .ads-urgency__dot{width:6px;height:6px}
   .ads-hero__inner{padding:108px 14px 42px}
-  .ads-badge{max-width:100%;white-space:normal;border-radius:6px;font-size:9px;line-height:1.3}
   .ads-hero h1{max-width:100%;font-size:clamp(38px,13vw,58px);line-height:.96;letter-spacing:0}
   .ads-hero__lead{font-size:15px;line-height:1.55}
   .ads-offer-list div{font-size:14px}
@@ -668,6 +668,10 @@ body[class^="ads-"],body[class*=" ads-"]{overflow-x:hidden}
     </div>
   </section>
 </main>
+
+<footer class="ads-footer">
+  <a href="https://www.rastrick.com.au" target="_blank" rel="noopener">Website Built by RASTRICK. MADE</a>
+</footer>
 
 <div class="ads-sticky" aria-label="Quick contact">
   <a class="ads-sticky__quote" href="#quote">Free quote</a>

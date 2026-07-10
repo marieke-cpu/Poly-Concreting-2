@@ -120,7 +120,7 @@ function LocationPage(){
       h(LocationHero,{loc,onQuote:()=>setQuote(true)}),
       h("section",{className:"section"},
         h("div",{className:"wrap"},
-          h("div",{style:{display:"grid",gridTemplateColumns:"1.3fr .7fr",gap:"clamp(32px,5vw,80px)",alignItems:"start"}},
+          h("div",{className:"loc-intro-grid",style:{display:"grid",gridTemplateColumns:"1.3fr .7fr",gap:"clamp(32px,5vw,80px)",alignItems:"start"}},
             h("div",null,
               h(LR,null,h(LEb,{n:"01"},"Why ",loc.name)),
               h(LR,{d:"1",as:"h2",className:"display",style:{fontSize:"clamp(30px,3.8vw,56px)",margin:"20px 0 0",lineHeight:.95}},"Local knowledge.",h("br"),"Better concrete."),
@@ -128,7 +128,7 @@ function LocationPage(){
                 loc.intro.map((p,i)=>h(LR,{key:i,d:String(i+2),as:"p",style:{fontSize:"clamp(16px,1.35vw,19px)",lineHeight:1.7,color:i===0?"var(--text)":"var(--muted)"}},p))
               )
             ),
-            h(LR,{d:"1",style:{position:"sticky",top:"100px"}},
+            h(LR,{d:"1",className:"loc-nearby-card",style:{position:"sticky",top:"100px"}},
               h("div",{style:{background:"var(--panel)",border:"1px solid var(--line)",borderRadius:"var(--r-lg)",padding:"clamp(24px,2.6vw,36px)"}},
                 h("div",{className:"mono",style:{fontSize:"10px",letterSpacing:".16em",color:"var(--faint)",marginBottom:"16px"}},"NEARBY SUBURBS WE SERVICE"),
                 h("div",{style:{display:"flex",flexWrap:"wrap",gap:"8px"}},
@@ -216,7 +216,7 @@ function LocationPage(){
             h(LR,null,h(LEb,{n:nearby.length>0?"06":"05"},"Ready to start")),
             h(LR,{d:"1",as:"h2",className:"display",style:{fontSize:"clamp(38px,5.5vw,86px)",margin:"20px 0 0",lineHeight:.93}},"Get a fixed quote",h("br"),"in ",loc.name," today."),
             h(LR,{d:"2",as:"p",style:{margin:"22px 0 0",color:"var(--muted)",fontSize:"clamp(16px,1.3vw,19px)",maxWidth:"44ch",lineHeight:1.65}},"Tell us about your site and we'll come back with a locked price, same day. No obligation. No follow-up calls unless you want them."),
-            h(LR,{d:"3",style:{display:"flex",gap:"14px",marginTop:"36px",flexWrap:"wrap"}},
+            h(LR,{d:"3",className:"loc-final-actions",style:{display:"flex",gap:"14px",marginTop:"36px",flexWrap:"wrap"}},
               h("button",{className:"btn btn--solid btn--lg",onClick:()=>setQuote(true)},"Start my quote ",h(LAr,null)),
               h("a",{className:"btn btn--ghost btn--lg",href:`tel:${LD.phone.replace(/\s/g,"")}`},h(LIc,{name:"phone",s:16})," ",LD.phone)
             )
