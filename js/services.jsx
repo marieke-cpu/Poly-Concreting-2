@@ -193,7 +193,7 @@ function ReviewCarousel({ reviews }){
               </div>
             </div>
             <p style={{margin:"22px 0 0",color:"var(--muted)",fontSize:"15px",lineHeight:1.65,maxWidth:"34ch"}}>
-              Public client feedback from homeowners and builders across South East Queensland.
+              Public client feedback from homeowners and builders across Moreton Bay, North Brisbane and the Sunshine Coast.
             </p>
           </div>
           <div className="mono" style={{fontSize:"10.5px",letterSpacing:".09em",color:"var(--faint)",borderTop:"1px solid var(--line)",paddingTop:"14px"}}>
@@ -311,7 +311,7 @@ function ServicesApp(){
                   fontSize:"clamp(16px,1.35vw,20px)",
                   maxWidth:"46ch",lineHeight:1.65,
                 }}>
-                  Driveways, slabs, exposed aggregate, pool surrounds and more — one crew, one standard, fixed price. Across all of South East Queensland.
+                  Driveways, slabs, exposed aggregate, pool surrounds and more — one crew, one standard, fixed price. Across all of Moreton Bay, North Brisbane and the Sunshine Coast.
                 </p>
                 <div className="svc-cta-row" style={{display:"flex",gap:"12px",flexWrap:"wrap",flexShrink:0}}>
                   <button className="btn btn--solid btn--lg" onClick={openQuote}>

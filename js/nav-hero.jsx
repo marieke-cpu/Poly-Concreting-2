@@ -245,10 +245,10 @@ function HeroContent({ accent, onQuote, big }){
     <div className="hero-copy" style={{maxWidth: big? "min(100%,900px)":"min(100%,820px)"}}>
       
       <Reveal d="1" as="h1" className="display" style={{fontSize: big?"clamp(52px,8.2vw,138px)":"clamp(44px,6.4vw,104px)",margin:"24px 0 0",letterSpacing:".002em"}}>
-        The concrete<br/>beneath<br/><Chrome>South East Queensland.</Chrome>
+        Concreting<br/><Chrome>Moreton Bay,<br/>North Brisbane & Sunshine Coast.</Chrome>
       </Reveal>
       <Reveal d="2" as="p" style={{maxWidth:"46ch",margin:"30px 0 0",fontSize:"clamp(16px,1.3vw,19px)",color:"var(--muted)",lineHeight:1.65}}>
-        Driveways, exposed aggregate, slabs and patios built by a licensed, insured crew with 10+ years on the tools. Clear quotes, locked-in dates, tidy sites and finishes made to lift the value of your home.
+        Driveways, slabs, exposed aggregate and decorative concrete built by a licensed, insured crew with 10+ years on the tools. Clear quotes, locked-in dates, tidy sites and finishes made to lift the value of your home.
       </Reveal>
       <Reveal d="3" style={{display:"flex",gap:"14px",marginTop:"38px",flexWrap:"wrap"}}>
         <button className="btn btn--solid btn--lg" onClick={onQuote}>Get my quote <Arrow/></button>
@@ -265,7 +265,7 @@ function HeroContent({ accent, onQuote, big }){
         ))}
       </Reveal>
       <Reveal d="4" className="hero-stats" style={{display:"flex",gap:"30px",marginTop:"44px",flexWrap:"wrap"}}>
-        {[["150+","Projects placed"],["10+ yrs","Industry experience"],["9","Regions covered"]].map(([a,b])=>(
+        {[["150+","Projects placed"],["10+ yrs","Industry experience"],["3","Target service areas"]].map(([a,b])=>(
           <div key={b} style={{display:"flex",flexDirection:"column",gap:"4px"}}>
             <span className="display" style={{fontSize:"26px"}}>{a}</span>
             <span className="mono" style={{fontSize:"10.5px",letterSpacing:".14em",textTransform:"uppercase",color:"var(--faint)"}}>{b}</span>
@@ -318,12 +318,12 @@ function Hero({ variant="cinematic", accent="chrome", motion=true, onQuote }){
         <div className="wrap" style={{position:"relative",zIndex:2,width:"100%"}}>
           
           <Reveal d="1" as="h1" className="display" style={{fontSize:"clamp(54px,11vw,200px)",margin:"26px 0 0"}}>
-            We pour the<br/>ground SEQ is<br/>{accent==="chrome"?<span className="chrome-text">built on.</span>:<span>built on.</span>}
+            We pour the<br/>ground our region is<br/>{accent==="chrome"?<span className="chrome-text">built on.</span>:<span>built on.</span>}
           </Reveal>
           <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-end",gap:"40px",flexWrap:"wrap",marginTop:"44px"}}>
             <Reveal d="2" as="p" style={{maxWidth:"42ch",fontSize:"clamp(16px,1.3vw,19px)",color:"var(--muted)"}}>
               Driveways, exposed aggregate, house slabs and patios. 10+ years, 150+ pours, one
-              standard across the whole of South East Queensland.
+              standard across Moreton Bay, North Brisbane and the Sunshine Coast.
             </Reveal>
             <Reveal d="3" style={{display:"flex",gap:"14px",flexWrap:"wrap"}}>
               <button className="btn btn--solid btn--lg" onClick={onQuote}>Get a quote <Arrow/></button>

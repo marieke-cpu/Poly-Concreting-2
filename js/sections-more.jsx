@@ -103,13 +103,13 @@ function Areas(){
   return (
     <section id="areas" className="section" style={{background:"var(--base-2)",borderBlock:"1px solid var(--line)"}}>
       <div className="wrap">
-        <SH n="06" kicker="Service areas" title={<>One crew standard,<br/>all of South East QLD.</>}
-          sub="Morayfield is home base — but we pour from the Sunshine Coast through Brisbane, Ipswich and west to Toowoomba. Tap a region to see where we work."/>
+        <SH n="06" kicker="Service areas" title={<>One crew standard,<br/>Caboolture to the Coast.</>}
+          sub="Morayfield is home base, with focused coverage across Caboolture, North Brisbane and the Sunshine Coast. Tap a target area to see where we work."/>
         <div className="areas-grid" style={{display:"grid",gridTemplateColumns:"1.15fr .85fr",gap:"clamp(24px,3vw,48px)",marginTop:"clamp(40px,5vw,68px)",alignItems:"stretch"}}>
           {/* MAP */}
           <Rw className="areas-map" style={{position:"relative",borderRadius:"var(--r-lg)",overflow:"hidden",border:"1px solid var(--line)",minHeight:"440px",isolation:"isolate"}}>
             <LeafletMap regions={regions} act={act} onSelect={setAct}/>
-            <div className="mono" style={{position:"absolute",top:"12px",left:"12px",fontSize:"9.5px",letterSpacing:".16em",color:"rgba(255,255,255,.6)",zIndex:500,pointerEvents:"none",background:"rgba(8,8,10,.65)",padding:"5px 10px",borderRadius:"4px",backdropFilter:"blur(4px)"}}>SEQ · COVERAGE MAP</div>
+            <div className="mono" style={{position:"absolute",top:"12px",left:"12px",fontSize:"9.5px",letterSpacing:".16em",color:"rgba(255,255,255,.6)",zIndex:500,pointerEvents:"none",background:"rgba(8,8,10,.65)",padding:"5px 10px",borderRadius:"4px",backdropFilter:"blur(4px)"}}>Moreton Bay, North Brisbane & Sunshine Coast · COVERAGE MAP</div>
           </Rw>
           {/* DETAIL */}
           <Rw d="1" style={{display:"flex",flexDirection:"column"}}>
@@ -257,7 +257,7 @@ function Testimonials(){
               Don't take our<br/>word for it.
             </div>
             <p className="mono" style={{margin:"8px 0 0",fontSize:"11px",letterSpacing:".06em",color:"var(--muted)",lineHeight:1.5}}>
-              150+ JOBS ACROSS SEQ.<br/>HERE'S WHAT CLIENTS SAY.
+              150+ JOBS ACROSS Moreton Bay, North Brisbane & Sunshine Coast.<br/>HERE'S WHAT CLIENTS SAY.
             </p>
           </div>
           {/* divider */}
@@ -393,7 +393,7 @@ function Footer(){
         <div className="foot-grid" style={{display:"grid",gridTemplateColumns:"1.6fr 1fr 1fr 1.2fr",gap:"clamp(30px,4vw,56px)"}}>
           <div className="foot-brand">
             <img className="foot-logo" src="Logo's/1logo.png" alt="Poly Concreting" loading="lazy" decoding="async" width="280" height="70" style={{width:"min(280px,80%)",marginBottom:"22px"}}/>
-            <p className="foot-brand-copy" style={{color:"var(--muted)",maxWidth:"34ch",fontSize:"15px"}}>Quality residential and small commercial concreting. Proudly Australian Polynesian-owned, Morayfield based, serving South East Queensland.</p>
+            <p className="foot-brand-copy" style={{color:"var(--muted)",maxWidth:"34ch",fontSize:"15px"}}>Quality residential and small commercial concreting. Proudly Australian Polynesian-owned, Morayfield based, serving Moreton Bay, North Brisbane and the Sunshine Coast.</p>
           </div>
           <div>
             <div className="mono foot-h">SERVICES</div>
@@ -412,7 +412,7 @@ function Footer(){
             <div style={{display:"flex",flexDirection:"column",gap:"16px",marginTop:"18px"}}>
               <a href={`tel:${PDm.phone.replace(/\s/g,"")}`} className="display" style={{fontSize:"26px"}}>{PDm.phone}</a>
               <a href={`mailto:${PDm.email}`} className="foot-l" style={{fontSize:"15px"}}>{PDm.email}</a>
-              <div style={{color:"var(--muted)",fontSize:"15px",display:"flex",gap:"9px",alignItems:"flex-start"}}><Iw name="pin" s={16}/> Morayfield QLD 4506<br/>Servicing all of SEQ</div>
+              <div style={{color:"var(--muted)",fontSize:"15px",display:"flex",gap:"9px",alignItems:"flex-start"}}><Iw name="pin" s={16}/> Morayfield QLD 4506<br/>Servicing all of Moreton Bay, North Brisbane & Sunshine Coast</div>
               <div style={{display:"flex",gap:"10px",marginTop:"4px"}}>
                 <a href="https://www.instagram.com/poly_concreting/" target="_blank" rel="noopener noreferrer" className="mono" style={{width:"38px",height:"38px",borderRadius:"50%",border:"1px solid var(--line-2)",display:"grid",placeItems:"center",fontSize:"11px",color:"var(--muted)",textDecoration:"none"}}>IG</a>
                 <a href="https://www.facebook.com/people/Poly-concreting/100091605109959/" target="_blank" rel="noopener noreferrer" className="mono" style={{width:"38px",height:"38px",borderRadius:"50%",border:"1px solid var(--line-2)",display:"grid",placeItems:"center",fontSize:"11px",color:"var(--muted)",textDecoration:"none"}}>FB</a>
@@ -423,7 +423,7 @@ function Footer(){
         </div>
         <div className="foot-bottom" style={{display:"flex",justifyContent:"space-between",alignItems:"center",flexWrap:"wrap",gap:"14px",marginTop:"clamp(40px,5vw,64px)",paddingTop:"26px",borderTop:"1px solid var(--line)"}}>
           <span className="mono" style={{fontSize:"11.5px",color:"var(--faint)",letterSpacing:".05em"}}>© {new Date().getFullYear()} Poly Concreting · QBCC 15393395 · ABN 25 669 696 673</span>
-          <span className="mono" style={{fontSize:"11.5px",color:"var(--faint)",letterSpacing:".05em"}}>Privacy · Terms · Sitemap · Website built by <a href="https://www.rastrick.com.au" target="_blank" rel="noopener noreferrer" style={{color:"var(--faint)",textDecoration:"underline"}}>RASTRICK. MADE</a></span>
+          <span className="mono" style={{fontSize:"14px",color:"var(--muted)",letterSpacing:".06em",fontWeight:600}}>Website built by <a href="https://www.rastrick.com.au" target="_blank" rel="noopener noreferrer" style={{color:"var(--text)",textDecoration:"underline",textUnderlineOffset:"3px"}}>RASTRICK. MADE</a></span>
         </div>
       </div>
     </footer>

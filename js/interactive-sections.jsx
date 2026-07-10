@@ -296,7 +296,7 @@ function ProjectReel({ onQuote }){
           <IR d="1" as="h2" className="display" style={{
             fontSize:"clamp(32px,4.5vw,70px)",margin:"16px 0 0",lineHeight:.92,
           }}>
-            Built across SEQ.
+            Built across Moreton Bay, North Brisbane & Sunshine Coast.
           </IR>
         </div>
         <IR d="2" style={{display:"flex",alignItems:"center",gap:"clamp(14px,2vw,24px)"}}>

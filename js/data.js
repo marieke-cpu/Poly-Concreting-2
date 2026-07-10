@@ -38,20 +38,29 @@ window.PC_DATA = {
       ["Small Commercial","commercial"],
     ],
     Locations: [
-      ["Morayfield","morayfield-concreting"],
       ["Caboolture","caboolture-concreting"],
+      ["Morayfield","morayfield-concreting"],
+      ["Upper Caboolture","upper-caboolture-concreting"],
+      ["Bellmere","bellmere-concreting"],
+      ["Burpengary","burpengary-concreting"],
+      ["Wamuran","wamuran-concreting"],
+      ["Elimbah","elimbah-concreting"],
+      ["Ningi","ningi-concreting"],
+      ["Banksia Beach","banksia-beach-concreting"],
+      ["Sandstone Point","sandstone-point-concreting"],
+      ["Toorbul","toorbul-concreting"],
+      ["Woodford","woodford-concreting"],
+      ["Boogaree","boogaree-concreting"],
       ["North Lakes","north-lakes-concreting"],
-      ["Brisbane","brisbane-concreting"],
+      ["North Brisbane","brisbane-concreting"],
       ["Sunshine Coast","sunshine-coast-concreting"],
-      ["Ipswich","ipswich-concreting"],
-      ["Toowoomba","toowoomba-concreting"],
     ],
   },
 
   metrics: [
-    { value: 10, suffix:"+", label:"Industry Experience", sub:"Across SEQ since 2010" },
+    { value: 10, suffix:"+", label:"Industry Experience", sub:"Across Moreton Bay, North Brisbane & Sunshine Coast since 2010" },
     { value: 150, suffix:"+", label:"Projects Delivered", sub:"Residential · Commercial" },
-    { value: 8, suffix:"", label:"Regions covered", sub:"Moreton Bay to Toowoomba" },
+    { value: 3, suffix:"", label:"Target service zones", sub:"Caboolture, North Brisbane & Sunshine Coast" },
     { value: 2.5, suffix:"M+", prefix:"$", label:"In project value placed", sub:"Driveways, Slabs & Decorative" },
   ],
 
@@ -107,7 +116,7 @@ window.PC_DATA = {
       blurb:"Plain concrete pathway with a broom finish in Wamuran — clean, practical and built to last.", stat:["55m²","Plain concrete","Broom finish"] },
     { id:"gatton-pool", title:"Plain Concrete Pool Surround", cat:"Pool Surrounds", loc:"Gatton", scope:"Plain concrete broom finish pool surround", year:"2025", img:"assets/img/optimized/photos-rest-of-photos-vids-pool1.webp", pos:"center",
       blurb:"Plain concrete pool surround with a broom finish in Gatton — slip-resistant, practical and neatly finished.", stat:["70m²","Plain concrete","Broom finish"] },
-    { id:"outdoor-patio-10", title:"Plain Concrete Outdoor Patio Area", cat:"Outdoor", loc:"South East QLD", scope:"Plain concrete broom finish outdoor patio", year:"2025", img:"assets/img/optimized/photos-rest-of-photos-vids-outdoor10.webp", pos:"center",
+    { id:"outdoor-patio-10", title:"Plain Concrete Outdoor Patio Area", cat:"Outdoor", loc:"Moreton Bay", scope:"Plain concrete broom finish outdoor patio", year:"2025", img:"assets/img/optimized/photos-rest-of-photos-vids-outdoor10.webp", pos:"center",
       blurb:"Plain concrete outdoor patio area with a broom finish — practical, durable and cleanly finished.", stat:["45m²","Plain concrete","Broom finish"] },
     { id:"ipswich-pathway-2", title:"Plain Concrete Pathway", cat:"Pathways", loc:"Ipswich", scope:"Plain concrete broom finish pathway", year:"2025", img:"assets/img/optimized/photos-rest-of-photos-vids-path11.webp", pos:"center",
       blurb:"Plain concrete pathway with a broom finish in Ipswich — clean, practical and built to last.", stat:["30m²","Plain concrete","Broom finish"] },
@@ -137,14 +146,9 @@ window.PC_DATA = {
   ],
 
   regions: [
-    { id:"moretonbay", name:"Moreton Bay", towns:"Morayfield · Caboolture · Redcliffe · North Lakes", count:"60+", home:true, locationPages:[["Morayfield","morayfield-concreting"],["Caboolture","caboolture-concreting"],["North Lakes","north-lakes-concreting"]] },
-    { id:"brisbane",   name:"Brisbane", towns:"CBD · Northside · Southside · Western suburbs", count:"35+", locationPages:[["Brisbane","brisbane-concreting"]] },
-    { id:"sunshine",   name:"Sunshine Coast", towns:"Caloundra · Maroochydore · Noosa", count:"18+", locationPages:[["Sunshine Coast","sunshine-coast-concreting"]] },
-    { id:"ipswich",    name:"Ipswich", towns:"Ipswich · Springfield · Ripley", count:"35+", locationPages:[["Ipswich","ipswich-concreting"]] },
-    { id:"logan",      name:"Logan", towns:"Logan · Beenleigh · Springwood", count:"12+" },
-    { id:"toowoomba",  name:"Toowoomba", towns:"Toowoomba · Highfields · Range", count:"6+", locationPages:[["Toowoomba","toowoomba-concreting"]] },
-    { id:"lockyer",    name:"Lockyer Valley", towns:"Gatton · Laidley · Plainland · Forest Hill", count:"4+" },
-    { id:"somerset",   name:"Somerset Region", towns:"Esk · Kilcoy · Toogoolawah · Lowood", count:"3+" },
+    { id:"moretonbay", name:"Moreton Bay", towns:"Caboolture · Morayfield · Upper Caboolture · Bellmere · Burpengary · Wamuran · Elimbah · Ningi · Banksia Beach · Sandstone Point · Toorbul · Woodford · Boogaree", count:"60+", home:true, locationPages:[["Caboolture","caboolture-concreting"],["Morayfield","morayfield-concreting"],["Upper Caboolture","upper-caboolture-concreting"],["Bellmere","bellmere-concreting"],["Burpengary","burpengary-concreting"],["Wamuran","wamuran-concreting"],["Elimbah","elimbah-concreting"],["Ningi","ningi-concreting"],["Banksia Beach","banksia-beach-concreting"],["Sandstone Point","sandstone-point-concreting"],["Toorbul","toorbul-concreting"],["Woodford","woodford-concreting"],["Boogaree","boogaree-concreting"]] },
+    { id:"brisbane",   name:"North Brisbane", towns:"North Lakes · Mango Hill · Chermside · Aspley · Mitchelton · The Gap · Everton Park · Bridgeman Downs", count:"35+", locationPages:[["North Lakes","north-lakes-concreting"],["North Brisbane","brisbane-concreting"]] },
+    { id:"sunshine",   name:"Sunshine Coast", towns:"Caloundra · Maroochydore · Mooloolaba · Buderim · Birtinya · Mountain Creek · Bokarina · Kawana Waters", count:"18+", locationPages:[["Sunshine Coast","sunshine-coast-concreting"]] },
   ],
 
   testimonials: [
@@ -284,7 +288,7 @@ window.PC_REVIEWS = function PolyGoogleReviews(){
               )
             )
           ),
-          React.createElement("div", { className:"mono", style:{fontSize:"11px",color:"var(--faint)",letterSpacing:".06em"} }, "MORAYFIELD BASED · SEQ WIDE")
+          React.createElement("div", { className:"mono", style:{fontSize:"11px",color:"var(--faint)",letterSpacing:".06em"} }, "MORAYFIELD BASED · TARGET AREA COVERAGE")
         ),
         React.createElement("div", { className:"pc-review-body", style:{flex:1,display:"flex",minWidth:0} },
           React.createElement("div", { style:{flex:1,padding:"clamp(24px,3vw,42px)",minWidth:0,display:"flex",flexDirection:"column",justifyContent:"center"} },

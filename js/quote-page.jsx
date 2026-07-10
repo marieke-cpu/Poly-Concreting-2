@@ -132,7 +132,7 @@ function QuotePage(){
               Let&rsquo;s price your<br/><span className="chrome-text">concrete</span>, properly.
             </QR>
             <QR d="2" as="p" style={{margin:"22px 0 0",color:"var(--muted)",fontSize:"clamp(16px,1.3vw,20px)",maxWidth:"52ch",lineHeight:1.65}}>
-              Free, no-obligation quotes across South East Queensland. Fill in the form and a Poly owner — not a call centre — gets back to you the same day.
+              Free, no-obligation quotes across Moreton Bay, North Brisbane and the Sunshine Coast. Fill in the form and a Poly owner — not a call centre — gets back to you the same day.
             </QR>
           </div>
         </section>
@@ -195,7 +195,7 @@ function QuotePage(){
                   ["check","QBCC Licensed & Insured","White-card crews, full WHS, public liability covered on every job."],
                   ["check","Owner-operated","You deal with the people on the tools, from quote to clean-up."],
                   ["check","Fixed price, written quote","No variations, no surprises. Your price is locked before we lift a shovel."],
-                  ["check","Serving SEQ","Moreton Bay · Brisbane · Sunshine Coast · Ipswich · Toowoomba."],
+                  ["check","Serving Moreton Bay, North Brisbane & Sunshine Coast","Moreton Bay · North Brisbane · Sunshine Coast."],
                 ].map(([icon,t,dd])=>(
                   <div key={t} style={{background:"var(--panel)",border:"1px solid var(--line)",borderRadius:"var(--r)",padding:"18px 20px",display:"flex",gap:"12px",alignItems:"flex-start"}}>
                     <span style={{color:"var(--text)",flexShrink:0,marginTop:"1px"}}><QIc name={icon} s={18}/></span>

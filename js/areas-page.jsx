@@ -24,12 +24,12 @@ function AreasPage(){
           <div className="wrap" style={{position:"relative"}}>
             <AR><AEb n="—">Service areas</AEb></AR>
             <AR d="1" as="h1" className="display" style={{fontSize:"clamp(46px,8vw,124px)",margin:"20px 0 0",lineHeight:.93}}>
-              We pour right across<br/>South East QLD.
+              Specialist concrete for<br/>Caboolture, North Brisbane & Sunshine Coast.
             </AR>
             <AR d="2">
               <div className="subpage-hero-copy" style={{display:"flex",gap:"clamp(28px,5vw,72px)",marginTop:"32px",alignItems:"flex-end",flexWrap:"wrap"}}>
                 <p style={{margin:0,color:"var(--muted)",fontSize:"clamp(16px,1.35vw,20px)",maxWidth:"46ch",lineHeight:1.65}}>
-                  Based in Morayfield and working from the Sunshine Coast through Brisbane, Ipswich and west to Toowoomba. If you're in SEQ, chances are we're already pouring near you.
+                  Based in Morayfield and focused on Caboolture, North Brisbane and the Sunshine Coast. If you are in these target areas, we are ready to quote and pour with a local crew.
                 </p>
                 <div className="subpage-actions" style={{display:"flex",gap:"12px",flexWrap:"wrap",flexShrink:0}}>
                   <button className="btn btn--solid btn--lg" onClick={()=>setQuote(true)}>Get a free quote <AArr/></button>
@@ -96,7 +96,7 @@ function AreasPage(){
               ))}
             </div>
             <AR d="2" as="p" className="mono" style={{marginTop:"22px",fontSize:"12.5px",color:"var(--faint)",letterSpacing:".03em"}}>
-              Don't see your suburb? We cover the whole of SEQ — <a href="#quote" className="link-sweep" style={{display:"inline-flex"}}>ask us about your area <AArr d="e"/></a>
+              Don't see your suburb? We focus on Caboolture, North Brisbane and the Sunshine Coast — <a href="#quote" className="link-sweep" style={{display:"inline-flex"}}>ask us about your area <AArr d="e"/></a>
             </AR>
           </div>
         </section>

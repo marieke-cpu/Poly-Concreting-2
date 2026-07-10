@@ -168,7 +168,7 @@ function ProjectsApp(){
             <PR d="2">
               <div className="subpage-hero-copy" style={{display:"flex",gap:"clamp(28px,5vw,72px)",marginTop:"32px",alignItems:"flex-end",flexWrap:"wrap"}}>
                 <p style={{margin:0,color:"var(--muted)",fontSize:"clamp(16px,1.35vw,20px)",maxWidth:"46ch",lineHeight:1.65}}>
-                  {PROJ.length} recent jobs across South East Queensland — driveways, slabs, pathways and decorative finishes. Tap any project to see it up close.
+                  {PROJ.length} recent jobs across Moreton Bay, North Brisbane and the Sunshine Coast — driveways, slabs, pathways and decorative finishes. Tap any project to see it up close.
                 </p>
                 <div className="subpage-actions" style={{display:"flex",gap:"12px",flexWrap:"wrap",flexShrink:0}}>
                   <button className="btn btn--solid btn--lg" onClick={()=>setQuote(true)}>Get a free quote <PAr/></button>

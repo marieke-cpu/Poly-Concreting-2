@@ -882,7 +882,7 @@ function ServiceSalesHero({ s, isResidential, openQuote }){
       <div className="wrap" style={{position:"relative",width:"100%",paddingTop:"clamp(170px,21vh,220px)",paddingBottom:"clamp(46px,8vh,92px)"}}>
         <div className="svc-sales-hero__grid">
           <div className="hero-copy">
-            <SR><SEb n="—">Poly Concreting · South East QLD</SEb></SR>
+            <SR><SEb n="—">Poly Concreting · Moreton Bay, North Brisbane & Sunshine Coast</SEb></SR>
             <SR d="1" as="h1" className="display" style={{
               fontSize:"clamp(46px,7.8vw,118px)",lineHeight:.9,margin:"20px 0 0",maxWidth:"12ch",
             }}>
@@ -959,7 +959,7 @@ function ServiceSalesHero({ s, isResidential, openQuote }){
             <div className="svc-trust-strip svc-sales-hero__stats" style={{display:"grid",gridTemplateColumns:"repeat(4,minmax(0,1fr))",marginTop:"clamp(30px,4vw,48px)",border:"1px solid rgba(255,255,255,.16)",background:"rgba(8,8,10,.32)",backdropFilter:"blur(12px)",borderRadius:"var(--r)",overflow:"hidden"}}>
               {[
                 {v:"150+",  l:"Jobs completed"},
-                {v:"10+",   l:"Years in SEQ"},
+                {v:"10+",   l:"Years in Moreton Bay, North Brisbane & Sunshine Coast"},
                 {v:"4.8★",  l:"Google rating"},
                 {v:"Fixed", l:"Written quotes"},
               ].map((t,i,arr)=>(
@@ -1003,8 +1003,8 @@ function ServiceDetailApp(){
   },[]);
 
   const updateMeta = (svc)=>{
-    const title = `${svc.name} South East QLD | Poly Concreting`;
-    const desc = svc.metaDesc || `Professional ${svc.name.toLowerCase()} across South East Queensland. Owner-operated, fixed price, same-day quotes. Based in Morayfield.`;
+    const title = `${svc.name} Moreton Bay, North Brisbane & Sunshine Coast | Poly Concreting`;
+    const desc = svc.metaDesc || `Professional ${svc.name.toLowerCase()} across Moreton Bay, North Brisbane and the Sunshine Coast. Owner-operated, fixed price, same-day quotes. Based in Morayfield.`;
     const url = `https://polyconcretingqld.com.au/${svcHref(svc.id)}`;
     document.title = title;
     const setMeta = (sel,attr,val)=>{ const el=document.querySelector(sel); if(el) el.setAttribute(attr,val); };

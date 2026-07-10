@@ -84,7 +84,7 @@ function AboutPage(){
               <BR d="1" style={{position:"relative",borderRadius:"var(--r-lg)",overflow:"hidden",border:"1px solid var(--line)",aspectRatio:"4/3",minHeight:"220px"}}>
                 <BPh label={null} src="assets/img/team.webp" pos="center 38%" style={{position:"absolute",inset:0}}/>
                 <div style={{position:"absolute",inset:0,background:"linear-gradient(0deg,rgba(8,8,10,.55),transparent 55%)"}}/>
-                <div className="ph__tag" style={{position:"absolute",left:0,bottom:0}}>THE POLY CREW · MORAYFIELD, SEQ</div>
+                <div className="ph__tag" style={{position:"absolute",left:0,bottom:0}}>THE POLY CREW · MORAYFIELD, Moreton Bay, North Brisbane & Sunshine Coast</div>
               </BR>
             </div>
           </div>
@@ -126,7 +126,7 @@ function AboutPage(){
                 <div style={{background:"linear-gradient(160deg,#141418,#0e0e12)",border:"1px solid rgba(255,255,255,.07)",borderRadius:"var(--r-lg)",padding:"clamp(28px,3vw,44px)"}}>
                   <svg width="28" height="22" viewBox="0 0 32 24" fill="none" style={{marginBottom:"18px",opacity:.2}}><path d="M0 24V14.4C0 8.4 3.2 3.6 9.6 0l2.4 3.6C8.8 5.6 7.2 8 7.2 11.2H12V24H0zm16 0V14.4C16 8.4 19.2 3.6 25.6 0L28 3.6C24.8 5.6 23.2 8 23.2 11.2H28V24H16z" fill="white"/></svg>
                   <p className="display" style={{fontSize:"clamp(17px,1.8vw,24px)",lineHeight:1.3,margin:0,color:"rgba(232,232,239,.9)"}}>
-                    "We're not here to be the biggest crew in SEQ. We're here to be the one you call back."
+                    "We're not here to be the biggest crew in Moreton Bay, North Brisbane & Sunshine Coast. We're here to be the one you call back."
                   </p>
                   <div style={{marginTop:"24px",paddingTop:"18px",borderTop:"1px solid rgba(255,255,255,.07)"}}>
                     <div style={{fontSize:"13px",fontWeight:600,color:"rgba(232,232,239,.85)"}}>Angelo</div>

@@ -145,7 +145,7 @@ function DrivewaySalesHero({ open }){
       }}>
         <div className="svc-sales-hero__grid">
           <div className="hero-copy">
-            <SR><SEb n="—">Concrete Driveways · South East QLD</SEb></SR>
+            <SR><SEb n="—">Concrete Driveways · Moreton Bay, North Brisbane & Sunshine Coast</SEb></SR>
             <SR d="1" as="h1" className="display" style={{
               fontSize:"clamp(46px,7.8vw,118px)",lineHeight:.9,
               margin:"20px 0 0",maxWidth:"12ch",
@@ -210,7 +210,7 @@ function DrivewaySalesHero({ open }){
           <div className="svc-trust-strip svc-sales-hero__stats" style={{display:"grid",gridTemplateColumns:"repeat(4,minmax(0,1fr))",marginTop:"clamp(30px,4vw,48px)",border:"1px solid rgba(255,255,255,.16)",background:"rgba(8,8,10,.32)",backdropFilter:"blur(12px)",borderRadius:"var(--r)",overflow:"hidden"}}>
             {[
               {v:"150+",  l:"Jobs completed"},
-              {v:"10+",   l:"Years in SEQ"},
+              {v:"10+",   l:"Years in Moreton Bay, North Brisbane & Sunshine Coast"},
               {v:"4.8★",  l:"Google rating"},
               {v:"Fixed", l:"Written quotes"},
             ].map((t,i,arr)=>(

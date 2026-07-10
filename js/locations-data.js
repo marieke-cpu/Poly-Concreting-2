@@ -109,7 +109,7 @@ window.PC_LOCATIONS = [
     heading: "Concreting in Caboolture",
     tagline: "Solid concrete work for a suburb that's constantly growing.",
     intro: [
-      "Caboolture has been one of the fastest-growing areas in South East Queensland for over a decade, and with that growth comes enormous demand for quality concreting. The soils throughout Caboolture — particularly in older residential streets and the new Caboolture South development corridor — are predominantly clay-heavy, which requires careful site preparation to prevent the cracking and heaving that plague poorly-built concrete work. Poly Concreting understands the local ground conditions and works to the standards that Caboolture homes and yards demand.",
+      "Caboolture has been one of Queensland's fastest-growing local areas for over a decade, and with that growth comes enormous demand for quality concreting. The soils throughout Caboolture — particularly in older residential streets and the new Caboolture South development corridor — are predominantly clay-heavy, which requires careful site preparation to prevent the cracking and heaving that plague poorly-built concrete work. Poly Concreting understands the local ground conditions and works to the standards that Caboolture homes and yards demand.",
       "The job mix in Caboolture reflects the area's diversity: newer homes in Caboolture South getting their first driveways poured, older properties on the western side of town replacing crumbling original slabs, and acreage properties along Pumicestone Road needing large shed slabs and concrete hardstand areas. We handle them all. Exposed aggregate driveways are particularly popular in the newer estates as homeowners look to lift their street appeal from the start, while practical broom-finish concrete remains the go-to for utility areas and shed floors.",
       "Poly Concreting is based just down the road in Morayfield, meaning fast response times, no excess travel costs, and a genuine commitment to the Caboolture community. We've built a strong reputation here through consistent, honest work — and we intend to keep it that way."
     ],
@@ -419,7 +419,7 @@ window.PC_LOCATIONS = [
     heading: "Concreting in Ipswich",
     tagline: "Ipswich's growth corridor demands quality concrete foundations.",
     intro: [
-      "The Ipswich region — and Springfield Lakes in particular — is one of the most active building and development areas in South East Queensland right now. New estates are releasing land constantly, and with them comes a wave of demand for concrete work: house slabs, garage floors, driveways, pathways, and shed pads for the large acreage blocks on the city's outer fringe. Poly Concreting services Ipswich and the Springfield Lakes growth corridor, delivering the same level of workmanship we're known for in Moreton Bay to a market that badly needs reliable, quality-focused tradies.",
+      "The Ipswich region — and Springfield Lakes in particular — has been one of Queensland's active building and development corridors. New estates are releasing land constantly, and with them comes a wave of demand for concrete work: house slabs, garage floors, driveways, pathways, and shed pads for the large acreage blocks on the city's outer fringe. Poly Concreting services Ipswich and the Springfield Lakes growth corridor, delivering the same level of workmanship we're known for in Moreton Bay to a market that badly needs reliable, quality-focused tradies.",
       "Soil conditions in Ipswich are varied but broadly clay-dominant, particularly in the older residential suburbs toward the city centre. The Springfield and Springfield Lakes estates are built on compacted fill in many areas, which requires close attention during sub-base preparation to ensure slabs and driveways don't settle unevenly over time. For acreage properties in Ripley, Deebing Heights, and the Scenic Rim edge, large shed slabs and hardstand areas are the most common request — properties that are setting up seriously for equestrian use, home businesses, or just genuine rural life.",
       "In Springfield Lakes itself, the newer residential streets show a preference for neat, clean concrete — broom finish or honed driveways that match the contemporary townhouse and family home streetscape. We see a lot of new builds coming to us for their first driveway pour, and we take care to get the finish exactly right the first time."
     ],
@@ -565,7 +565,854 @@ window.PC_LOCATIONS = [
     }
   },
 
-  /* ── 8. TOOWOOMBA ───────────────────────────────────────── */
+  /* ── 8. WAMURAN ─────────────────────────────────────────── */
+  {
+    id: "wamuran",
+    name: "Wamuran",
+    region: "Moreton Bay",
+    state: "QLD",
+    postcode: "4512",
+    heading: "Concreting in Wamuran",
+    tagline: "Reliable concrete work for Wamuran's acreage and rural properties.",
+    intro: [
+      "Wamuran sits about 30 kilometres west of Caboolture and is home to a mix of rural lifestyle properties, hobby farms, and long-established acreage blocks. The concrete work here reflects that — shed slabs and hardstand areas are the most common request, along with long driveways that connect rural homes to the road, and concrete paths through established gardens. Poly Concreting is based in Morayfield and services Wamuran regularly, bringing the same standard of sub-base preparation and reinforcement that acreage jobs demand.",
+      "The soils in and around Wamuran are generally clay-rich, with significant moisture variation between wet and dry seasons. This makes proper site preparation essential — we compact the formation layer thoroughly and specify appropriate steel reinforcement to ensure your slab or driveway won't lift or crack as the ground moves. For large shed slabs on acreage, we coordinate the boxing and steel placement carefully so the pour finishes level and at the right thickness for the load it needs to carry.",
+      "Getting concrete trucks out to Wamuran requires coordination — we plan our Wamuran pours so the truck turnaround, access, and site conditions are all considered upfront. There are no surprises on pour day. If you're on an acreage block in Wamuran and need a shed slab, driveway, or concrete path quoted, call Angelo for a same-day response."
+    ],
+    services: LOCATION_SERVICES,
+    nearbySuburbs: [
+      "Caboolture", "Upper Caboolture", "Woodford", "Moorina", "Moodlu",
+      "Rocksberg", "Elimbah", "Morayfield", "Beerwah", "Glass House Mountains"
+    ],
+    faqs: [
+      {
+        q: "Do you pour concrete on acreage blocks in Wamuran?",
+        a: "Yes — acreage and rural properties in Wamuran are a regular part of our work. Shed slabs, long driveways, hardstand areas and concrete paths are the most common jobs we quote out here. We plan truck access upfront so there are no issues on pour day."
+      },
+      {
+        q: "What size shed slab can you pour in Wamuran?",
+        a: "We pour shed slabs of any size — from single-car garages to large open-span sheds. We'll advise on slab thickness based on the shed size and intended load, handle the boxing and steel, and get the pour done right in one hit."
+      },
+      {
+        q: "Does the clay soil in Wamuran cause problems for concrete driveways?",
+        a: "Clay soils that shrink and swell with moisture are the primary cause of driveway cracking in this area. We compact the formation layer thoroughly and use proper steel reinforcement to manage soil movement. A correctly built driveway on clay will hold up well for decades."
+      },
+      {
+        q: "How do I get a quote for a concrete job in Wamuran?",
+        a: "Call or message Angelo directly. He'll come out to Wamuran, walk the site, confirm the scope, and give you a fixed written price before anything starts. No guesswork, no per-metre estimates that change at handover."
+      },
+      {
+        q: "How long does a driveway or slab take to organise in Wamuran?",
+        a: "Same-day response to your enquiry. Site visit within a few days. Pour scheduling depends on current workload — typically 1–3 weeks out. We'll confirm a realistic pour date when we come out to measure up."
+      }
+    ],
+    metaTitle: "Concreting Wamuran | Driveways, Shed Slabs & Acreage Concrete | Poly Concreting",
+    metaDesc: "Wamuran concreting — shed slabs, long driveways, hardstand and acreage concrete. Clay soil specialists. Owner-operated, fixed written quotes.",
+    ogImage: "assets/img/agg-driveway.webp",
+    projectIds: ["wamuran-drive", "wamuran-pathway", "wamuran-pathway-2", "acreage", "plain-broom-drive", "side-drain", "commercial", "morayfield-patio"],
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Poly Concreting — Wamuran",
+      "description": "Concreting services in Wamuran QLD — shed slabs, driveways, hardstand and acreage concrete work.",
+      "url": "https://polyconcretingqld.com.au/wamuran-concreting",
+      "telephone": "+61481445041",
+      "email": "info@polyconcretingqld.com.au",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Wamuran",
+        "addressRegion": "QLD",
+        "postalCode": "4512",
+        "addressCountry": "AU"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -27.03,
+        "longitude": 152.73
+      },
+      "areaServed": [
+        "Wamuran", "Upper Caboolture", "Moorina", "Moodlu", "Rocksberg", "Caboolture"
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "07:00",
+        "closes": "17:00"
+      }
+    }
+  },
+
+  /* ── 9. ELIMBAH ──────────────────────────────────────────── */
+  {
+    id: "elimbah",
+    name: "Elimbah",
+    region: "Moreton Bay",
+    state: "QLD",
+    postcode: "4516",
+    heading: "Concreting in Elimbah",
+    tagline: "Dependable concrete work for Elimbah's lifestyle and rural blocks.",
+    intro: [
+      "Elimbah is a quiet, semi-rural locality sitting between Caboolture and the Pumicestone Passage coast, roughly 15 kilometres east of Caboolture. It's an area of lifestyle properties, hobby farms, and large residential blocks, with concrete needs that reflect that character — driveways, shed slabs, concrete paths, and hardstand areas are the jobs we're most often called out for. Poly Concreting services Elimbah regularly from our Morayfield base, and the straightforward access via the Bruce Highway makes it an easy run.",
+      "Like much of the Moreton Bay hinterland, Elimbah sits on clay-heavy soil that expands and contracts significantly with seasonal rainfall. Getting the sub-base right before any pour is non-negotiable in these conditions — we compact the formation layer and use correct steel reinforcement so the finished concrete moves with the ground rather than cracking under it. For shed slabs on lifestyle blocks, we take the time to get the steel placement and boxing spot on before any concrete is poured.",
+      "If you're in Elimbah and need concrete work quoted, Angelo will come out to the site, walk through the scope, and give you a fixed written price. No per-metre guesswork. No surprises when the invoice arrives."
+    ],
+    services: LOCATION_SERVICES,
+    nearbySuburbs: [
+      "Caboolture", "Wamuran", "Toorbul", "Ningi", "Banksia Beach",
+      "Burpengary East", "Morayfield", "Glass House Mountains", "Beerwah", "Rocksberg"
+    ],
+    faqs: [
+      {
+        q: "Do you service Elimbah for concrete work?",
+        a: "Yes — Elimbah is well within our regular service area. We quote and pour driveways, shed slabs, paths and hardstand areas for lifestyle and rural properties throughout the suburb."
+      },
+      {
+        q: "What types of concrete jobs do you do in Elimbah?",
+        a: "Driveways, shed slabs, garage pads, concrete paths and hardstand areas are the most common in Elimbah. We handle all finishes — broom, plain, exposed aggregate and coloured — and advise on what suits each job."
+      },
+      {
+        q: "The soil on my Elimbah block seems very clayey. Will that affect my slab?",
+        a: "Clay soil that moves with moisture is the main challenge for concrete in this area. We compact the formation layer and use appropriate steel reinforcement to manage soil movement. Properly built concrete on reactive clay holds up well for decades."
+      },
+      {
+        q: "Can you pour a long driveway on a rural Elimbah block?",
+        a: "Yes — long rural driveways are something we do regularly in the Moreton Bay hinterland. We plan truck access, set up batter boards, and pour in sections if needed. Contact us with the approximate dimensions and we'll give you a fixed price."
+      },
+      {
+        q: "How soon can you come out to quote in Elimbah?",
+        a: "Same-day response to your enquiry. Site visits typically scheduled within 48–72 hours. We give you a fixed written price at the quote — no back-and-forth."
+      }
+    ],
+    metaTitle: "Concreting Elimbah QLD | Driveways, Sheds & Rural Concrete | Poly Concreting",
+    metaDesc: "Elimbah concreting — driveways, shed slabs, paths and hardstand for lifestyle and rural properties. Fixed written quotes. Owner on every job.",
+    ogImage: "assets/img/agg-driveway.webp",
+    projectIds: ["wamuran-drive", "wamuran-pathway", "acreage", "plain-broom-drive", "side-drain", "caboolture-drive", "side-path", "morayfield-patio"],
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Poly Concreting — Elimbah",
+      "description": "Concreting services in Elimbah QLD — driveways, shed slabs, paths and hardstand for lifestyle and rural properties.",
+      "url": "https://polyconcretingqld.com.au/elimbah-concreting",
+      "telephone": "+61481445041",
+      "email": "info@polyconcretingqld.com.au",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Elimbah",
+        "addressRegion": "QLD",
+        "postalCode": "4516",
+        "addressCountry": "AU"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -27.05,
+        "longitude": 152.99
+      },
+      "areaServed": [
+        "Elimbah", "Caboolture", "Wamuran", "Toorbul", "Ningi", "Burpengary East"
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "07:00",
+        "closes": "17:00"
+      }
+    }
+  },
+
+  /* ── 10. BURPENGARY ─────────────────────────────────────── */
+  {
+    id: "burpengary",
+    name: "Burpengary",
+    region: "Moreton Bay",
+    state: "QLD",
+    postcode: "4505",
+    heading: "Concreting in Burpengary",
+    tagline: "Local concrete work for Burpengary's growing residential community.",
+    intro: [
+      "Burpengary has grown into one of North Moreton Bay's more substantial residential suburbs, with established streets closer to the Bruce Highway mixing with newer estates like Burpengary East and the Burpengary Meadows development corridor. The concrete demand here spans the full residential range — driveways for new builds and first-time upgrades, exposed aggregate for homeowners lifting street appeal, and outdoor entertaining slabs for families making the most of their Burpengary yards. Poly Concreting is based nearby in Morayfield and services Burpengary regularly.",
+      "The clay content in Burpengary soils increases as you move west from the Bruce Highway — a factor that matters significantly for concrete longevity. We compact every sub-base thoroughly and use appropriate steel reinforcement across all jobs, so you're not dealing with cracked slabs in five years when the ground shifts. For newer builds in Burpengary East, first-time driveway pours are common and we take care to match the home's style with the right finish — exposed aggregate, broom, or coloured concrete.",
+      "Outdoor entertaining areas are increasingly popular in Burpengary as families invest in their outdoor space. Alfresco slabs connecting to the living area, concrete paths running side access to the back yard, and garage floors are all jobs we quote in Burpengary regularly. Get in touch and Angelo will come out to your block, scope the job, and give you a fixed price."
+    ],
+    services: LOCATION_SERVICES,
+    nearbySuburbs: [
+      "Morayfield", "Caboolture", "Narangba", "Burpengary East", "Dakabin",
+      "Bellmere", "Deception Bay", "Kallangur", "Griffin", "Upper Caboolture"
+    ],
+    faqs: [
+      {
+        q: "Do you service Burpengary East and the newer estates?",
+        a: "Yes — Burpengary East and the surrounding new estate corridors are a regular part of our Burpengary work. New builds needing their first driveway, alfresco slabs, and side access paths are all common requests out there."
+      },
+      {
+        q: "What concrete finish is best for a new driveway in Burpengary?",
+        a: "It depends on the home's style and budget. Exposed aggregate is the popular choice for street appeal — it suits contemporary facades and holds its look well long-term. Broom finish is the practical, solid option for those who want a clean standard driveway. We'll advise on both when we come out to quote."
+      },
+      {
+        q: "My old Burpengary driveway keeps cracking. What's causing it?",
+        a: "Reactive clay soil movement is usually the culprit in Burpengary. Driveways built without adequate sub-base compaction or reinforcement crack and lift as the ground moves seasonally. We demolish the old slab, prepare the base correctly, and pour fresh with proper reinforcement to stop the cycle."
+      },
+      {
+        q: "Can you pour an alfresco slab in Burpengary?",
+        a: "Yes — alfresco areas are one of the most common jobs we do in Burpengary. We'll scope the area, plan the drainage, and advise on the right finish for outdoor use. Broom, exposed aggregate, or coloured concrete all work well for outdoor entertaining areas."
+      },
+      {
+        q: "How quickly can you start a concrete job in Burpengary?",
+        a: "We respond same day to all enquiries. Site visits typically happen within 48–72 hours. Pour scheduling is usually 1–3 weeks out depending on the season and current workload."
+      }
+    ],
+    metaTitle: "Concreting Burpengary | Driveways, Slabs & Outdoor Concrete | Poly Concreting",
+    metaDesc: "Burpengary concreting — driveways, alfresco slabs, exposed aggregate and outdoor areas. Local Moreton Bay crew. Fixed written quotes.",
+    ogImage: "assets/img/agg-driveway.webp",
+    projectIds: ["caboolture-drive", "plain-broom-drive", "agg-drive", "morayfield-patio", "patio-agg", "outdoor-patio-10", "side-path", "side-drain"],
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Poly Concreting — Burpengary",
+      "description": "Concreting services in Burpengary QLD — driveways, alfresco slabs, exposed aggregate and outdoor areas.",
+      "url": "https://polyconcretingqld.com.au/burpengary-concreting",
+      "telephone": "+61481445041",
+      "email": "info@polyconcretingqld.com.au",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Burpengary",
+        "addressRegion": "QLD",
+        "postalCode": "4505",
+        "addressCountry": "AU"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -27.16,
+        "longitude": 152.96
+      },
+      "areaServed": [
+        "Burpengary", "Burpengary East", "Narangba", "Morayfield", "Dakabin", "Bellmere"
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "07:00",
+        "closes": "17:00"
+      }
+    }
+  },
+
+  /* ── 11. UPPER CABOOLTURE ───────────────────────────────── */
+  {
+    id: "upper-caboolture",
+    name: "Upper Caboolture",
+    region: "Moreton Bay",
+    state: "QLD",
+    postcode: "4510",
+    heading: "Concreting in Upper Caboolture",
+    tagline: "Acreage and rural concrete work done right on Caboolture's western fringe.",
+    intro: [
+      "Upper Caboolture stretches along the acreage corridors west and north of Caboolture township — large lifestyle blocks, hobby farms, and rural residential properties that have been here for decades. The concrete work matches the landscape: long gravel-to-concrete driveway upgrades, shed slabs built to carry real loads, hardstand areas for machinery and vehicles, and concrete paths connecting buildings across working properties. Poly Concreting services Upper Caboolture regularly and understands what acreage concrete work actually requires.",
+      "Clay soil dominates across Upper Caboolture and the surrounding rural fringe. Moisture variation is significant — properties on low-lying ground or near creek lines can see soil that's very active in wet seasons. We take sub-base preparation seriously: thorough compaction, correct depth, and appropriate steel reinforcement are non-negotiable on every pour. Acreage jobs sometimes involve uneven terrain and access challenges that suburban concrete work doesn't, and we plan for those factors upfront.",
+      "Being based in Morayfield means we're close and can coordinate Upper Caboolture jobs without the travel overhead that brings Brisbane concreters out here. Fixed written quotes, same-day response, Angelo on every job. Call us for a no-obligation site visit and price."
+    ],
+    services: LOCATION_SERVICES,
+    nearbySuburbs: [
+      "Caboolture", "Wamuran", "Moorina", "Moodlu", "Rocksberg",
+      "Morayfield", "Elimbah", "Bellmere", "Boogaree", "Woodford"
+    ],
+    faqs: [
+      {
+        q: "Do you pour concrete on acreage and rural properties in Upper Caboolture?",
+        a: "Yes — Upper Caboolture acreage is a regular part of our work. Shed slabs, long driveways, hardstand areas and concrete paths are the most common jobs we quote in the area."
+      },
+      {
+        q: "Can you pour a large shed slab in Upper Caboolture?",
+        a: "Absolutely. Large shed slabs are a speciality — we handle the site prep, boxing, steel reinforcement, pour and finish. We'll advise on slab thickness based on the intended load and span, and can coordinate truck access on rural properties."
+      },
+      {
+        q: "The clay in Upper Caboolture is very reactive. How do you manage that?",
+        a: "Reactive clay is manageable when the sub-base is prepared correctly. We compact the formation layer thoroughly and use appropriate steel reinforcement so the slab can accommodate ground movement without cracking. It's a different standard than urban concrete work and we know the difference."
+      },
+      {
+        q: "I want to upgrade my gravel driveway to concrete in Upper Caboolture. Can you quote that?",
+        a: "Yes — gravel to concrete upgrades are common in Upper Caboolture. We'll measure the driveway, advise on the finish, and give you a fixed price for the full job including boxing, compaction, steel, concrete supply, pour and finish."
+      },
+      {
+        q: "How do I book Poly Concreting for a job in Upper Caboolture?",
+        a: "Call or message Angelo directly. He'll respond same day and come out to your property to walk the site and give you a fixed written price. No travel fees, no runaround."
+      }
+    ],
+    metaTitle: "Concreting Upper Caboolture | Shed Slabs, Driveways & Acreage Concrete | Poly Concreting",
+    metaDesc: "Upper Caboolture concreting — shed slabs, long driveways and hardstand for acreage properties. Clay soil specialists. Fixed written quotes.",
+    ogImage: "assets/img/agg-driveway.webp",
+    projectIds: ["wamuran-drive", "wamuran-pathway", "acreage", "plain-broom-drive", "caboolture-drive", "side-drain", "commercial", "wamuran-pathway-2"],
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Poly Concreting — Upper Caboolture",
+      "description": "Concreting services in Upper Caboolture QLD — shed slabs, driveways and acreage concrete work.",
+      "url": "https://polyconcretingqld.com.au/upper-caboolture-concreting",
+      "telephone": "+61481445041",
+      "email": "info@polyconcretingqld.com.au",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Upper Caboolture",
+        "addressRegion": "QLD",
+        "postalCode": "4510",
+        "addressCountry": "AU"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -27.04,
+        "longitude": 152.88
+      },
+      "areaServed": [
+        "Upper Caboolture", "Caboolture", "Wamuran", "Moorina", "Moodlu", "Rocksberg"
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "07:00",
+        "closes": "17:00"
+      }
+    }
+  },
+
+  /* ── 12. BOOGAREE ───────────────────────────────────────── */
+  {
+    id: "boogaree",
+    name: "Boogaree",
+    region: "Moreton Bay",
+    state: "QLD",
+    postcode: "4510",
+    heading: "Concreting in Boogaree",
+    tagline: "Concrete work for rural Boogaree properties done properly.",
+    intro: [
+      "Boogaree is a small rural locality tucked between Caboolture and the western acreage corridors, sharing much of the character of Upper Caboolture and the Caboolture hinterland. Lifestyle blocks, rural residential properties, and hobby farms are the norm here, and the concrete work reflects it — shed slabs, concrete driveways, hardstand for vehicles and equipment, and paths between structures are what we're typically called out for. Poly Concreting services Boogaree from our Morayfield base with no travel loading.",
+      "The soils in the Boogaree and surrounds area are clay-heavy and reactive, meaning moisture variation through the year drives significant ground movement. Concrete work that isn't properly reinforced and built on a well-compacted sub-base won't last. We do the prep work properly every time — formation compaction, correct steel placement, and an appropriate mix design for the job. It's the difference between concrete that holds up for 30 years and work that's cracking in three.",
+      "For smaller communities like Boogaree, access and logistics require more planning than urban work. We coordinate concrete trucks, site access, and timing so the pour day goes smoothly without delays. Angelo quotes every job in person and gives you a fixed written price. Call for a same-day response."
+    ],
+    services: LOCATION_SERVICES,
+    nearbySuburbs: [
+      "Caboolture", "Upper Caboolture", "Morayfield", "Wamuran", "Bellmere",
+      "Moorina", "Moodlu", "Rocksberg", "Elimbah", "Burpengary"
+    ],
+    faqs: [
+      {
+        q: "Do you concrete in Boogaree?",
+        a: "Yes — Boogaree and the surrounding rural localities are within our regular service area. We quote and pour shed slabs, driveways, hardstand and paths for rural residential properties in the area."
+      },
+      {
+        q: "What's the most common concrete job in Boogaree?",
+        a: "Shed slabs and driveway upgrades are the most frequent requests. Rural properties in this area often have large sheds needing a proper concrete floor, or older gravel driveways that owners want upgraded to concrete."
+      },
+      {
+        q: "How do you handle truck access on rural Boogaree properties?",
+        a: "We scope truck access when we come out to quote — gate widths, overhead clearances, surface conditions and turning space are all assessed upfront. If there are access constraints we work them into the pour plan so there are no surprises."
+      },
+      {
+        q: "What concrete finish works best for a rural driveway in Boogaree?",
+        a: "Broom finish is the practical standard for rural driveways — it provides grip, handles light vehicle use well, and is cost-effective for longer runs. Exposed aggregate is an option for the section closest to the home if street appeal matters. We'll advise on both."
+      },
+      {
+        q: "How do I get a quote for a shed slab in Boogaree?",
+        a: "Call or message Angelo directly. He'll respond same day and come out to your property to measure up and give you a fixed written price before any work starts."
+      }
+    ],
+    metaTitle: "Concreting Boogaree QLD | Shed Slabs, Driveways & Rural Concrete | Poly Concreting",
+    metaDesc: "Boogaree concreting — shed slabs, driveways and rural concrete work near Caboolture. Fixed written quotes. Owner on every job.",
+    ogImage: "assets/img/agg-driveway.webp",
+    projectIds: ["wamuran-drive", "acreage", "plain-broom-drive", "wamuran-pathway", "caboolture-drive", "side-drain", "commercial", "morayfield-patio"],
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Poly Concreting — Boogaree",
+      "description": "Concreting services in Boogaree QLD — shed slabs, driveways and rural concrete near Caboolture.",
+      "url": "https://polyconcretingqld.com.au/boogaree-concreting",
+      "telephone": "+61481445041",
+      "email": "info@polyconcretingqld.com.au",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Boogaree",
+        "addressRegion": "QLD",
+        "postalCode": "4510",
+        "addressCountry": "AU"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -27.05,
+        "longitude": 152.92
+      },
+      "areaServed": [
+        "Boogaree", "Caboolture", "Upper Caboolture", "Moorina", "Moodlu", "Morayfield"
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "07:00",
+        "closes": "17:00"
+      }
+    }
+  },
+
+  /* ── 13. WOODFORD ───────────────────────────────────────── */
+  {
+    id: "woodford",
+    name: "Woodford",
+    region: "Moreton Bay",
+    state: "QLD",
+    postcode: "4514",
+    heading: "Concreting in Woodford",
+    tagline: "Solid concrete work in the D'Aguilar hinterland.",
+    intro: [
+      "Woodford is a hinterland town about 30 kilometres north-west of Caboolture, at the foot of the D'Aguilar Range. It's a community of rural lifestyle properties, small farms, and established residential blocks with a distinctly relaxed character. Concrete work in Woodford centres on the practical needs of rural living — shed slabs, concrete driveways, hardstand areas, and farm tracks. Poly Concreting travels out to Woodford regularly and plans these jobs with the additional logistics that hinterland work demands.",
+      "Woodford's soil profile is typically clay-based with some variation as you move toward the range edge. Reactive clay in the lowland sections can cause significant ground movement with seasonal moisture change, making proper sub-base preparation and reinforcement essential. We compact the formation layer thoroughly on every job and use appropriate steel mesh and bar to ensure the concrete can accommodate normal ground movement without cracking.",
+      "Getting concrete trucks to Woodford takes planning — particularly for properties on hinterland roads with access restrictions. We scope this out at the quote stage so there are no delays on pour day. Angelo quotes every job in person, gives you a fixed written price, and is on site for the pour. No subcontracting, no surprises."
+    ],
+    services: LOCATION_SERVICES,
+    nearbySuburbs: [
+      "Caboolture", "Wamuran", "Beerwah", "Glass House Mountains", "Kilcoy",
+      "D'Aguilar", "Jimna", "Neurum", "Mount Mee", "Stanley River"
+    ],
+    faqs: [
+      {
+        q: "Do you concrete in Woodford and the surrounding hinterland?",
+        a: "Yes — we service Woodford and the D'Aguilar hinterland regularly. Shed slabs, driveways, hardstand areas and rural paths are the most common jobs. We plan logistics for hinterland work upfront so pour day runs smoothly."
+      },
+      {
+        q: "Can you pour a shed slab at a rural property near Woodford?",
+        a: "Yes — rural shed slabs in the Woodford area are standard work for us. We assess site access and truck clearances at the quote stage, handle boxing and steel, and pour to the right thickness for the load and span."
+      },
+      {
+        q: "What affect does the D'Aguilar climate have on concrete in Woodford?",
+        a: "Woodford gets more rainfall than the coast and soils can be quite active. We use appropriate mix design and curing procedures for higher-moisture environments. The result is concrete that holds up through wet winters and dry summers alike."
+      },
+      {
+        q: "What concrete finish suits a Woodford rural driveway?",
+        a: "Broom finish is the practical choice for rural driveways — it grips well in mud and rain, handles vehicle use, and is cost-effective for longer runs. Exposed aggregate is an option for the section near the house if appearance matters. We'll give you an honest recommendation."
+      },
+      {
+        q: "Is there a travel fee for Woodford?",
+        a: "We give a single fixed written quote that covers everything — there are no separate travel fees bolted on later. When Angelo comes out to quote, the price he leaves you with is the price you pay."
+      }
+    ],
+    metaTitle: "Concreting Woodford QLD | Shed Slabs, Driveways & Hinterland Concrete | Poly Concreting",
+    metaDesc: "Woodford concreting — shed slabs, rural driveways and hardstand in the D'Aguilar hinterland. Owner-operated, fixed written quotes.",
+    ogImage: "assets/img/agg-driveway.webp",
+    projectIds: ["wamuran-drive", "acreage", "plain-broom-drive", "wamuran-pathway", "rural-drive", "side-drain", "commercial", "wamuran-pathway-2"],
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Poly Concreting — Woodford",
+      "description": "Concreting services in Woodford QLD — shed slabs, rural driveways and hardstand in the D'Aguilar hinterland.",
+      "url": "https://polyconcretingqld.com.au/woodford-concreting",
+      "telephone": "+61481445041",
+      "email": "info@polyconcretingqld.com.au",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Woodford",
+        "addressRegion": "QLD",
+        "postalCode": "4514",
+        "addressCountry": "AU"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.95,
+        "longitude": 152.77
+      },
+      "areaServed": [
+        "Woodford", "Wamuran", "Caboolture", "D'Aguilar", "Neurum", "Glass House Mountains"
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "07:00",
+        "closes": "17:00"
+      }
+    }
+  },
+
+  /* ── 14. TOORBUL ────────────────────────────────────────── */
+  {
+    id: "toorbul",
+    name: "Toorbul",
+    region: "Moreton Bay",
+    state: "QLD",
+    postcode: "4510",
+    heading: "Concreting in Toorbul",
+    tagline: "Coastal concrete for Toorbul's Pumicestone Passage properties.",
+    intro: [
+      "Toorbul is a small coastal community on the western shore of Pumicestone Passage, with a mix of permanent residences, holiday homes, and fishing shacks facing the water. It's a relaxed, low-density area where property owners are increasingly upgrading concrete for driveways, outdoor entertaining areas, and paths that connect buildings across their blocks. Poly Concreting services Toorbul from Morayfield and understands what coastal concrete work requires — the right mix design, sealer, and finish for a salt-air environment.",
+      "Salt air and humidity on Pumicestone Passage accelerate surface deterioration on concrete that isn't correctly specified. We use appropriate mix design and apply quality sealer on exposed surfaces so your concrete holds up long-term at Toorbul. Pool surrounds, alfresco areas, and driveways near the waterfront are all jobs where this matters — and we factor it in from the quote, not as an afterthought.",
+      "Access to Toorbul requires some planning — it's at the end of a road and concrete trucks need clear access and turning space. We scope all of this at the quote stage so the pour day runs without delays. Angelo comes out to every job personally, gives a fixed written price, and is on site when the concrete goes in."
+    ],
+    services: LOCATION_SERVICES,
+    nearbySuburbs: [
+      "Ningi", "Elimbah", "Caboolture", "Banksia Beach", "Sandstone Point",
+      "Beachmere", "Donnybrook", "Morayfield", "Burpengary", "Narangba"
+    ],
+    faqs: [
+      {
+        q: "Do you concrete in Toorbul?",
+        a: "Yes — Toorbul and the Pumicestone Passage coastal area are within our service area. Driveways, outdoor entertaining areas, pool surrounds and paths are common jobs we quote there."
+      },
+      {
+        q: "Does salt air affect concrete at Toorbul?",
+        a: "Yes — coastal humidity and salt spray can affect concrete longevity if the wrong mix or sealer is used. We specify the right mix design and apply quality sealer on exposed surfaces so your concrete holds up in the Pumicestone Passage environment."
+      },
+      {
+        q: "What concrete finish is best for outdoor entertaining areas in Toorbul?",
+        a: "Exposed aggregate is a popular choice — the texture provides natural grip on wet surfaces, handles coastal UV well, and looks great alongside coastal landscaping. Broom finish is the practical option for driveways and working surfaces."
+      },
+      {
+        q: "Can you pour a pool surround at a Toorbul property?",
+        a: "Yes — pool surrounds with appropriate slip-resistant finish are something we do regularly in coastal areas. We advise on the right finish and drainage detail for poolside concrete and factor the coastal environment into the specification."
+      },
+      {
+        q: "How do you manage truck access in Toorbul?",
+        a: "We scope truck access when we come out to quote — gate widths, turning space, road access and surface conditions are all assessed upfront. If there are constraints we work them into the pour plan."
+      }
+    ],
+    metaTitle: "Concreting Toorbul QLD | Driveways, Pool Surrounds & Coastal Concrete | Poly Concreting",
+    metaDesc: "Toorbul concreting — driveways, pool surrounds and outdoor areas on Pumicestone Passage. Coastal concrete specialists. Fixed written quotes.",
+    ogImage: "assets/img/agg-driveway.webp",
+    projectIds: ["pool", "pool-deck", "agg-drive", "patio-agg", "outdoor-patio-10", "plain-broom-drive", "side-path", "wamuran-pathway"],
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Poly Concreting — Toorbul",
+      "description": "Concreting services in Toorbul QLD — driveways, pool surrounds and outdoor areas on Pumicestone Passage.",
+      "url": "https://polyconcretingqld.com.au/toorbul-concreting",
+      "telephone": "+61481445041",
+      "email": "info@polyconcretingqld.com.au",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Toorbul",
+        "addressRegion": "QLD",
+        "postalCode": "4510",
+        "addressCountry": "AU"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -27.02,
+        "longitude": 153.00
+      },
+      "areaServed": [
+        "Toorbul", "Ningi", "Elimbah", "Caboolture", "Banksia Beach", "Beachmere"
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "07:00",
+        "closes": "17:00"
+      }
+    }
+  },
+
+  /* ── 15. BELLMERE ───────────────────────────────────────── */
+  {
+    id: "bellmere",
+    name: "Bellmere",
+    region: "Moreton Bay",
+    state: "QLD",
+    postcode: "4510",
+    heading: "Concreting in Bellmere",
+    tagline: "Close to Morayfield, fast response, quality concrete every time.",
+    intro: [
+      "Bellmere is a residential suburb sitting just north of Morayfield — Poly Concreting's home base — which makes it one of the easiest areas for us to service quickly and without travel overhead. The suburb has a mix of established residential streets and larger blocks on its northern fringe, and the concrete work reflects that mix: driveways, alfresco entertaining slabs, concrete paths, and garage pads are all common requests. Because we're so close, we can often fit Bellmere jobs in quickly when a date opens up.",
+      "Like most of the Caboolture-Morayfield corridor, Bellmere sits on reactive clay soils that move significantly with moisture changes through the year. Driveways built without adequate sub-base compaction or reinforcement tend to crack and lift over time — it's a very common complaint in established streets throughout the area. When we replace or upgrade a driveway in Bellmere, we compact the formation correctly and use appropriate steel reinforcement so the new slab lasts decades, not years.",
+      "Being close to our base means lower mobilisation overhead and flexibility on scheduling. Get in touch with Angelo for a same-day response, a site visit within a couple of days, and a fixed written price before anything starts."
+    ],
+    services: LOCATION_SERVICES,
+    nearbySuburbs: [
+      "Morayfield", "Caboolture", "Burpengary", "Upper Caboolture", "Narangba",
+      "Dakabin", "Elimbah", "Boogaree", "Caboolture South", "Moodlu"
+    ],
+    faqs: [
+      {
+        q: "Do you service Bellmere for residential concrete work?",
+        a: "Yes — Bellmere is right next door to our Morayfield base. Driveways, alfresco areas, paths and garage pads are all jobs we quote in Bellmere regularly. Fast response and no travel overhead."
+      },
+      {
+        q: "What concrete finishes are popular in Bellmere?",
+        a: "Exposed aggregate is the most popular choice for driveways in Bellmere — it lifts street appeal and holds up well long-term. Broom finish is the solid practical option for paths and working areas. We'll advise on the right choice for your property."
+      },
+      {
+        q: "Can you replace my cracked driveway in Bellmere?",
+        a: "Yes — driveway replacements are one of the most common jobs we do in established Moreton Bay suburbs like Bellmere. We demo the old slab, prep the base correctly, and pour fresh with proper reinforcement to stop the cracking cycle."
+      },
+      {
+        q: "How quickly can you quote and schedule a job in Bellmere?",
+        a: "Being based next door in Morayfield, we can often get to Bellmere for a quote within 24–48 hours of your call. Scheduling depends on current workload but we'll give you a realistic pour date at the quote."
+      },
+      {
+        q: "Do you do small jobs like a single concrete path in Bellmere?",
+        a: "Yes — we quote all sizes of work. A concrete path, a single car driveway, a small alfresco slab — if it's concrete, we'll price it up honestly and do it properly."
+      }
+    ],
+    metaTitle: "Concreting Bellmere QLD | Driveways, Alfresco & Concrete Paths | Poly Concreting",
+    metaDesc: "Bellmere concreting — driveways, alfresco slabs and concrete paths next door to Morayfield. Fast response, fixed written quotes.",
+    ogImage: "assets/img/agg-driveway.webp",
+    projectIds: ["caboolture-drive", "plain-broom-drive", "morayfield-patio", "agg-drive", "patio-agg", "outdoor-patio-10", "side-path", "side-drain"],
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Poly Concreting — Bellmere",
+      "description": "Concreting services in Bellmere QLD — driveways, alfresco slabs and concrete paths near Morayfield.",
+      "url": "https://polyconcretingqld.com.au/bellmere-concreting",
+      "telephone": "+61481445041",
+      "email": "info@polyconcretingqld.com.au",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bellmere",
+        "addressRegion": "QLD",
+        "postalCode": "4510",
+        "addressCountry": "AU"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -27.09,
+        "longitude": 152.93
+      },
+      "areaServed": [
+        "Bellmere", "Morayfield", "Caboolture", "Burpengary", "Upper Caboolture", "Narangba"
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "07:00",
+        "closes": "17:00"
+      }
+    }
+  },
+
+  /* ── 16. BANKSIA BEACH ──────────────────────────────────── */
+  {
+    id: "banksia-beach",
+    name: "Banksia Beach",
+    region: "Moreton Bay",
+    state: "QLD",
+    postcode: "4507",
+    heading: "Concreting in Banksia Beach",
+    tagline: "Quality concrete for Bribie Island's Banksia Beach properties.",
+    intro: [
+      "Banksia Beach is one of Bribie Island's primary residential suburbs — a low-density coastal community with a mix of permanent homes and holiday properties facing the Pumicestone Passage and Moreton Bay. Driveways, exposed aggregate alfresco areas, pool surrounds, and concrete paths are the most common jobs we're called out for on Bribie Island, and we service Banksia Beach regularly. The coastal environment here means specification matters — salt air, high UV, and coastal humidity all affect concrete long-term if it's not built right.",
+      "We use appropriate mix design and quality sealer on all Banksia Beach pours, particularly for exposed surfaces and pool surrounds. Exposed aggregate is the most popular finish on Bribie Island — the texture provides natural slip resistance on wet surfaces, it handles UV well, and it suits the relaxed coastal aesthetic of Banksia Beach properties. The natural aggregate colour palette also complements the coastal landscaping and light timber character typical of the island.",
+      "Getting to Banksia Beach requires driving across the Bribie Island bridge, which we factor into our scheduling so timing and truck logistics are sorted before pour day. Angelo quotes every Banksia Beach job in person and gives a fixed written price. Same-day response to all enquiries."
+    ],
+    services: LOCATION_SERVICES,
+    nearbySuburbs: [
+      "Woorim", "Bribie Island", "Ningi", "Sandstone Point", "Toorbul",
+      "Elimbah", "Caboolture", "Morayfield", "Beachmere", "Donnybrook"
+    ],
+    faqs: [
+      {
+        q: "Do you concrete on Bribie Island — Banksia Beach?",
+        a: "Yes — we service Banksia Beach and the broader Bribie Island area regularly. Driveways, exposed aggregate alfresco areas, pool surrounds and paths are the most common jobs we quote there."
+      },
+      {
+        q: "What concrete finish is best for Banksia Beach properties?",
+        a: "Exposed aggregate is the most popular choice on Bribie Island — it holds up well to coastal UV, humidity and foot traffic, looks good long-term, and provides natural grip for alfresco and pool surround areas. We'll advise on the right aggregate and sealer combination when we come out to quote."
+      },
+      {
+        q: "Does the coastal environment affect concrete in Banksia Beach?",
+        a: "Salt air and humidity can affect concrete surface quality long-term if the wrong mix or sealer is used. We specify the right mix design and apply a quality sealer on exposed surfaces so your concrete holds up in the Bribie Island environment — it's factored in from the start."
+      },
+      {
+        q: "Can you pour a pool surround at a Banksia Beach property?",
+        a: "Yes — pool surrounds in coastal areas are a regular part of our work. We advise on the right slip-resistant finish, handle drainage details correctly, and apply appropriate sealer for the coastal environment."
+      },
+      {
+        q: "How do you manage getting concrete trucks to Banksia Beach?",
+        a: "We plan truck access to Bribie Island carefully — bridge access, timing relative to traffic and tides, and on-site turning space are all scoped at the quote. There are no surprises on pour day."
+      }
+    ],
+    metaTitle: "Concreting Banksia Beach | Bribie Island Driveways, Pool Surrounds & Concrete | Poly Concreting",
+    metaDesc: "Banksia Beach concreting — driveways, pool surrounds and exposed aggregate for Bribie Island properties. Coastal specialists. Fixed written quotes.",
+    ogImage: "assets/img/agg-driveway.webp",
+    projectIds: ["agg-drive", "pool", "pool-deck", "patio-agg", "outdoor-patio-10", "strathpine-exposed", "plain-broom-drive", "side-path"],
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Poly Concreting — Banksia Beach",
+      "description": "Concreting services in Banksia Beach QLD — driveways, pool surrounds and exposed aggregate for Bribie Island properties.",
+      "url": "https://polyconcretingqld.com.au/banksia-beach-concreting",
+      "telephone": "+61481445041",
+      "email": "info@polyconcretingqld.com.au",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Banksia Beach",
+        "addressRegion": "QLD",
+        "postalCode": "4507",
+        "addressCountry": "AU"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -27.08,
+        "longitude": 153.17
+      },
+      "areaServed": [
+        "Banksia Beach", "Woorim", "Bribie Island", "Ningi", "Sandstone Point", "Toorbul"
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "07:00",
+        "closes": "17:00"
+      }
+    }
+  },
+
+  /* ── 17. NINGI ──────────────────────────────────────────── */
+  {
+    id: "ningi",
+    name: "Ningi",
+    region: "Moreton Bay",
+    state: "QLD",
+    postcode: "4511",
+    heading: "Concreting in Ningi",
+    tagline: "Coastal lifestyle concrete for Ningi and the Pumicestone Passage area.",
+    intro: [
+      "Ningi sits on the mainland side of Pumicestone Passage, across from Bribie Island's northern end. It's a quiet coastal lifestyle area with residential and acreage properties, and the concrete work here reflects that character — driveways, shed slabs, outdoor entertaining areas, and concrete paths are the most common requests. Poly Concreting services Ningi from Morayfield and understands the coastal environment's demands on concrete work.",
+      "Coastal humidity and salt air reach Ningi properties, particularly those facing Pumicestone Passage. For exposed surfaces and outdoor areas, the right mix design and quality sealer matter long-term. We factor this into every Ningi pour upfront — not as an add-on at the end. Whether it's an alfresco slab, pool surround, or driveway, we specify the concrete appropriately for the coastal environment.",
+      "The soils in Ningi vary from sandy coastal profiles close to the water to heavier clay further inland. Both need careful sub-base preparation — sandy profiles require thorough compaction to prevent subsidence, while clay-heavy soils need to be managed for seasonal movement. We assess site conditions when we come out to quote and build the preparation approach into the price. Angelo gives a fixed written quote and is on site for every pour."
+    ],
+    services: LOCATION_SERVICES,
+    nearbySuburbs: [
+      "Banksia Beach", "Sandstone Point", "Toorbul", "Elimbah", "Beachmere",
+      "Caboolture", "Morayfield", "Donnybrook", "Narangba", "Burpengary"
+    ],
+    faqs: [
+      {
+        q: "Do you concrete in Ningi?",
+        a: "Yes — Ningi and the surrounding Pumicestone Passage area are within our regular service area. Driveways, shed slabs, alfresco areas and pool surrounds are common jobs we quote there."
+      },
+      {
+        q: "What concrete services do you offer in Ningi?",
+        a: "We pour driveways, shed slabs, alfresco areas, pool surrounds, paths and garage pads in Ningi. All finishes available — broom, plain, exposed aggregate, coloured and trowel."
+      },
+      {
+        q: "Does the coastal environment affect concrete in Ningi?",
+        a: "Coastal humidity and salt air are factors for Pumicestone Passage properties. We use appropriate mix design and apply quality sealer on exposed surfaces to ensure longevity. This is factored into our quote upfront."
+      },
+      {
+        q: "What's the best concrete finish for a Ningi driveway?",
+        a: "Broom finish is the practical standard for driveways. Exposed aggregate is popular for front driveways where street appeal matters and provides good traction year-round. We'll advise on the right choice for your property when we come out to quote."
+      },
+      {
+        q: "How quickly can you quote a concrete job in Ningi?",
+        a: "Same-day response to all enquiries. Site visits typically within 48–72 hours. We give you a fixed written price at the quote — no back-and-forth."
+      }
+    ],
+    metaTitle: "Concreting Ningi QLD | Driveways, Slabs & Coastal Concrete | Poly Concreting",
+    metaDesc: "Ningi concreting — driveways, shed slabs and outdoor concrete for coastal lifestyle properties near Pumicestone Passage. Fixed written quotes.",
+    ogImage: "assets/img/agg-driveway.webp",
+    projectIds: ["agg-drive", "plain-broom-drive", "acreage", "patio-agg", "outdoor-patio-10", "pool", "side-path", "wamuran-drive"],
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Poly Concreting — Ningi",
+      "description": "Concreting services in Ningi QLD — driveways, shed slabs and outdoor concrete near Pumicestone Passage.",
+      "url": "https://polyconcretingqld.com.au/ningi-concreting",
+      "telephone": "+61481445041",
+      "email": "info@polyconcretingqld.com.au",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ningi",
+        "addressRegion": "QLD",
+        "postalCode": "4511",
+        "addressCountry": "AU"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -27.07,
+        "longitude": 153.08
+      },
+      "areaServed": [
+        "Ningi", "Banksia Beach", "Sandstone Point", "Toorbul", "Elimbah", "Beachmere"
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "07:00",
+        "closes": "17:00"
+      }
+    }
+  },
+
+  /* ── 18. SANDSTONE POINT ────────────────────────────────── */
+  {
+    id: "sandstone-point",
+    name: "Sandstone Point",
+    region: "Moreton Bay",
+    state: "QLD",
+    postcode: "4511",
+    heading: "Concreting in Sandstone Point",
+    tagline: "Waterside concrete for Sandstone Point's Pumicestone Passage homes.",
+    intro: [
+      "Sandstone Point sits at the base of the Bribie Island bridge on the mainland side of Pumicestone Passage — a small residential community with a strong waterside character. Homeowners here invest in concrete that complements the lifestyle: driveways that work, alfresco areas that face the passage, pool surrounds that handle barefoot traffic year-round, and paths that connect buildings across well-kept blocks. Poly Concreting services Sandstone Point and understands what coastal concrete requires in this environment.",
+      "Properties facing Pumicestone Passage are exposed to salt air and coastal humidity year-round. Concrete that isn't correctly specified deteriorates faster in this environment — surface scaling, sealer failure, and carbonation can all be accelerated by a salt-air exposure if the wrong mix or surface treatment is used. We specify appropriate mix design and apply quality sealer on every Sandstone Point pour so the concrete holds up for decades in this coastal setting.",
+      "Exposed aggregate is the most popular finish in Sandstone Point — the texture provides natural grip for wet surfaces, it handles coastal UV without fading, and it suits the relaxed waterside aesthetic of the area. Pool surrounds, alfresco areas, and driveways in exposed aggregate are all jobs we quote and pour at Sandstone Point regularly. Fixed written quotes. Angelo on every job."
+    ],
+    services: LOCATION_SERVICES,
+    nearbySuburbs: [
+      "Ningi", "Banksia Beach", "Toorbul", "Elimbah", "Beachmere",
+      "Donnybrook", "Caboolture", "Morayfield", "Narangba", "Burpengary"
+    ],
+    faqs: [
+      {
+        q: "Do you concrete in Sandstone Point?",
+        a: "Yes — Sandstone Point and the surrounding Pumicestone Passage area are within our service area. Driveways, exposed aggregate alfresco areas, pool surrounds and paths are common jobs we quote there."
+      },
+      {
+        q: "What concrete finish is best for a Sandstone Point property?",
+        a: "Exposed aggregate is a strong choice for coastal Sandstone Point properties — it handles UV, coastal humidity and bare feet year-round without the maintenance burden of some other finishes. Broom finish is the practical option for working driveways and paths. We advise on both when we come out to quote."
+      },
+      {
+        q: "Does the Pumicestone Passage environment affect concrete at Sandstone Point?",
+        a: "Salt air and humidity are significant factors on passage-side properties. We use the right mix design and apply quality sealer on exposed surfaces. This is specified upfront in the quote — not added as an extra at handover."
+      },
+      {
+        q: "Can you pour a pool surround at a Sandstone Point property?",
+        a: "Yes — pool surrounds with appropriate slip-resistant finish are a regular part of our coastal work. We handle drainage details, specify the right sealer for the coastal environment, and advise on the best finish for your specific site."
+      },
+      {
+        q: "How quickly can you quote a job in Sandstone Point?",
+        a: "Same-day response to all enquiries. Site visits to Sandstone Point typically within 48–72 hours. Fixed written price at the quote. No back-and-forth."
+      }
+    ],
+    metaTitle: "Concreting Sandstone Point QLD | Driveways, Pool Surrounds & Coastal Concrete | Poly Concreting",
+    metaDesc: "Sandstone Point concreting — driveways, pool surrounds and exposed aggregate for Pumicestone Passage properties. Coastal specialists. Fixed written quotes.",
+    ogImage: "assets/img/agg-driveway.webp",
+    projectIds: ["agg-drive", "pool", "pool-deck", "patio-agg", "strathpine-exposed", "outdoor-patio-10", "plain-broom-drive", "side-path"],
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Poly Concreting — Sandstone Point",
+      "description": "Concreting services in Sandstone Point QLD — driveways, pool surrounds and coastal concrete on Pumicestone Passage.",
+      "url": "https://polyconcretingqld.com.au/sandstone-point-concreting",
+      "telephone": "+61481445041",
+      "email": "info@polyconcretingqld.com.au",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Sandstone Point",
+        "addressRegion": "QLD",
+        "postalCode": "4511",
+        "addressCountry": "AU"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -27.10,
+        "longitude": 153.14
+      },
+      "areaServed": [
+        "Sandstone Point", "Ningi", "Banksia Beach", "Toorbul", "Elimbah", "Beachmere"
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "07:00",
+        "closes": "17:00"
+      }
+    }
+  },
+
+  /* ── 19. TOOWOOMBA ───────────────────────────────────────── */
   {
     id: "toowoomba",
     name: "Toowoomba",
@@ -575,7 +1422,7 @@ window.PC_LOCATIONS = [
     heading: "Concreting in Toowoomba",
     tagline: "Built to handle Toowoomba's climate — from frost to summer storms.",
     intro: [
-      "Toowoomba's position on the Darling Downs escarpment creates a climate unlike anywhere else in South East Queensland. Cold winters with occasional frosts, hot dry summers, and rapid temperature swings put unique demands on concrete work. Freeze-thaw cycles — while mild by alpine standards — still cause surface scaling on concrete that isn't mixed and finished correctly. Poly Concreting specifies the appropriate cement-to-water ratio and uses quality admixtures for Toowoomba pours, giving you concrete that holds its integrity through the full seasonal cycle year after year.",
+      "Toowoomba's position on the Darling Downs escarpment creates a climate unlike the coastal and Moreton Bay suburbs. Cold winters with occasional frosts, hot dry summers, and rapid temperature swings put unique demands on concrete work. Freeze-thaw cycles — while mild by alpine standards — still cause surface scaling on concrete that isn't mixed and finished correctly. Poly Concreting specifies the appropriate cement-to-water ratio and uses quality admixtures for Toowoomba pours, giving you concrete that holds its integrity through the full seasonal cycle year after year.",
       "Toowoomba is an established city with a strong residential and commercial base, and the demand here centres on driveway replacements for older properties, patio slabs for homes taking advantage of the city's famous gardens and outdoor culture, and practical slabs for the city's active farming and rural services community. The Garden City lifestyle means outdoor entertaining areas, pathways through established gardens, and decorative concrete that sits sympathetically within beautiful landscaped properties. We get a lot of requests for coloured concrete and trowel finishes that work within these classic Toowoomba garden settings.",
       "We also do commercial and industrial slabs for Toowoomba's significant industrial and logistics sector around the Charlton Wellcamp precinct. If you need a hardstand, workshop floor, or commercial driveway in the Toowoomba area, Poly Concreting can deliver. Distance means scheduling is planned ahead — we block out Toowoomba work in focused runs to make the trip worthwhile for everyone."
     ],

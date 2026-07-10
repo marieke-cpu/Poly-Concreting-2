@@ -2,14 +2,9 @@
 window.PC_PAGES = {
   /* ---------- service areas ---------- */
   areaSuburbs: {
-    moretonbay: ["Morayfield","Caboolture","Caboolture South","Burpengary","Burpengary East","Narangba","North Lakes","Mango Hill","Griffin","Murrumba Downs","Kallangur","Petrie","Lawnton","Strathpine","Joyner","Eatons Hill","Albany Creek","Warner","Dakabin","Deception Bay","Redcliffe","Scarborough","Clontarf","Woody Point","Newport","Kippa-Ring","Rothwell","Margate","Beachmere","Wamuran","Ningi","Banksia Beach","Bribie Island"],
-    brisbane: ["Brisbane CBD","Fortitude Valley","New Farm","Newstead","South Brisbane","West End","Paddington","Toowong","St Lucia","Indooroopilly","Taringa","Milton","Auchenflower","Highgate Hill","Annerley","Moorooka","Sunnybank","Upper Mount Gravatt","Mount Gravatt","Holland Park","Coorparoo","Camp Hill","Hawthorne","Bulimba","Morningside","Wynnum","Manly","Carindale","Chermside","Aspley","Bridgeman Downs","McDowall","Everton Park","Mitchelton","The Gap","Carseldine","Sandgate","Nundah","Albany Creek","Kedron","Windsor","Clayfield","Hamilton","Stafford","Ferny Hills","Arana Hills","Wavell Heights","Virginia","Banyo","Hendra"],
-    sunshine: ["Caloundra","Kings Beach","Pelican Waters","Bokarina","Wurtulla","Kawana Waters","Birtinya","Minyama","Parrearra","Buddina","Mooloolaba","Alexandra Headland","Maroochydore","Cotton Tree","Kuluin","Mountain Creek","Buderim","Sippy Downs","Palmview","Nambour","Woombye","Yandina","Bli Bli","Mudjimba","Twin Waters","Pacific Paradise","Marcoola","Coolum Beach","Mount Coolum","Peregian Beach","Beerwah","Landsborough","Glass House Mountains","Eudlo","Chevallum"],
-    ipswich: ["Ipswich","Booval","Bundamba","Raceview","North Ipswich","East Ipswich","One Mile","Silkstone","Basin Pocket","Leichhardt","Riverview","Redbank","Redbank Plains","Dinmore","Goodna","Wacol","Carole Park","Camira","Springfield","Springfield Lakes","Augustine Heights","Brookwater","Flinders View","Ripley","South Ripley","Yamanto","Collingwood Park","Bellbird Park","Blackstone","Brassall","Karalee","Moores Pocket","Walloon","Rosewood","Westbrook","Cranley","Goulburn"],
-    logan: ["Logan Central","Woodridge","Kingston","Slacks Creek","Loganlea","Loganholme","Meadowbrook","Marsden","Browns Plains","Hillcrest","Park Ridge","Park Ridge South","Logan Reserve","Boronia Heights","Berrinba","Crestmead","Waterford West","Waterford","Bethania","Eagleby","Beenleigh","Springwood","Rochedale South","Underwood","Shailer Park","Daisy Hill","Tanah Merah","Cornubia","Carbrook","Greenbank","Jimboomba","Mount Warren Park","Logan Village"],
-    toowoomba: ["Toowoomba","Highfields","Glenvale","Kearneys Spring","Wilsonton","Harristown","Centenary Heights","Rangeville","Newtown","Rockville","South Toowoomba","Darling Heights","Cranley","Westbrook","Torrington","Harlaxton","Middle Ridge","Drayton","Wellcamp","Charlton","Kingsthorpe","Cabarlah","Geham","Gowrie Junction","Oakey","Pittsworth"],
-    lockyer: ["Gatton","Laidley","Laidley Heights","Laidley South","Plainland","Forest Hill","Hatton Vale","Grantham","Helidon","Helidon Spa","Withcott","Regency Downs","Lowood","Fordsdale","Caffey","Lawes","Mount Sylvia","Spring Creek","College View","Murphys Creek","Postmans Ridge","Upper Tenthill","Lower Tenthill","Summerholm","Adare","Blenheim","Churchable","Vinegar Hill","Rockside","Flagstone Creek","Mount Sylvia"],
-    somerset: ["Esk","Kilcoy","Toogoolawah","Lowood","Fernvale","Coominya","Moore","Harlin","Jimna","Linville","Villeneuve","Hazeldean","Mount Beppo","Ivory Creek","Tarampa","Wivenhoe Pocket","Vernor","Crossdale","Buaraba","Gregors Creek","Ottaba","Braemore","Caboonbah","Colinton","Benarkin","Sandy Creek","Lake Somerset"],
+    moretonbay: ["Caboolture","Morayfield","Upper Caboolture","Bellmere","Burpengary","Wamuran","Elimbah","Ningi","Banksia Beach","Sandstone Point","Toorbul","Woodford","Boogaree"],
+    brisbane: ["North Lakes","Mango Hill","Griffin","Murrumba Downs","Kallangur","Petrie","Lawnton","Strathpine","Chermside","Aspley","Bridgeman Downs","McDowall","Everton Park","Mitchelton","The Gap","Stafford"],
+    sunshine: ["Caloundra","Kings Beach","Pelican Waters","Bokarina","Wurtulla","Kawana Waters","Birtinya","Buddina","Mooloolaba","Alexandra Headland","Maroochydore","Mountain Creek","Buderim","Sippy Downs","Palmview","Coolum Beach"],
   },
 
   /* ---------- reviews ---------- */
@@ -28,15 +23,15 @@ window.PC_PAGES = {
 
   /* ---------- about ---------- */
   about: {
-    lede: "Locally owned and operated in Morayfield — delivering high-quality concrete across residential and commercial projects throughout South East Queensland.",
+    lede: "Locally owned and operated in Morayfield — delivering high-quality concrete across residential and commercial projects throughout Moreton Bay, North Brisbane and the Sunshine Coast.",
     intro: [
-      "Poly Concreting is a locally owned and operated concreting company serving South East Queensland. We deliver high-quality concreting solutions across both residential and commercial projects — from driveways, slabs and decorative finishes through to hardstands, warehouse floors and large-scale civil works.",
+      "Poly Concreting is a locally owned and operated concreting company serving Moreton Bay, North Brisbane and the Sunshine Coast. We deliver high-quality concreting solutions across both residential and commercial projects — from driveways, slabs and decorative finishes through to hardstands, warehouse floors and large-scale civil works.",
       "Our approach is simple: show up on time, communicate clearly, deliver strong results, and leave every site clean and professional. We believe quality work speaks for itself, and our growing reputation across the region is proof of that commitment.",
     ],
     story: [
       "Poly Concreting was founded right here in Morayfield, Queensland, driven by a vision to build something lasting — both in concrete and in reputation. What started as a small operation has grown into a trusted local concreting business, one job at a time.",
       "Our founders bring proud Polynesian & Australian heritage to the work — a background rooted in community, resilience, and an unmatched work ethic. That cultural foundation shapes how we approach every project: with respect, determination, and a commitment to doing things right.",
-      "Today, Poly Concreting continues to grow across South East Queensland, earning trust through consistent quality, reliability, and the kind of hard work that builds real results.",
+      "Today, Poly Concreting continues to grow across Moreton Bay, North Brisbane and the Sunshine Coast, earning trust through consistent quality, reliability, and the kind of hard work that builds real results.",
     ],
     mission: "To deliver strong, reliable concreting solutions for both residential homeowners and commercial clients — focusing on quality, precision and long-lasting results. Whether it's a backyard driveway or a commercial hardstand, every client gets a finished product they can trust and be proud of.",
     values: [
@@ -47,7 +42,7 @@ window.PC_PAGES = {
     ],
     safety: "Every crew is white-card certified and site-inducted, we run full WHS on every job, and we're fully licensed and insured. No shortcuts — on safety or anything else.",
     stats: [
-      ["10+","Years on the tools"],["150+","Jobs delivered"],["100%","Owner-operated"],["8","SEQ regions"],
+      ["10+","Years on the tools"],["150+","Jobs delivered"],["100%","Owner-operated"],["8","Moreton Bay, North Brisbane & Sunshine Coast regions"],
     ],
   },
 

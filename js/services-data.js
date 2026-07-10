@@ -4,7 +4,7 @@ window.PC_SERVICES = [
   /* 01 ── DRIVEWAYS ───────────────────────────────────────────────── */
   {
     id:"driveways", name:"Driveways", short:"Driveways",
-    metaDesc:"Concrete driveways across South East QLD. Exposed aggregate, coloured & broom finish. Owner-operated, fixed price, same-day quotes. Based in Morayfield.",
+    metaDesc:"Concrete driveways across Moreton Bay, North Brisbane & Sunshine Coast. Exposed aggregate, coloured & broom finish. Owner-operated, fixed price, same-day quotes. Based in Morayfield.",
     tag:"The first thing visitors see — and the last thing you want to redo.",
     hero:"assets/img/optimized/photos-driveways-plain4.webp", pos:"center 58%",
     intro:"A driveway carries real load, sheds water and sets the tone for the whole property. We prepare the base right, reinforce it properly and finish it to last decades — not seasons.",
@@ -33,7 +33,7 @@ window.PC_SERVICES = [
   /* 02 ── SLABS ───────────────────────────────────────────────────── */
   {
     id:"slabs", name:"House & Shed Slabs", short:"Slabs",
-    metaDesc:"House & shed slabs across South East QLD. Reinforced, correctly prepared and builder-ready. Acreage & sloping sites welcome. Fixed price. Based in Morayfield.",
+    metaDesc:"House & shed slabs across Moreton Bay, North Brisbane & Sunshine Coast. Reinforced, correctly prepared and builder-ready. Acreage & sloping sites welcome. Fixed price. Based in Morayfield.",
     headline:["The slab", "everything sits on."],
     tag:"The foundation everything else sits on. Built right, not eyeballed.",
     hero:"assets/img/optimized/photos-trowel-slab1.webp", pos:"center",
@@ -63,7 +63,7 @@ window.PC_SERVICES = [
       { icon:"sparkle", t:"Finish choice",          d:"Power float is the base for most slabs. Exposed, coloured or broom adds cost — itemised clearly in the quote." },
     ],
     faqs:[
-      {q:"Do you do acreage and sloping blocks?",  a:"Constantly. Cut-and-fill and drop-edge beams on sloping sites are our bread and butter across SEQ."},
+      {q:"Do you do acreage and sloping blocks?",  a:"Constantly. Cut-and-fill and drop-edge beams on sloping sites are our bread and butter across Moreton Bay, North Brisbane & Sunshine Coast."},
       {q:"Can you work with my builder?",          a:"Yes — we slot into the build program and coordinate with your other trades and certifier."},
       {q:"Shed slabs too?",                        a:"Absolutely — machinery sheds, garages and granny flats, sized and reinforced for the load."},
     ],
@@ -74,7 +74,7 @@ window.PC_SERVICES = [
   /* 03 ── PATHWAYS ────────────────────────────────────────────────── */
   {
     id:"pathways", name:"Pathways", short:"Pathways",
-    metaDesc:"Concrete pathways & side access across South East QLD. Graded falls, channel drains, broom or exposed aggregate. Owner-operated, fixed price. Based in Morayfield.",
+    metaDesc:"Concrete pathways & side access across Moreton Bay, North Brisbane & Sunshine Coast. Graded falls, channel drains, broom or exposed aggregate. Owner-operated, fixed price. Based in Morayfield.",
     headline:["Paths that drain,", "last and look right."],
     tag:"Side access, wrap-arounds and connections that actually drain.",
     hero:"assets/img/path-side-drain.webp", pos:"center 55%",
@@ -115,7 +115,7 @@ window.PC_SERVICES = [
   /* 04 ── OUTDOOR ENTERTAINING ────────────────────────────────────── */
   {
     id:"patios", name:"Outdoor Entertaining", short:"Outdoor",
-    metaDesc:"Outdoor entertaining slabs across South East QLD. Level, shaped & finished for QLD weather. Broom, coloured or exposed aggregate. Fixed price. Based in Morayfield.",
+    metaDesc:"Outdoor entertaining slabs across Moreton Bay, North Brisbane & Sunshine Coast. Level, shaped & finished for QLD weather. Broom, coloured or exposed aggregate. Fixed price. Based in Morayfield.",
     headline:["The floor your", "outdoor space deserves."],
     tag:"Alfresco floors and entertaining areas built to live on.",
     hero:"assets/img/patio-broom.webp", pos:"center 55%",
@@ -156,7 +156,7 @@ window.PC_SERVICES = [
   /* 05 ── POOL SURROUNDS ──────────────────────────────────────────── */
   {
     id:"pools", name:"Pool Surrounds", short:"Pool Surrounds",
-    metaDesc:"Concrete pool surrounds across South East QLD. Slip-rated finishes, channel drainage & clean coping. Owner-operated, fixed price. Based in Morayfield.",
+    metaDesc:"Concrete pool surrounds across Moreton Bay, North Brisbane & Sunshine Coast. Slip-rated finishes, channel drainage & clean coping. Owner-operated, fixed price. Based in Morayfield.",
     headline:["Concrete that handles", "the wet zone."],
     tag:"Slip-safe, cool underfoot, and finished to frame the water.",
     hero:"assets/img/pool-coping.webp", pos:"center",
@@ -197,7 +197,7 @@ window.PC_SERVICES = [
   /* 06 ── SMALL COMMERCIAL CONCRETE ──────────────────────────────── */
   {
     id:"commercial", name:"Small Commercial", short:"Commercial",
-    metaDesc:"Small commercial concrete across South East QLD — shopfront slabs, hardstand, parking bays. Fixed price, fixed date. QBCC licensed, fully insured. Based in Morayfield.",
+    metaDesc:"Small commercial concrete across Moreton Bay, North Brisbane & Sunshine Coast — shopfront slabs, hardstand, parking bays. Fixed price, fixed date. QBCC licensed, fully insured. Based in Morayfield.",
     headline:["Built to", "your program."],
     tag:"Shopfront floors, hardstand and parking bays — fixed price, fixed date, documentation supplied. Never holding up your trades.",
     hero:"assets/img/optimized/photos-trowel-slab2.webp", pos:"center 55%",
@@ -231,7 +231,7 @@ window.PC_SERVICES = [
       {q:"What documentation do you supply?",           a:"Slump test records, batch delivery tickets and pour time logs at handover. If your certifier or body corporate has specific requirements, let us know upfront and we'll format accordingly."},
       {q:"Can you pour after hours or on weekends?",    a:"Yes. Weekend and after-hours pours so your shopfront, premises or development keeps moving on schedule."},
       {q:"What size commercial jobs do you take on?",   a:"Shopfront floors, unit slabs, parking bays, hardstand and small commercial builds. We focus on the work we do best and quote honestly on everything else."},
-      {q:"Are you licensed and insured for commercial?", a:"QBCC licensed (15393395) and fully insured for commercial work across SEQ. Certificates of currency available on request."},
+      {q:"Are you licensed and insured for commercial?", a:"QBCC licensed (15393395) and fully insured for commercial work across Moreton Bay, North Brisbane & Sunshine Coast. Certificates of currency available on request."},
     ],
     stat:["QBCC Licensed","Fixed price & date","Documentation supplied"],
     testimonial:{ q:"Poured our shopfront slab over a weekend so we opened on time. Numbers landed exactly where quoted.", n:"Priya N.", r:"Narangba — Commercial Client" },
@@ -240,7 +240,7 @@ window.PC_SERVICES = [
   /* 07 ── RESURFACING ─────────────────────────────────────────────── */
   {
     id:"resurfacing", name:"Resurfacing", short:"Resurfacing",
-    metaDesc:"Concrete resurfacing across South East QLD. Bonded overlay for worn or tired slabs — no demolition. Dulux Avista colours & finishes. Fixed price. Based in Morayfield.",
+    metaDesc:"Concrete resurfacing across Moreton Bay, North Brisbane & Sunshine Coast. Bonded overlay for worn or tired slabs — no demolition. Dulux Avista colours & finishes. Fixed price. Based in Morayfield.",
     tag:"Refresh worn, stained or tired concrete — without the cost of a full replacement.",
     hero:"assets/img/covercrete-hero.webp", pos:"center",
     intro:"Your existing slab is probably structurally fine — it just doesn't look it. A polymer-modified overlay bonds directly to sound concrete and gives you a fresh, sealed surface in the full Dulux Avista colour and stencil range. No demolition. No skip bin. Half the disruption of a full replacement.",
@@ -271,7 +271,7 @@ window.PC_SERVICES = [
   /* 09 ── TROWEL FINISH ───────────────────────────────────────────── */
   {
     id:"trowel", name:"Trowel Finish", short:"Trowel Finish",
-    metaDesc:"Trowel finish concrete across South East QLD. Steel-trowelled, hard & dense for indoor floors, garages & commercial slabs. Fixed price. Based in Morayfield.",
+    metaDesc:"Trowel finish concrete across Moreton Bay, North Brisbane & Sunshine Coast. Steel-trowelled, hard & dense for indoor floors, garages & commercial slabs. Fixed price. Based in Morayfield.",
     tag:"A smooth, dense surface — the most versatile and the base for polished and sealed concrete.",
     hero:"assets/img/trowel-hero.webp", pos:"center",
     intro:"A steel-trowelled finish is worked after screeding to close the surface and produce a hard, smooth, dense slab. It's what goes under polished concrete, sealed floors and most commercial interiors — and it requires timing and skill to do consistently across a large pour.",
@@ -300,7 +300,7 @@ window.PC_SERVICES = [
   /* 10 ── BROOM FINISH ────────────────────────────────────────────── */
   {
     id:"broom", name:"Broom Finish", short:"Broom Finish",
-    metaDesc:"Broom finish concrete across South East QLD. Slip-resistant, clean lines for driveways, paths & outdoor slabs. Owner-operated, fixed price. Based in Morayfield.",
+    metaDesc:"Broom finish concrete across Moreton Bay, North Brisbane & Sunshine Coast. Slip-resistant, clean lines for driveways, paths & outdoor slabs. Owner-operated, fixed price. Based in Morayfield.",
     tag:"The most practical concrete finish — clean lines, solid grip, ages well.",
     hero:"assets/img/broom-hero.webp", pos:"center",
     intro:"Broom finish is applied by drawing a stiff brush across the surface of the concrete before it sets, leaving a series of parallel lines that add grip and a clean, uniform look. It's the most widely used outdoor finish for good reason — it works, it lasts and it suits almost every job.",
@@ -329,7 +329,7 @@ window.PC_SERVICES = [
   /* 11 ── SWIRL FINISH ────────────────────────────────────────────── */
   {
     id:"swirl", name:"Swirl Finish", short:"Swirl Finish",
-    metaDesc:"Swirl finish concrete across South East QLD. Hand-applied circular texture for patios, pool surrounds & entertaining areas. Fixed price. Based in Morayfield.",
+    metaDesc:"Swirl finish concrete across Moreton Bay, North Brisbane & Sunshine Coast. Hand-applied circular texture for patios, pool surrounds & entertaining areas. Fixed price. Based in Morayfield.",
     tag:"Hand-trowelled circular texture — grip and character without going decorative.",
     hero:"assets/img/coloured5.webp", pos:"center",
     intro:"A swirl finish is applied by hand, working a steel trowel in overlapping arcs across the surface of the concrete. The result is a consistent circular texture that adds grip, breaks up flat light and gives concrete a crafted look — without the cost of exposed aggregate or stencil.",
@@ -360,7 +360,7 @@ window.PC_SERVICES = [
   /* 12 ── EXPOSED AGGREGATE ───────────────────────────────────────── */
   {
     id:"exposed", name:"Exposed Aggregate", short:"Exposed Aggregate",
-    metaDesc:"Exposed aggregate concrete across South East QLD. Boral & Nielsens ranges, wet-look sealed. Driveways, paths & pool surrounds. Fixed price. Based in Morayfield.",
+    metaDesc:"Exposed aggregate concrete across Moreton Bay, North Brisbane & Sunshine Coast. Boral & Nielsens ranges, wet-look sealed. Driveways, paths & pool surrounds. Fixed price. Based in Morayfield.",
     tag:"Our specialty. Stone you can feel underfoot, sealed to a wet-look shine.",
     hero:"assets/img/agg-river-stone.webp", pos:"center",
     intro:"Exposed aggregate is where craft shows. Wash back too early or too late and it's ruined — timing is everything. A decade-plus of pours means we get the reveal right, every time.",
@@ -375,9 +375,9 @@ window.PC_SERVICES = [
     aggRanges:[
       {
         supplier:"Boral",
-        intro:"Boral's Exposé range is the SEQ exposed aggregate standard — consistent sizing, reliable colour batching and wide availability. We pour Boral mixes regularly and know exactly how each colour washes back and seals up.",
+        intro:"Boral's Exposé range is the Moreton Bay, North Brisbane & Sunshine Coast exposed aggregate standard — consistent sizing, reliable colour batching and wide availability. We pour Boral mixes regularly and know exactly how each colour washes back and seals up.",
         mixes:[
-          { name:"Salt and Pepper", img:"assets/img/agg-boral/salt-and-pepper.webp", tone:"Black · White",         desc:"The classic. Fine black and white aggregate — clean, contemporary and the most popular choice for modern SEQ homes." },
+          { name:"Salt and Pepper", img:"assets/img/agg-boral/salt-and-pepper.webp", tone:"Black · White",         desc:"The classic. Fine black and white aggregate — clean, contemporary and the most popular choice for modern Moreton Bay, North Brisbane & Sunshine Coast homes." },
           { name:"Pearl",           img:"assets/img/agg-boral/pearl.webp",           tone:"Cream · White",         desc:"Soft cream and off-white tones that keep the surface light and bright. A favourite for pool surrounds and alfresco areas." },
           { name:"Silver Frost",    img:"assets/img/agg-boral/silver-frost.webp",    tone:"Cool Silver · Grey",    desc:"Cool silver-grey aggregate with a frosted, clean finish. Works beautifully with rendered homes and Hamptons-style builds." },
           { name:"Arctic Sun",      img:"assets/img/agg-boral/arctic-sun.webp",      tone:"Warm White · Gold",     desc:"Light warm-white tones with subtle golden flecks — an elegant finish that catches the Queensland light." },
@@ -395,7 +395,7 @@ window.PC_SERVICES = [
       },
       {
         supplier:"Nielsens",
-        intro:"Nielsens' range uses locally sourced SEQ aggregate with distinct, memorable colour names. Strong selection of dark, mid and light tones — well suited to the Queensland landscape and all property styles.",
+        intro:"Nielsens' range uses locally sourced Moreton Bay, North Brisbane & Sunshine Coast aggregate with distinct, memorable colour names. Strong selection of dark, mid and light tones — well suited to the Queensland landscape and all property styles.",
         mixes:[
           { name:"Oyster",      img:"assets/img/agg-nielsens/oyster.webp",      tone:"Cream · Off-White",      desc:"Soft cream and oyster tones — light, coastal and versatile. Popular on driveways, paths and pool surrounds." },
           { name:"Panda",       img:"assets/img/agg-nielsens/panda.webp",       tone:"Black · White",           desc:"Bold black and white contrast aggregate. A clean, contemporary alternative to the classic salt and pepper." },
@@ -407,9 +407,9 @@ window.PC_SERVICES = [
           { name:"Granite Bay",  img:"assets/img/agg-nielsens/granite-bay.webp", tone:"Grey · Granite",         desc:"Natural granite grey tones with the texture and depth of real stone. A timeless, premium finish." },
           { name:"Flintstone",  img:"assets/img/agg-nielsens/flintstone.webp",  tone:"Flint Grey · Mixed",      desc:"Cool grey flint aggregate with natural mixed tones — strong, understated and very versatile." },
           { name:"Stanley",     img:"assets/img/agg-nielsens/stanley.webp",     tone:"Mid Grey · Natural",      desc:"Mid-tone natural grey — reliable, clean and suits almost any home style or landscape." },
-          { name:"Manning",     img:"assets/img/agg-nielsens/manning.webp",     tone:"Earthy Natural · Stone",  desc:"Warm natural stone tones sourced from local SEQ quarries. Earthy and grounded — suits the Queensland landscape." },
+          { name:"Manning",     img:"assets/img/agg-nielsens/manning.webp",     tone:"Earthy Natural · Stone",  desc:"Warm natural stone tones sourced from local Moreton Bay, North Brisbane & Sunshine Coast quarries. Earthy and grounded — suits the Queensland landscape." },
           { name:"Reserve",     img:"assets/img/agg-nielsens/reserve.webp",     tone:"Premium Mixed · Stone",   desc:"A premium mixed-stone blend with natural colour variation — refined and distinctive on large driveway and patio areas." },
-          { name:"Yarrabilba",  img:"assets/img/agg-nielsens/yarrabilba.webp",  tone:"Warm Earth · Local Stone",desc:"Named after the local region — warm earthy tones from SEQ-sourced aggregate. Natural and on-place." },
+          { name:"Yarrabilba",  img:"assets/img/agg-nielsens/yarrabilba.webp",  tone:"Warm Earth · Local Stone",desc:"Named after the local region — warm earthy tones from Moreton Bay, North Brisbane & Sunshine Coast-sourced aggregate. Natural and on-place." },
           { name:"Magpie",      img:"assets/img/agg-nielsens/magpie.webp",      tone:"Black · White · Grey",    desc:"Bold black and white with grey variation — a striking, high-contrast finish with real character." },
           { name:"Orio",        img:"assets/img/agg-nielsens/orio.webp",        tone:"Dark · Black · White",    desc:"Dark aggregate with sharp black and white contrast — bold and contemporary. A strong choice for modern driveways." },
           { name:"Midnight",    img:"assets/img/agg-nielsens/midnight.webp",    tone:"Very Dark · Near Black",  desc:"Deep, near-black finish that seals to a rich wet-look sheen. Premium and dramatic." },
@@ -440,7 +440,7 @@ window.PC_SERVICES = [
   /* 13 ── COLOURED CONCRETE ───────────────────────────────────────── */
   {
     id:"coloured", name:"Coloured", short:"Coloured",
-    metaDesc:"Coloured concrete across South East QLD. Full-depth iron oxide pigments — Boral & Nielsens ranges. UV stable, any finish. Owner-operated, fixed price. Based in Morayfield.",
+    metaDesc:"Coloured concrete across Moreton Bay, North Brisbane & Sunshine Coast. Full-depth iron oxide pigments — Boral & Nielsens ranges. UV stable, any finish. Owner-operated, fixed price. Based in Morayfield.",
     tag:"Integral oxide colours that go all the way through the slab — not just on the surface.",
     hero:"assets/img/coloured6.webp", pos:"center 55%",
     intro:"Coloured concrete uses iron oxide pigments mixed into the pour, so the colour is through the full depth of the slab — not a coating that wears off. Paired with the right finish and sealer, it lifts a plain grey slab into something that actually adds to the property.",
@@ -506,9 +506,9 @@ window.PC_SERVICES = [
       },
       {
         supplier:"Nielsens",
-        intro:"Nielsens' Colourmix (by Oxerra) range is well suited to the Queensland climate with a wide selection of earthy, natural and bold tones. Reliable colour consistency across pours — popular across SEQ residential and acreage builds.",
+        intro:"Nielsens' Colourmix (by Oxerra) range is well suited to the Queensland climate with a wide selection of earthy, natural and bold tones. Reliable colour consistency across pours — popular across Moreton Bay, North Brisbane & Sunshine Coast residential and acreage builds.",
         mixes:[
-          { name:"Suede",         hex:"#c0a880", img:"assets/img/coloured-nielsens/suede.webp",        desc:"Warm sandy tan — natural and relaxed. A versatile neutral that suits most home styles across SEQ." },
+          { name:"Suede",         hex:"#c0a880", img:"assets/img/coloured-nielsens/suede.webp",        desc:"Warm sandy tan — natural and relaxed. A versatile neutral that suits most home styles across Moreton Bay, North Brisbane & Sunshine Coast." },
           { name:"Ginger",        hex:"#c07840", img:"assets/img/coloured-nielsens/ginger.webp",       desc:"Warm amber-ginger brown. Rich and inviting — a natural complement to timber and brick exteriors." },
           { name:"Havana",        hex:"#783820", img:"assets/img/coloured-nielsens/havana.webp",       desc:"Deep tobacco brown. Rich, earthy and premium — seals to a beautiful dark wet-look sheen." },
           { name:"Jabiru",        hex:"#3a2818", img:"assets/img/coloured-nielsens/jabiru.webp",       desc:"Very dark brown-black. One of the deepest earthy tones — bold and distinctive." },
@@ -554,7 +554,7 @@ window.PC_SERVICES = [
           { name:"Marl",          hex:"#a8b0a0", img:"assets/img/coloured-nielsens/marl.webp",          desc:"Light grey-green — soft and natural. A calm, landscape-connected neutral for outdoor slabs." },
           { name:"Pumice",        hex:"#c0b8a8", img:"assets/img/coloured-nielsens/pumice.webp",        desc:"Light stone-grey with a warm base. Natural and understated — suits bush and acreage settings." },
           { name:"Cargo",         hex:"#a08060", img:"assets/img/coloured-nielsens/cargo.webp",         desc:"Warm tan-brown — earthy and versatile. A reliable, natural tone across most residential styles." },
-          { name:"Terracotta",    hex:"#bc6040", img:"assets/img/coloured-nielsens/terracotta.webp",    desc:"Classic earthy orange-red. A perennial SEQ favourite that suits traditional and Queenslander homes." },
+          { name:"Terracotta",    hex:"#bc6040", img:"assets/img/coloured-nielsens/terracotta.webp",    desc:"Classic earthy orange-red. A perennial Moreton Bay, North Brisbane & Sunshine Coast favourite that suits traditional and Queenslander homes." },
           { name:"Caribbean Blue",hex:"#4898b8", img:"assets/img/coloured-nielsens/caribbean-blue.webp",desc:"Aqua blue — vibrant and tropical. A bold, unique choice for pool surrounds and alfresco areas." },
         ],
       },
@@ -564,7 +564,7 @@ window.PC_SERVICES = [
   /* 14 ── STAMPED CONCRETE ────────────────────────────────────────── */
   {
     id:"stamped", name:"Stamped", short:"Stamped",
-    metaDesc:"Stamped concrete across South East QLD. 3D texture in cobblestone, slate, flagstone & more. Colour hardener & contrast release. Fixed price. Based in Morayfield.",
+    metaDesc:"Stamped concrete across Moreton Bay, North Brisbane & Sunshine Coast. 3D texture in cobblestone, slate, flagstone & more. Colour hardener & contrast release. Fixed price. Based in Morayfield.",
     tag:"3D texture pressed into fresh concrete — pavers, slate and stone looks in one solid pour.",
     hero:"assets/img/stamped-hero.webp", pos:"center",
     intro:"Stamped concrete uses rigid polyurethane mats pressed into the surface while the concrete is still workable, leaving a 3D impression of stone, slate, cobble or tile. The result has physical depth and texture that stencilling can't replicate — and it's all one unjointed slab.",
@@ -606,7 +606,7 @@ window.PC_SERVICES = [
   /* 15 ── COVERCRETE ──────────────────────────────────────────────── */
   {
     id:"covercrete", name:"Covercrete", short:"Covercrete",
-    metaDesc:"Covercrete spray overlays across South East QLD. Decorative resurfacing over existing slabs — no demolition. Dulux Avista colours & patterns. Fixed price. Based in Morayfield.",
+    metaDesc:"Covercrete spray overlays across Moreton Bay, North Brisbane & Sunshine Coast. Decorative resurfacing over existing slabs — no demolition. Dulux Avista colours & patterns. Fixed price. Based in Morayfield.",
     tag:"Transform tired concrete with a sprayed decorative overlay — no demolition required.",
     hero:"assets/img/covercrete-hero.webp", pos:"center",
     intro:"Covercrete is a spray-applied polymer-modified overlay that bonds directly to existing sound concrete. You get a fresh, decorative surface without the disruption of a full rip-out — and with a far wider range of finishes than plain resurfacing.",
@@ -636,7 +636,7 @@ window.PC_SERVICES = [
       { name:"Cream",            img:"assets/img/covercrete-colours/cream.webp",           desc:"Soft warm off-white. A timeless neutral that suits rendered and Hamptons-style homes." },
       { name:"Merino",           img:"assets/img/covercrete-colours/merino.webp",          desc:"Warm pale neutral — natural and relaxed. One of the most versatile tones in the range." },
       { name:"Sandy Beige",      img:"assets/img/covercrete-colours/sandy-beige.webp",     desc:"Light sandy beige with a warm undertone. Easy-living and complements most landscaping." },
-      { name:"Sandstone",        img:"assets/img/covercrete-colours/sandstone.webp",       desc:"Classic mid sandy tan — earthy and natural. Suits every property style across SEQ." },
+      { name:"Sandstone",        img:"assets/img/covercrete-colours/sandstone.webp",       desc:"Classic mid sandy tan — earthy and natural. Suits every property style across Moreton Bay, North Brisbane & Sunshine Coast." },
       { name:"Bluegum",          img:"assets/img/covercrete-colours/bluegum.webp",         desc:"Soft blue-grey green. A subtle, nature-inspired tone that works beautifully outdoors." },
       { name:"Silver Sands",     img:"assets/img/covercrete-colours/silver-sands.webp",    desc:"Cool light grey with a silver tone. Contemporary and clean for modern rendered homes." },
       { name:"French Grey",      img:"assets/img/covercrete-colours/french-grey.webp",     desc:"Warm mid grey with a slight beige cast. Sophisticated and popular on coastal homes." },
