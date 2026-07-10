@@ -302,7 +302,7 @@ const STRIP_PHOTOS = [
   "assets/img/optimized/photos-trowel-slab1.webp",
   "assets/img/optimized/photos-rest-of-photos-vids-out1.webp",
   "assets/img/optimized/photos-rest-of-photos-vids-pool1.webp",
-  "assets/img/optimized/photos-driveways-plain7.webp",
+  "assets/img/optimized/D2.webp",
   "assets/img/optimized/photos-rest-of-photos-vids-outdoor10.webp",
 ];
 
