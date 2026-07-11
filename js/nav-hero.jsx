@@ -280,15 +280,24 @@ const HERO_VIDEOS = ["assets/video/hero.mp4","assets/video/hero3.mp4","assets/vi
 
 function SplitVideo({ motion }){
   const [idx, setIdx] = uS(0);
+  const [allowVideo, setAllowVideo] = uS(false);
   const videoRef = uR(null);
   useAlwaysPlayingVideo(videoRef, [idx]);
+  uE(()=>{
+    const query = window.matchMedia("(min-width: 761px) and (prefers-reduced-motion: no-preference)");
+    const update = ()=>setAllowVideo(query.matches);
+    update(); query.addEventListener?.("change",update);
+    return ()=>query.removeEventListener?.("change",update);
+  },[]);
   const next = ()=> setIdx(i=>(i+1)%HERO_VIDEOS.length);
   return (
     <div style={{position:"relative"}}>
       <div style={{position:"absolute",inset:0,overflow:"hidden"}}>
-        <video ref={videoRef} key={idx} autoPlay muted playsInline preload="metadata" poster="assets/img/hero-poster.webp" onLoadedMetadata={e=>playHeroVideo(e.currentTarget)} onCanPlay={e=>playHeroVideo(e.currentTarget)} onPause={e=>window.setTimeout(()=>playHeroVideo(e.currentTarget),120)} onEnded={next}
+        <img src="assets/img/hero-poster.webp" alt="Decorative concrete project by Poly Concreting" width="900" height="1629" fetchPriority="high" decoding="async"
+          style={{position:"absolute",inset:0,width:"100%",height:"100%",objectFit:"cover",objectPosition:"center"}}/>
+        {allowVideo && <video ref={videoRef} key={idx} autoPlay muted playsInline preload="metadata" poster="assets/img/hero-poster.webp" onLoadedMetadata={e=>playHeroVideo(e.currentTarget)} onCanPlay={e=>playHeroVideo(e.currentTarget)} onPause={e=>window.setTimeout(()=>playHeroVideo(e.currentTarget),120)} onEnded={next}
           style={{position:"absolute",inset:0,width:"100%",height:"100%",objectFit:"cover",objectPosition:"center"}}
-          src={HERO_VIDEOS[idx]}/>
+          src={HERO_VIDEOS[idx]}/>}
         {/* bottom fade */}
         <div style={{position:"absolute",inset:0,background:"linear-gradient(0deg,rgba(8,8,10,.7),transparent 40%)"}}></div>
         {/* left edge fade — blends into content panel */}
