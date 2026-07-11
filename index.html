@@ -18,7 +18,8 @@
 <meta property="og:title" content="Poly Concreting | Driveways, Exposed Aggregate & Slabs | Moreton Bay, North Brisbane &amp; Sunshine Coast"/>
 <meta property="og:description" content="Owner-operated concreting specialists in Moreton Bay, North Brisbane and the Sunshine Coast. Driveways, exposed aggregate, house & shed slabs, pathways and decorative concrete. Free quotes."/>
 <meta property="og:image" content="https://polyconcretingqld.com.au/assets/img/agg-driveway.webp"/>
-<link rel="preload" as="image" href="assets/img/hero-poster.webp" fetchpriority="high"/>
+<link rel="preload" as="image" href="assets/img/hero-poster-mobile.webp" media="(max-width:760px)" fetchpriority="high"/>
+<link rel="preload" as="image" href="assets/img/hero-poster.webp" media="(min-width:761px)" fetchpriority="high"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
 <meta property="og:site_name" content="Poly Concreting"/>
@@ -132,12 +133,17 @@
 <noscript><link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet"/></noscript>
 <link rel="stylesheet" href="css/styles.min.css?v=20260711-mobile-compat"/>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" media="print" onload="this.media='all'"/>
+<style>
+  .mobile-hero-prepaint{display:none}
+  @media(max-width:760px){.mobile-hero-prepaint{display:block;position:absolute;inset:0 0 auto;height:100svh;overflow:hidden;z-index:0}.mobile-hero-prepaint img{width:100%;height:100%;object-fit:cover;object-position:center}#root{position:relative;z-index:1}}
+</style>
 </head>
 <body class="home-page">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M8B9HG45" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <div class="grain"></div>
+<div class="mobile-hero-prepaint" aria-hidden="true"><img src="assets/img/hero-poster-mobile.webp" alt="" width="480" height="869" fetchpriority="high" decoding="async"/></div>
 <div id="root"></div>
 
 <script defer src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>

@@ -4,16 +4,15 @@
   var createElement = React.createElement;
   React.createElement = function (type, props) {
     if (type === "video" && props && props.autoPlay && /assets\/video\/hero/.test(props.src || "")) {
-      return createElement("img", {
-        src: props.poster || "assets/img/hero-poster.webp",
-        alt: "Decorative concrete project by Poly Concreting",
-        width: 900,
-        height: 1629,
-        fetchPriority: "high",
-        decoding: "async",
-        className: props.className || "hero-bg-image",
-        style: props.style
+      return null;
+    }
+    if (type === "img" && props && /Logo's\/1logo\.png$/.test(props.src || "")) {
+      props = Object.assign({}, props, {
+        src: "Logo's/1logo.webp",
+        width: 400,
+        height: 235
       });
+      arguments[1] = props;
     }
     return createElement.apply(this, arguments);
   };
